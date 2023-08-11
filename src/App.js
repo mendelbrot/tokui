@@ -2,7 +2,7 @@ import Glyph from './components/Glyph'
 
 function App() {
   return (
-    <div>
+    <div class="flex flex-wrap">
       <Glyph letters="mui" border="none"/>
       <Glyph border="none"/>
       <Glyph letters="kui" border="none"/>
