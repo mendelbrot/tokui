@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       a
-      <Glyph />
+      <Glyph letters="kui"/>
     </div>
   );
 }

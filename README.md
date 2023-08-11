@@ -11,3 +11,7 @@ ok.  the character is an svg that is composed of several polylines.  I'll make t
 
 the Glyph component will have some logic that gets the correct polylines for each of the letters and puts them all into the svg.
 
+i need to learn the setting for inline svg:
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
+
