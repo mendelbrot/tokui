@@ -1,56 +1,186 @@
+const Hor1 = ({rectStyle}) => <rect x="0.75" y="0.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
+const Hor2 = ({rectStyle}) => <rect x="0.75" y="4.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
+const Hor3 = ({rectStyle}) => <rect x="0.75" y="8.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
+const Ver1 = ({rectStyle}) => <rect x="0.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
+const Ver2 = ({rectStyle}) => <rect x="4.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
+const Ver3 = ({rectStyle}) => <rect x="8.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
+const Vt1 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(45)" style={rectStyle} />
+const Vt2 = ({rectStyle}) => <rect x="2.65" y="2.5" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
+const Vt3 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(135)" style={rectStyle} />
+const Vb1 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-45)" style={rectStyle} />
+const Vb2 = ({rectStyle}) => <rect x="2.65" y="7" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
+const Vb3 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-135) "style={rectStyle} />
 
-const width = 80
-const height = 80
-const border = "2px solid lightgreen"
-const fill = "black"
+const M = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
 
-const rectStyle = {"fill": fill}
-const svgStyle = {"width": width, "height": height, "border": border}
+const P = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
 
-function Glyph() {
+const H = ({rectStyle}) =>
+  <>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
+
+const W = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
+
+const N = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
+const T = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
+const S = ({rectStyle}) =>
+  <>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
+const L = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
+const G = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+const K = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+const F = ({rectStyle}) =>
+  <>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+const Y = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+const I1 = ({rectStyle}) =>
+  <>
+    <Vt1 rectStyle={rectStyle}/>
+  </>
+
+const I2 = ({rectStyle}) =>
+  <>
+    <Vb1 rectStyle={rectStyle}/>
+  </>
+
+const E1 = ({rectStyle}) =>
+  <>
+    <Vt1 rectStyle={rectStyle}/>
+    <Vt2 rectStyle={rectStyle}/>
+  </>
+
+const E2 = ({rectStyle}) =>
+  <>
+    <Vb1 rectStyle={rectStyle}/>
+    <Vb2 rectStyle={rectStyle}/>
+  </>
+
+const A1 = ({rectStyle}) =>
+  <>
+    <Vt1 rectStyle={rectStyle}/>
+    <Vt3 rectStyle={rectStyle}/>
+  </>
+
+const A2 = ({rectStyle}) =>
+  <>
+    <Vb1 rectStyle={rectStyle}/>
+    <Vb3 rectStyle={rectStyle}/>
+  </>
+
+const O1 = ({rectStyle}) =>
+  <>
+    <Vt2 rectStyle={rectStyle}/>
+    <Vt3 rectStyle={rectStyle}/>
+  </>
+
+const O2 = ({rectStyle}) =>
+  <>
+    <Vb2 rectStyle={rectStyle}/>
+    <Vb3 rectStyle={rectStyle}/>
+  </>
+
+const U1 = ({rectStyle}) =>
+  <>
+    <Vt3 rectStyle={rectStyle}/>
+  </>
+
+const U2 = ({rectStyle}) =>
+  <>
+    <Vb3 rectStyle={rectStyle}/>
+  </>
+
+function Glyph({
+  letters, 
+  width = 200, 
+  height = 200, 
+  border = "2px solid lightgreen", 
+  fill = "black"
+}) {
+  const rectStyle = {"fill": fill}
+  const svgStyle = {"width": width, "height": height, "border": border}
+
   return (
     <div>
       <svg version="1.1" viewBox="0 0 10 10" style={svgStyle}>
-        {/* <line x1="0" y1="1" x2="10" y2="1" stroke="purple" stroke-width="0.1" />
-        <line x1="0" y1="2" x2="10" y2="2" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="0" y1="3" x2="10" y2="3" stroke="purple" stroke-width="0.1" />
-        <line x1="0" y1="4" x2="10" y2="4" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="0" y1="5" x2="10" y2="5" stroke="blue" stroke-width="0.1" />
-        <line x1="0" y1="6" x2="10" y2="6" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="0" y1="7" x2="10" y2="7" stroke="purple" stroke-width="0.1" />
-        <line x1="0" y1="8" x2="10" y2="8" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="0" y1="9" x2="10" y2="9" stroke="purple" stroke-width="0.1" />
-
-        <line x1="1" y1="0" x2="1" y2="10" stroke="purple" stroke-width="0.1" />
-        <line x1="2" y1="0" x2="2" y2="10" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="3" y1="0" x2="3" y2="10" stroke="purple" stroke-width="0.1" />
-        <line x1="4" y1="0" x2="4" y2="10" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="5" y1="0" x2="5" y2="10" stroke="blue" stroke-width="0.1" />
-        <line x1="6" y1="0" x2="6" y2="10" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="7" y1="0" x2="7" y2="10" stroke="purple" stroke-width="0.1" />
-        <line x1="8" y1="0" x2="8" y2="10" stroke="lightgreen" stroke-width="0.1" />
-        <line x1="9" y1="0" x2="9" y2="10" stroke="purple" stroke-width="0.1" /> */}
-
-        <rect x="0.75" y="0.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-        <rect x="0.75" y="4.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-        <rect x="0.75" y="8.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-
-        <rect x="0.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-        <rect x="4.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-        <rect x="8.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-
-        <rect x="2.65" y="2.5" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
-        <rect x="2.65" y="7" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
-
-        <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(45)" style={rectStyle} />
-        <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(135)" style={rectStyle} />
-        <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-45)" style={rectStyle} />
-        <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-135) "style={rectStyle} />
+        {letters && letters[0] && letters[0].toLowerCase() === 'm' && <M rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'p' && <P rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'h' && <H rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'n' && <N rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 't' && <T rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 's' && <S rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'g' && <G rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'k' && <K rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'f' && <F rectStyle={rectStyle} />}
+        {letters && letters[0] && letters[0].toLowerCase() === 'y' && <Y rectStyle={rectStyle} />}
+        {letters && letters[1] && letters[1].toLowerCase() === 'i' && <I1 rectStyle={rectStyle} />}
+        {letters && letters[1] && letters[1].toLowerCase() === 'e' && <E1 rectStyle={rectStyle} />}
+        {letters && letters[1] && letters[1].toLowerCase() === 'a' && <A1 rectStyle={rectStyle} />}
+        {letters && letters[1] && letters[1].toLowerCase() === 'o' && <O1 rectStyle={rectStyle} />}
+        {letters && letters[1] && letters[1].toLowerCase() === 'u' && <U1 rectStyle={rectStyle} />}
+        {letters && letters[2] && letters[2].toLowerCase() === 'i' && <I2 rectStyle={rectStyle} />}
+        {letters && letters[2] && letters[2].toLowerCase() === 'e' && <E2 rectStyle={rectStyle} />}
+        {letters && letters[2] && letters[2].toLowerCase() === 'a' && <A2 rectStyle={rectStyle} />}
+        {letters && letters[2] && letters[2].toLowerCase() === 'o' && <O2 rectStyle={rectStyle} />}
+        {letters && letters[2] && letters[2].toLowerCase() === 'u' && <U2 rectStyle={rectStyle} />}
+        
       </svg>
     </div>
   );
 }
 
 export default Glyph;
-
-// transform-box="stroke-box" 

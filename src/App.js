@@ -3,8 +3,10 @@ import Glyph from './components/Glyph'
 function App() {
   return (
     <div>
-      a
-      <Glyph letters="kui"/>
+      <Glyph letters="mui" border="none"/>
+      <Glyph border="none"/>
+      <Glyph letters="kui" border="none"/>
+      <Glyph letters="lou" border="none"/>
     </div>
   );
 }
