@@ -24,7 +24,7 @@ const P = ({rectStyle}) =>
     <Ver1 rectStyle={rectStyle}/>
   </>
 
-const H = ({rectStyle}) =>
+const F = ({rectStyle}) =>
   <>
     <Hor3 rectStyle={rectStyle}/>
     <Ver1 rectStyle={rectStyle}/>
@@ -74,7 +74,7 @@ const K = ({rectStyle}) =>
     <Ver3 rectStyle={rectStyle}/>
   </>
 
-const F = ({rectStyle}) =>
+const H = ({rectStyle}) =>
   <>
     <Hor3 rectStyle={rectStyle}/>
     <Ver3 rectStyle={rectStyle}/>
