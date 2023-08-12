@@ -143,39 +143,39 @@ const U2 = ({rectStyle}) =>
   </>
 
 function Glyph({
-  letters, 
+  letters = '', 
   size = 200,  
-  border = "2px solid lightgreen", 
-  fill = "black"
+  border = '2px solid lightgreen', 
+  fill = 'black'
 }) {
-  const rectStyle = {"fill": fill}
-  const svgStyle = {"width": size, "height": size, "border": border}
+  const rectStyle = {'fill': fill}
+  const svgStyle = {'width': size, 'height': size, 'border': border}
 
   return (
     <div>
       <svg version="1.1" viewBox="0 0 10 10" style={svgStyle}>
-        {letters && letters[0] && letters[0].toLowerCase() === 'm' && <M rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'p' && <P rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'h' && <H rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'n' && <N rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 't' && <T rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 's' && <S rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'g' && <G rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'k' && <K rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'f' && <F rectStyle={rectStyle} />}
-        {letters && letters[0] && letters[0].toLowerCase() === 'y' && <Y rectStyle={rectStyle} />}
-        {letters && letters[1] && letters[1].toLowerCase() === 'i' && <I1 rectStyle={rectStyle} />}
-        {letters && letters[1] && letters[1].toLowerCase() === 'e' && <E1 rectStyle={rectStyle} />}
-        {letters && letters[1] && letters[1].toLowerCase() === 'a' && <A1 rectStyle={rectStyle} />}
-        {letters && letters[1] && letters[1].toLowerCase() === 'o' && <O1 rectStyle={rectStyle} />}
-        {letters && letters[1] && letters[1].toLowerCase() === 'u' && <U1 rectStyle={rectStyle} />}
-        {letters && letters[2] && letters[2].toLowerCase() === 'i' && <I2 rectStyle={rectStyle} />}
-        {letters && letters[2] && letters[2].toLowerCase() === 'e' && <E2 rectStyle={rectStyle} />}
-        {letters && letters[2] && letters[2].toLowerCase() === 'a' && <A2 rectStyle={rectStyle} />}
-        {letters && letters[2] && letters[2].toLowerCase() === 'o' && <O2 rectStyle={rectStyle} />}
-        {letters && letters[2] && letters[2].toLowerCase() === 'u' && <U2 rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'm' && <M rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'p' && <P rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'h' && <H rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'n' && <N rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 't' && <T rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 's' && <S rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'g' && <G rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'k' && <K rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'f' && <F rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'y' && <Y rectStyle={rectStyle} />}
+        {letters[1] && letters[1].toLowerCase() === 'i' && <I1 rectStyle={rectStyle} />}
+        {letters[1] && letters[1].toLowerCase() === 'e' && <E1 rectStyle={rectStyle} />}
+        {letters[1] && letters[1].toLowerCase() === 'a' && <A1 rectStyle={rectStyle} />}
+        {letters[1] && letters[1].toLowerCase() === 'o' && <O1 rectStyle={rectStyle} />}
+        {letters[1] && letters[1].toLowerCase() === 'u' && <U1 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'i' && <I2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'e' && <E2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'a' && <A2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'o' && <O2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'u' && <U2 rectStyle={rectStyle} />}
         
       </svg>
     </div>

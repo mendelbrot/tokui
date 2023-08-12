@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import ErrorPage from './pages/error-page'
 import Home from './pages/home'
 import Root from './pages/root'
-import AllGlyphs from './pages/all-glyphs'
+import AllGlyphs from './pages/glyphs'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import {
