@@ -10,7 +10,6 @@ function Display({text, array}) {
 
   return (
     <div>
-      <h1 className='mb-6 text-xl'>Home</h1>
       {wordsArray.map((line, lineIndex) => (
         <div key={`line ${lineIndex}`} className='flex'>
           {line.map((word, wordIndex) => (

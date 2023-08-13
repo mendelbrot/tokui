@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import ErrorPage from './pages/error-page'
 import Home from './pages/home'
 import Root from './pages/root'
-import AllGlyphs from './pages/glyphs'
+import Glyphs from './pages/glyphs'
+import GlyphPage from './pages/glyph-page'
+import Editor from './pages/editor'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import {
@@ -22,8 +24,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/all-glyphs',
-        element: <AllGlyphs />,
+        path: '/editor',
+        element: <Editor />,
+      },
+      {
+        path: '/glyphs',
+        element: <Glyphs />,
+      },
+      {
+        path: '/glyphs/:letters',
+        element: <GlyphPage />,
       },
     ],
   },

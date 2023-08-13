@@ -8,7 +8,8 @@ function Root() {
     <div>
       <div>
         <NavLink className={navLinkClass} to='/' >Home</NavLink>
-        <NavLink className={navLinkClass} to='all-glyphs' >All Glyphs</NavLink>
+        <NavLink className={navLinkClass} to='editor' >Editor</NavLink>
+        <NavLink className={navLinkClass} to='glyphs' >Glyphs</NavLink>
       </div>
       <Outlet />
     </div>
