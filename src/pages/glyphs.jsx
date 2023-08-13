@@ -7,7 +7,7 @@ const l1 = 'mphwntslgkfy'.split('')
 const l2 = 'ieaou'.split('')
 const l3 = ' ieaou'.split('')
 
-function AllGlyphs() {
+function Block(consonant) {
   return (
     <div className="flex flex-wrap">
       {cartesian(l1, l2, l3).filter(item => item[1] !== item[2]).map(item => <Glyph letters={item} size={50} border="none" />)}
@@ -15,4 +15,12 @@ function AllGlyphs() {
   );
 }
 
-export default AllGlyphs;
+function Glyphs() {
+  return (
+    <div className="flex flex-wrap">
+      {cartesian(l1, l2, l3).filter(item => item[1] !== item[2]).map(item => <Glyph letters={item} size={50} border="none" />)}
+    </div>
+  );
+}
+
+export default Glyphs;
