@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import GlyphSymbol from '../components/glyph-symbol'
 import GlyphText from '../components/glyph-text'
 
@@ -10,35 +9,26 @@ function Glyph({
   border, 
   fill
 }) {
-  const [isHovering, setIsHovering] = useState(false)
-
-  const handleMouseOver = () => {
-    setIsHovering(true)
-  }
-
-  const handleMouseOut = () => {
-    setIsHovering(false)
-  };
 
   return (
     <div
+      className='relative'
       style = {{'width': size, 'height': size}}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
     >
-      {isHovering ? 
-      (<GlyphText 
-        letters={letters} 
-        size={size}
-        boxClass={boxClass}
-        letterClass={letterClass}
-      />) : 
-      (<GlyphSymbol 
+      <GlyphSymbol 
         letters={letters}
         size={size}
         border={border}
         fill={fill}
-      />)}
+      />
+      <div className='absolute bottom-0 left-0 opacity-0 hover:opacity-90 ease-in duration-250'>
+        <GlyphText 
+          letters={letters} 
+          size={size}
+          boxClass={boxClass}
+          letterClass={letterClass}
+        />
+      </div>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 function GlyphText({
   letters = '',  
   size = 200,
-  boxClass = 'bg-emerald-200',
+  boxClass = 'bg-emerald-200 rounded-lg',
   letterClass = ''
 }) {
   const boxStyle = {
@@ -23,18 +23,25 @@ function GlyphText({
     lineHeight: `${Math.round(size/2)}px`, 
     fontSize: `${Math.round(0.4*size)}px`
   }
+
+  const replacedLetters = Array.from(letters).map(letter => {
+    if (letter === '_') {
+      return ' '
+    }
+    return letter
+  })
   
   return (
     <div className={boxClass} style={boxStyle}>
       <div style={innerStyle1}>
-        <span className={letterClass} >{letters[0]}</span>
+        <span className={letterClass} >{replacedLetters[0]}</span>
       </div>
       <div>
         <div style={innerStyle23}>
-          <span className={letterClass} >{letters[1]}</span>
+          <span className={letterClass} >{replacedLetters[1]}</span>
         </div>
         <div style={innerStyle23}>
-        <span className={letterClass} >{letters[2]}</span>
+        <span className={letterClass} >{replacedLetters[2]}</span>
         </div>
       </div>
     </div>
