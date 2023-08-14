@@ -24,7 +24,6 @@ async function openAsync(setText, setFile) {
 async function saveAsync(text, file) {
   try {
     const options = {
-      suggestedName: file.name,
       types: [
         {
           description: 'Text Files',
@@ -33,7 +32,10 @@ async function saveAsync(text, file) {
           },
         },
       ],
-    };
+    }
+    if (file && file.name) {
+      options.suggestedName = file.name
+    }
     const handle = await window.showSaveFilePicker(options)
     const writable = await handle.createWritable()
     await writable.write(text)
@@ -66,10 +68,18 @@ function Editor() {
   return (
     <div>
       <h1 className='mb-6 text-xl'>Editor</h1>
-      <Display text={text} />
-      <textarea value={text} onChange={handleTextChange} />
-      <button onClick={handleOpen} >Open</button>
-      <button onClick={handleSave} >Save</button>
+      <div className='grid grid-rows-4 justify-items-center'>
+        <div className='border-2 rounded-lg p-2 m-2 row-span-3'>
+          <Display text={text} />
+        </div>
+        <div className='flex row-span-1'>
+          <textarea value={text} onChange={handleTextChange} className='border-2 rounded-lg p-2 m-2 w-96'/>
+          <div className='flex flex-col' >
+            <button onClick={handleOpen} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Open</button>
+            <button onClick={handleSave} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Save</button>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
