@@ -15,3 +15,10 @@ i need to learn the setting for inline svg:
 
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 
+# editor
+
+this website has an editor that allows typing in plain text to see the glyphs.  Also does loading and saving plain text files.  
+
+# glyphs
+
+the glyphs page shows a view of all 300 glyphs.  each one can be clicked on to go to a details page.

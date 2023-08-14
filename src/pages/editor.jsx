@@ -67,7 +67,6 @@ function Editor() {
 
   return (
     <div>
-      <h1 className='mb-6 text-xl'>Editor</h1>
       <div className='grid grid-rows-4 justify-items-center'>
         <div className='border-2 rounded-lg p-2 m-2 row-span-3'>
           <Display text={text} />
