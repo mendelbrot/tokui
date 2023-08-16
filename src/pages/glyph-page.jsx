@@ -6,7 +6,7 @@ function GlyphPage() {
   const {letters} = useParams()
 
   return (
-    <div>
+    <div className='w-48 selection:border-2'>
       <GlyphSymbol letters={letters}/>
       <GlyphText letters={letters}/>
     </div>

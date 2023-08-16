@@ -1,28 +1,10 @@
+import { useEffect, useState, useRef } from 'react'
+
 function GlyphText({
-  letters = '',  
-  size = 200,
-  boxClass = 'bg-emerald-200 rounded-lg',
-  letterClass = ''
+  letters = ''
 }) {
-  const boxStyle = {
-    width: `${size}px`, 
-    height: `${size}px`, 
-    display: 'flex'
-  }
-  const innerStyle1 = {
-    width: `${Math.round(size/2)}px`, 
-    height: `${size}px`, 
-    textAlign: 'center', 
-    lineHeight: `${size}px`, 
-    fontSize: `${Math.round(0.7*size)}px`
-  }
-  const innerStyle23 = {
-    width: `${Math.round(size/2)}px`, 
-    height: `${Math.round(size/2)}px`, 
-    textAlign: 'center', 
-    lineHeight: `${Math.round(size/2)}px`, 
-    fontSize: `${Math.round(0.4*size)}px`
-  }
+  const [width, setWidth] = useState(0)
+  const elementRef = useRef(null)
 
   const replacedLetters = Array.from(letters).map(letter => {
     if (letter === '_' || letter === '-') {
@@ -30,19 +12,46 @@ function GlyphText({
     }
     return letter
   })
+
+  const handleResize = () => {
+    setWidth(elementRef.current.offsetWidth)
+  }
+
+  useEffect(() => {
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
   
   return (
-    <div className={boxClass} style={boxStyle}>
-      <div style={innerStyle1}>
-        <span className={letterClass} >{replacedLetters[0]}</span>
+    <div className='bg-emerald-200 rounded-lg grid grid-rows-2 grid-flow-col'>
+      <div 
+        className={`row-span-2 text-center`}
+        style={{
+          height: 2*width + 'px',
+          fontSize: Math.round(width) + 'px'
+        }}
+        ref={elementRef} 
+      >
+        {replacedLetters[0]}
       </div>
-      <div>
-        <div style={innerStyle23}>
-          <span className={letterClass} >{replacedLetters[1]}</span>
-        </div>
-        <div style={innerStyle23}>
-        <span className={letterClass} >{replacedLetters[2]}</span>
-        </div>
+      <div 
+        className='text-center'
+        style={{
+          height: width + 'px',
+          fontSize: Math.round(0.5*width) + 'px'
+        }}
+      >
+        {replacedLetters[1]}
+      </div>
+      <div 
+        className='text-center'
+        style={{
+          height: width + 'px',
+          fontSize: Math.round(0.5*width) + 'px'
+        }}
+      >
+        {replacedLetters[2]}
       </div>
     </div>
   )

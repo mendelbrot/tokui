@@ -2,11 +2,8 @@ import Glyph from '../components/glyph'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-const size = 50
-const wideWidth = `${Math.round(20*size) + 3*48}px`
-const tallWidth = `${Math.round(15*size) + 2*48}px`
 const wideStyle = 'grid grid-rows-3 grid-flow-col gap-12'
-const tallStyle = 'grid grid-cols-3 gap-12'
+const tallStyle = 'grid grid-cols-1 gap-12 sm:grid-cols-3'
 
 const letters = (consonant) => {
   return [
@@ -42,9 +39,11 @@ function Block({consonant}) {
   return (
     <div className='grid grid-cols-5'>
       {letters(consonant).map(l => (
-        <Link to={`/glyphs/${l.join('')}`} key={l.join('')}>
-          <Glyph letters={l} size={size}/>
-        </Link>
+        <div className='min-w-12 max-w-48'>
+          <Link to={`/glyphs/${l.join('')}`} key={l.join('')}>
+            <Glyph letters={l}/>
+          </Link>
+        </div>
       ))}
     </div>
   );
@@ -63,10 +62,7 @@ function Toggle({active}) {
 
 function Glyphs() {
   const [tall, setTall] = useState(true)
-
   const gridStyle = tall ? tallStyle : wideStyle
-  const gridWidth = tall ? tallWidth : wideWidth
-
   const toggleTall = () => {
     setTall(!tall)
   }
@@ -76,7 +72,7 @@ function Glyphs() {
       <div onClick={toggleTall} style={{display: 'none'}}>
         <Toggle active={tall} />
       </div>
-      <div className={gridStyle} style={{width: gridWidth}} >
+      <div className={gridStyle} >
         <Block consonant='m' />
         <Block consonant='n' />
         <Block consonant='g' />

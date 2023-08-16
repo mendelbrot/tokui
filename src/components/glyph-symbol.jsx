@@ -144,12 +144,10 @@ const U2 = ({rectStyle}) =>
 
 function Glyph({
   letters = '', 
-  size = 200,  
-  border = 'none', 
   fill = 'black'
 }) {
   const rectStyle = {'fill': fill}
-  const svgStyle = {'width': `${size}px`, 'height': `${size}px`, 'border': border}
+  const svgStyle = {}
 
   return (
     <div>
