@@ -16,7 +16,7 @@ const words = [
   {
     id: 3,
     written: 'to kui',
-    meanings: ['the name of this language'],
+    meanings: ['the language kui'],
     tags: [],
     tokipona: null,
   },

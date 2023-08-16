@@ -2,19 +2,36 @@ import GlyphSymbol from '../components/glyph-symbol'
 import GlyphText from '../components/glyph-text'
 import words from '../data/words'
 
+function WordHeading({letters}) {
+  const words = letters && letters.split(' ')
+  const multi = words.length > 1
+
+  return (
+    <div className={multi ? '' : 'flex'} >
+      <div className='flex' >
+        {words.map(w => (
+          <div className='w-24 pb-2 pr-2'>
+            <GlyphText letters={w} />
+          </div>
+        ))}        
+      </div>
+      <div className='flex' >
+        {words.map(w => (
+          <div className='w-24 pb-2 pr-2' >
+            <GlyphSymbol letters={w} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function WordDetails({letters}) {
   const thisWord = words.filter(w => w.written === letters)[0]
 
   return (
     <div>
-      <div className='flex' >
-        <div className='w-24 mb-2 mr-2' >
-          <GlyphSymbol letters={letters} />
-        </div>
-        <div className='w-24 mb-2'>
-          <GlyphText letters={letters} />
-        </div>
-      </div>
+      <WordHeading letters={letters} />
       {thisWord && <div className='prose' >
         {thisWord.meanings && thisWord.meanings.length > 0 && <div>
           <h3>meanings</h3>
