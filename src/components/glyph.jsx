@@ -3,7 +3,8 @@ import GlyphText from '../components/glyph-text'
 
 function Glyph({
   letters,  
-  fill
+  fill,
+  absolute
 }) {
 
   return (

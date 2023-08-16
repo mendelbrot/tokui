@@ -1,6 +1,6 @@
 import Glyph from '../components/glyph'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import React from 'react'
 
 const wideStyle = 'grid grid-rows-3 grid-flow-col gap-12'
 const tallStyle = 'grid grid-cols-1 gap-12 sm:grid-cols-3'
@@ -61,11 +61,18 @@ function Toggle({active}) {
 }
 
 function Glyphs() {
-  const [tall, setTall] = useState(true)
+  const [tall, setTall] = React.useState(true)
   const gridStyle = tall ? tallStyle : wideStyle
   const toggleTall = () => {
     setTall(!tall)
   }
+
+  const reload = () => window.location.reload(false)
+  React.useEffect(() => {
+    window.addEventListener('resize', reload)
+    window.addEventListener('resize', () => console.log('hello'))
+    return window.removeEventListener('resize', reload)
+  }, [])
 
   return (
     <div>

@@ -1,4 +1,3 @@
-// import Glyph from './glyph'
 import GlyphSymbol from './glyph-symbol'
 
 const textToArray = (text) => {

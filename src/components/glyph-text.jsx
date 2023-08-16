@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 
 function GlyphText({
-  letters = ''
+  letters = '',
 }) {
   const [width, setWidth] = useState(0)
   const elementRef = useRef(null)
@@ -19,16 +19,15 @@ function GlyphText({
 
   useEffect(() => {
     handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    // window.addEventListener('resize', handleResize)
+    // return () => window.removeEventListener('resize', handleResize)
   }, [])
   
   return (
-    <div className='bg-emerald-200 rounded-lg grid grid-rows-2 grid-flow-col'>
+    <div className='bg-emerald-200 rounded-lg grid grid-rows-2 grid-flow-col' >
       <div 
-        className={`row-span-2 text-center`}
+        className='row-span-2 text-center'
         style={{
-          height: 2*width + 'px',
           lineHeight: 2*width + 'px',
           fontSize: Math.round(width) + 'px'
         }}
@@ -39,7 +38,6 @@ function GlyphText({
       <div 
         className='text-center'
         style={{
-          height: width + 'px',
           fontSize: Math.round(0.7*width) + 'px'
         }}
       >
@@ -48,7 +46,6 @@ function GlyphText({
       <div 
         className='text-center'
         style={{
-          height: width + 'px',
           fontSize: Math.round(0.7*width) + 'px'
         }}
       >
