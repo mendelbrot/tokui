@@ -1,10 +1,8 @@
-import {useParams} from 'react-router-dom'
 import GlyphSymbol from '../components/glyph-symbol'
 import GlyphText from '../components/glyph-text'
 import words from '../data/words'
 
-function GlyphPage() {
-  const {letters} = useParams()
+function WordDetails({letters}) {
   const thisWord = words.filter(w => w.written === letters)[0]
 
   return (
@@ -48,4 +46,4 @@ function GlyphPage() {
   )
 }
 
-export default GlyphPage;
+export default WordDetails

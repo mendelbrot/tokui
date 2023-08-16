@@ -4,7 +4,7 @@ import ErrorPage from './pages/error-page'
 import Home from './pages/home'
 import Root from './pages/root'
 import Glyphs from './pages/glyphs'
-import GlyphPage from './pages/glyph-page'
+import GlyphPage from './pages/word-details-page'
 import Editor from './pages/editor'
 import Words from './pages/words'
 import './index.css'
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <Glyphs />,
       },
       {
-        path: '/glyphs/:letters',
+        path: '/words/:letters',
         element: <GlyphPage />,
       },
       {
