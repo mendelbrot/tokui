@@ -10,12 +10,15 @@ function Display({text, array}) {
   const wordsArray = array || textToArray(text)
 
   return (
-    <div style={{height: '500px', width: '600px'}} >
+    <div className='w-[80vw] sm:w-[576px] h-[240px] sm:h-[576px] overflow-y-auto'>
       {wordsArray.map((line, lineIndex) => (
         <div key={`line ${lineIndex}`} className='flex flex-wrap'>
           {line.map((word, wordIndex) => (
-            <div key={`word ${wordIndex}`} >
-              <GlyphSymbol letters={word} size={50} />
+            <div 
+              key={`word ${wordIndex}`} 
+              className='w-[48px]' 
+            >
+              <GlyphSymbol letters={word}/>
             </div>
           ))}
         </div>

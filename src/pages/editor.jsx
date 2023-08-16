@@ -68,11 +68,14 @@ function Editor() {
   return (
     <div>
       <div className='grid grid-rows-4 justify-items-center'>
-        <div className='border-2 rounded-lg p-2 m-2 row-span-3'>
+        <div className='border-2 rounded-lg row-span-2 p-2 sm:row-span-3'>
           <Display text={text} />
         </div>
         <div className='flex row-span-1'>
-          <textarea value={text} onChange={handleTextChange} className='border-2 rounded-lg p-2 m-2 w-96'/>
+          <textarea 
+            value={text} 
+            onChange={handleTextChange} 
+            className='border-2 rounded-lg p-2 m-2 w-[50vw] sm:w-96'/>
           <div className='flex flex-col' >
             <button onClick={handleOpen} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Open</button>
             <button onClick={handleSave} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Save</button>

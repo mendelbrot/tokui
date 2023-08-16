@@ -29,6 +29,7 @@ function GlyphText({
         className={`row-span-2 text-center`}
         style={{
           height: 2*width + 'px',
+          lineHeight: 2*width + 'px',
           fontSize: Math.round(width) + 'px'
         }}
         ref={elementRef} 
@@ -39,7 +40,7 @@ function GlyphText({
         className='text-center'
         style={{
           height: width + 'px',
-          fontSize: Math.round(0.5*width) + 'px'
+          fontSize: Math.round(0.7*width) + 'px'
         }}
       >
         {replacedLetters[1]}
@@ -48,7 +49,7 @@ function GlyphText({
         className='text-center'
         style={{
           height: width + 'px',
-          fontSize: Math.round(0.5*width) + 'px'
+          fontSize: Math.round(0.7*width) + 'px'
         }}
       >
         {replacedLetters[2]}
