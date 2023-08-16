@@ -1,15 +1,15 @@
-const Hor1 = ({rectStyle}) => <rect x="0.75" y="0.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-const Hor2 = ({rectStyle}) => <rect x="0.75" y="4.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-const Hor3 = ({rectStyle}) => <rect x="0.75" y="8.75" width="8.5" height="0.5" rx="0.25" style={rectStyle}/>
-const Ver1 = ({rectStyle}) => <rect x="0.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-const Ver2 = ({rectStyle}) => <rect x="4.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-const Ver3 = ({rectStyle}) => <rect x="8.75" y="0.75" width="0.5" height="8.5" rx="0.25" style={rectStyle}/>
-const Vt1 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(45)" style={rectStyle} />
-const Vt2 = ({rectStyle}) => <rect x="2.65" y="2.5" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
-const Vt3 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(135)" style={rectStyle} />
-const Vb1 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-45)" style={rectStyle} />
-const Vb2 = ({rectStyle}) => <rect x="2.65" y="7" width="4.7" height="0.5" rx="0.25" style={rectStyle}/>
-const Vb3 = ({rectStyle}) => <rect x="-0.80" y="4.75" width="6" height="0.5" rx="0.25" transform-origin="center" transform="rotate(-135) "style={rectStyle} />
+const Hor1 = ({rectStyle}) => <rect x='0.75' y='0.75' width='8.5' height='0.5' rx='0.25' style={rectStyle}/>
+const Hor2 = ({rectStyle}) => <rect x='0.75' y='4.75' width='8.5' height='0.5' rx='0.25' style={rectStyle}/>
+const Hor3 = ({rectStyle}) => <rect x='0.75' y='8.75' width='8.5' height='0.5' rx='0.25' style={rectStyle}/>
+const Ver1 = ({rectStyle}) => <rect x='0.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
+const Ver2 = ({rectStyle}) => <rect x='4.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
+const Ver3 = ({rectStyle}) => <rect x='8.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
+const Vt1 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(45)' style={rectStyle} />
+const Vt2 = ({rectStyle}) => <rect x='2.65' y='2.5' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
+const Vt3 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(135)' style={rectStyle} />
+const Vb1 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(-45)' style={rectStyle} />
+const Vb2 = ({rectStyle}) => <rect x='2.65' y='7' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
+const Vb3 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(-135) 'style={rectStyle} />
 
 const M = ({rectStyle}) =>
   <>
@@ -151,7 +151,7 @@ function Glyph({
 
   return (
     <div>
-      <svg version="1.1" viewBox="0 0 10 10" style={svgStyle}>
+      <svg version='1.1' viewBox='0 0 10 10' style={svgStyle}>
         {letters[0] && letters[0].toLowerCase() === 'm' && <M rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'n' && <N rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'g' && <G rectStyle={rectStyle} />}
