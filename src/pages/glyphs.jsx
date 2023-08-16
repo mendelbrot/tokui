@@ -2,9 +2,6 @@ import Glyph from '../components/glyph'
 import { Link } from 'react-router-dom'
 import React from 'react'
 
-const wideStyle = 'grid grid-rows-3 grid-flow-col gap-12'
-const tallStyle = 'grid grid-cols-1 gap-12 sm:grid-cols-3'
-
 const letters = (consonant) => {
   return [
     [consonant, 'i', ''],
@@ -39,8 +36,8 @@ function Block({consonant}) {
   return (
     <div className='grid grid-cols-5'>
       {letters(consonant).map(l => (
-        <div className='min-w-12 max-w-48'>
-          <Link to={`/glyphs/${l.join('')}`} key={l.join('')}>
+        <div key={l.join('')} className='min-w-12 max-w-48'>
+          <Link to={`/glyphs/${l.join('')}`} >
             <Glyph letters={l}/>
           </Link>
         </div>
@@ -49,37 +46,10 @@ function Block({consonant}) {
   );
 }
 
-function Toggle({active}) {
-  const activeClass = 'w-6 h-12 bg-emerald-200 rounded-lg border-2 border-slate-500'
-  const inactiveClass = 'w-12 h-6 bg-emerald-200 rounded-lg border-2 border-slate-500'
-  const toggleClass = active ? activeClass : inactiveClass
-  return (
-    <div className='grid grid-cols-1 content-center justify-items-center w-12 h-12'>
-      <div className={toggleClass}></div>
-    </div>
-  )
-}
-
 function Glyphs() {
-  const [tall, setTall] = React.useState(true)
-  const gridStyle = tall ? tallStyle : wideStyle
-  const toggleTall = () => {
-    setTall(!tall)
-  }
-
-  const reload = () => window.location.reload(false)
-  React.useEffect(() => {
-    window.addEventListener('resize', reload)
-    window.addEventListener('resize', () => console.log('hello'))
-    return window.removeEventListener('resize', reload)
-  }, [])
-
   return (
     <div>
-      <div onClick={toggleTall} style={{display: 'none'}}>
-        <Toggle active={tall} />
-      </div>
-      <div className={gridStyle} >
+      <div className={'grid grid-cols-1 gap-12 sm:grid-cols-3'} >
         <Block consonant='m' />
         <Block consonant='n' />
         <Block consonant='g' />
