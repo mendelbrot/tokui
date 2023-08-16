@@ -6,6 +6,7 @@ import Root from './pages/root'
 import Glyphs from './pages/glyphs'
 import GlyphPage from './pages/glyph-page'
 import Editor from './pages/editor'
+import Words from './pages/words'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/glyphs/:letters',
         element: <GlyphPage />,
+      },
+      {
+        path: '/words',
+        element: <Words />,
       },
     ],
   },

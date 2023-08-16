@@ -75,8 +75,8 @@ function Editor() {
           <textarea 
             value={text} 
             onChange={handleTextChange} 
-            className='border-2 rounded-lg p-2 m-2 w-[50vw] sm:w-96'/>
-          <div className='flex flex-col' >
+            className='border-2 rounded-lg p-2 m-2 mt-4 w-[50vw] sm:w-96'/>
+          <div className='flex flex-col mt-2' >
             <button onClick={handleOpen} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Open</button>
             <button onClick={handleSave} className='border-2 rounded-lg p-2 m-2 hover:border-black'>Save</button>
           </div>

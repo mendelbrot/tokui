@@ -20,7 +20,7 @@ function GlyphPage() {
       {thisWord && <div className='prose' >
         {thisWord.meanings && thisWord.meanings.length > 0 && <div>
           <h3>meanings</h3>
-          <div className='max-h-48 flex flex-wrap' >
+          <div className='flex flex-wrap' >
             {thisWord.meanings.map(m => 
               <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
                 {m}
@@ -30,11 +30,13 @@ function GlyphPage() {
         </div>}
         {thisWord.tags && thisWord.tags.length > 0 && <div>
           <h3>tags</h3>
-          {thisWord.tags.map(m => 
-            <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
-              {m}
-            </div>
-          )}
+          <div className='flex flex-wrap' >
+            {thisWord.tags.map(m => 
+              <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
+                {m}
+              </div>
+            )}
+          </div>
         </div>}
         {thisWord.tokipona && <div>
           <h3>toki pona equivalent</h3>

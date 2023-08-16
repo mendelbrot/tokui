@@ -6,10 +6,11 @@ const navLinkClass = ({ isActive, isPending }) =>
 function Root() {
   return (
     <div className='m-4'>
-      <div className='mb-4'>
+      <div className='pb-4 border-b-2 mb-4'>
         <NavLink className={navLinkClass} to='/' >Home</NavLink>
         <NavLink className={navLinkClass} to='editor' >Editor</NavLink>
         <NavLink className={navLinkClass} to='glyphs' >Glyphs</NavLink>
+        <NavLink className={navLinkClass} to='words' >Words</NavLink>
       </div>
       <Outlet />
     </div>

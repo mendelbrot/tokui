@@ -2,13 +2,20 @@ const words = [
   {
     id: 1,
     written: 'to',
-    meanings: ['talk', 'speak', 'communicate', 'say', 'express', 'abc', 'abc', 'bc'],
+    meanings: ['talk', 'speak', 'communicate', 'say', 'express',],
     tags: ['tokipona'],
     tokipona: 'toki',
   },
   {
     id: 2,
     written: 'kui',
+    meanings: ['the name of this language'],
+    tags: [],
+    tokipona: null,
+  },
+  {
+    id: 3,
+    written: 'to kui',
     meanings: ['the name of this language'],
     tags: [],
     tokipona: null,
