@@ -5,8 +5,8 @@ import { useState } from 'react'
 const size = 50
 const wideWidth = `${Math.round(20*size) + 3*48}px`
 const tallWidth = `${Math.round(15*size) + 2*48}px`
-const wideStyle = 'grid grid-cols-4 gap-12'
-const tallStyle = 'grid grid-rows-4 grid-flow-col gap-12'
+const wideStyle = 'grid grid-rows-3 grid-flow-col gap-12'
+const tallStyle = 'grid grid-cols-3 gap-12'
 
 const letters = (consonant) => {
   return [
@@ -62,7 +62,7 @@ function Toggle({active}) {
 }
 
 function Glyphs() {
-  const [tall, setTall] = useState(false)
+  const [tall, setTall] = useState(true)
 
   const gridStyle = tall ? tallStyle : wideStyle
   const gridWidth = tall ? tallWidth : wideWidth
@@ -73,21 +73,21 @@ function Glyphs() {
 
   return (
     <div>
-      <div onClick={toggleTall}>
+      <div onClick={toggleTall} style={{display: 'none'}}>
         <Toggle active={tall} />
       </div>
       <div className={gridStyle} style={{width: gridWidth}} >
         <Block consonant='m' />
-        <Block consonant='p' />
-        <Block consonant='f' />
-        <Block consonant='w' />
         <Block consonant='n' />
-        <Block consonant='t' />
-        <Block consonant='s' />
-        <Block consonant='l' />
         <Block consonant='g' />
+        <Block consonant='p' />
+        <Block consonant='t' />
         <Block consonant='k' />
+        <Block consonant='f' />
+        <Block consonant='s' />
         <Block consonant='h' />
+        <Block consonant='w' />
+        <Block consonant='l' />
         <Block consonant='y' />
       </div>
     </div>

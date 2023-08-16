@@ -25,7 +25,7 @@ function GlyphText({
   }
 
   const replacedLetters = Array.from(letters).map(letter => {
-    if (letter === '_') {
+    if (letter === '_' || letter === '-') {
       return ' '
     }
     return letter

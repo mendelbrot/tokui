@@ -17,47 +17,9 @@ const M = ({rectStyle}) =>
     <Ver1 rectStyle={rectStyle}/>
   </>
 
-const P = ({rectStyle}) =>
-  <>
-    <Hor1 rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver1 rectStyle={rectStyle}/>
-  </>
-
-const F = ({rectStyle}) =>
-  <>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver1 rectStyle={rectStyle}/>
-  </>
-
-const W = ({rectStyle}) =>
-  <>
-    <Hor2 rectStyle={rectStyle}/>
-    <Ver1 rectStyle={rectStyle}/>
-  </>
-
 const N = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
-  </>
-
-const T = ({rectStyle}) =>
-  <>
-    <Hor1 rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
-  </>
-
-const S = ({rectStyle}) =>
-  <>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
-  </>
-
-const L = ({rectStyle}) =>
-  <>
-    <Hor2 rectStyle={rectStyle}/>
     <Ver2 rectStyle={rectStyle}/>
   </>
 
@@ -67,22 +29,60 @@ const G = ({rectStyle}) =>
     <Ver3 rectStyle={rectStyle}/>
   </>
 
+const P = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
+
+const T = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
 const K = ({rectStyle}) =>
+  <>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+const F = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
+
+const S = ({rectStyle}) =>
+  <>
+    <Hor1 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
+  </>
+
+const H = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
     <Hor3 rectStyle={rectStyle}/>
     <Ver3 rectStyle={rectStyle}/>
   </>
 
-const H = ({rectStyle}) =>
+const W = ({rectStyle}) =>
   <>
     <Hor3 rectStyle={rectStyle}/>
-    <Ver3 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+  </>
+
+const L = ({rectStyle}) =>
+  <>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver2 rectStyle={rectStyle}/>
   </>
 
 const Y = ({rectStyle}) =>
   <>
-    <Hor2 rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
     <Ver3 rectStyle={rectStyle}/>
   </>
 
@@ -155,16 +155,16 @@ function Glyph({
     <div>
       <svg version="1.1" viewBox="0 0 10 10" style={svgStyle}>
         {letters[0] && letters[0].toLowerCase() === 'm' && <M rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 'p' && <P rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 'h' && <H rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'n' && <N rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 't' && <T rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 's' && <S rectStyle={rectStyle} />}
-        {letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'g' && <G rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'p' && <P rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 't' && <T rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'k' && <K rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'f' && <F rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 's' && <S rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'h' && <H rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
+        {letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'y' && <Y rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'i' && <I1 rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'e' && <E1 rectStyle={rectStyle} />}

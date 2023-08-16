@@ -2,20 +2,25 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="200mm"
-   height="200mm"
-   viewBox="0 0 200 200"
+   width="617.62903"
+   height="615.4129"
+   viewBox="0 0 163.41437 162.82802"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs1" />
-  <g
-     id="layer1">
-    <path
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 20,20 H 180 V 180 H 20 L 180,20"
-       id="path2" />
-  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:4"
+     d="M 161.41421,81.414214 H 1.4869406"
+     id="path1" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:4"
+     d="M 161.41421,1.4142136 V 161.41421"
+     id="path3" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:4"
+     d="M 1.4142136,161.41421 161.41421,1.4142136"
+     id="path4" />
 </svg>
