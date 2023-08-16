@@ -9,23 +9,38 @@ function GlyphPage() {
 
   return (
     <div>
-      <div className='flex'>
-        <div className='w-24 mb-2 mr-2'>
-          <GlyphSymbol letters={letters}/>
+      <div className='flex' >
+        <div className='w-24 mb-2 mr-2' >
+          <GlyphSymbol letters={letters} />
         </div>
         <div className='w-24 mb-2'>
-          <GlyphText letters={letters}/>
+          <GlyphText letters={letters} />
         </div>
       </div>
-      <div>
-        {thisWord && <div className='prose max-h-48 flex flex-wrap'>
-          {thisWord.meanings.map(m => 
-            <div key={m} className='border-2 m-1 px-2 py-1 rounded-lg w-36' >
+      {thisWord && <div className='prose' >
+        {thisWord.meanings && thisWord.meanings.length > 0 && <div>
+          <h3>meanings</h3>
+          <div className='max-h-48 flex flex-wrap' >
+            {thisWord.meanings.map(m => 
+              <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
+                {m}
+              </div>
+            )}
+          </div>
+        </div>}
+        {thisWord.tags && thisWord.tags.length > 0 && <div>
+          <h3>tags</h3>
+          {thisWord.tags.map(m => 
+            <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
               {m}
             </div>
           )}
         </div>}
-      </div>
+        {thisWord.tokipona && <div>
+          <h3>toki pona equivalent</h3>
+          {thisWord.tokipona}
+        </div>}
+      </div>}
     </div>
     
   )

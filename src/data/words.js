@@ -2,7 +2,7 @@ const words = [
   {
     id: 1,
     written: 'to',
-    meanings: ['talk', 'speak', 'communicate', 'say', 'express'],
+    meanings: ['talk', 'speak', 'communicate', 'say', 'express', 'abc', 'abc', 'bc'],
     tags: ['tokipona'],
     tokipona: 'toki',
   },
