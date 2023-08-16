@@ -38,7 +38,7 @@ function Block({consonant}) {
       {letters(consonant).map(l => (
         <div key={l.join('')} className='min-w-12 max-w-48'>
           <Link to={`/words/${l.join('')}`} >
-            <Glyph letters={l}/>
+            <Glyph letters={l.join('')}/>
           </Link>
         </div>
       ))}
