@@ -6,7 +6,7 @@ import RandomWord from '../components/random-word'
 function Words() {
   return (
     <div>
-      <div className='absolute bottom-6 right-6'>
+      <div className='fixed bottom-6 right-6'>
         <RandomWord />
       </div>
       <div className='sm:flex sm:flex-wrap'>
