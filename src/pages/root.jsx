@@ -5,8 +5,8 @@ const navLinkClass = ({ isActive, isPending }) =>
 
 function Root() {
   return (
-    <div className='m-4'>
-      <div className='pb-4 border-b-2 mb-4'>
+    <div className='mx-4 mb-4'>
+      <div className='sticky top-0 z-50 bg-white py-4 border-b-2 mb-4'>
         <NavLink className={navLinkClass} to='/' >Home</NavLink>
         <NavLink className={navLinkClass} to='editor' >Editor</NavLink>
         <NavLink className={navLinkClass} to='glyphs' >Glyphs</NavLink>
