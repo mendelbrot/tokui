@@ -4,9 +4,9 @@ import words from '../data/words'
 
 function Words() {
   return (
-    <div className='max-w-prose'>
+    <div className='sm:flex sm:flex-wrap'>
       {words.map(w => 
-        <div key={'w ' + w.written} className='flex py-2 sm:py-4 border-b-2 first:pt-0' >
+        <div key={'w ' + w.written} className='flex p-2 sm:py-4 border-b-2 sm:mr-12 hover:bg-yellow-50' >
           <Link to={`/words/${encodeURI(w.written)}`} >
             <div className='flex'>
               <div className='w-48'>
