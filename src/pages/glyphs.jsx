@@ -50,7 +50,7 @@ function Glyphs() {
 
   return (
     <div>
-      <div className={`grid grid-cols-1 gap-12 sm:gap-6 sm:grid-cols-3 sm:max-w-2xl sm:overflow-x-auto`} >
+      <div className={'grid gap-4 sm:gap-6 grid-cols-3 max-w-2xl'} >
         <Block consonant='m' />
         <Block consonant='n' />
         <Block consonant='g' />
