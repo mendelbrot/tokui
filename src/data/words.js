@@ -22,7 +22,7 @@ const words = [
   },
   {
     id: 4,
-    written: 'ko',
+    written: 'lo',
     meanings: ['zero', 'none', 'empty', 'void'],
     tags: ['numbers'],
     tokipona: ['ala'],
@@ -43,7 +43,7 @@ const words = [
   },
   {
     id: 7,
-    written: 'le',
+    written: 'fe',
     meanings: ['three', 'triple', 'triad'],
     tags: ['numbers'],
     tokipona: [],
@@ -71,7 +71,7 @@ const words = [
   },
   {
     id: 11,
-    written: 'tea',
+    written: 'giu',
     meanings: ['plus', 'add', 'give', 'bring'],
     tags: ['numbers', 'tokipona'],
     tokipona: ['pana'],
@@ -85,7 +85,7 @@ const words = [
   },
   {
     id: 13,
-    written: 'nu',
+    written: 'na',
     meanings: ['number'],
     tags: ['numbers', 'tokipona'],
     tokipona: ['nanpa'],
@@ -93,7 +93,7 @@ const words = [
   {
     id: 14,
     written: 'yui',
-    meanings: ['subtract', 'remove', 'take away', 'omit', 'absent', 'ignore', 'loose'],
+    meanings: ['minus', 'subtract', 'remove', 'take away', 'omit', 'absent', 'ignore', 'loose'],
     tags: ['numbers', 'tokipona'],
     tokipona: ['weka'],
   },
