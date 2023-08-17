@@ -67,7 +67,7 @@ function Editor() {
 
   return (
     <div>
-      <div className='grid grid-rows-4 justify-items-center'>
+      <div className='grid grid-rows-4 justify-items-center max-w-2xl pt-2 sm:pt-4'>
         <div className='border-2 rounded-lg row-span-2 p-2 sm:row-span-3'>
           <Display text={text} />
         </div>

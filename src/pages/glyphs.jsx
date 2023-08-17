@@ -47,9 +47,10 @@ function Block({consonant}) {
 }
 
 function Glyphs() {
+
   return (
     <div>
-      <div className={'grid grid-cols-1 gap-12 sm:grid-cols-3'} >
+      <div className={`grid grid-cols-1 gap-12 sm:gap-6 sm:grid-cols-3 sm:max-w-2xl sm:overflow-x-auto`} >
         <Block consonant='m' />
         <Block consonant='n' />
         <Block consonant='g' />

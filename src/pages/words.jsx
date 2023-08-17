@@ -8,7 +8,7 @@ function Words() {
       {words.map(w => 
         <div key={'w ' + w.written} className='flex py-2 sm:py-4 border-b-2 first:pt-0' >
           <Link to={`/words/${encodeURI(w.written)}`} >
-            <GlyphMulti letters={w.written} sizeClass='w-12 sm:w-24 mr-1' />
+            <GlyphMulti letters={w.written} sizeClass='w-12 mr-1' />
           </Link>
         </div>
       )}
