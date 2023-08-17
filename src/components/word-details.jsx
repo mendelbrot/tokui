@@ -45,17 +45,19 @@ function WordDetails({letters}) {
         </div>}
         {thisWord.tags && thisWord.tags.length > 0 && <div>
           <h3>tags</h3>
-          <div className='flex flex-wrap' >
-            {thisWord.tags.map(m => 
-              <div key={m} className='border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36' >
-                {m}
-              </div>
-            )}
-          </div>
+          <ul>
+            {thisWord.tags.map(i => (
+              <li>{i}</li>
+            ))}
+          </ul>
         </div>}
-        {thisWord.tokipona && <div>
-          <h3>toki pona equivalent</h3>
-          {thisWord.tokipona}
+        {thisWord.tokipona && thisWord.tags.length > 0 && <div>
+          <h3>toki pona equivalents</h3>
+          <ul>
+            {thisWord.tokipona.map(i => (
+              <li>{i}</li>
+            ))}
+          </ul>
         </div>}
       </div>}
     </div>
