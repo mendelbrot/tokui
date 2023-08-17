@@ -65,7 +65,7 @@ const words = [
   {
     id: 10,
     written: 'tu',
-    meanings: ['six', 'the base of this number system', '_ * 6** _', 'tu = 6', 're tu = 18', 'tu nu = 36', 're tu nu = 72'],
+    meanings: ['six', 'the base of this number system', '_ * 6** _', 'tu = 6', 'fe tu = 3*6 = 18', 'tu nu = 6**2 = 36', 'fe tu nu = 3*6**2 = 108'],
     tags: ['numbers'],
     tokipona: [],
   },
