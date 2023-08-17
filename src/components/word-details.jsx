@@ -51,7 +51,7 @@ function WordDetails({letters}) {
             ))}
           </ul>
         </div>}
-        {thisWord.tokipona && thisWord.tags.length > 0 && <div>
+        {thisWord.tokipona && thisWord.tokipona.length > 0 && <div>
           <h3>toki pona equivalents</h3>
           <ul>
             {thisWord.tokipona.map(i => (
