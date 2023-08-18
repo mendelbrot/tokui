@@ -99,4 +99,6 @@ const words = [
   },
 ]
 
+export const w = (id) => words.filter(w => w.id === id)[0].written
+
 export default words

@@ -8,6 +8,7 @@ import GlyphPage from './pages/word-details-page'
 import Editor from './pages/editor'
 import Words from './pages/words'
 import Tags from './pages/tags'
+import Learn from './pages/learn'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/tags',
         element: <Tags />,
+      },
+      {
+        path: '/learn',
+        element: <Learn />,
       },
     ],
   },
