@@ -4,12 +4,20 @@ const Hor3 = ({rectStyle}) => <rect x='0.75' y='8.75' width='8.5' height='0.5' r
 const Ver1 = ({rectStyle}) => <rect x='0.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
 const Ver2 = ({rectStyle}) => <rect x='4.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
 const Ver3 = ({rectStyle}) => <rect x='8.75' y='0.75' width='0.5' height='8.5' rx='0.25' style={rectStyle}/>
+const Hor1b = ({rectStyle}) => <rect x='2.65' y='5.5' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
+const Hor2b = ({rectStyle}) => <rect x='2.65' y='6.75' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
+const Hor3b = ({rectStyle}) => <rect x='2.65' y='8.00' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
+const Ver1b = ({rectStyle}) => <rect x='2.65' y='5.5' width='0.5' height='3.00' rx='0.25' style={rectStyle}/>
+const Ver2b = ({rectStyle}) => <rect x='4.75' y='5.5' width='0.5' height='3.00' rx='0.25' style={rectStyle}/>
+const Ver3b = ({rectStyle}) => <rect x='7.10' y='5.5' width='0.5' height='3.00' rx='0.25' style={rectStyle}/>
 const Vt1 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(45)' style={rectStyle} />
 const Vt2 = ({rectStyle}) => <rect x='2.65' y='2.5' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
 const Vt3 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(135)' style={rectStyle} />
 const Vb1 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(-45)' style={rectStyle} />
 const Vb2 = ({rectStyle}) => <rect x='2.65' y='7' width='4.7' height='0.5' rx='0.25' style={rectStyle}/>
 const Vb3 = ({rectStyle}) => <rect x='-0.80' y='4.75' width='6' height='0.5' rx='0.25' transform-origin='center' transform='rotate(-135) 'style={rectStyle} />
+
+// leading consonants
 
 const M = ({rectStyle}) =>
   <>
@@ -20,7 +28,8 @@ const M = ({rectStyle}) =>
 const N = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
   </>
 
 const G = ({rectStyle}) =>
@@ -38,7 +47,8 @@ const P = ({rectStyle}) =>
 const T = ({rectStyle}) =>
   <>
     <Hor2 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
   </>
 
 const K = ({rectStyle}) =>
@@ -50,41 +60,132 @@ const K = ({rectStyle}) =>
 const F = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
+    <Hor2 rectStyle={rectStyle}/>
     <Ver1 rectStyle={rectStyle}/>
   </>
 
 const S = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
+    <Hor2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
   </>
 
 const H = ({rectStyle}) =>
   <>
     <Hor1 rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
+    <Hor2 rectStyle={rectStyle}/>
     <Ver3 rectStyle={rectStyle}/>
   </>
 
 const W = ({rectStyle}) =>
   <>
+    <Hor1 rectStyle={rectStyle}/>
     <Hor3 rectStyle={rectStyle}/>
     <Ver1 rectStyle={rectStyle}/>
   </>
 
 const L = ({rectStyle}) =>
   <>
+    <Hor1 rectStyle={rectStyle}/>
     <Hor3 rectStyle={rectStyle}/>
-    <Ver2 rectStyle={rectStyle}/>
+    <Ver1 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
   </>
 
 const Y = ({rectStyle}) =>
   <>
+    <Hor1 rectStyle={rectStyle}/>
     <Hor3 rectStyle={rectStyle}/>
     <Ver3 rectStyle={rectStyle}/>
   </>
+
+// ending consonants
+
+const M2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+  </>
+
+const N2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const G2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const P2 = ({rectStyle}) =>
+  <>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+  </>
+
+const T2 = ({rectStyle}) =>
+  <>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const K2 = ({rectStyle}) =>
+  <>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const F2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+  </>
+
+const S2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const H2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor2b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const W2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor3b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+  </>
+
+const L2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor3b rectStyle={rectStyle}/>
+    <Ver1b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
+  </>
+
+const Y2 = ({rectStyle}) =>
+  <>
+    <Hor1b rectStyle={rectStyle}/>
+    <Hor3 rectStyle={rectStyle}/>
+    <Ver3 rectStyle={rectStyle}/>
+  </>
+
+// vowels
 
 const I1 = ({rectStyle}) =>
   <>
@@ -164,17 +265,31 @@ function Glyph({
         {letters[0] && letters[0].toLowerCase() === 'w' && <W rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'l' && <L rectStyle={rectStyle} />}
         {letters[0] && letters[0].toLowerCase() === 'y' && <Y rectStyle={rectStyle} />}
+
         {letters[1] && letters[1].toLowerCase() === 'i' && <I1 rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'e' && <E1 rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'a' && <A1 rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'o' && <O1 rectStyle={rectStyle} />}
         {letters[1] && letters[1].toLowerCase() === 'u' && <U1 rectStyle={rectStyle} />}
+
         {letters[2] && letters[2].toLowerCase() === 'i' && <I2 rectStyle={rectStyle} />}
         {letters[2] && letters[2].toLowerCase() === 'e' && <E2 rectStyle={rectStyle} />}
         {letters[2] && letters[2].toLowerCase() === 'a' && <A2 rectStyle={rectStyle} />}
         {letters[2] && letters[2].toLowerCase() === 'o' && <O2 rectStyle={rectStyle} />}
         {letters[2] && letters[2].toLowerCase() === 'u' && <U2 rectStyle={rectStyle} />}
-        
+
+        {letters[2] && letters[2].toLowerCase() === 'm' && <M2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'n' && <N2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'g' && <G2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'p' && <P2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 't' && <T2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'k' && <K2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'f' && <F2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 's' && <S2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'h' && <H2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'w' && <W2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'l' && <L2 rectStyle={rectStyle} />}
+        {letters[2] && letters[2].toLowerCase() === 'y' && <Y2 rectStyle={rectStyle} />}  
       </svg>
     </div>
   );
