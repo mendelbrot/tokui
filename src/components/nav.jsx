@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const navLinkClass = ({ isActive, isPending }) =>
   isActive? 'text-gray-500 mr-4' : 'text-blue-500 mr-4' 

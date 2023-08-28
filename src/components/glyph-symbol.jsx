@@ -181,8 +181,8 @@ const L2 = ({rectStyle}) =>
 const Y2 = ({rectStyle}) =>
   <>
     <Hor1b rectStyle={rectStyle}/>
-    <Hor3 rectStyle={rectStyle}/>
-    <Ver3 rectStyle={rectStyle}/>
+    <Hor3b rectStyle={rectStyle}/>
+    <Ver3b rectStyle={rectStyle}/>
   </>
 
 // vowels
