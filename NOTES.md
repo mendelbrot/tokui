@@ -27,3 +27,27 @@ https://nextjs.org/docs/app/building-your-application/routing
 - url segment
 - url path
 - slug
+
+## types
+a tutorial about types in nextjs
+https://blog.logrocket.com/using-next-js-with-typescript/
+
+filesystem types npm package
+https://www.npmjs.com/package/@types/filesystem
+
+`const [filehandle] = await window.showOpenFilePicker({ multiple: false })`
+gives this ts error:
+`Property 'showOpenFilePicker' does not exist on type 'Window & typeof globalThis'.ts(2339)`
+
+showOpenFilePicker docs:
+https://developer.mozilla.org/en-US/docs/Web/API/Window/showOpenFilePicker
+
+this answer showed the correct package to install for the types:
+https://stackoverflow.com/questions/69803693/svelte-how-to-use-native-web-apis
+https://www.npmjs.com/package/@types/wicg-file-system-access
+
+they all come from this repo called Definitely Typed:
+https://github.com/DefinitelyTyped/DefinitelyTyped
+
+
+

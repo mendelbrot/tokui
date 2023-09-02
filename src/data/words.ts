@@ -14,7 +14,7 @@ const words: WordItem[] = [
   },
   {
     id: 2, written: 'kui',
-    meanings: ['the name of this language'],
+    meanings: ['the name of this language', 'minus'],
     tags: [], tokipona: [],
   }
 ]

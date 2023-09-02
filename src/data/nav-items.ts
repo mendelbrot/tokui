@@ -2,11 +2,11 @@ const navItems = [
   {
     url: '/',
     label: 'Home'
-  },{
-    url: '/learn',
-    label: 'Learn'
   },
-
+  // {
+  //   url: '/learn',
+  //   label: 'Learn'
+  // },
   {
     url: '/editor',
     label: 'Editor'
