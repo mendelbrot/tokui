@@ -2,10 +2,9 @@
 
 import Link from 'next/link'
 import navItems from '@/data/nav-items'
-import { useRouter } from 'next/router'
 import { usePathname } from 'next/navigation'
 
-function Nav() {
+const Nav = () => {
   const pathname = usePathname()
   
   return (
