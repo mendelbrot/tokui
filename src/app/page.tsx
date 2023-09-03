@@ -1,7 +1,3 @@
-import words from '@/data/words'
-import GlyphSymbol from '@/components/glyph-symbol'
-import GlyphText from '@/components/glyph-text'
-
 export default function Home() {
   return (
     <main>
