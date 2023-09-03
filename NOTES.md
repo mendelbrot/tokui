@@ -29,6 +29,7 @@ https://nextjs.org/docs/app/building-your-application/routing
 - slug
 
 ## types
+
 a tutorial about types in nextjs
 https://blog.logrocket.com/using-next-js-with-typescript/
 
@@ -54,7 +55,7 @@ https://github.com/DefinitelyTyped/DefinitelyTyped
 formatting all:
 
 ```
-
+npx prettier . --write
 ```
 
 setup:
@@ -64,6 +65,7 @@ npm i prettier eslint-config-prettier
 ```
 
 `.prettierrc`
+
 ```
 {
   "semi": false,
@@ -81,7 +83,3 @@ npm i prettier eslint-config-prettier
   "extends": ["next/core-web-vitals", "prettier"]
 }
 ```
-
-
-
-

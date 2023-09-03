@@ -1,7 +1,7 @@
 const navItems = [
   {
     url: '/',
-    label: 'Home'
+    label: 'Home',
   },
   // {
   //   url: '/learn',
@@ -9,11 +9,11 @@ const navItems = [
   // },
   {
     url: '/editor',
-    label: 'Editor'
+    label: 'Editor',
   },
   {
     url: '/words',
-    label: 'Words'
+    label: 'Words',
   },
 ]
 

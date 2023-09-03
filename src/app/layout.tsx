@@ -13,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body className='mx-4 mb-4'>
+    <html lang="en">
+      <body className="mx-4 mb-4">
         <Nav />
         {children}
       </body>
