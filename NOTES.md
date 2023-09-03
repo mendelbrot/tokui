@@ -91,3 +91,7 @@ As expected the deployement broke after switching framework.  I changed the fram
 magic to prevent item from expanding to parent width:
 https://tailwindcss.com/docs/display#block-and-inline
 https://stackoverflow.com/questions/18134700/css-prevent-div-width-from-expanding-to-available-width
+
+## transform-origin svg warning
+i'm having this problem:
+https://github.com/vercel/next.js/issues/53342
