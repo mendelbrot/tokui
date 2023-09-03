@@ -14,7 +14,10 @@ const WordDetails: Comp = ({ letters }) => {
       <div className="fixed bottom-6 right-6">
         <RandomWord />
       </div>
-      <GlyphMulti words={letters} sizeClass="w-24 pb-2 pr-2" />
+      <div className="p-2 border-2 rounded-lg inline-block">
+        <GlyphMulti words={letters} sizeClass="w-16" />
+      </div>
+      
       {thisWord && (
         <div className="prose">
           {thisWord.meanings && thisWord.meanings.length > 0 && (

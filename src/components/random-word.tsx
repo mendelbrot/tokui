@@ -16,7 +16,7 @@ const RandomWord = () => {
   return (
     <button
       onClick={handleRandom}
-      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-yellow-50 hover:bg-opacity-70"
+      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-emerald-200 hover:bg-opacity-70"
     >
       <Image
         className="opacity-30 rounded-lg"

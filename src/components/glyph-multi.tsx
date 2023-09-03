@@ -8,9 +8,9 @@ type Comp = React.FunctionComponent<Props>
 export const GlyphSymbolMulti: Comp = ({ words, fill, sizeClass }) => {
   const wordsArray = words.split(' ')
   return (
-    <div className="flex">
+    <div>
       {wordsArray.map((item, index) => (
-        <div key={index} className={sizeClass}>
+        <div key={index} className={sizeClass + ' inline-block'}>
           <GlyphSymbol letters={item} fill={fill} />
         </div>
       ))}
@@ -21,9 +21,9 @@ export const GlyphSymbolMulti: Comp = ({ words, fill, sizeClass }) => {
 export const GlyphTextMulti: Comp = ({ words, sizeClass }) => {
   const wordsArray = words.split(' ')
   return (
-    <div className="flex">
+    <div>
       {wordsArray.map((item, index) => (
-        <div key={index} className={sizeClass}>
+        <div key={index} className={sizeClass + ' inline-block'}>
           <GlyphText letters={item} />
         </div>
       ))}

@@ -85,3 +85,9 @@ npm i prettier eslint-config-prettier
 ```
 
 As expected the deployement broke after switching framework.  I changed the framework preset in the project settings and now im going to merge to main to see if it works again.
+
+## inline-block
+
+magic to prevent item from expanding to parent width:
+https://tailwindcss.com/docs/display#block-and-inline
+https://stackoverflow.com/questions/18134700/css-prevent-div-width-from-expanding-to-available-width
