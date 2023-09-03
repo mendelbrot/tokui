@@ -6,7 +6,7 @@ import WordDetails from '@/components/word-details'
 const WordDetailsPage = () => {
   const params = useParams()
   const letters: string =
-    typeof params.letters == 'string' ? params.letters : ''
+    typeof params.letters == 'string' ? decodeURI(params.letters) : ''
 
   return (
     <main>
