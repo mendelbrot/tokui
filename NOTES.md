@@ -49,5 +49,39 @@ https://www.npmjs.com/package/@types/wicg-file-system-access
 they all come from this repo called Definitely Typed:
 https://github.com/DefinitelyTyped/DefinitelyTyped
 
+## formatting with prettier
+
+formatting all:
+
+```
+
+```
+
+setup:
+
+```
+npm i prettier eslint-config-prettier
+```
+
+`.prettierrc`
+```
+{
+  "semi": false,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
+
+`.eslintrc.json`
+
+```
+{
+  "extends": ["next/core-web-vitals", "prettier"]
+}
+```
+
+
 
 
