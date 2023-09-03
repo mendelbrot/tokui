@@ -83,3 +83,5 @@ npm i prettier eslint-config-prettier
   "extends": ["next/core-web-vitals", "prettier"]
 }
 ```
+
+As expected the deployement broke after switching framework.  I changed the framework preset in the project settings and now im going to merge to main to see if it works again.
