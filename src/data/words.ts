@@ -23,4 +23,6 @@ const words: WordItem[] = [
   },
 ]
 
+export const w = (id: number) => words.filter(w => w.id === id)[0].written
+
 export default words
