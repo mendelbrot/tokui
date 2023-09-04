@@ -95,3 +95,44 @@ https://stackoverflow.com/questions/18134700/css-prevent-div-width-from-expandin
 ## transform-origin svg warning
 i'm having this problem:
 https://github.com/vercel/next.js/issues/53342
+
+## importing csv data
+
+https://stackoverflow.com/questions/55341986/how-do-i-import-a-file-with-a-space-using-next-js
+https://www.npmjs.com/package/csv-loader
+
+here's how to do it:
+
+`npm i csv-loader`
+
+`next.config.js`
+
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.csv$/,
+      loader: 'csv-loader',
+      options: {
+        dynamicTyping: true,
+        header: true,
+        skipEmptyLines: true,
+      },
+    })
+
+    return config
+  },
+}
+
+module.exports = nextConfig
+
+```
+
+then to use it in a file:
+```
+// @ts-ignore 
+import words from '@/data/words.csv'
+
+console.log('words')
+```
