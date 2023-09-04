@@ -20,6 +20,14 @@ const wordCategories = [
     title: 'Configuration',
   },
   {
+    tag: 'sequence-comparison',
+    title: 'Sequence / Comparison',
+  },
+  {
+    tag: 'distribution',
+    title: 'Distribution',
+  },
+  {
     tag: 'math',
     title: 'Math',
   },
