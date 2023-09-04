@@ -12,8 +12,8 @@ const wordCategories = [
     title: 'Grammar',
   },
   {
-    tag: 'Pronoun',
-    title: 'pronoun',
+    tag: 'pronoun',
+    title: 'Pronouns',
   },
   {
     tag: 'configuration',

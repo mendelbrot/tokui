@@ -369,12 +369,15 @@ export default function Learn() {
           </tr>
           <tr>
             <th className="border">tokui romanized</th>
-            <td className="border">mei ko tok</td>
+            <td className="border">la mok yu mi su kil kas</td>
           </tr>
           <tr>
             <th className="border">tokui</th>
             <td className="border">
-              <GlyphSymbolMulti sizeClass="w-10" words={'mei ko tok'} />
+              <GlyphSymbolMulti
+                sizeClass="w-10"
+                words={'la mok yu mi su kil kas'}
+              />
             </td>
           </tr>
         </tbody>
