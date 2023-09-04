@@ -1,0 +1,200 @@
+id,meaning,category,tokui,tokipona
+1,lizard,misc,kes,akesi
+2,hunt,misc,las,alasa
+3,all,misc,lae,ale
+4,low,misc,nap,anpa
+5,different,misc,nat,ante
+6,keep,misc,wen,awen
+7,shop,misc,sun,esun
+8,thing,misc,yio,ijo
+9,bad,misc,kie,ike
+10,tool,misc,lio,ilo
+11,inside,misc,nis,insa
+12,dirty,misc,yak,jaki
+13,yellow,misc,yeo,jelo
+14,fish,misc,kal,kala
+15,sound,misc,lam,kalama
+16,come,misc,kam,kama
+17,plant,misc,kas,kasi
+18,can,misc,ken,ken
+19,use,misc,pek,kepeken
+20,fruit,misc,kil,kili
+21,rock,misc,wen,kiwen
+22,paste,misc,ko,ko
+23,air,misc,kon,kon
+24,color,misc,kue,kule
+25,group,misc,kul,kulupu
+26,hear,misc,kut,kute
+27,sleep,misc,lap,lape
+28,green,misc,lao,laso
+29,head,misc,wal,lawa
+30,cloth,misc,len,len
+31,cold,misc,let,lete
+32,small,misc,lil,lili
+33,chord,misc,lin,linja
+34,paper,misc,lip,lipu
+35,red,misc,loe,loje
+36,at,misc,lon,lon
+37,hand,misc,lua,luka
+38,see,misc,luk,lukin
+39,hole,misc,lup,lupa
+40,land,misc,ma,ma
+41,parent,misc,mam,mama
+42,money,misc,mai,mani
+43,woman,misc,mel,meli
+44,meaning,misc,min,mi
+45,man,misc,man,mije
+46,eat,misc,mok,moku
+47,dead,misc,mol,moli
+48,back,misc,mon,monsi
+49,meow,misc,mu,mu
+50,moon,misc,mun,mun
+51,play,misc,mui,musi
+52,many,misc,mue,mute
+53,strange,misc,san,nasa
+54,way,misc,nas,nasin
+55,mountain,misc,nen,nena
+56,name,misc,nim,nimi
+57,foot,misc,nok,noka
+58,love,misc,lin,olin
+59,open,misc,poe,open
+60,break,misc,pak,pakala
+61,do,misc,pai,pali
+62,stick,misc,pal,palisa
+63,food,misc,pan,pan
+64,give,misc,pam,pana
+65,feel,misc,pil,pilin
+66,black,misc,pim,pimeja
+67,end,misc,pin,pini
+68,bug,misc,pip,pipi
+69,near,misc,poa,poka
+70,container,misc,pok,poki
+71,good,misc,pon,pona
+72,same,misc,sam,sama
+73,fire,misc,sei,seli
+74,skin,misc,sel,selo
+75,high,misc,wei,sewi
+76,form,misc,yis,sijelo
+77,circle,misc,sik,sike
+78,new,misc,sin,sin
+79,face,misc,pin,sinpin
+80,picture,misc,tel,sitelen
+81,know,misc,son,sona
+82,animal,misc,wel,soweli
+83,big,misc,sui,suli
+84,sun,misc,sun,suno
+85,table,misc,sup,sunpa
+86,sweet,misc,wui,suwi
+87,from,misc,tan,tan
+88,to,misc,wa,tawa
+89,water,misc,tel,telo
+90,time,misc,ten,tenpo
+91,talk,misc,to,toki
+92,house,misc,tom,tomo
+93,sex,misc,nup,unpa
+94,mouth,misc,tua,uta
+95,fight,misc,tua,utala
+96,white,misc,wao,walo
+97,bird,misc,was,waso
+98,strong,misc,wua,wawa
+99,away,misc,wek,weka
+100,want,misc,wil,wile
+101,cool/awesome,misc,pik,epiku
+102,reflect/resound/echo/opposite polar end of,misc,yas,jasima
+103,also/to as well/even/indeed/really,misc,kin,kin
+104,split/sever/cut/slice,misc,pis,kipisi
+105,take/seize/catch/receive/get,misc,lap,lanpan
+106,block/brick/cube,misc,keo,leko
+107,middle/midpoint/space inside/between,misc,meo,meso
+108,medication/medicine,misc,mik,misikeke
+109,monstrous,misc,mua,monsuta
+110,embellishment/spice,misc,mao,namako
+111,eye,misc,ko,oko
+112,mushroom/fungus/fungi,misc,sok,soko
+113,non-binary/trans/non-cisgender,misc,ton,tonsi
+114,quote,misc,ki,
+115,paraphrase,misc,ke,
+116,assertion,relation,la,
+117,question,relation,li,
+118,order,relation,lo,
+119,relation with misc speech act type,relation,le,
+120,me,pronoun,mi,
+121,me and you,pronoun,mo,
+122,me and they,pronoun,me,
+123,me and you and they,pronoun,moe,
+124,this,pronoun,ni,ni
+125,it,pronoun,ne,ona
+126,you,pronoun,yo,sina
+127,they,pronoun,ye,
+128,you and they,pronoun,yoe,
+129,one/person,pronoun,yan,yan
+130,what/unknown part of a question,pronoun,sem,seme
+131,number,math,nap,nanpa
+132,0/zero/none/no,math,pa,ala
+133,one,math,wa,wan
+134,two,math,tu,tu
+135,three,math,gi,
+136,four,math,so,
+137,five,math,lu,
+138,six/_*6**_,math,ha,
+139,plus,math,piu,
+140,minus,math,kui,
+141,times,math,miu,
+142,divided by,math,gui,
+143,to the power of,math,piu,
+144,decimal point,math,pu,
+145,of,grammar,pi,pi
+146,semantic role escape bracket,grammar,ga,
+147,open sub-clause level 1,grammar,ge,
+148,close sub-clause level 1,grammar,pe,
+149,open sub-clause level 2,grammar,geu,
+150,close sub-clause level 2,grammar,peu,
+151,colon,grammar,yi,
+152,list item,grammar,se,
+153,head,grammar,hi,
+154,agent,semantic-role,ya,
+155,inductive agent,semantic-role,yu,
+156,mutal agent,semantic-role,ku,
+157,initiator,semantic-role,he,
+158,patient,semantic-role,wu,
+159,experiencer,semantic-role,fa,
+160,possessor,semantic-role,ho,
+161,attribute,semantic-role,fi,
+162,part,semantic-role,gu,
+163,possession,semantic-role,yo,jo
+164,care,semantic-role,sa,
+165,instrument,semantic-role,go,
+166,origin,semantic-role,fu,
+167,destination,semantic-role,ti,
+168,direction/orientation,semantic-role,hu,
+169,recipient,semantic-role,po,
+170,goal,semantic-role,we,
+171,content,semantic-role,su,
+172,contnt 2,semantic-role,sui,
+173,reference standard,semantic-role,hao,
+174,context,semantic-role,wo,
+175,location,semantic-role,wi,
+176,time,semantic-role,te,
+177,manner,semantic-role,ta,
+178,path,semantic-role,ka,
+179,purpose/motivation,semantic-role,foi,
+180,cause/reason,semantic-role,fo,
+181,extent,semantic-role,na,
+182,result/consequence,semantic-role,no,
+183,identical-discrete,configuration,fie,
+184,identical-interconnected,configuration,fia,
+185,identical-fused,configuration,fiu,
+186,similarifferent-discrete,configuration,fai,
+187,similarifferent-interconnected,configuration,fae,
+188,similarifferent-fused,configuration,fau,
+189,diverse-discrete,configuration,fui,
+190,diverse-interconnected,configuration,fua,
+191,diverse-fused,configuration,fue,
+192,and,logic,ne,en
+193,but,logic,tas,taso
+194,implies,logic,fat,
+195,therefore,logic,fal,
+196,or,logic,nu,anu
+197,xor,logic,nui,
+198,nand,logic,nei,
+199,not,logic,pas,

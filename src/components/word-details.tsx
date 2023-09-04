@@ -1,4 +1,4 @@
-import words from '../data/words'
+import words from '@/data/words'
 import RandomWord from '../components/random-word'
 import React from 'react'
 import GlyphMulti from './glyph-multi'
@@ -7,7 +7,9 @@ type Props = { letters: string }
 type Comp = React.FunctionComponent<Props>
 
 const WordDetails: Comp = ({ letters }) => {
-  const thisWord = words.filter((w) => w.written === letters)[0]
+  const thisWord = words.filter((w) => w.tokui === letters)[0]
+
+  const meanings = thisWord.meaning.split('/')
 
   return (
     <div className="max-w-[444px]">
@@ -17,14 +19,14 @@ const WordDetails: Comp = ({ letters }) => {
       <div className="p-2 border-2 rounded-lg inline-block">
         <GlyphMulti words={letters} sizeClass="w-16" />
       </div>
-      
+
       {thisWord && (
         <div className="prose">
-          {thisWord.meanings && thisWord.meanings.length > 0 && (
+          {meanings && meanings.length > 0 && (
             <div>
               <h3>meanings</h3>
               <div className="flex flex-wrap">
-                {thisWord.meanings.map((m) => (
+                {meanings.map((m) => (
                   <div
                     key={'m ' + m}
                     className="border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36"
@@ -35,24 +37,16 @@ const WordDetails: Comp = ({ letters }) => {
               </div>
             </div>
           )}
-          {thisWord.tags && thisWord.tags.length > 0 && (
+          {thisWord.category && (
             <div>
-              <h3>tags</h3>
-              <ul>
-                {thisWord.tags.map((i) => (
-                  <li key={'t ' + i}>{i}</li>
-                ))}
-              </ul>
+              <h3>category</h3>
+              <p>{thisWord.category}</p>
             </div>
           )}
-          {thisWord.tokipona && thisWord.tokipona.length > 0 && (
+          {thisWord.tokipona && (
             <div>
-              <h3>toki pona equivalents</h3>
-              <ul>
-                {thisWord.tokipona.map((i) => (
-                  <li key={'tp ' + i}>{i}</li>
-                ))}
-              </ul>
+              <h3>toki pona equivalent</h3>
+              <p>{thisWord.tokipona}</p>
             </div>
           )}
         </div>
