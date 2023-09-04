@@ -21,6 +21,41 @@ const words: WordItem[] = [
     tags: [],
     tokipona: [],
   },
+  {
+    id: 3,
+    written: 'pi',
+    meanings: ['(of)'],
+    tags: ['tokipona'],
+    tokipona: ['pi'],
+  },
+  {
+    id: 4,
+    written: 'la',
+    meanings: ['relation: assertion'],
+    tags: ['relation-marker'],
+    tokipona: [],
+  },
+  {
+    id: 5,
+    written: 'li',
+    meanings: ['relation: question'],
+    tags: ['relation-marker'],
+    tokipona: [],
+  },
+  {
+    id: 5,
+    written: 'lo',
+    meanings: ['relation: order'],
+    tags: ['relation-marker'],
+    tokipona: [],
+  },
+  {
+    id: 5,
+    written: 'le',
+    meanings: ['relation'],
+    tags: ['relation-marker'],
+    tokipona: [],
+  },
 ]
 
 export const w = (id: number) => words.filter(w => w.id === id)[0].written
