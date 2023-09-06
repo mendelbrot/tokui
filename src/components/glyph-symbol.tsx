@@ -1,549 +1,619 @@
-'use client'
-
 import React from 'react'
 
-type LetterProps = { rectStyle: object }
+type LetterProps = { lineClass: string }
 type LetterComp = React.FunctionComponent<LetterProps>
 
-const Hor1: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="0.75"
-    y="0.75"
-    width="8.5"
-    height="0.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor1: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="12"
+    x2="42"
+    y2="12"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Hor2: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="0.75"
-    y="4.75"
-    width="8.5"
-    height="0.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor2: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="32"
+    x2="42"
+    y2="32"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Hor3: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="0.75"
-    y="8.75"
-    width="8.5"
-    height="0.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor3: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="52"
+    x2="42"
+    y2="52"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver1: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="0.75"
-    y="0.75"
-    width="0.5"
-    height="8.5"
-    rx="0.25"
-    style={rectStyle}
+const Ver1: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="12"
+    x2="2"
+    y2="52"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver2: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="4.75"
-    y="0.75"
-    width="0.5"
-    height="8.5"
-    rx="0.25"
-    style={rectStyle}
+const Ver3: LetterComp = ({ lineClass }) => (
+  <line
+    x1="42"
+    y1="12"
+    x2="42"
+    y2="52"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver3: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="8.75"
-    y="0.75"
-    width="0.5"
-    height="8.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor1b: LetterComp = ({ lineClass }) => (
+  <line
+    x1="9"
+    y1="35"
+    x2="35"
+    y2="35"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Hor1b: LetterComp = ({ rectStyle }) => (
-  <rect x="2.65" y="5.5" width="4.7" height="0.5" rx="0.25" style={rectStyle} />
-)
-const Hor2b: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="2.65"
-    y="6.75"
-    width="4.7"
-    height="0.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor2b: LetterComp = ({ lineClass }) => (
+  <line
+    x1="9"
+    y1="42"
+    x2="35"
+    y2="42"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Hor3b: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="2.65"
-    y="8.00"
-    width="4.7"
-    height="0.5"
-    rx="0.25"
-    style={rectStyle}
+const Hor3b: LetterComp = ({ lineClass }) => (
+  <line
+    x1="9"
+    y1="49"
+    x2="35"
+    y2="49"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver1b: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="2.65"
-    y="5.5"
-    width="0.5"
-    height="3.00"
-    rx="0.25"
-    style={rectStyle}
+const Ver1b: LetterComp = ({ lineClass }) => (
+  <line
+    x1="9"
+    y1="35"
+    x2="9"
+    y2="49"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver2b: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="4.75"
-    y="5.5"
-    width="0.5"
-    height="3.00"
-    rx="0.25"
-    style={rectStyle}
+const Ver3b: LetterComp = ({ lineClass }) => (
+  <line
+    x1="35"
+    y1="35"
+    x2="35"
+    y2="49"
+    className={lineClass}
+    stroke-linecap="round"
   />
 )
-const Ver3b: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="7.10"
-    y="5.5"
-    width="0.5"
-    height="3.00"
-    rx="0.25"
-    style={rectStyle}
+const V01: LetterComp = ({ lineClass }) => (
+  <line
+    x1="12"
+    y1="2"
+    x2="22"
+    y2="12"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
   />
 )
-const Vt1: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="-0.80"
-    y="4.75"
-    width="6"
-    height="0.5"
-    rx="0.25"
-    transform-origin="center"
-    transform="rotate(45)"
-    style={rectStyle}
+const V02: LetterComp = ({ lineClass }) => (
+  <line
+    x1="15"
+    y1="5"
+    x2="29"
+    y2="5"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
   />
 )
-const Vt2: LetterComp = ({ rectStyle }) => (
-  <rect x="2.65" y="2.5" width="4.7" height="0.5" rx="0.25" style={rectStyle} />
-)
-const Vt3: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="-0.80"
-    y="4.75"
-    width="6"
-    height="0.5"
-    rx="0.25"
-    transform-origin="center"
-    transform="rotate(135)"
-    style={rectStyle}
+const V03: LetterComp = ({ lineClass }) => (
+  <line
+    x1="32"
+    y1="2"
+    x2="22"
+    y2="12"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
   />
 )
-const Vb1: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="-0.80"
-    y="4.75"
-    width="6"
-    height="0.5"
-    rx="0.25"
-    transform-origin="center"
-    transform="rotate(-45)"
-    style={rectStyle}
+const Vt1: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="12"
+    x2="22"
+    y2="32"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
   />
 )
-const Vb2: LetterComp = ({ rectStyle }) => (
-  <rect x="2.65" y="7" width="4.7" height="0.5" rx="0.25" style={rectStyle} />
+const Vt2: LetterComp = ({ lineClass }) => (
+  <line
+    x1="10"
+    y1="20"
+    x2="34"
+    y2="20"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
+  />
 )
-const Vb3: LetterComp = ({ rectStyle }) => (
-  <rect
-    x="-0.80"
-    y="4.75"
-    width="6"
-    height="0.5"
-    rx="0.25"
-    transform-origin="center"
-    transform="rotate(-135) "
-    style={rectStyle}
+const Vt3: LetterComp = ({ lineClass }) => (
+  <line
+    x1="22"
+    y1="32"
+    x2="42"
+    y2="12"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
+  />
+)
+const Vb1: LetterComp = ({ lineClass }) => (
+  <line
+    x1="2"
+    y1="52"
+    x2="22"
+    y2="32"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
+  />
+)
+const Vb2: LetterComp = ({ lineClass }) => (
+  <line
+    x1="10"
+    y1="44"
+    x2="34"
+    y2="44"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
+  />
+)
+const Vb3: LetterComp = ({ lineClass }) => (
+  <line
+    x1="22"
+    y1="32"
+    x2="42"
+    y2="52"
+    className={lineClass}
+    stroke-width="1"
+    stroke-linecap="round"
   />
 )
 
 // leading consonants
 
-const M: LetterComp = ({ rectStyle }) => (
+const M: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
   </>
 )
 
-const N: LetterComp = ({ rectStyle }) => (
+const N: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const G: LetterComp = ({ rectStyle }) => (
+const G: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const P: LetterComp = ({ rectStyle }) => (
+const P: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
+    <Hor2 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
   </>
 )
 
-const T: LetterComp = ({ rectStyle }) => (
+const T: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor2 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const K: LetterComp = ({ rectStyle }) => (
+const K: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor2 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const F: LetterComp = ({ rectStyle }) => (
+const F: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor2 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor2 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
   </>
 )
 
-const S: LetterComp = ({ rectStyle }) => (
+const S: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor2 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor2 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const H: LetterComp = ({ rectStyle }) => (
+const H: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor2 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor2 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const W: LetterComp = ({ rectStyle }) => (
+const W: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor3 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor3 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
   </>
 )
 
-const L: LetterComp = ({ rectStyle }) => (
+const L: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor3 rectStyle={rectStyle} />
-    <Ver1 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor3 lineClass={lineClass} />
+    <Ver1 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
-const Y: LetterComp = ({ rectStyle }) => (
+const Y: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1 rectStyle={rectStyle} />
-    <Hor3 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1 lineClass={lineClass} />
+    <Hor3 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
 // ending consonants
 
-const M2: LetterComp = ({ rectStyle }) => (
+const M2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
   </>
 )
 
-const N2: LetterComp = ({ rectStyle }) => (
+const N2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const G2: LetterComp = ({ rectStyle }) => (
+const G2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const P2: LetterComp = ({ rectStyle }) => (
+const P2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
+    <Hor2b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
   </>
 )
 
-const T2: LetterComp = ({ rectStyle }) => (
+const T2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor2b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const K2: LetterComp = ({ rectStyle }) => (
+const K2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor2b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor2b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const F2: LetterComp = ({ rectStyle }) => (
+const F2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor2b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor2b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
   </>
 )
 
-const S2: LetterComp = ({ rectStyle }) => (
+const S2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor2b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor2b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const H2: LetterComp = ({ rectStyle }) => (
+const H2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor2b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor2b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const W2: LetterComp = ({ rectStyle }) => (
+const W2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor3b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor3b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
   </>
 )
 
-const L2: LetterComp = ({ rectStyle }) => (
+const L2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor3b rectStyle={rectStyle} />
-    <Ver1b rectStyle={rectStyle} />
-    <Ver3b rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor3b lineClass={lineClass} />
+    <Ver1b lineClass={lineClass} />
+    <Ver3b lineClass={lineClass} />
   </>
 )
 
-const Y2: LetterComp = ({ rectStyle }) => (
+const Y2: LetterComp = ({ lineClass }) => (
   <>
-    <Hor1b rectStyle={rectStyle} />
-    <Hor3 rectStyle={rectStyle} />
-    <Ver3 rectStyle={rectStyle} />
+    <Hor1b lineClass={lineClass} />
+    <Hor3 lineClass={lineClass} />
+    <Ver3 lineClass={lineClass} />
   </>
 )
 
 // vowels
 
-const I1: LetterComp = ({ rectStyle }) => (
+const I1: LetterComp = ({ lineClass }) => (
   <>
-    <Vt1 rectStyle={rectStyle} />
+    <Vt1 lineClass={lineClass} />
   </>
 )
 
-const I2: LetterComp = ({ rectStyle }) => (
+const I2: LetterComp = ({ lineClass }) => (
   <>
-    <Vb1 rectStyle={rectStyle} />
+    <Vb1 lineClass={lineClass} />
   </>
 )
 
-const E1: LetterComp = ({ rectStyle }) => (
+const E1: LetterComp = ({ lineClass }) => (
   <>
-    <Vt1 rectStyle={rectStyle} />
-    <Vt2 rectStyle={rectStyle} />
+    <Vt1 lineClass={lineClass} />
+    <Vt2 lineClass={lineClass} />
   </>
 )
 
-const E2: LetterComp = ({ rectStyle }) => (
+const E2: LetterComp = ({ lineClass }) => (
   <>
-    <Vb1 rectStyle={rectStyle} />
-    <Vb2 rectStyle={rectStyle} />
+    <Vb1 lineClass={lineClass} />
+    <Vb2 lineClass={lineClass} />
   </>
 )
 
-const A1: LetterComp = ({ rectStyle }) => (
+const A1: LetterComp = ({ lineClass }) => (
   <>
-    <Vt1 rectStyle={rectStyle} />
-    <Vt3 rectStyle={rectStyle} />
+    <Vt1 lineClass={lineClass} />
+    <Vt3 lineClass={lineClass} />
   </>
 )
 
-const A2: LetterComp = ({ rectStyle }) => (
+const A2: LetterComp = ({ lineClass }) => (
   <>
-    <Vb1 rectStyle={rectStyle} />
-    <Vb3 rectStyle={rectStyle} />
+    <Vb1 lineClass={lineClass} />
+    <Vb3 lineClass={lineClass} />
   </>
 )
 
-const O1: LetterComp = ({ rectStyle }) => (
+const O1: LetterComp = ({ lineClass }) => (
   <>
-    <Vt2 rectStyle={rectStyle} />
-    <Vt3 rectStyle={rectStyle} />
+    <Vt2 lineClass={lineClass} />
+    <Vt3 lineClass={lineClass} />
   </>
 )
 
-const O2: LetterComp = ({ rectStyle }) => (
+const O2: LetterComp = ({ lineClass }) => (
   <>
-    <Vb2 rectStyle={rectStyle} />
-    <Vb3 rectStyle={rectStyle} />
+    <Vb2 lineClass={lineClass} />
+    <Vb3 lineClass={lineClass} />
   </>
 )
 
-const U1: LetterComp = ({ rectStyle }) => (
+const U1: LetterComp = ({ lineClass }) => (
   <>
-    <Vt3 rectStyle={rectStyle} />
+    <Vt3 lineClass={lineClass} />
   </>
 )
 
-const U2: LetterComp = ({ rectStyle }) => (
+const U2: LetterComp = ({ lineClass }) => (
   <>
-    <Vb3 rectStyle={rectStyle} />
+    <Vb3 lineClass={lineClass} />
   </>
 )
 
-const GlyphSymbol = ({ letters = '', fill = 'black' }) => {
-  const rectStyle = { fill: fill }
-  const svgStyle = {}
+type GlyphSymbolProps = {
+  letters?: string
+  lineClass?: string
+  svgClass?: string
+}
+type GlyphSymbolComp = React.FunctionComponent<GlyphSymbolProps>
+
+const GlyphSymbol: GlyphSymbolComp = ({
+  letters = '',
+  lineClass = 'stroke-black stroke-2',
+  svgClass = '',
+}) => {
+  // example letters inputs:
+  // ko koi kon ako akoi akon . , : *
+  const startletters = ['i', 'e', 'a', 'o', 'u', '.', ',', ':', '*']
+  const startLetter = startletters.includes(letters[0]) ? letters[0] : null
+  const shiftedLetters = startLetter ? letters.slice(1) : letters
+
+  // return (
+  //   <div>
+  //     <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+  //       <V01 lineClass={lineClass} />
+  //       <V02 lineClass={lineClass} />
+  //       <V03 lineClass={lineClass} />
+  //       <Hor1 lineClass={lineClass} />
+  //       <Hor2 lineClass={lineClass} />
+  //       <Hor3 lineClass={lineClass} />
+  //       <Ver1 lineClass={lineClass} />
+  //       <Ver3 lineClass={lineClass} />
+  //       <Hor1b lineClass={lineClass} />
+  //       <Hor2b lineClass={lineClass} />
+  //       <Hor3b lineClass={lineClass} />
+  //       <Ver1b lineClass={lineClass} />
+  //       <Ver3b lineClass={lineClass} />
+  //       <Vt1 lineClass={lineClass} />
+  //       <Vt2 lineClass={lineClass} />
+  //       <Vt3 lineClass={lineClass} />
+  //       <Vb1 lineClass={lineClass} />
+  //       <Vb2 lineClass={lineClass} />
+  //       <Vb3 lineClass={lineClass} />
+  //     </svg>
+  //   </div>
+  // )
 
   return (
     <div>
-      <svg version="1.1" viewBox="0 0 10 10" style={svgStyle}>
-        {letters[0] && letters[0].toLowerCase() === 'm' && (
-          <M rectStyle={rectStyle} />
+      <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'm' && (
+          <M lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'n' && (
-          <N rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'n' && (
+          <N lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'g' && (
-          <G rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'g' && (
+          <G lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'p' && (
-          <P rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'p' && (
+          <P lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 't' && (
-          <T rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 't' && (
+          <T lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'k' && (
-          <K rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'k' && (
+          <K lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'f' && (
-          <F rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'f' && (
+          <F lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 's' && (
-          <S rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 's' && (
+          <S lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'h' && (
-          <H rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'h' && (
+          <H lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'w' && (
-          <W rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'w' && (
+          <W lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'l' && (
-          <L rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'l' && (
+          <L lineClass={lineClass} />
         )}
-        {letters[0] && letters[0].toLowerCase() === 'y' && (
-          <Y rectStyle={rectStyle} />
-        )}
-
-        {letters[1] && letters[1].toLowerCase() === 'i' && (
-          <I1 rectStyle={rectStyle} />
-        )}
-        {letters[1] && letters[1].toLowerCase() === 'e' && (
-          <E1 rectStyle={rectStyle} />
-        )}
-        {letters[1] && letters[1].toLowerCase() === 'a' && (
-          <A1 rectStyle={rectStyle} />
-        )}
-        {letters[1] && letters[1].toLowerCase() === 'o' && (
-          <O1 rectStyle={rectStyle} />
-        )}
-        {letters[1] && letters[1].toLowerCase() === 'u' && (
-          <U1 rectStyle={rectStyle} />
+        {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'y' && (
+          <Y lineClass={lineClass} />
         )}
 
-        {letters[2] && letters[2].toLowerCase() === 'i' && (
-          <I2 rectStyle={rectStyle} />
+        {shiftedLetters[1] && shiftedLetters[1].toLowerCase() === 'i' && (
+          <I1 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'e' && (
-          <E2 rectStyle={rectStyle} />
+        {shiftedLetters[1] && shiftedLetters[1].toLowerCase() === 'e' && (
+          <E1 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'a' && (
-          <A2 rectStyle={rectStyle} />
+        {shiftedLetters[1] && shiftedLetters[1].toLowerCase() === 'a' && (
+          <A1 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'o' && (
-          <O2 rectStyle={rectStyle} />
+        {shiftedLetters[1] && shiftedLetters[1].toLowerCase() === 'o' && (
+          <O1 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'u' && (
-          <U2 rectStyle={rectStyle} />
+        {shiftedLetters[1] && shiftedLetters[1].toLowerCase() === 'u' && (
+          <U1 lineClass={lineClass} />
         )}
 
-        {letters[2] && letters[2].toLowerCase() === 'm' && (
-          <M2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'i' && (
+          <I2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'n' && (
-          <N2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'e' && (
+          <E2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'g' && (
-          <G2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'a' && (
+          <A2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'p' && (
-          <P2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'o' && (
+          <O2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 't' && (
-          <T2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'u' && (
+          <U2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'k' && (
-          <K2 rectStyle={rectStyle} />
+
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'm' && (
+          <M2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'f' && (
-          <F2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'n' && (
+          <N2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 's' && (
-          <S2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'g' && (
+          <G2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'h' && (
-          <H2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'p' && (
+          <P2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'w' && (
-          <W2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 't' && (
+          <T2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'l' && (
-          <L2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'k' && (
+          <K2 lineClass={lineClass} />
         )}
-        {letters[2] && letters[2].toLowerCase() === 'y' && (
-          <Y2 rectStyle={rectStyle} />
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'f' && (
+          <F2 lineClass={lineClass} />
+        )}
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 's' && (
+          <S2 lineClass={lineClass} />
+        )}
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'h' && (
+          <H2 lineClass={lineClass} />
+        )}
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'w' && (
+          <W2 lineClass={lineClass} />
+        )}
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'l' && (
+          <L2 lineClass={lineClass} />
+        )}
+        {shiftedLetters[2] && shiftedLetters[2].toLowerCase() === 'y' && (
+          <Y2 lineClass={lineClass} />
         )}
       </svg>
     </div>
