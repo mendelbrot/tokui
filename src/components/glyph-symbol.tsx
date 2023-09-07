@@ -508,31 +508,12 @@ const GlyphSymbol: GlyphSymbolComp = ({
   lineClass = 'stroke-black stroke-1',
   svgClass = 'm-1',
 }) => {
-  // example letters inputs:
-  // ko koi kon ako akoi akon . , : *
-  const startletters = [
-    'i',
-    'e',
-    'a',
-    'o',
-    'u',
-    'I',
-    'E',
-    'A',
-    'O',
-    'U',
-    '.',
-    ',',
-    ':',
-    '*',
-  ]
-  const startLetter = startletters.includes(letters[0]) ? letters[0] : null
-  const shiftedLetters = startLetter ? letters.slice(1) : letters
+  const viewBox = '0 0 44 54'
 
-  if (letters === '%X') {
+  if (letters === '%') {
     return (
       <div>
-        <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
           <V01 lineClass={lineClass} />
           <V02 lineClass={lineClass} />
           <V03 lineClass={lineClass} />
@@ -557,9 +538,107 @@ const GlyphSymbol: GlyphSymbolComp = ({
     )
   }
 
+  if (letters === '.') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vb1 lineClass={lineClass} />
+          <Vt3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ',') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vb1 lineClass={lineClass} />
+          <Vb3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ':') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vt1 lineClass={lineClass} />
+          <Vb1 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '*') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Ver3 lineClass={lineClass} />
+          <Hor2 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '!') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vt1 lineClass={lineClass} />
+          <Vt3 lineClass={lineClass} />
+          <Vb1 lineClass={lineClass} />
+          <Vb3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '[') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Hor1 lineClass={lineClass} />
+          <Ver1 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ']') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Hor1 lineClass={lineClass} />
+          <Ver3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  const startletters = [
+    'i',
+    'e',
+    'a',
+    'o',
+    'u',
+    'I',
+    'E',
+    'A',
+    'O',
+    'U',
+    '.',
+    ',',
+    ':',
+    '*',
+  ]
+  const startLetter = startletters.includes(letters[0]) ? letters[0] : null
+  const shiftedLetters = startLetter ? letters.slice(1) : letters
+
   return (
     <div>
-      <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+      <svg version="1.1" viewBox={viewBox} className={svgClass}>
         {startLetter && startLetter.toLowerCase() === 'i' && (
           <I0 lineClass={lineClass} />
         )}
