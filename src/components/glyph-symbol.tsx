@@ -116,9 +116,9 @@ const V01: LetterComp = ({ lineClass }) => (
 )
 const V02: LetterComp = ({ lineClass }) => (
   <line
-    x1="16"
+    x1="15"
     y1="6"
-    x2="28"
+    x2="29"
     y2="6"
     className={lineClass}
     stroke-width="1"
@@ -149,9 +149,9 @@ const Vt1: LetterComp = ({ lineClass }) => (
 )
 const Vt2: LetterComp = ({ lineClass }) => (
   <line
-    x1="10"
+    x1="11"
     y1="22"
-    x2="34"
+    x2="33"
     y2="22"
     className={lineClass}
     stroke-width="1"
@@ -182,9 +182,9 @@ const Vb1: LetterComp = ({ lineClass }) => (
 )
 const Vb2: LetterComp = ({ lineClass }) => (
   <line
-    x1="10"
+    x1="11"
     y1="46"
-    x2="34"
+    x2="33"
     y2="46"
     className={lineClass}
     stroke-width="1"
