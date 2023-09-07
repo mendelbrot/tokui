@@ -510,7 +510,22 @@ const GlyphSymbol: GlyphSymbolComp = ({
 }) => {
   // example letters inputs:
   // ko koi kon ako akoi akon . , : *
-  const startletters = ['i', 'e', 'a', 'o', 'u', '.', ',', ':', '*']
+  const startletters = [
+    'i',
+    'e',
+    'a',
+    'o',
+    'u',
+    'I',
+    'E',
+    'A',
+    'O',
+    'U',
+    '.',
+    ',',
+    ':',
+    '*',
+  ]
   const startLetter = startletters.includes(letters[0]) ? letters[0] : null
   const shiftedLetters = startLetter ? letters.slice(1) : letters
 
