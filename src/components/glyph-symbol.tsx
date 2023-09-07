@@ -397,6 +397,12 @@ const Y2: LetterComp = ({ lineClass }) => (
 
 // vowels
 
+const I0: LetterComp = ({ lineClass }) => (
+  <>
+    <V01 lineClass={lineClass} />
+  </>
+)
+
 const I1: LetterComp = ({ lineClass }) => (
   <>
     <Vt1 lineClass={lineClass} />
@@ -406,6 +412,13 @@ const I1: LetterComp = ({ lineClass }) => (
 const I2: LetterComp = ({ lineClass }) => (
   <>
     <Vb1 lineClass={lineClass} />
+  </>
+)
+
+const E0: LetterComp = ({ lineClass }) => (
+  <>
+    <V01 lineClass={lineClass} />
+    <V02 lineClass={lineClass} />
   </>
 )
 
@@ -423,6 +436,13 @@ const E2: LetterComp = ({ lineClass }) => (
   </>
 )
 
+const A0: LetterComp = ({ lineClass }) => (
+  <>
+    <V01 lineClass={lineClass} />
+    <V03 lineClass={lineClass} />
+  </>
+)
+
 const A1: LetterComp = ({ lineClass }) => (
   <>
     <Vt1 lineClass={lineClass} />
@@ -437,6 +457,13 @@ const A2: LetterComp = ({ lineClass }) => (
   </>
 )
 
+const O0: LetterComp = ({ lineClass }) => (
+  <>
+    <V02 lineClass={lineClass} />
+    <V03 lineClass={lineClass} />
+  </>
+)
+
 const O1: LetterComp = ({ lineClass }) => (
   <>
     <Vt2 lineClass={lineClass} />
@@ -448,6 +475,12 @@ const O2: LetterComp = ({ lineClass }) => (
   <>
     <Vb2 lineClass={lineClass} />
     <Vb3 lineClass={lineClass} />
+  </>
+)
+
+const U0: LetterComp = ({ lineClass }) => (
+  <>
+    <V03 lineClass={lineClass} />
   </>
 )
 
@@ -472,8 +505,8 @@ type GlyphSymbolComp = React.FunctionComponent<GlyphSymbolProps>
 
 const GlyphSymbol: GlyphSymbolComp = ({
   letters = '',
-  lineClass = 'stroke-black stroke-2',
-  svgClass = '',
+  lineClass = 'stroke-black stroke-1',
+  svgClass = 'm-1',
 }) => {
   // example letters inputs:
   // ko koi kon ako akoi akon . , : *
@@ -481,35 +514,52 @@ const GlyphSymbol: GlyphSymbolComp = ({
   const startLetter = startletters.includes(letters[0]) ? letters[0] : null
   const shiftedLetters = startLetter ? letters.slice(1) : letters
 
-  // return (
-  //   <div>
-  //     <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
-  //       <V01 lineClass={lineClass} />
-  //       <V02 lineClass={lineClass} />
-  //       <V03 lineClass={lineClass} />
-  //       <Hor1 lineClass={lineClass} />
-  //       <Hor2 lineClass={lineClass} />
-  //       <Hor3 lineClass={lineClass} />
-  //       <Ver1 lineClass={lineClass} />
-  //       <Ver3 lineClass={lineClass} />
-  //       <Hor1b lineClass={lineClass} />
-  //       <Hor2b lineClass={lineClass} />
-  //       <Hor3b lineClass={lineClass} />
-  //       <Ver1b lineClass={lineClass} />
-  //       <Ver3b lineClass={lineClass} />
-  //       <Vt1 lineClass={lineClass} />
-  //       <Vt2 lineClass={lineClass} />
-  //       <Vt3 lineClass={lineClass} />
-  //       <Vb1 lineClass={lineClass} />
-  //       <Vb2 lineClass={lineClass} />
-  //       <Vb3 lineClass={lineClass} />
-  //     </svg>
-  //   </div>
-  // )
+  if (letters === '%X') {
+    return (
+      <div>
+        <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+          <V01 lineClass={lineClass} />
+          <V02 lineClass={lineClass} />
+          <V03 lineClass={lineClass} />
+          <Hor1 lineClass={lineClass} />
+          <Hor2 lineClass={lineClass} />
+          <Hor3 lineClass={lineClass} />
+          <Ver1 lineClass={lineClass} />
+          <Ver3 lineClass={lineClass} />
+          <Hor1b lineClass={lineClass} />
+          <Hor2b lineClass={lineClass} />
+          <Hor3b lineClass={lineClass} />
+          <Ver1b lineClass={lineClass} />
+          <Ver3b lineClass={lineClass} />
+          <Vt1 lineClass={lineClass} />
+          <Vt2 lineClass={lineClass} />
+          <Vt3 lineClass={lineClass} />
+          <Vb1 lineClass={lineClass} />
+          <Vb2 lineClass={lineClass} />
+          <Vb3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
 
   return (
     <div>
       <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+        {startLetter && startLetter.toLowerCase() === 'i' && (
+          <I0 lineClass={lineClass} />
+        )}
+        {startLetter && startLetter.toLowerCase() === 'e' && (
+          <E0 lineClass={lineClass} />
+        )}
+        {startLetter && startLetter.toLowerCase() === 'a' && (
+          <A0 lineClass={lineClass} />
+        )}
+        {startLetter && startLetter.toLowerCase() === 'o' && (
+          <O0 lineClass={lineClass} />
+        )}
+        {startLetter && startLetter.toLowerCase() === 'u' && (
+          <U0 lineClass={lineClass} />
+        )}
         {shiftedLetters[0] && shiftedLetters[0].toLowerCase() === 'm' && (
           <M lineClass={lineClass} />
         )}
