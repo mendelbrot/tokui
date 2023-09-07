@@ -6,9 +6,9 @@ type LetterComp = React.FunctionComponent<LetterProps>
 const Hor1: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="12"
+    y1="14"
     x2="42"
-    y2="12"
+    y2="14"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -16,9 +16,9 @@ const Hor1: LetterComp = ({ lineClass }) => (
 const Hor2: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="32"
+    y1="34"
     x2="42"
-    y2="32"
+    y2="34"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -26,9 +26,9 @@ const Hor2: LetterComp = ({ lineClass }) => (
 const Hor3: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="52"
+    y1="54"
     x2="42"
-    y2="52"
+    y2="54"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -36,9 +36,9 @@ const Hor3: LetterComp = ({ lineClass }) => (
 const Ver1: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="12"
+    y1="14"
     x2="2"
-    y2="52"
+    y2="54"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -46,9 +46,9 @@ const Ver1: LetterComp = ({ lineClass }) => (
 const Ver3: LetterComp = ({ lineClass }) => (
   <line
     x1="42"
-    y1="12"
+    y1="14"
     x2="42"
-    y2="52"
+    y2="54"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -56,9 +56,9 @@ const Ver3: LetterComp = ({ lineClass }) => (
 const Hor1b: LetterComp = ({ lineClass }) => (
   <line
     x1="9"
-    y1="35"
+    y1="37"
     x2="35"
-    y2="35"
+    y2="37"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -66,9 +66,9 @@ const Hor1b: LetterComp = ({ lineClass }) => (
 const Hor2b: LetterComp = ({ lineClass }) => (
   <line
     x1="9"
-    y1="42"
+    y1="44"
     x2="35"
-    y2="42"
+    y2="44"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -76,9 +76,9 @@ const Hor2b: LetterComp = ({ lineClass }) => (
 const Hor3b: LetterComp = ({ lineClass }) => (
   <line
     x1="9"
-    y1="49"
+    y1="51"
     x2="35"
-    y2="49"
+    y2="51"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -86,9 +86,9 @@ const Hor3b: LetterComp = ({ lineClass }) => (
 const Ver1b: LetterComp = ({ lineClass }) => (
   <line
     x1="9"
-    y1="35"
+    y1="37"
     x2="9"
-    y2="49"
+    y2="51"
     className={lineClass}
     stroke-linecap="round"
   />
@@ -96,19 +96,19 @@ const Ver1b: LetterComp = ({ lineClass }) => (
 const Ver3b: LetterComp = ({ lineClass }) => (
   <line
     x1="35"
-    y1="35"
+    y1="37"
     x2="35"
-    y2="49"
+    y2="51"
     className={lineClass}
     stroke-linecap="round"
   />
 )
 const V01: LetterComp = ({ lineClass }) => (
   <line
-    x1="12"
+    x1="10"
     y1="2"
     x2="22"
-    y2="12"
+    y2="14"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -117,9 +117,9 @@ const V01: LetterComp = ({ lineClass }) => (
 const V02: LetterComp = ({ lineClass }) => (
   <line
     x1="15"
-    y1="5"
+    y1="6"
     x2="29"
-    y2="5"
+    y2="6"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -127,10 +127,10 @@ const V02: LetterComp = ({ lineClass }) => (
 )
 const V03: LetterComp = ({ lineClass }) => (
   <line
-    x1="32"
+    x1="34"
     y1="2"
     x2="22"
-    y2="12"
+    y2="14"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -139,9 +139,9 @@ const V03: LetterComp = ({ lineClass }) => (
 const Vt1: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="12"
+    y1="14"
     x2="22"
-    y2="32"
+    y2="34"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -149,10 +149,10 @@ const Vt1: LetterComp = ({ lineClass }) => (
 )
 const Vt2: LetterComp = ({ lineClass }) => (
   <line
-    x1="10"
-    y1="20"
-    x2="34"
-    y2="20"
+    x1="11"
+    y1="22"
+    x2="33"
+    y2="22"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -161,9 +161,9 @@ const Vt2: LetterComp = ({ lineClass }) => (
 const Vt3: LetterComp = ({ lineClass }) => (
   <line
     x1="22"
-    y1="32"
+    y1="34"
     x2="42"
-    y2="12"
+    y2="14"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -172,9 +172,9 @@ const Vt3: LetterComp = ({ lineClass }) => (
 const Vb1: LetterComp = ({ lineClass }) => (
   <line
     x1="2"
-    y1="52"
+    y1="54"
     x2="22"
-    y2="32"
+    y2="34"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -182,10 +182,10 @@ const Vb1: LetterComp = ({ lineClass }) => (
 )
 const Vb2: LetterComp = ({ lineClass }) => (
   <line
-    x1="10"
-    y1="44"
-    x2="34"
-    y2="44"
+    x1="11"
+    y1="46"
+    x2="33"
+    y2="46"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -194,9 +194,9 @@ const Vb2: LetterComp = ({ lineClass }) => (
 const Vb3: LetterComp = ({ lineClass }) => (
   <line
     x1="22"
-    y1="32"
+    y1="34"
     x2="42"
-    y2="52"
+    y2="54"
     className={lineClass}
     stroke-width="1"
     stroke-linecap="round"
@@ -508,31 +508,12 @@ const GlyphSymbol: GlyphSymbolComp = ({
   lineClass = 'stroke-black stroke-1',
   svgClass = 'm-1',
 }) => {
-  // example letters inputs:
-  // ko koi kon ako akoi akon . , : *
-  const startletters = [
-    'i',
-    'e',
-    'a',
-    'o',
-    'u',
-    'I',
-    'E',
-    'A',
-    'O',
-    'U',
-    '.',
-    ',',
-    ':',
-    '*',
-  ]
-  const startLetter = startletters.includes(letters[0]) ? letters[0] : null
-  const shiftedLetters = startLetter ? letters.slice(1) : letters
+  const viewBox = '0 0 44 56'
 
-  if (letters === '%X') {
+  if (letters === '%') {
     return (
       <div>
-        <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
           <V01 lineClass={lineClass} />
           <V02 lineClass={lineClass} />
           <V03 lineClass={lineClass} />
@@ -557,9 +538,107 @@ const GlyphSymbol: GlyphSymbolComp = ({
     )
   }
 
+  if (letters === '.') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vb1 lineClass={lineClass} />
+          <Vt3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ',') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vb1 lineClass={lineClass} />
+          <Vb3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ':') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vt1 lineClass={lineClass} />
+          <Vb1 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '*') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Ver3 lineClass={lineClass} />
+          <Hor2 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '!') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Vt1 lineClass={lineClass} />
+          <Vt3 lineClass={lineClass} />
+          <Vb1 lineClass={lineClass} />
+          <Vb3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === '[') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Hor1 lineClass={lineClass} />
+          <Ver1 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  if (letters === ']') {
+    return (
+      <div>
+        <svg version="1.1" viewBox={viewBox} className={svgClass}>
+          <Hor1 lineClass={lineClass} />
+          <Ver3 lineClass={lineClass} />
+        </svg>
+      </div>
+    )
+  }
+
+  const startletters = [
+    'i',
+    'e',
+    'a',
+    'o',
+    'u',
+    'I',
+    'E',
+    'A',
+    'O',
+    'U',
+    '.',
+    ',',
+    ':',
+    '*',
+  ]
+  const startLetter = startletters.includes(letters[0]) ? letters[0] : null
+  const shiftedLetters = startLetter ? letters.slice(1) : letters
+
   return (
     <div>
-      <svg version="1.1" viewBox="0 0 44 54" className={svgClass}>
+      <svg version="1.1" viewBox={viewBox} className={svgClass}>
         {startLetter && startLetter.toLowerCase() === 'i' && (
           <I0 lineClass={lineClass} />
         )}

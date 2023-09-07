@@ -20,7 +20,7 @@ export const Display: DisplayComp = ({ text, array }) => {
         <div key={`line ${lineIndex}`} className="flex flex-wrap">
           {line.map((word, wordIndex) => (
             <div key={`word ${wordIndex}`} className="w-[48px]">
-              <GlyphSymbol letters={word} />
+              <GlyphSymbol letters={word} lineClass="stroke-black stroke-2" />
             </div>
           ))}
         </div>
