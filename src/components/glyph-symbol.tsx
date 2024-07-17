@@ -10,7 +10,7 @@ const Hor1: LetterComp = ({ lineClass }) => (
     x2="42"
     y2="14"
     className={lineClass}
-    stroke-linecap="round"
+    
   />
 )
 const Hor2: LetterComp = ({ lineClass }) => (
