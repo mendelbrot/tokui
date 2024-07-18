@@ -85,5 +85,4 @@ function buildSvgParts() {
   return parts
 }
 
-// console.dir(buildSvgParts(), { depth: null })
 fs.writeFileSync('draw/parts.json', JSON.stringify(buildSvgParts(), null, 2))
