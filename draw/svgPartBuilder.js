@@ -3,11 +3,7 @@ This is a tool for building the svg elements that represent elements in tokui ch
 This code is not run within the application; it is used to build json and svg data that the app uses.
 
 Purpose:
-Each letter consists of 1 to 4 svg lines, which can be placed in one of up to 13 locations.
-writing every letter and location would mean writing around 250 blocks of svg, and they 
-would all be basically the same except for the up to 16 coordinate numbers in the svg lines. 
-Therefore writing every letter+location in svg would be tedious to create, and very tedious to modify.
-This tool solves this problem by building all of the svg blocks from an array of coordinate data.
+Compare partsCoordinates.js with parts.json. Which file would you prefer to manually edit or enter coordinate numbers into?
 
 partsCoordinates.js => parts.json
 
@@ -30,11 +26,12 @@ the forms data below is:
 
 forms.form[position].letter
 
-at the letter position, there is an array of 4-arrays.  each 4-array is for an svg line.
+at the letter position, there is an array of 4-arrays.  each 4-array is coordinates for an svg line.
 */
 
 const pc = require('./partsCoordinates')
-require('./stringFormat')
+require('./stringFormat') // adds the format method to strings
+const fs = require('fs')
 
 const forms = {
   X: [{ ...pc.C_surrounding, ...pc.V_solo }],
@@ -66,24 +63,27 @@ const forms = {
   ],
 }
 
-const svgLine = '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />'
+const svgLine = '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'
 
 // rebuild the forms structure but replace the coordinates with svg blocks
 function buildSvgParts() {
   let parts = {}
-  Object.entries(forms).forEach(([formName, positions]) => {
-    parts[formName] = positions.map((position) => {
-      positionWithSvg = {}
+  Object.entries(forms).forEach(([formName, positionsInForm]) => {
+    parts[formName] = positionsInForm.map((position) => {
+      svgBlocksForLetters = {}
       Object.entries(position).forEach(([letter, coordinates]) => {
-        positionWithSvg[letter] = coordinates.map((componentCoordinates) =>
-          svgLine.format(...componentCoordinates)
+        svgBlocksForLetters[letter] = coordinates.reduce(
+          (svgBlock, lineCoordinates) =>
+            svgBlock + svgLine.format(...lineCoordinates),
+          ''
         )
       })
-      return positionWithSvg
+      return svgBlocksForLetters
     })
   })
 
   return parts
 }
 
-console.dir(buildSvgParts(), { depth: null })
+// console.dir(buildSvgParts(), { depth: null })
+fs.writeFileSync('draw/parts.json', JSON.stringify(buildSvgParts(), null, 2))
