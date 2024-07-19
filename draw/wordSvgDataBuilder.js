@@ -3,7 +3,11 @@ const fs = require('fs')
 
 function n(box) {
   return (
-    '<g transform="{0}">'.format(box.transform) +
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
@@ -22,26 +26,30 @@ function n(box) {
       box.x + box.width,
       box.y + box.height
     ) +
-    '</g>'
+    '</g>\n'
   )
 }
 
 function a(box) {
   return (
-    '<g transform="{0}">'.format(box.transform) +
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
-      Math.round(((box.x + box.width) / 2) * 100) / 100,
+      Math.round((box.x + box.width / 2) * 100) / 100,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
-      Math.round(((box.x + box.width) / 2) * 100) / 100,
+      Math.round((box.x + box.width / 2) * 100) / 100,
       box.y + box.height
     ) +
-    '</g>'
+    '</g>\n'
   )
 }
 
@@ -67,7 +75,7 @@ const boxes = {
   },
   FVB: {
     x: 4,
-    y: 4,
+    y: 20,
     width: 32,
     height: 16,
     transform: 'scale(1,-1)',
@@ -109,10 +117,8 @@ const categories = {
   X,
   Y,
   V,
-  C
+  C,
 }
-
-
 
 const forms = {
   X: [boxes.F],
@@ -145,7 +151,7 @@ function build() {
         parts[label][index][letter] = shapes[letter](box)
       })
     })
-  });
+  })
 
   return parts
 }
@@ -153,8 +159,10 @@ function build() {
 const frame =
   '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">\n<rect width="100%" height="100%" fill="{1}" />\n<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n{0}</g>\n</svg>'
 
+const parts = JSON.parse(fs.readFileSync('draw/parts.json', 'utf8'))
+
 function draw(word) {
-  form = 'X'
+  let form = 'X'
   if (word === 'na') {
     form = 'CV'
   }
@@ -163,20 +171,17 @@ function draw(word) {
     form = 'CVV'
   }
 
-  const wordInnerSvg = word.reduce(
-    (svgBlock, letter, index) => svgBlock + parts[form][index][letter],
-    ''
-  )
-  const wordSvg = frames[frameVowel].format(
-    wordInnerSvg,
-    fill,
-    stroke,
-    strokeWidth
-  )
+  const wordInnerSvg = word
+    .split('')
+    .reduce(
+      (svgBlock, letter, index) => svgBlock + parts[form][index][letter],
+      ''
+    )
+  const wordSvg = frame.format(wordInnerSvg, 'white', 'black', '2')
 
   return wordSvg
 }
 
-fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
+// fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
-// fs.writeFileSync('draw/shapes/drawing-test.svg', draw('n'))
+fs.writeFileSync('draw/shapes/drawing-test.svg', draw('naa'))

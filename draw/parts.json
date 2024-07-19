@@ -1,183 +1,183 @@
 {
   "X": [
     {
-      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>",
-      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"36\" />\n</g>"
+      "n": "<g transform=\"scale(1,1)\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "a": "<g transform=\"scale(1,1)\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n"
     }
   ],
   "CV": [
     {
-      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+      "n": "<g transform=\"scale(1,1)\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,1)\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
     }
   ],
   "CVC": [
     {
-      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+      "n": "<g transform=\"scale(1,1)\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,1)\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CVV": [
     {
-      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+      "n": "<g transform=\"scale(1,1)\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,1)\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"scale(1,-1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n"
     }
   ],
   "CVCY": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CVVY": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CVCYY": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CVVYY": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CC": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CCC": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "CCCC": [
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "VV": [
     {
-      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,1)\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"scale(1,-1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n"
     }
   ],
   "VVY": [
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "VVYY": [
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n",
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ],
   "VC": [
     {
-      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "a": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     },
     {
-      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+      "n": "<g transform=\"{0}\" transform-origin=\"NaN NaN\">\n<line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>\n"
     }
   ]
 }
