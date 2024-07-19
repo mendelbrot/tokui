@@ -85,4 +85,4 @@ function buildSvgParts() {
   return parts
 }
 
-fs.writeFileSync('draw/parts.json', JSON.stringify(buildSvgParts(), null, 2))
+fs.writeFileSync('draw/parts1.json', JSON.stringify(buildSvgParts(), null, 2))
