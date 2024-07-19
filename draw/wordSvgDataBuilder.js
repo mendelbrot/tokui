@@ -100,7 +100,7 @@ V = vowel
 
 */
 
-const X = ['n', 'a', '+']
+const X = ['n', 'a']
 const Y = ['n', 'a']
 const V = ['a']
 const C = ['n']
@@ -134,18 +134,18 @@ const forms = {
 
 function build() {
   let parts = {}
-  Object.entries(forms).forEach(([formName, positionsInForm]) => {
-    parts[formName] = positionsInForm.map((box) => {
-      const formCategorySpecifiers = formName.split('')
-      svgBlocksForLetters = {}
-      Object.entries(shapes).forEach(([shapeName, shapeFunction] => {
-        category = formCategorySpecifiers[index]
-        if 
-        svgBlocksForLetters[shapeName] = shapeFunction(box)
+
+  Object.entries(forms).forEach(([label, sequence]) => {
+    parts[label] = []
+    const letterTypes = label.split('')
+    sequence.forEach((box, index) => {
+      parts[label].push({})
+      letters = categories[letterTypes[index]]
+      letters.forEach((letter) => {
+        parts[label][index][letter] = shapes[letter](box)
       })
-      return svgBlocksForLetters
     })
-  })
+  });
 
   return parts
 }
@@ -177,6 +177,6 @@ function draw(word) {
   return wordSvg
 }
 
-fs.writeFileSync('draw/parts1.json', JSON.stringify(build(), null, 2))
+fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
 // fs.writeFileSync('draw/shapes/drawing-test.svg', draw('n'))

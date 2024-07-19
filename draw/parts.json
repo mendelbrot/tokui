@@ -1,0 +1,183 @@
+{
+  "X": [
+    {
+      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>",
+      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"36\" />\n</g>"
+    }
+  ],
+  "CV": [
+    {
+      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    }
+  ],
+  "CVC": [
+    {
+      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CVV": [
+    {
+      "n": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"scale(1,-1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    }
+  ],
+  "CVCY": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CVVY": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CVCYY": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CVVYY": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CC": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CCC": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "CCCC": [
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "VV": [
+    {
+      "a": "<g transform=\"scale(1,1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"scale(1,-1)\"><line x1=\"4\" y1=\"4\" x2=\"18\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"18\" y2=\"20\" />\n</g>"
+    }
+  ],
+  "VVY": [
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "VVYY": [
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>",
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ],
+  "VC": [
+    {
+      "a": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    },
+    {
+      "n": "<g transform=\"{0}\"><line x1=\"{0}\" y1=\"{1}\" x2=\"NaN\" y2=\"{3}\" />\n<line x1=\"{0}\" y1=\"{1}\" x2=\"{2}\" y2=\"NaN\" />\n<line x1=\"NaN\" y1=\"{1}\" x2=\"NaN\" y2=\"NaN\" />\n</g>"
+    }
+  ]
+}
