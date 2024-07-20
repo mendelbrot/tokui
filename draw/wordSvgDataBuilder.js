@@ -1,6 +1,124 @@
 require('./stringFormat') // adds the format method to strings
 const fs = require('fs')
 
+const Q = 0.4
+
+function dy(hgt) {
+  Math.round(Q * hgt * 100) / 100
+}
+
+function dx(wid) {
+  Math.round(Q * wid * 50) / 100
+}
+
+function mid(z) {
+  return Math.round(z * 50) / 100
+}
+
+function i(box) {
+  return (
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) + '</g>\n'
+  )
+}
+
+function e(box) {
+  return (
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + dx(box.width),
+      box.y + dy(box.width),
+      box.x + box.width - dx(box.width),
+      box.y + dy(box.width)
+    ) +
+    '</g>\n'
+  )
+}
+
+function a(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function o(box) {
+  return (
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + dx(box.width),
+      box.y + dy(box.width),
+      box.x + box.width - dx(box.width),
+      box.y + dy(box.width)
+    ) +
+    '</g>\n'
+  )
+}
+
+function u(box) {
+  return (
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) + '</g>\n'
+  )
+}
+
+function m(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
 function n(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
@@ -30,7 +148,7 @@ function n(box) {
   )
 }
 
-function a(box) {
+function g(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -40,13 +158,274 @@ function a(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function p(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
       Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function t(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function k(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
       Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function f(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function s(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function h(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function w(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function l(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function y(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
       box.y + box.height
     ) +
     '</g>\n'
@@ -54,8 +433,23 @@ function a(box) {
 }
 
 const shapes = {
-  n,
+  i,
+  e,
   a,
+  o,
+  u,
+  m,
+  n,
+  g,
+  p,
+  t,
+  k,
+  f,
+  s,
+  h,
+  w,
+  l,
+  y,
 }
 
 const boxes = {
@@ -108,34 +502,70 @@ function frame(vowel = null) {
     )
   }
 
-  const frameVowelBox = {
-    x: 10,
-    y: 4,
-    width: 20,
-    height: 10,
-    transform: '',
-  }
-
   return (
     '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="55">\n' +
     '<rect width="100%" height="100%" fill="{1}" />\n' +
-    shapes[vowel](frameVowelBox) +
+    shapes[vowel]({
+      x: 10,
+      y: 4,
+      width: 20,
+      height: 10,
+      transform: '',
+    }) +
     '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round" transform="translate(0 -15)">\n{0}' +
     '</g>\n' +
     '</svg>'
   )
 }
 
-const X = ['n', 'a']
-const Y = ['n', 'a']
-const V = ['a']
-const C = ['n']
+const X = [
+  'i',
+  'e',
+  'a',
+  'o',
+  'u',
+  'm',
+  'n',
+  'g',
+  'f',
+  's',
+  'h',
+  'p',
+  't',
+  'k',
+  'w',
+  'l',
+  'y',
+]
+const Y = [
+  'i',
+  'e',
+  'a',
+  'o',
+  'u',
+  'm',
+  'n',
+  'g',
+  'f',
+  's',
+  'h',
+  'p',
+  't',
+  'k',
+  'w',
+  'l',
+  'y',
+]
+const V = ['i', 'e', 'a', 'o', 'u']
+const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
+const F = ['I', 'E', 'A', 'O', 'U']
 
 const groups = {
   X,
   Y,
   V,
   C,
+  F,
 }
 
 const forms = {
@@ -215,7 +645,7 @@ function draw(word) {
   const sequence = word.split('')
 
   let frame = parts.frames.basic
-  if (['I', 'E', 'A', 'O', 'U'].some((item) => item === word[0])) {
+  if (groups.F.some((item) => item === word[0])) {
     frameVowel = sequence.shift() // modifies
     frame = parts.frames[frameVowel]
   }
