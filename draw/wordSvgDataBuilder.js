@@ -4,11 +4,11 @@ const fs = require('fs')
 const Q = 0.4
 
 function dy(hgt) {
-  Math.round(Q * hgt * 100) / 100
+  return Math.round(Q * hgt * 100) / 100
 }
 
 function dx(wid) {
-  Math.round(Q * wid * 50) / 100
+  return Math.round(Q * wid * 50) / 100
 }
 
 function mid(z) {
@@ -17,17 +17,28 @@ function mid(z) {
 
 function i(box) {
   return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
       box.x + mid(box.width),
       box.y + box.height
-    ) + '</g>\n'
+    ) +
+    '</g>\n'
   )
 }
 
 function e(box) {
   return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
@@ -69,6 +80,11 @@ function a(box) {
 
 function o(box) {
   return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
@@ -87,12 +103,18 @@ function o(box) {
 
 function u(box) {
   return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
       box.x + mid(box.width),
       box.y + box.height
-    ) + '</g>\n'
+    ) +
+    '</g>\n'
   )
 }
 
@@ -474,21 +496,111 @@ const boxes = {
     height: 16,
     transform: 'scale(1,-1)',
   },
-  FCB: {},
-  L: {},
-  LVT: {},
-  LVB: {},
-  LCB: {},
-  RT: {},
-  RB: {},
-  L2: {},
-  R2: {},
-  I1: {},
-  I2: {},
-  I3: {},
-  I4: {},
-  T: {},
-  B: {},
+  FCB: {
+    x: 10,
+    y: 23,
+    width: 20,
+    height: 10,
+    transform: '',
+  },
+  L: {
+    x: 4,
+    y: 4,
+    width: 16,
+    height: 32,
+    transform: '',
+  },
+  LVT: {
+    x: 4,
+    y: 4,
+    width: 16,
+    height: 16,
+    transform: '',
+  },
+  LVB: {
+    x: 4,
+    y: 20,
+    width: 16,
+    height: 16,
+    transform: 'scale(1,-1)',
+  },
+  LCB: {
+    x: 10,
+    y: 23,
+    width: 10,
+    height: 10,
+    transform: '',
+  },
+  RT: {
+    x: 24,
+    y: 4,
+    width: 12,
+    height: 14,
+    transform: '',
+  },
+  RB: {
+    x: 24,
+    y: 22,
+    width: 12,
+    height: 14,
+    transform: '',
+  },
+  L2: {
+    x: 4,
+    y: 4,
+    width: 14,
+    height: 32,
+    transform: '',
+  },
+  R2: {
+    x: 22,
+    y: 4,
+    width: 14,
+    height: 32,
+    transform: '',
+  },
+  I1: {
+    x: 4,
+    y: 4,
+    width: 14,
+    height: 14,
+    transform: '',
+  },
+  I2: {
+    x: 4,
+    y: 22,
+    width: 14,
+    height: 14,
+    transform: '',
+  },
+  I3: {
+    x: 22,
+    y: 4,
+    width: 14,
+    height: 14,
+    transform: '',
+  },
+  I4: {
+    x: 22,
+    y: 22,
+    width: 14,
+    height: 14,
+    transform: '',
+  },
+  T: {
+    x: 10,
+    y: 4,
+    width: 20,
+    height: 10,
+    transform: '',
+  },
+  B: {
+    x: 4,
+    y: 14,
+    width: 32,
+    height: 22,
+    transform: '',
+  },
 }
 
 function frame(vowel = null) {
@@ -587,8 +699,8 @@ const forms = {
 }
 
 const pakala = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-  <rect width="100%" height="100%" fill="{1}" />
-  <g stroke="{2}" stroke-width="{3}" stroke-linecap="round">
+  <rect width="100%" height="100%" fill="{0}" />
+  <g stroke="{1}" stroke-width="{2}" stroke-linecap="round">
     <line x1="4" y1="6" x2="36" y2="4" />
     <line x1="4" y1="36" x2="36" y2="36" />
     <line x1="6" y1="6" x2="4" y2="36" />
@@ -625,16 +737,16 @@ function build() {
 const parts = JSON.parse(fs.readFileSync('draw/parts.json', 'utf8'))
 
 function checkAgainst(sequence, forms) {
-  forms.forEach((form) => {
+  for (const form of forms) {
     if (
       sequence.length === form.length &&
-      sequence.all((letter, index) =>
-        groups[form[index]].some((item) => item === letter)
-      )
+      sequence.every((letter, index) => {
+        return groups[form[index]].some((item) => item === letter)
+      })
     ) {
       return form
     }
-  })
+  }
 }
 
 function draw(word) {
@@ -683,12 +795,13 @@ function draw(word) {
     }
   }
 
-  const innerPart = word
-    .split('')
-    .reduce(
-      (accumulator, letter, index) => accumulator + parts[form][index][letter],
-      ''
-    )
+  if (form === 'pakala') {
+    return parts[form].format('white', 'black', '2')
+  }
+
+  const innerPart = sequence.reduce((accumulator, letter, index) => {
+    return accumulator + parts[form][index][letter]
+  }, '')
   const wordSvg = frame.format(innerPart, 'white', 'black', '2')
 
   return wordSvg
@@ -696,4 +809,10 @@ function draw(word) {
 
 // fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
-// fs.writeFileSync('draw/shapes/drawing-test.svg', draw('naa'))
+// console.dir(parts, { depth: null })
+
+fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
+fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
+fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
+fs.writeFileSync('draw/shapes/Alks.svg', draw('Akls'))
+fs.writeFileSync('draw/shapes/et.svg', draw('et'))
