@@ -47,9 +47,9 @@ function e(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + dx(box.width),
-      box.y + dy(box.width),
+      box.y + dy(box.height),
       box.x + box.width - dx(box.width),
-      box.y + dy(box.width)
+      box.y + dy(box.height)
     ) +
     '</g>\n'
   )
@@ -93,9 +93,9 @@ function o(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + dx(box.width),
-      box.y + dy(box.width),
+      box.y + dy(box.height),
       box.x + box.width - dx(box.width),
-      box.y + dy(box.width)
+      box.y + dy(box.height)
     ) +
     '</g>\n'
   )
@@ -525,7 +525,7 @@ const boxes = {
     transform: 'scale(1,-1)',
   },
   LCB: {
-    x: 10,
+    x: 7,
     y: 23,
     width: 10,
     height: 10,
@@ -615,8 +615,9 @@ function frame(vowel = null) {
   }
 
   return (
-    '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="55">\n' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="50">\n' +
     '<rect width="100%" height="100%" fill="{1}" />\n' +
+    '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n' +
     shapes[vowel]({
       x: 10,
       y: 4,
@@ -624,7 +625,8 @@ function frame(vowel = null) {
       height: 10,
       transform: '',
     }) +
-    '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round" transform="translate(0 -15)">\n{0}' +
+    '<g transform="translate(0 10)">\n{0}' +
+    '</g>\n' +
     '</g>\n' +
     '</svg>'
   )
@@ -811,8 +813,28 @@ function draw(word) {
 
 // console.dir(parts, { depth: null })
 
+
+
+
+
+
 fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
 fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
 fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
-fs.writeFileSync('draw/shapes/Alks.svg', draw('Akls'))
+fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
+fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
+fs.writeFileSync('draw/shapes/Akls.svg', draw('Akls'))
 fs.writeFileSync('draw/shapes/et.svg', draw('et'))
+fs.writeFileSync('draw/shapes/e.svg', draw('e'))
+fs.writeFileSync('draw/shapes/a.svg', draw('a'))
+fs.writeFileSync('draw/shapes/u.svg', draw('u'))
+fs.writeFileSync('draw/shapes/h.svg', draw('h'))
+fs.writeFileSync('draw/shapes/Olis.svg', draw('Olis'))
+fs.writeFileSync('draw/shapes/Ilof.svg', draw('Ilof'))
+fs.writeFileSync('draw/shapes/Olisen.svg', draw('Olisen'))
+fs.writeFileSync('draw/shapes/Ilofuf.svg', draw('Ilofuf'))
+fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
+fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
+fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
+fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
+fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))

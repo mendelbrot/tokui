@@ -3,7 +3,7 @@
 <g stroke="black" stroke-width="2" stroke-linecap="round">
 <g transform="" transform-origin="20 9">
 <line x1="10" y1="4" x2="20" y2="14" />
-<line x1="14" y1="12" x2="26" y2="12" />
+<line x1="14" y1="8" x2="26" y2="8" />
 </g>
 <g transform="" transform-origin="20 25">
 <line x1="4" y1="25" x2="36" y2="25" />
