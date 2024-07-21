@@ -23,8 +23,14 @@ function i(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
+      box.x + box.width,
       box.y,
+      box.x,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
       box.x + box.width,
       box.y + box.height
     ) +
@@ -109,8 +115,14 @@ function u(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + box.width,
+      box.x,
       box.y,
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y + +mid(box.height),
       box.x,
       box.y + box.height
     ) +
@@ -454,7 +466,7 @@ function y(box) {
   )
 }
 
-const shapes = {
+const letters = {
   i,
   e,
   a,
@@ -474,6 +486,30 @@ const shapes = {
   y,
 }
 
+const pakala = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+  <rect width="100%" height="100%" fill="{0}" />
+  <g stroke="{1}" stroke-width="{2}" stroke-linecap="round">
+    <line x1="4" y1="6" x2="36" y2="4" />
+    <line x1="4" y1="36" x2="36" y2="36" />
+    <line x1="6" y1="6" x2="4" y2="36" />
+    <line x1="36" y1="4" x2="34" y2="32" />
+    <line x1="28" y1="6" x2="16" y2="19" />
+    <line x1="16" y1="19" x2="27" y2="21" />
+    <line x1="27" y1="21" x2="14" y2="36" />
+  </g>
+</svg>`
+
+const special = {
+  Z: pakala,
+}
+
+const frame =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">\n' +
+  '<rect width="100%" height="100%" fill="{1}" />\n' +
+  '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n{0}' +
+  '</g>\n' +
+  '</svg>'
+
 const boxes = {
   F: {
     x: 4,
@@ -482,91 +518,63 @@ const boxes = {
     height: 32,
     transform: '',
   },
-  FCT: {
+  FT: {
     x: 12,
     y: 7,
     width: 16,
     height: 10,
     transform: '',
   },
-  FCB: {
+  FB: {
     x: 12,
     y: 23,
     width: 16,
     height: 10,
     transform: '',
   },
-  FVT: {
-    x: 14,
-    y: 7,
-    width: 12,
-    height: 10,
-    transform: '',
-  },
-  FVB: {
-    x: 14,
-    y: 23,
-    width: 12,
-    height: 10,
-    transform: '',
-  },
-  L: {
+  LF: {
     x: 4,
     y: 4,
     width: 16,
     height: 32,
     transform: '',
   },
-  LCT: {
+  LFT: {
     x: 7,
     y: 7,
     width: 10,
     height: 10,
     transform: '',
   },
-  LCB: {
+  LFB: {
     x: 7,
     y: 23,
     width: 10,
     height: 10,
     transform: '',
   },
-  LVT: {
-    x: 7,
-    y: 7,
-    width: 10,
-    height: 10,
-    transform: '',
-  },
-  LVB: {
-    x: 7,
-    y: 23,
-    width: 10,
-    height: 10,
-    transform: '',
-  },
-  RT: {
+  RFT: {
     x: 24,
     y: 4,
     width: 12,
     height: 14,
     transform: '',
   },
-  RB: {
+  RFB: {
     x: 24,
     y: 22,
     width: 12,
     height: 14,
     transform: '',
   },
-  L2: {
+  L: {
     x: 4,
     y: 4,
     width: 14,
     height: 32,
     transform: '',
   },
-  R2: {
+  R: {
     x: 22,
     y: 4,
     width: 14,
@@ -602,148 +610,53 @@ const boxes = {
     transform: '',
   },
   T: {
-    x: 12,
+    x: 4,
     y: 4,
-    width: 16,
-    height: 12,
+    width: 32,
+    height: 14,
     transform: '',
   },
   B: {
     x: 4,
-    y: 16,
+    y: 22,
     width: 32,
-    height: 20,
+    height: 14,
     transform: '',
   },
 }
 
-function frame(vowel = null) {
-  // if (!vowel) {
-    return (
-      '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">\n' +
-      '<rect width="100%" height="100%" fill="{1}" />\n' +
-      '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n{0}' +
-      '</g>\n' +
-      '</svg>'
-    )
-  // }
-
-  // return (
-  //   '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="50">\n' +
-  //   '<rect width="100%" height="100%" fill="{1}" />\n' +
-  //   '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n' +
-  //   shapes[vowel]({
-  //     x: 10,
-  //     y: 4,
-  //     width: 20,
-  //     height: 10,
-  //     transform: '',
-  //   }) +
-  //   '<g transform="translate(0 10)">\n{0}' +
-  //   '</g>\n' +
-  //   '</g>\n' +
-  //   '</svg>'
-  // )
-}
-
-const X = [
-  'i',
-  'e',
-  'a',
-  'o',
-  'u',
-  'm',
-  'n',
-  'g',
-  'f',
-  's',
-  'h',
-  'p',
-  't',
-  'k',
-  'w',
-  'l',
-  'y',
-]
-const Y = [
-  'i',
-  'e',
-  'a',
-  'o',
-  'u',
-  'm',
-  'n',
-  'g',
-  'f',
-  's',
-  'h',
-  'p',
-  't',
-  'k',
-  'w',
-  'l',
-  'y',
-]
 const V = ['i', 'e', 'a', 'o', 'u']
 const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
-// const F = ['I', 'E', 'A', 'O', 'U']
+const S = ['Z']
+const Y = V.concat(C)
+const X = V.concat(C, S)
 
 const groups = {
   X,
   Y,
   V,
   C,
-  // F,
+  S,
 }
 
 const forms = {
-  X: [boxes.F],
-  CV: [boxes.F, boxes.FVT],
-  CVC: [boxes.F, boxes.FVT, boxes.FCB],
-  CVV: [boxes.F, boxes.FVT, boxes.FVB],
-  CVCY: [boxes.L, boxes.LVT, boxes.LCB, boxes.RT],
-  CVVY: [boxes.L, boxes.LVT, boxes.LVB, boxes.RT],
-  CVCYY: [boxes.L, boxes.LVT, boxes.LCB, boxes.RT, boxes.RB],
-  CVVYY: [boxes.L, boxes.LVT, boxes.LVB, boxes.RT, boxes.RB],
-  CC: [boxes.L2, boxes.R2],
-  CCC: [boxes.L2, boxes.I3, boxes.I4],
-  CCCC: [boxes.I1, boxes.I2, boxes.I3, boxes.I4],
-  VV: [boxes.FVT, boxes.FVB],
-  VVY: [boxes.LVT, boxes.LVB, boxes.RT],
-  VVYY: [boxes.LVT, boxes.LVB, boxes.RT, boxes.RB],
-  VC: [boxes.T, boxes.B],
+  X: ['F'],
+  A2: ['F', 'FT'],
+  A3: ['F', 'FT', 'FB'],
+  A4: ['LF', 'LFT', 'LFB', 'RFT'],
+  A5: ['LF', 'LFT', 'LFB', 'RFT', 'RFB'],
+  B2: ['L', 'R'],
+  B3: ['L', 'I3', 'I4'],
+  B4: ['I1', 'I2', 'I3', 'I4'],
 }
 
-const pakala = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-  <rect width="100%" height="100%" fill="{0}" />
-  <g stroke="{1}" stroke-width="{2}" stroke-linecap="round">
-    <line x1="4" y1="6" x2="36" y2="4" />
-    <line x1="4" y1="36" x2="36" y2="36" />
-    <line x1="6" y1="6" x2="4" y2="36" />
-    <line x1="36" y1="4" x2="34" y2="32" />
-    <line x1="28" y1="6" x2="16" y2="19" />
-    <line x1="16" y1="19" x2="27" y2="21" />
-    <line x1="27" y1="21" x2="14" y2="36" />
-  </g>
-</svg>`
-
 function build() {
-  let parts = { pakala }
+  let parts = { special, frame }
 
-  parts.frames = { basic: frame() }
-  // groups.V.forEach((vowel) => {
-  //   parts.frames[vowel.toUpperCase()] = frame(vowel)
-  // })
-
-  Object.entries(forms).forEach(([label, sequence]) => {
-    parts[label] = []
-    const letterTypes = label.split('')
-    sequence.forEach((box, index) => {
-      parts[label].push({})
-      letters = groups[letterTypes[index]]
-      letters.forEach((letter) => {
-        parts[label][index][letter] = shapes[letter](box)
-      })
+  Object.entries(boxes).forEach(([boxLabel, box]) => {
+    parts[boxLabel] = {}
+    groups.Y.forEach((letter) => {
+      parts[boxLabel][letter] = letters[letter](box)
     })
   })
 
@@ -752,73 +665,57 @@ function build() {
 
 const parts = JSON.parse(fs.readFileSync('draw/parts.json', 'utf8'))
 
-function checkAgainst(sequence, forms) {
-  for (const form of forms) {
-    if (
-      sequence.length === form.length &&
-      sequence.every((letter, index) => {
-        return groups[form[index]].some((item) => item === letter)
-      })
-    ) {
-      return form
-    }
-  }
-}
-
-function draw(word) {
+function draw(word, styles = ['white', 'black', '2']) {
   if (word.length === 0) {
     return null
   }
 
+  const pakala = parts.special.Z.format(...styles)
+
+  if (word.length > 5) {
+    return pakala
+  }
+
+  if (groups.S.some((i) => i === word)) {
+    return parts.special[word].format(...styles)
+  }
+
   const sequence = word.split('')
-
-  let frame = parts.frames.basic
-  // if (groups.F.some((item) => item === word[0])) {
-  //   frameVowel = sequence.shift() // modifies
-  //   frame = parts.frames[frameVowel]
-  // }
-
   let form = 'pakala'
 
-  switch (sequence.length) {
-    case 0: {
-      return frames[frameVowel].format('', fill, stroke, strokeWidth)
+  if (sequence.length === 1) {
+    if (Y.some((i) => i === sequence[0])) {
+      form = 'X'
+    } else {
+      return pakala
     }
-    case 1: {
-      const s = checkAgainst(sequence, ['X'])
-      if (s) form = s
-      break
+  } else {
+    if (!sequence.every((letter) => Y.some((i) => i === letter))) {
+      return pakala
     }
-    case 2: {
-      const s = checkAgainst(sequence, ['CV', 'CC', 'VV', 'VC'])
-      if (s) form = s
-      break
-    }
-    case 3: {
-      const s = checkAgainst(sequence, ['CVC', 'CVV', 'CCC', 'VVY'])
-      if (s) form = s
-      break
-    }
-    case 4: {
-      const s = checkAgainst(sequence, ['CVCY', 'CVVY', 'CCCC', 'VVYY'])
-      if (s) form = s
-      break
-    }
-    case 5: {
-      const s = checkAgainst(sequence, ['CVCYY', 'CVVYY'])
-      if (s) form = s
-      break
+
+    if (
+      V.some((i) => i === sequence[0]) ||
+      sequence.every((letter) => C.some((i) => i === letter))
+    ) {
+      if (sequence.length < 5) {
+        form = 'B' + sequence.length
+      } else {
+        return pakala
+      }
+    } else {
+      form = 'A' + sequence.length
     }
   }
 
   if (form === 'pakala') {
-    return parts[form].format('white', 'black', '2')
+    return pakala
   }
 
   const innerPart = sequence.reduce((accumulator, letter, index) => {
-    return accumulator + parts[form][index][letter]
+    return accumulator + parts[forms[form][index]][letter]
   }, '')
-  const wordSvg = frame.format(innerPart, 'white', 'black', '2')
+  const wordSvg = parts.frame.format(innerPart, ...styles)
 
   return wordSvg
 }
@@ -826,7 +723,6 @@ function draw(word) {
 // fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
 // console.dir(parts, { depth: null })
-
 
 fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
 fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
@@ -849,5 +745,5 @@ fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
 fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
 fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
 fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
-
-
+fs.writeFileSync('draw/shapes/v.svg', draw('v'))
+fs.writeFileSync('draw/shapes/Z.svg', draw('Z'))
