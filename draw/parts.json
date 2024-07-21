@@ -1,20 +1,15 @@
 {
   "pakala": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\">\n  <rect width=\"100%\" height=\"100%\" fill=\"{0}\" />\n  <g stroke=\"{1}\" stroke-width=\"{2}\" stroke-linecap=\"round\">\n    <line x1=\"4\" y1=\"6\" x2=\"36\" y2=\"4\" />\n    <line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n    <line x1=\"6\" y1=\"6\" x2=\"4\" y2=\"36\" />\n    <line x1=\"36\" y1=\"4\" x2=\"34\" y2=\"32\" />\n    <line x1=\"28\" y1=\"6\" x2=\"16\" y2=\"19\" />\n    <line x1=\"16\" y1=\"19\" x2=\"27\" y2=\"21\" />\n    <line x1=\"27\" y1=\"21\" x2=\"14\" y2=\"36\" />\n  </g>\n</svg>",
   "frames": {
-    "basic": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n{0}</g>\n</svg>",
-    "I": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"50\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n<g transform=\"translate(0 10)\">\n{0}</g>\n</g>\n</svg>",
-    "E": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"50\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"14\" y1=\"8\" x2=\"26\" y2=\"8\" />\n</g>\n<g transform=\"translate(0 10)\">\n{0}</g>\n</g>\n</svg>",
-    "A": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"50\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"30\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n<g transform=\"translate(0 10)\">\n{0}</g>\n</g>\n</svg>",
-    "O": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"50\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"30\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"14\" y1=\"8\" x2=\"26\" y2=\"8\" />\n</g>\n<g transform=\"translate(0 10)\">\n{0}</g>\n</g>\n</svg>",
-    "U": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"50\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n<g transform=\"translate(0 10)\">\n{0}</g>\n</g>\n</svg>"
+    "basic": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n{0}</g>\n</svg>"
   },
   "X": [
     {
-      "i": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"16.8\" x2=\"29.6\" y2=\"16.8\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"36\" />\n<line x1=\"13.6\" y1=\"13.6\" x2=\"36\" y2=\"13.6\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"16.8\" x2=\"29.6\" y2=\"16.8\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"36\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"4\" y1=\"13.6\" x2=\"26.4\" y2=\"13.6\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"36\" y1=\"4\" x2=\"4\" y2=\"36\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"4\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n",
@@ -45,11 +40,11 @@
       "y": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n<line x1=\"17.6\" y1=\"10\" x2=\"26\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"20\" y2=\"17\" />\n<line x1=\"26\" y1=\"7\" x2=\"20\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n<line x1=\"14\" y1=\"10\" x2=\"22.4\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n</g>\n"
     }
   ],
   "CVC": [
@@ -68,25 +63,25 @@
       "y": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n<line x1=\"17.6\" y1=\"10\" x2=\"26\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"20\" y2=\"17\" />\n<line x1=\"26\" y1=\"7\" x2=\"20\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n<line x1=\"14\" y1=\"10\" x2=\"22.4\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n</g>\n"
     },
     {
-      "m": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n</g>\n",
-      "n": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "g": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "f": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n</g>\n",
-      "s": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "h": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "p": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n</g>\n",
-      "t": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "k": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"28\" x2=\"30\" y2=\"28\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "w": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"33\" x2=\"30\" y2=\"33\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n</g>\n",
-      "l": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"33\" x2=\"30\" y2=\"33\" />\n<line x1=\"10\" y1=\"23\" x2=\"10\" y2=\"33\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n",
-      "y": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"10\" y1=\"23\" x2=\"30\" y2=\"23\" />\n<line x1=\"10\" y1=\"33\" x2=\"30\" y2=\"33\" />\n<line x1=\"30\" y1=\"23\" x2=\"30\" y2=\"33\" />\n</g>\n"
+      "m": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "n": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "g": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "f": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "s": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "h": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "p": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "t": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "k": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"28\" x2=\"28\" y2=\"28\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "w": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"33\" x2=\"28\" y2=\"33\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "l": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"33\" x2=\"28\" y2=\"33\" />\n<line x1=\"12\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n",
+      "y": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"12\" y1=\"23\" x2=\"28\" y2=\"23\" />\n<line x1=\"12\" y1=\"33\" x2=\"28\" y2=\"33\" />\n<line x1=\"28\" y1=\"23\" x2=\"28\" y2=\"33\" />\n</g>\n"
     }
   ],
   "CVV": [
@@ -105,18 +100,18 @@
       "y": "<g transform=\"\" transform-origin=\"20 20\">\n<line x1=\"4\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n<line x1=\"17.6\" y1=\"10\" x2=\"26\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"20\" y2=\"17\" />\n<line x1=\"26\" y1=\"7\" x2=\"20\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n<line x1=\"14\" y1=\"10\" x2=\"22.4\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"26.4\" x2=\"29.6\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"26.4\" x2=\"29.6\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"26\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"26\" y2=\"33\" />\n<line x1=\"17.6\" y1=\"26\" x2=\"26\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"20\" y2=\"33\" />\n<line x1=\"26\" y1=\"23\" x2=\"20\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"26\" y1=\"23\" x2=\"14\" y2=\"33\" />\n<line x1=\"14\" y1=\"26\" x2=\"22.4\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"26\" y1=\"23\" x2=\"14\" y2=\"33\" />\n</g>\n"
     }
   ],
   "CVCY": [
@@ -135,11 +130,11 @@
       "y": "<g transform=\"\" transform-origin=\"12 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"20\" y2=\"36\" />\n<line x1=\"20\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
       "m": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"23\" />\n<line x1=\"7\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n",
@@ -156,11 +151,11 @@
       "y": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"23\" />\n<line x1=\"7\" y1=\"33\" x2=\"17\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -191,25 +186,25 @@
       "y": "<g transform=\"\" transform-origin=\"12 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"20\" y2=\"36\" />\n<line x1=\"20\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n<line x1=\"10\" y1=\"26\" x2=\"17\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n<line x1=\"7\" y1=\"26\" x2=\"14\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -240,11 +235,11 @@
       "y": "<g transform=\"\" transform-origin=\"12 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"20\" y2=\"36\" />\n<line x1=\"20\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
       "m": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"23\" />\n<line x1=\"7\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n",
@@ -261,11 +256,11 @@
       "y": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"23\" />\n<line x1=\"7\" y1=\"33\" x2=\"17\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -280,11 +275,11 @@
       "y": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"18\" x2=\"36\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n<line x1=\"27.6\" y1=\"26.2\" x2=\"36\" y2=\"26.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"24\" y1=\"26.2\" x2=\"32.4\" y2=\"26.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
@@ -315,25 +310,25 @@
       "y": "<g transform=\"\" transform-origin=\"12 20\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"4\" />\n<line x1=\"4\" y1=\"36\" x2=\"20\" y2=\"36\" />\n<line x1=\"20\" y1=\"4\" x2=\"20\" y2=\"36\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n<line x1=\"10\" y1=\"26\" x2=\"17\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n<line x1=\"7\" y1=\"26\" x2=\"14\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -348,11 +343,11 @@
       "y": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"18\" x2=\"36\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n<line x1=\"27.6\" y1=\"26.2\" x2=\"36\" y2=\"26.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"24\" y1=\"26.2\" x2=\"32.4\" y2=\"26.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
@@ -501,41 +496,41 @@
   ],
   "VV": [
     {
-      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"36\" y1=\"4\" x2=\"20\" y2=\"20\" />\n<line x1=\"10.4\" y1=\"10.4\" x2=\"29.6\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"4\" y1=\"4\" x2=\"20\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"26\" y2=\"17\" />\n<line x1=\"17.6\" y1=\"10\" x2=\"26\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"14\" y1=\"7\" x2=\"20\" y2=\"17\" />\n<line x1=\"26\" y1=\"7\" x2=\"20\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n<line x1=\"14\" y1=\"10\" x2=\"22.4\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 12\">\n<line x1=\"26\" y1=\"7\" x2=\"14\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"26.4\" x2=\"29.6\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"36\" y1=\"20\" x2=\"20\" y2=\"36\" />\n<line x1=\"10.4\" y1=\"26.4\" x2=\"29.6\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"20 28\">\n<line x1=\"4\" y1=\"20\" x2=\"20\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"26\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"26\" y2=\"33\" />\n<line x1=\"17.6\" y1=\"26\" x2=\"26\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"14\" y1=\"23\" x2=\"20\" y2=\"33\" />\n<line x1=\"26\" y1=\"23\" x2=\"20\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"26\" y1=\"23\" x2=\"14\" y2=\"33\" />\n<line x1=\"14\" y1=\"26\" x2=\"22.4\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 28\">\n<line x1=\"26\" y1=\"23\" x2=\"14\" y2=\"33\" />\n</g>\n"
     }
   ],
   "VVY": [
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n<line x1=\"10\" y1=\"26\" x2=\"17\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n<line x1=\"7\" y1=\"26\" x2=\"14\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -552,25 +547,25 @@
   ],
   "VVYY": [
     {
-      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"20\" y1=\"4\" x2=\"12\" y2=\"20\" />\n<line x1=\"7.2\" y1=\"10.4\" x2=\"16.8\" y2=\"10.4\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"4\" y1=\"4\" x2=\"12\" y2=\"20\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" />\n<line x1=\"10\" y1=\"10\" x2=\"17\" y2=\"10\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"7\" y1=\"7\" x2=\"12\" y2=\"17\" />\n<line x1=\"17\" y1=\"7\" x2=\"12\" y2=\"17\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n<line x1=\"7\" y1=\"10\" x2=\"14\" y2=\"10\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 12\">\n<line x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "a": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"20\" y1=\"20\" x2=\"12\" y2=\"36\" />\n<line x1=\"7.2\" y1=\"26.4\" x2=\"16.8\" y2=\"26.4\" />\n</g>\n",
-      "u": "<g transform=\"scale(1,-1)\" transform-origin=\"12 28\">\n<line x1=\"4\" y1=\"20\" x2=\"12\" y2=\"36\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"17\" y2=\"33\" />\n<line x1=\"10\" y1=\"26\" x2=\"17\" y2=\"26\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"7\" y1=\"23\" x2=\"12\" y2=\"33\" />\n<line x1=\"17\" y1=\"23\" x2=\"12\" y2=\"33\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n<line x1=\"7\" y1=\"26\" x2=\"14\" y2=\"26\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"12 28\">\n<line x1=\"17\" y1=\"23\" x2=\"7\" y2=\"33\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"18\" />\n<line x1=\"27.6\" y1=\"8.2\" x2=\"36\" y2=\"8.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"30\" y2=\"18\" />\n<line x1=\"26.4\" y1=\"9.6\" x2=\"33.6\" y2=\"9.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"30\" y2=\"18\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"24\" y1=\"8.2\" x2=\"32.4\" y2=\"8.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"36\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"4\" x2=\"24\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n",
@@ -585,11 +580,11 @@
       "y": "<g transform=\"\" transform-origin=\"30 11\">\n<line x1=\"24\" y1=\"4\" x2=\"36\" y2=\"4\" />\n<line x1=\"24\" y1=\"18\" x2=\"36\" y2=\"18\" />\n<line x1=\"36\" y1=\"4\" x2=\"36\" y2=\"18\" />\n</g>\n"
     },
     {
-      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
+      "i": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"36\" />\n<line x1=\"27.6\" y1=\"26.2\" x2=\"36\" y2=\"26.2\" />\n</g>\n",
       "a": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"30\" y2=\"36\" />\n<line x1=\"26.4\" y1=\"27.6\" x2=\"33.6\" y2=\"27.6\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"30\" y2=\"36\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"24\" y1=\"26.2\" x2=\"32.4\" y2=\"26.2\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"36\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "m": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n</g>\n",
       "n": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"24\" y1=\"22\" x2=\"24\" y2=\"36\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
       "g": "<g transform=\"\" transform-origin=\"30 29\">\n<line x1=\"24\" y1=\"22\" x2=\"36\" y2=\"22\" />\n<line x1=\"36\" y1=\"22\" x2=\"36\" y2=\"36\" />\n</g>\n",
@@ -606,25 +601,25 @@
   ],
   "VC": [
     {
-      "i": "<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n",
-      "e": "<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"14\" y1=\"8\" x2=\"26\" y2=\"8\" />\n</g>\n",
-      "a": "<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"30\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n",
-      "o": "<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"30\" y1=\"4\" x2=\"20\" y2=\"14\" />\n<line x1=\"14\" y1=\"8\" x2=\"26\" y2=\"8\" />\n</g>\n",
-      "u": "<g transform=\"\" transform-origin=\"20 9\">\n<line x1=\"10\" y1=\"4\" x2=\"20\" y2=\"14\" />\n</g>\n"
+      "i": "<g transform=\"\" transform-origin=\"20 10\">\n<line x1=\"12\" y1=\"4\" x2=\"28\" y2=\"16\" />\n</g>\n",
+      "e": "<g transform=\"\" transform-origin=\"20 10\">\n<line x1=\"12\" y1=\"4\" x2=\"28\" y2=\"16\" />\n<line x1=\"16.8\" y1=\"7.6\" x2=\"28\" y2=\"7.6\" />\n</g>\n",
+      "a": "<g transform=\"\" transform-origin=\"20 10\">\n<line x1=\"12\" y1=\"4\" x2=\"20\" y2=\"16\" />\n<line x1=\"28\" y1=\"4\" x2=\"20\" y2=\"16\" />\n</g>\n",
+      "o": "<g transform=\"\" transform-origin=\"20 10\">\n<line x1=\"28\" y1=\"4\" x2=\"12\" y2=\"16\" />\n<line x1=\"12\" y1=\"7.6\" x2=\"23.2\" y2=\"7.6\" />\n</g>\n",
+      "u": "<g transform=\"\" transform-origin=\"20 10\">\n<line x1=\"28\" y1=\"4\" x2=\"12\" y2=\"16\" />\n</g>\n"
     },
     {
-      "m": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n</g>\n",
-      "n": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "g": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "f": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n</g>\n",
-      "s": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "h": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "p": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n</g>\n",
-      "t": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "k": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"25\" x2=\"36\" y2=\"25\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "w": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n</g>\n",
-      "l": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"4\" y1=\"14\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n",
-      "y": "<g transform=\"\" transform-origin=\"20 25\">\n<line x1=\"4\" y1=\"14\" x2=\"36\" y2=\"14\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"36\" y1=\"14\" x2=\"36\" y2=\"36\" />\n</g>\n"
+      "m": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n</g>\n",
+      "n": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "g": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "f": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n</g>\n",
+      "s": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "h": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "p": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n</g>\n",
+      "t": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "k": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"26\" x2=\"36\" y2=\"26\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "w": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n</g>\n",
+      "l": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"4\" y1=\"16\" x2=\"4\" y2=\"36\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n",
+      "y": "<g transform=\"\" transform-origin=\"20 26\">\n<line x1=\"4\" y1=\"16\" x2=\"36\" y2=\"16\" />\n<line x1=\"4\" y1=\"36\" x2=\"36\" y2=\"36\" />\n<line x1=\"36\" y1=\"16\" x2=\"36\" y2=\"36\" />\n</g>\n"
     }
   ]
 }

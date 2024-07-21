@@ -2,10 +2,10 @@
 <rect width="100%" height="100%" fill="white" />
 <g stroke="black" stroke-width="2" stroke-linecap="round">
 <g transform="" transform-origin="12 12">
-<line x1="4" y1="4" x2="12" y2="20" />
+<line x1="7" y1="7" x2="17" y2="17" />
 </g>
-<g transform="scale(1,-1)" transform-origin="12 28">
-<line x1="4" y1="20" x2="12" y2="36" />
+<g transform="" transform-origin="12 28">
+<line x1="17" y1="23" x2="7" y2="33" />
 </g>
 <g transform="" transform-origin="30 11">
 <line x1="24" y1="4" x2="36" y2="4" />

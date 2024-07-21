@@ -1,14 +1,14 @@
 require('./stringFormat') // adds the format method to strings
 const fs = require('fs')
 
-const Q = 0.4
+const Q = 0.3
 
 function dy(hgt) {
   return Math.round(Q * hgt * 100) / 100
 }
 
 function dx(wid) {
-  return Math.round(Q * wid * 50) / 100
+  return Math.round(Q * wid * 100) / 100
 }
 
 function mid(z) {
@@ -25,7 +25,7 @@ function i(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
-      box.x + mid(box.width),
+      box.x + box.width,
       box.y + box.height
     ) +
     '</g>\n'
@@ -42,13 +42,13 @@ function e(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
-      box.x + mid(box.width),
+      box.x + box.width,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + dx(box.width),
       box.y + dy(box.height),
-      box.x + box.width - dx(box.width),
+      box.x + box.width,
       box.y + dy(box.height)
     ) +
     '</g>\n'
@@ -88,11 +88,11 @@ function o(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
-      box.x + mid(box.width),
+      box.x,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + dx(box.width),
+      box.x,
       box.y + dy(box.height),
       box.x + box.width - dx(box.width),
       box.y + dy(box.height)
@@ -109,9 +109,9 @@ function u(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
+      box.x + box.width,
       box.y,
-      box.x + mid(box.width),
+      box.x,
       box.y + box.height
     ) +
     '</g>\n'
@@ -482,24 +482,31 @@ const boxes = {
     height: 32,
     transform: '',
   },
+  FCT: {
+    x: 12,
+    y: 7,
+    width: 16,
+    height: 10,
+    transform: '',
+  },
+  FCB: {
+    x: 12,
+    y: 23,
+    width: 16,
+    height: 10,
+    transform: '',
+  },
   FVT: {
-    x: 4,
-    y: 4,
-    width: 32,
-    height: 16,
+    x: 14,
+    y: 7,
+    width: 12,
+    height: 10,
     transform: '',
   },
   FVB: {
-    x: 4,
-    y: 20,
-    width: 32,
-    height: 16,
-    transform: 'scale(1,-1)',
-  },
-  FCB: {
-    x: 10,
+    x: 14,
     y: 23,
-    width: 20,
+    width: 12,
     height: 10,
     transform: '',
   },
@@ -510,21 +517,28 @@ const boxes = {
     height: 32,
     transform: '',
   },
+  LCT: {
+    x: 7,
+    y: 7,
+    width: 10,
+    height: 10,
+    transform: '',
+  },
+  LCB: {
+    x: 7,
+    y: 23,
+    width: 10,
+    height: 10,
+    transform: '',
+  },
   LVT: {
-    x: 4,
-    y: 4,
-    width: 16,
-    height: 16,
+    x: 7,
+    y: 7,
+    width: 10,
+    height: 10,
     transform: '',
   },
   LVB: {
-    x: 4,
-    y: 20,
-    width: 16,
-    height: 16,
-    transform: 'scale(1,-1)',
-  },
-  LCB: {
     x: 7,
     y: 23,
     width: 10,
@@ -588,23 +602,23 @@ const boxes = {
     transform: '',
   },
   T: {
-    x: 10,
+    x: 12,
     y: 4,
-    width: 20,
-    height: 10,
+    width: 16,
+    height: 12,
     transform: '',
   },
   B: {
     x: 4,
-    y: 14,
+    y: 16,
     width: 32,
-    height: 22,
+    height: 20,
     transform: '',
   },
 }
 
 function frame(vowel = null) {
-  if (!vowel) {
+  // if (!vowel) {
     return (
       '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">\n' +
       '<rect width="100%" height="100%" fill="{1}" />\n' +
@@ -612,24 +626,24 @@ function frame(vowel = null) {
       '</g>\n' +
       '</svg>'
     )
-  }
+  // }
 
-  return (
-    '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="50">\n' +
-    '<rect width="100%" height="100%" fill="{1}" />\n' +
-    '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n' +
-    shapes[vowel]({
-      x: 10,
-      y: 4,
-      width: 20,
-      height: 10,
-      transform: '',
-    }) +
-    '<g transform="translate(0 10)">\n{0}' +
-    '</g>\n' +
-    '</g>\n' +
-    '</svg>'
-  )
+  // return (
+  //   '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="50">\n' +
+  //   '<rect width="100%" height="100%" fill="{1}" />\n' +
+  //   '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n' +
+  //   shapes[vowel]({
+  //     x: 10,
+  //     y: 4,
+  //     width: 20,
+  //     height: 10,
+  //     transform: '',
+  //   }) +
+  //   '<g transform="translate(0 10)">\n{0}' +
+  //   '</g>\n' +
+  //   '</g>\n' +
+  //   '</svg>'
+  // )
 }
 
 const X = [
@@ -672,14 +686,14 @@ const Y = [
 ]
 const V = ['i', 'e', 'a', 'o', 'u']
 const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
-const F = ['I', 'E', 'A', 'O', 'U']
+// const F = ['I', 'E', 'A', 'O', 'U']
 
 const groups = {
   X,
   Y,
   V,
   C,
-  F,
+  // F,
 }
 
 const forms = {
@@ -717,9 +731,9 @@ function build() {
   let parts = { pakala }
 
   parts.frames = { basic: frame() }
-  groups.V.forEach((vowel) => {
-    parts.frames[vowel.toUpperCase()] = frame(vowel)
-  })
+  // groups.V.forEach((vowel) => {
+  //   parts.frames[vowel.toUpperCase()] = frame(vowel)
+  // })
 
   Object.entries(forms).forEach(([label, sequence]) => {
     parts[label] = []
@@ -759,10 +773,10 @@ function draw(word) {
   const sequence = word.split('')
 
   let frame = parts.frames.basic
-  if (groups.F.some((item) => item === word[0])) {
-    frameVowel = sequence.shift() // modifies
-    frame = parts.frames[frameVowel]
-  }
+  // if (groups.F.some((item) => item === word[0])) {
+  //   frameVowel = sequence.shift() // modifies
+  //   frame = parts.frames[frameVowel]
+  // }
 
   let form = 'pakala'
 
@@ -814,27 +828,26 @@ function draw(word) {
 // console.dir(parts, { depth: null })
 
 
-
-
-
-
 fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
 fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
 fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
 fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
 fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
-fs.writeFileSync('draw/shapes/Akls.svg', draw('Akls'))
 fs.writeFileSync('draw/shapes/et.svg', draw('et'))
 fs.writeFileSync('draw/shapes/e.svg', draw('e'))
 fs.writeFileSync('draw/shapes/a.svg', draw('a'))
 fs.writeFileSync('draw/shapes/u.svg', draw('u'))
 fs.writeFileSync('draw/shapes/h.svg', draw('h'))
-fs.writeFileSync('draw/shapes/Olis.svg', draw('Olis'))
-fs.writeFileSync('draw/shapes/Ilof.svg', draw('Ilof'))
-fs.writeFileSync('draw/shapes/Olisen.svg', draw('Olisen'))
-fs.writeFileSync('draw/shapes/Ilofuf.svg', draw('Ilofuf'))
 fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
 fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
 fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
 fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
 fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))
+fs.writeFileSync('draw/shapes/en.svg', draw('en'))
+fs.writeFileSync('draw/shapes/sae.svg', draw('sae'))
+fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
+fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
+fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
+fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
+
+
