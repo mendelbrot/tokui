@@ -645,7 +645,7 @@ const forms = {
   A3: ['F', 'FT', 'FB'],
   A4: ['LF', 'LFT', 'LFB', 'RFT'],
   A5: ['LF', 'LFT', 'LFB', 'RFT', 'RFB'],
-  B2: ['L', 'R'],
+  B2: ['T', 'B'],
   B3: ['L', 'I3', 'I4'],
   B4: ['I1', 'I2', 'I3', 'I4'],
 }
