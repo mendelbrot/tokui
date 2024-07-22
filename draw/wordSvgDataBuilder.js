@@ -504,7 +504,7 @@ const special = {
 }
 
 const frame =
-  '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">\n' +
+  '<svg xmlns="http://www.w3.org/2000/svg" width="{4}" height="{5}">\n' +
   '<rect width="100%" height="100%" fill="{1}" />\n' +
   '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n{0}' +
   '</g>\n' +
@@ -664,8 +664,10 @@ function build() {
 }
 
 const parts = JSON.parse(fs.readFileSync('draw/parts.json', 'utf8'))
+const glyphWidth = 40
+const glyphHeight = 40
 
-function draw(word, styles = ['white', 'black', '2']) {
+function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
   if (word.length === 0) {
     return null
   }
@@ -712,38 +714,73 @@ function draw(word, styles = ['white', 'black', '2']) {
     return pakala
   }
 
-  const innerPart = sequence.reduce((accumulator, letter, index) => {
+  const inner = sequence.reduce((accumulator, letter, index) => {
     return accumulator + parts[forms[form][index]][letter]
   }, '')
-  const wordSvg = parts.frame.format(innerPart, ...styles)
 
-  return wordSvg
+  if (phraseMode) {
+    return inner
+  } else {
+    return parts.frame.format(inner, ...styles, glyphWidth, glyphHeight)
+  }
+}
+
+function drawPhrase(phrase, styles = ['white', 'black', '2']) {
+  const phraseNest = phrase
+    .split(/\r\n|\r|\n/)
+    .map((line) => line.trim().split(/[ ]+/))
+
+  const width =
+    glyphWidth * phraseNest.reduce((acc, line) => Math.max(acc, line.length), 1)
+  const height = glyphHeight * phraseNest.length
+
+  let inner = ''
+  for (let y = 0; y < phraseNest.length; y++) {
+    for (let x = 0; x < phraseNest[y].length; x++) {
+      inner += '<g transform="translate({0} {1})" >{2}</g>'.format(
+        x * glyphWidth,
+        y * glyphHeight,
+        draw(phraseNest[y][x], (phraseMode = true))
+      )
+    }
+  }
+
+  return parts.frame.format(inner, ...styles, width, height)
 }
 
 // fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
+// fs.writeFileSync(
+//   'draw/shapes/phrase1.svg',
+//   drawPhrase('nau li kisot ma kafi en moku e panet wou')
+// )
+fs.writeFileSync(
+  'draw/shapes/phrase2.svg',
+  drawPhrase('nau li kisot ma kafi en moku e panet wou \n o solhe luika tif iun ma yelo \n u huleg sem li hasa yi temo')
+)
+
 // console.dir(parts, { depth: null })
 
-fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
-fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
-fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
-fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
-fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
-fs.writeFileSync('draw/shapes/et.svg', draw('et'))
-fs.writeFileSync('draw/shapes/e.svg', draw('e'))
-fs.writeFileSync('draw/shapes/a.svg', draw('a'))
-fs.writeFileSync('draw/shapes/u.svg', draw('u'))
-fs.writeFileSync('draw/shapes/h.svg', draw('h'))
-fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
-fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
-fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
-fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
-fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))
-fs.writeFileSync('draw/shapes/en.svg', draw('en'))
-fs.writeFileSync('draw/shapes/sae.svg', draw('sae'))
-fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
-fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
-fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
-fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
-fs.writeFileSync('draw/shapes/v.svg', draw('v'))
-fs.writeFileSync('draw/shapes/Z.svg', draw('Z'))
+// fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
+// fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
+// fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
+// fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
+// fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
+// fs.writeFileSync('draw/shapes/et.svg', draw('et'))
+// fs.writeFileSync('draw/shapes/e.svg', draw('e'))
+// fs.writeFileSync('draw/shapes/a.svg', draw('a'))
+// fs.writeFileSync('draw/shapes/u.svg', draw('u'))
+// fs.writeFileSync('draw/shapes/h.svg', draw('h'))
+// fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
+// fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
+// fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
+// fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
+// fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))
+// fs.writeFileSync('draw/shapes/en.svg', draw('en'))
+// fs.writeFileSync('draw/shapes/sae.svg', draw('sae'))
+// fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
+// fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
+// fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
+// fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
+// fs.writeFileSync('draw/shapes/v.svg', draw('v'))
+// fs.writeFileSync('draw/shapes/Z.svg', draw('Z'))
