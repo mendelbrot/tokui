@@ -486,29 +486,31 @@ const letters = {
   y,
 }
 
-const pakala = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
-  <rect width="100%" height="100%" fill="{0}" />
-  <g stroke="{1}" stroke-width="{2}" stroke-linecap="round">
-    <line x1="4" y1="6" x2="36" y2="4" />
-    <line x1="4" y1="36" x2="36" y2="36" />
-    <line x1="6" y1="6" x2="4" y2="36" />
-    <line x1="36" y1="4" x2="34" y2="32" />
-    <line x1="28" y1="6" x2="16" y2="19" />
-    <line x1="16" y1="19" x2="27" y2="21" />
-    <line x1="27" y1="21" x2="14" y2="36" />
-  </g>
-</svg>`
+const pakala = `
+<line x1="4" y1="6" x2="36" y2="4" />
+<line x1="4" y1="36" x2="36" y2="36" />
+<line x1="6" y1="6" x2="4" y2="36" />
+<line x1="36" y1="4" x2="34" y2="32" />
+<line x1="28" y1="6" x2="16" y2="19" />
+<line x1="16" y1="19" x2="27" y2="21" />
+<line x1="27" y1="21" x2="14" y2="36" />`
 
 const special = {
   Z: pakala,
+  _: '', // space
 }
 
-const frame =
-  '<svg xmlns="http://www.w3.org/2000/svg" width="{4}" height="{5}">\n' +
-  '<rect width="100%" height="100%" fill="{1}" />\n' +
-  '<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">\n{0}' +
-  '</g>\n' +
-  '</svg>'
+const frames = {
+  svg: `<svg xmlns="http://www.w3.org/2000/svg" width="{4}" height="{5}">
+<rect width="100%" height="100%" fill="{1}" />
+<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">
+{0}
+</g>
+</svg>`,
+  phraseMode: `<g transform="translate({0} {1})">
+{2}
+</g>`,
+}
 
 const boxes = {
   F: {
@@ -651,7 +653,7 @@ const forms = {
 }
 
 function build() {
-  let parts = { special, frame }
+  let parts = { special, frames }
 
   Object.entries(boxes).forEach(([boxLabel, box]) => {
     parts[boxLabel] = {}
@@ -672,7 +674,14 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
     return null
   }
 
-  const pakala = parts.special.Z.format(...styles)
+  const pakala = phraseMode
+    ? parts.special.Z
+    : parts.frames.svg.format(
+        parts.special.Z,
+        ...styles,
+        glyphWidth,
+        glyphHeight
+      )
 
   if (word.length > 5) {
     return pakala
@@ -721,31 +730,119 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
   if (phraseMode) {
     return inner
   } else {
-    return parts.frame.format(inner, ...styles, glyphWidth, glyphHeight)
+    return parts.frames.svg.format(inner, ...styles, glyphWidth, glyphHeight)
   }
 }
 
-function drawPhrase(phrase, styles = ['white', 'black', '2']) {
-  const phraseNest = phrase
-    .split(/\r\n|\r|\n/)
-    .map((line) => line.trim().split(/[ ]+/))
+function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
+  phrase = phrase.replace(/\r\n/g, '\n')
 
-  const width =
-    glyphWidth * phraseNest.reduce((acc, line) => Math.max(acc, line.length), 1)
-  const height = glyphHeight * phraseNest.length
+  let x = 0
+  let y = 0
+  let maxX = lineWrap
+  let word = ''
+  let ponaMode = false
+  let glyphs = ''
 
-  let inner = ''
-  for (let y = 0; y < phraseNest.length; y++) {
-    for (let x = 0; x < phraseNest[y].length; x++) {
-      inner += '<g transform="translate({0} {1})" >{2}</g>'.format(
+  for (let i = 0; i < phrase.length; i++) {
+
+    if (x > maxX) {
+      maxX = x
+    }
+
+    if (phrase[i] === '\n') {
+      if (word.length > 0) {
+        glyphs += parts.frames.phraseMode.format(
+          x * glyphWidth,
+          y * glyphHeight,
+          draw(word, (phraseMode = true))
+        )
+      }
+
+      x = 0
+      y += 1
+      word = ''
+      ponaMode = false
+
+      continue
+    }
+
+    if (ponaMode == true) {
+      if (phrase[i] === ' ') {
+        ponaMode === false
+      } else {
+        if (lineWrap !== 0 && x >= lineWrap) {
+          x = 0
+          y += 1
+        }
+
+        glyphs += parts.frames.phraseMode.format(
+          x * glyphWidth,
+          y * glyphHeight,
+          draw(phrase[i], (phraseMode = true))
+        )
+
+        x += 1
+      }
+
+      continue
+    }
+
+    if (
+      i < phrase.length - 1 &&
+      phrase[i + 1] === '#' &&
+      (phrase[i] === ' ' ||
+        i === 0 ||
+        (i > 0 && phrase[i - 1] === '\n'))
+    ) {
+      if (word.length > 0) {
+        if (lineWrap !== 0 && x >= lineWrap) {
+          x = 0
+          y += 1
+        }
+
+        glyphs += parts.frames.phraseMode.format(
+          x * glyphWidth,
+          y * glyphHeight,
+          draw(word, (phraseMode = true))
+        )
+
+        x += 1
+        word = ''
+      }
+
+      ponaMode = true
+
+      continue
+    }
+
+    if (phrase[i] === ' ' && word.length > 0) {
+      if (lineWrap !== 0 && x >= lineWrap) {
+        x = 0
+        y += 1
+      }
+
+      glyphs += parts.frames.phraseMode.format(
         x * glyphWidth,
         y * glyphHeight,
-        draw(phraseNest[y][x], (phraseMode = true))
+        draw(word, (phraseMode = true))
       )
+
+      x += 1
+      word = ''
+
+      continue
     }
+
+    word += phrase[i]
   }
 
-  return parts.frame.format(inner, ...styles, width, height)
+  return parts.frames.svg.format(
+    glyphs,
+    ...styles,
+    (maxX + 1) * glyphWidth,
+    (y + 1) * glyphHeight
+  )
 }
 
 // fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
@@ -756,7 +853,9 @@ function drawPhrase(phrase, styles = ['white', 'black', '2']) {
 // )
 fs.writeFileSync(
   'draw/shapes/phrase2.svg',
-  drawPhrase('nau li kisot ma kafi en moku e panet wou \n o solhe luika tif iun ma yelo \n u huleg sem li hasa yi temo')
+  drawPhrase(
+    'nau li kisot ma kafi en moku e panet wou \n o solhe a luika aep hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta'
+  )
 )
 
 // console.dir(parts, { depth: null })
