@@ -629,7 +629,7 @@ const boxes = {
 
 const V = ['i', 'e', 'a', 'o', 'u']
 const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
-const S = ['Z']
+const S = ['Z', '_']
 const Y = V.concat(C)
 const X = V.concat(C, S)
 
@@ -801,6 +801,8 @@ function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
     word += phrase[i]
   }
 
+  addGlyph()
+
   return parts.frames.svg.format(
     glyphs,
     ...styles,
@@ -833,6 +835,14 @@ fs.writeFileSync(
   'draw/shapes/phrase4.svg',
   drawPhrase(
     'nau li kisot ma kafi en #moku e panet wou \n o solhe a luika aep #hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta',
+    (lineWrap = 8)
+  )
+)
+
+fs.writeFileSync(
+  'draw/shapes/phrase5.svg',
+  drawPhrase(
+    'nau _ li _ _ ktl pyhw vrum kisot ma kafi ennnn #moku eq panxet wou \n o solhe a luika aep #hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta',
     (lineWrap = 8)
   )
 )
