@@ -72,13 +72,13 @@ function a(box) {
       box.x,
       box.y,
       box.x + mid(box.width),
-      box.y + box.height,
+      box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
       box.x + mid(box.width),
-      box.y + box.height,
+      box.y + box.height
     ) +
     '</g>\n'
   )
@@ -736,100 +736,64 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
 
 function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
   phrase = phrase.replace(/\r\n/g, '\n')
+  lineWrap = lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive linewrap
 
   let x = 0
   let y = 0
-  let maxX = lineWrap
+  let maxX = Math.max(lineWrap, 1)
   let word = ''
   let ponaMode = false
   let glyphs = ''
 
-  for (let i = 0; i < phrase.length; i++) {
-
-    if (x > maxX) {
-      maxX = x
-    }
-
-    if (phrase[i] === '\n') {
-      if (word.length > 0) {
-        glyphs += parts.frames.phraseMode.format(
-          x * glyphWidth,
-          y * glyphHeight,
-          draw(word, (phraseMode = true))
-        )
-      }
-
-      x = 0
-      y += 1
-      word = ''
-      ponaMode = false
-
-      continue
-    }
-
-    if (ponaMode == true) {
-      if (phrase[i] === ' ') {
-        ponaMode === false
-      } else {
-        if (lineWrap !== 0 && x >= lineWrap) {
-          x = 0
-          y += 1
-        }
-
-        glyphs += parts.frames.phraseMode.format(
-          x * glyphWidth,
-          y * glyphHeight,
-          draw(phrase[i], (phraseMode = true))
-        )
-
-        x += 1
-      }
-
-      continue
-    }
-
-    if (
-      i < phrase.length - 1 &&
-      phrase[i + 1] === '#' &&
-      (phrase[i] === ' ' ||
-        i === 0 ||
-        (i > 0 && phrase[i - 1] === '\n'))
-    ) {
-      if (word.length > 0) {
-        if (lineWrap !== 0 && x >= lineWrap) {
-          x = 0
-          y += 1
-        }
-
-        glyphs += parts.frames.phraseMode.format(
-          x * glyphWidth,
-          y * glyphHeight,
-          draw(word, (phraseMode = true))
-        )
-
-        x += 1
-        word = ''
-      }
-
-      ponaMode = true
-
-      continue
-    }
-
-    if (phrase[i] === ' ' && word.length > 0) {
-      if (lineWrap !== 0 && x >= lineWrap) {
-        x = 0
-        y += 1
-      }
-
+  function addGlyph() {
+    if (word.length > 0) {
       glyphs += parts.frames.phraseMode.format(
         x * glyphWidth,
         y * glyphHeight,
         draw(word, (phraseMode = true))
       )
 
-      x += 1
+      if (x > maxX) {
+        maxX = x
+      }
+
       word = ''
+      x += 1
+
+      if (lineWrap !== -1 && x > lineWrap) {
+        x = 0
+        y += 1
+      }
+    }
+  }
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === ' ') {
+      addGlyph()
+      ponaMode = false
+
+      continue
+    }
+
+    if (phrase[i] === '\n') {
+      addGlyph()
+      x = 0
+      y += 1
+      ponaMode = false
+
+      continue
+    }
+
+    if (phrase[i] === '#') {
+      addGlyph()
+      ponaMode = true
+
+      continue
+    }
+
+    if (ponaMode === true) {
+      word = phrase[i]
+      addGlyph()
 
       continue
     }
@@ -855,6 +819,21 @@ fs.writeFileSync(
   'draw/shapes/phrase2.svg',
   drawPhrase(
     'nau li kisot ma kafi en moku e panet wou \n o solhe a luika aep hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta'
+  )
+)
+
+fs.writeFileSync(
+  'draw/shapes/phrase3.svg',
+  drawPhrase(
+    'nau li kisot ma kafi en #moku e panet wou \n o solhe a luika aep #hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta'
+  )
+)
+
+fs.writeFileSync(
+  'draw/shapes/phrase4.svg',
+  drawPhrase(
+    'nau li kisot ma kafi en #moku e panet wou \n o solhe a luika aep #hulwo tif iun ma yelo \n u huleg sem li hasa yi temo los maipa ta',
+    (lineWrap = 8)
   )
 )
 
