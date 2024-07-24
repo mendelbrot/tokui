@@ -486,20 +486,6 @@ const letters = {
   y,
 }
 
-const pakala = `
-<line x1="4" y1="6" x2="36" y2="4" />
-<line x1="4" y1="36" x2="36" y2="36" />
-<line x1="6" y1="6" x2="4" y2="36" />
-<line x1="36" y1="4" x2="34" y2="32" />
-<line x1="28" y1="6" x2="16" y2="19" />
-<line x1="16" y1="19" x2="27" y2="21" />
-<line x1="27" y1="21" x2="14" y2="36" />`
-
-const special = {
-  Z: pakala,
-  _: '', // space
-}
-
 const frames = {
   svg: `<svg xmlns="http://www.w3.org/2000/svg" width="{4}" height="{5}">
 <rect width="100%" height="100%" fill="{1}" />
@@ -627,9 +613,166 @@ const boxes = {
   },
 }
 
+const pakala = `
+<line x1="4" y1="6" x2="36" y2="4" />
+<line x1="4" y1="36" x2="36" y2="36" />
+<line x1="6" y1="6" x2="4" y2="36" />
+<line x1="36" y1="4" x2="34" y2="32" />
+<line x1="28" y1="6" x2="16" y2="19" />
+<line x1="16" y1="19" x2="27" y2="21" />
+<line x1="27" y1="21" x2="14" y2="36" />`
+
+function n0(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
+      Math.min(mid(box.width), mid(box.height)),
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
+function n1(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n2(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n3(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n4(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n5(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+const special = {
+  Z: pakala,
+  _: '', // space
+  0: n0(boxes.F),
+  1: n1(boxes.F),
+  2: n2(boxes.F),
+  3: n3(boxes.F),
+  4: n4(boxes.F),
+  5: n5(boxes.F),
+}
+
 const V = ['i', 'e', 'a', 'o', 'u']
 const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
-const S = ['Z', '_']
+const S = ['Z', '_', '0', '1', '2', '3', '4', '5']
 const Y = V.concat(C)
 const X = V.concat(C, S)
 
@@ -846,6 +989,8 @@ fs.writeFileSync(
     (lineWrap = 8)
   )
 )
+
+fs.writeFileSync('draw/shapes/special.svg', drawPhrase('#01234567'))
 
 // console.dir(parts, { depth: null })
 
