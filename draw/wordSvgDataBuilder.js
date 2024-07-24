@@ -15,7 +15,7 @@ function mid(z) {
   return Math.round(z * 50) / 100
 }
 
-function u(box) {
+function i(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -107,7 +107,7 @@ function o(box) {
   )
 }
 
-function i(box) {
+function u(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -130,7 +130,7 @@ function i(box) {
   )
 }
 
-function g(box) {
+function m(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -182,7 +182,7 @@ function n(box) {
   )
 }
 
-function m(box) {
+function g(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -205,7 +205,7 @@ function m(box) {
   )
 }
 
-function k(box) {
+function p(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -257,7 +257,7 @@ function t(box) {
   )
 }
 
-function p(box) {
+function k(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -280,7 +280,7 @@ function p(box) {
   )
 }
 
-function h(box) {
+function f(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -344,7 +344,7 @@ function s(box) {
   )
 }
 
-function f(box) {
+function h(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -373,7 +373,7 @@ function f(box) {
   )
 }
 
-function y(box) {
+function w(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -437,7 +437,7 @@ function l(box) {
   )
 }
 
-function w(box) {
+function y(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -811,7 +811,7 @@ function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
   )
 }
 
-// fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
+fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
 fs.writeFileSync(
   'draw/shapes/phrase1.svg',
