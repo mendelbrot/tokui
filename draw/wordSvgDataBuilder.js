@@ -15,7 +15,7 @@ function mid(z) {
   return Math.round(z * 50) / 100
 }
 
-function i(box) {
+function u(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -72,13 +72,13 @@ function a(box) {
       box.x,
       box.y,
       box.x + mid(box.width),
-      box.y + box.height
+      box.y + box.height,
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
       box.x + mid(box.width),
-      box.y + box.height
+      box.y + box.height,
     ) +
     '</g>\n'
   )
@@ -107,7 +107,7 @@ function o(box) {
   )
 }
 
-function u(box) {
+function i(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -130,7 +130,7 @@ function u(box) {
   )
 }
 
-function m(box) {
+function g(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -182,7 +182,7 @@ function n(box) {
   )
 }
 
-function g(box) {
+function m(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -205,7 +205,7 @@ function g(box) {
   )
 }
 
-function p(box) {
+function k(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -257,7 +257,7 @@ function t(box) {
   )
 }
 
-function k(box) {
+function p(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -280,7 +280,7 @@ function k(box) {
   )
 }
 
-function f(box) {
+function h(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -344,7 +344,7 @@ function s(box) {
   )
 }
 
-function h(box) {
+function f(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -373,7 +373,7 @@ function h(box) {
   )
 }
 
-function w(box) {
+function y(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -437,7 +437,7 @@ function l(box) {
   )
 }
 
-function y(box) {
+function w(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -847,10 +847,10 @@ function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
 
 // fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
-// fs.writeFileSync(
-//   'draw/shapes/phrase1.svg',
-//   drawPhrase('nau li kisot ma kafi en moku e panet wou')
-// )
+fs.writeFileSync(
+  'draw/shapes/phrase1.svg',
+  drawPhrase('nau li kisot ma kafi en moku e panet wou')
+)
 fs.writeFileSync(
   'draw/shapes/phrase2.svg',
   drawPhrase(
@@ -860,26 +860,26 @@ fs.writeFileSync(
 
 // console.dir(parts, { depth: null })
 
-// fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
-// fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
-// fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
-// fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
-// fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
-// fs.writeFileSync('draw/shapes/et.svg', draw('et'))
-// fs.writeFileSync('draw/shapes/e.svg', draw('e'))
-// fs.writeFileSync('draw/shapes/a.svg', draw('a'))
-// fs.writeFileSync('draw/shapes/u.svg', draw('u'))
-// fs.writeFileSync('draw/shapes/h.svg', draw('h'))
-// fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
-// fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
-// fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
-// fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
-// fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))
-// fs.writeFileSync('draw/shapes/en.svg', draw('en'))
-// fs.writeFileSync('draw/shapes/sae.svg', draw('sae'))
-// fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
-// fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
-// fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
-// fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
-// fs.writeFileSync('draw/shapes/v.svg', draw('v'))
-// fs.writeFileSync('draw/shapes/Z.svg', draw('Z'))
+fs.writeFileSync('draw/shapes/naa.svg', draw('naa'))
+fs.writeFileSync('draw/shapes/kui.svg', draw('kui'))
+fs.writeFileSync('draw/shapes/gisol.svg', draw('gisol'))
+fs.writeFileSync('draw/shapes/whg.svg', draw('whg'))
+fs.writeFileSync('draw/shapes/kf.svg', draw('kf'))
+fs.writeFileSync('draw/shapes/et.svg', draw('et'))
+fs.writeFileSync('draw/shapes/e.svg', draw('e'))
+fs.writeFileSync('draw/shapes/a.svg', draw('a'))
+fs.writeFileSync('draw/shapes/u.svg', draw('u'))
+fs.writeFileSync('draw/shapes/h.svg', draw('h'))
+fs.writeFileSync('draw/shapes/ai.svg', draw('ai'))
+fs.writeFileSync('draw/shapes/iun.svg', draw('iun'))
+fs.writeFileSync('draw/shapes/ie.svg', draw('ie'))
+fs.writeFileSync('draw/shapes/eo.svg', draw('eo'))
+fs.writeFileSync('draw/shapes/pakala.svg', draw('pakala'))
+fs.writeFileSync('draw/shapes/en.svg', draw('en'))
+fs.writeFileSync('draw/shapes/sae.svg', draw('sae'))
+fs.writeFileSync('draw/shapes/solhe.svg', draw('solhe'))
+fs.writeFileSync('draw/shapes/luika.svg', draw('luika'))
+fs.writeFileSync('draw/shapes/lulwo.svg', draw('lulwo'))
+fs.writeFileSync('draw/shapes/tif.svg', draw('tif'))
+fs.writeFileSync('draw/shapes/v.svg', draw('v'))
+fs.writeFileSync('draw/shapes/Z.svg', draw('Z'))
