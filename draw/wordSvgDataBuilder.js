@@ -466,13 +466,150 @@ function y(box) {
   )
 }
 
+function n0(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
+      Math.min(mid(box.width), mid(box.height)),
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
+function n1(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n2(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n3(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n4(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function n5(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
 const letters = {
-  i,
+  i, // vowels
   e,
   a,
   o,
   u,
-  m,
+  m, // consonants
   n,
   g,
   p,
@@ -484,6 +621,12 @@ const letters = {
   w,
   l,
   y,
+  0: n0, // numerals
+  1: n1,
+  2: n2,
+  3: n3,
+  4: n4,
+  5: n5,
 }
 
 const frames = {
@@ -622,167 +765,29 @@ const pakala = `
 <line x1="16" y1="19" x2="27" y2="21" />
 <line x1="27" y1="21" x2="14" y2="36" />`
 
-function n0(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
-      Math.min(mid(box.width), mid(box.height)),
-      box.x + mid(box.width),
-      box.y + mid(box.height)
-    ) +
-    '</g>\n'
-  )
-}
-
-function n1(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x + mid(box.width),
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
-function n2(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y,
-      box.x,
-      box.y + box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + box.height,
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
-function n3(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x,
-      box.y + box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + box.height,
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
-function n4(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + mid(box.height),
-      box.x + box.width,
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x + mid(box.width),
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
-function n5(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y,
-      box.x + box.width,
-      box.y
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + box.height,
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x + mid(box.width),
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
 const special = {
   Z: pakala,
   _: '', // space
-  0: n0(boxes.F),
-  1: n1(boxes.F),
-  2: n2(boxes.F),
-  3: n3(boxes.F),
-  4: n4(boxes.F),
-  5: n5(boxes.F),
 }
 
 const V = ['i', 'e', 'a', 'o', 'u']
 const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
+
 const S = ['Z', '_', '0', '1', '2', '3', '4', '5']
 const Y = V.concat(C)
 const X = V.concat(C, S)
 
 const groups = {
-  X,
-  Y,
-  V,
-  C,
-  S,
+  V: ['i', 'e', 'a', 'o', 'u'],
+  C: ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y'],
+  N: ['0', '1', '2', '3', '4', '5'],
+  S: ['Z', '_'],
 }
+
+groups['X'] = groups.V.concat(groups.C, groups.N, groups.S)
+groups['Y'] = groups.V.concat(groups.C, groups.N)
+groups['CN'] = groups.C.concat(groups.N)
+groups['VN'] = groups.V.concat(groups.N)
 
 const forms = {
   X: ['F'],
@@ -796,12 +801,12 @@ const forms = {
 }
 
 function build() {
-  let parts = { special, frames }
+  let parts = { special, frames, forms, groups, letters: {} }
 
-  Object.entries(boxes).forEach(([boxLabel, box]) => {
-    parts[boxLabel] = {}
-    groups.Y.forEach((letter) => {
-      parts[boxLabel][letter] = letters[letter](box)
+  groups.Y.forEach((letter) => {
+    parts.letters[letter] = {}
+    Object.entries(boxes).forEach(([boxLabel, box]) => {
+      parts.letters[letter][boxLabel] = letters[letter](box)
     })
   })
 
@@ -830,7 +835,7 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
     return pakala
   }
 
-  if (groups.S.some((i) => i === word)) {
+  if (parts.groups.S.some((i) => i === word)) {
     return parts.special[word].format(...styles)
   }
 
@@ -838,19 +843,19 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
   let form = 'pakala'
 
   if (sequence.length === 1) {
-    if (Y.some((i) => i === sequence[0])) {
+    if (parts.groups.Y.some((i) => i === sequence[0])) {
       form = 'X'
     } else {
       return pakala
     }
   } else {
-    if (!sequence.every((letter) => Y.some((i) => i === letter))) {
+    if (!sequence.every((letter) => parts.groups.Y.some((i) => i === letter))) {
       return pakala
     }
 
     if (
-      V.some((i) => i === sequence[0]) ||
-      sequence.every((letter) => C.some((i) => i === letter))
+      parts.groups.VN.some((i) => i === sequence[0]) ||
+      sequence.every((letter) => parts.groups.CN.some((i) => i === letter))
     ) {
       if (sequence.length < 5) {
         form = 'B' + sequence.length
@@ -867,7 +872,7 @@ function draw(word, phraseMode = false, styles = ['white', 'black', '2']) {
   }
 
   const inner = sequence.reduce((accumulator, letter, index) => {
-    return accumulator + parts[forms[form][index]][letter]
+    return accumulator + parts.letters[letter][parts.forms[form][index]]
   }, '')
 
   if (phraseMode) {
@@ -954,7 +959,7 @@ function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
   )
 }
 
-fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
+// fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
 fs.writeFileSync(
   'draw/shapes/phrase1.svg',
@@ -991,6 +996,8 @@ fs.writeFileSync(
 )
 
 fs.writeFileSync('draw/shapes/special.svg', drawPhrase('#01234567'))
+
+fs.writeFileSync('draw/shapes/numbers.svg', drawPhrase('20 354 _ 432 120 _ 310 235 100 000 \n 1 000 000 000'))
 
 // console.dir(parts, { depth: null })
 
