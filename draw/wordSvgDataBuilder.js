@@ -15,7 +15,7 @@ function mid(z) {
   return Math.round(z * 50) / 100
 }
 
-function u(box) {
+function i(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -23,14 +23,14 @@ function u(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + box.width,
+      box.x,
       box.y,
       box.x,
-      box.y + mid(box.height)
+      box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
-      box.y + mid(box.height),
+      box.y + box.height,
       box.x + box.width,
       box.y + box.height
     ) +
@@ -48,14 +48,20 @@ function e(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
       box.x + box.width,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + dx(box.width),
-      box.y + dy(box.height),
+      box.x,
+      box.y + mid(box.height),
       box.x + box.width,
-      box.y + dy(box.height)
+      box.y + mid(box.height)
     ) +
     '</g>\n'
   )
@@ -94,20 +100,20 @@ function o(box) {
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
       box.y,
-      box.x,
+      box.x + box.width,
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
-      box.y + dy(box.height),
-      box.x + box.width - dx(box.width),
-      box.y + dy(box.height)
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
     ) +
     '</g>\n'
   )
 }
 
-function i(box) {
+function u(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
       box.transform,
@@ -115,16 +121,22 @@ function i(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
+      box.x + box.width,
       box.y,
       box.x + box.width,
-      box.y + mid(box.height)
+      box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + box.width,
-      box.y + +mid(box.height),
       box.x,
+      box.y + box.height,
+      box.x + box.width,
       box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
     ) +
     '</g>\n'
   )
@@ -845,7 +857,7 @@ function drawPhrase(phrase, lineWrap = 0, styles = ['white', 'black', '2']) {
   )
 }
 
-// fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
+fs.writeFileSync('draw/parts.json', JSON.stringify(build(), null, 2))
 
 fs.writeFileSync(
   'draw/shapes/phrase1.svg',
