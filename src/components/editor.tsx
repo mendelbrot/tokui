@@ -1,30 +1,15 @@
 'use client'
 
-import GlyphSymbol from '@/components/glyph-symbol'
 import React from 'react'
+import draw from '@/lib/draw'
 
-const textToArray = (text: string) => {
-  const lines = text.split('\n')
-  return lines.map((line) => line.split(' '))
-}
-
-type DisplayProps = { text?: string; array?: string[][] }
+type DisplayProps = { glyphSvg?: string }
 type DisplayComp = React.FunctionComponent<DisplayProps>
 
-export const Display: DisplayComp = ({ text, array }) => {
-  const wordsArray: string[][] = array || (text && textToArray(text)) || [[]]
-
+export const Display: DisplayComp = ({ glyphSvg }) => {
   return (
     <div className="w-[80vw] sm:w-[576px] h-[240px] sm:h-[576px] overflow-y-auto">
-      {wordsArray.map((line, lineIndex) => (
-        <div key={`line ${lineIndex}`} className="flex flex-wrap">
-          {line.map((word, wordIndex) => (
-            <div key={`word ${wordIndex}`} className="w-[48px]">
-              <GlyphSymbol letters={word} lineClass="stroke-black stroke-2" />
-            </div>
-          ))}
-        </div>
-      ))}
+      {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
     </div>
   )
 }
@@ -57,14 +42,15 @@ const openAsync = async (setText: SetText, setFile: SetFile) => {
   }
 }
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker#options
 const saveAsync = async (text: string, file: File | undefined) => {
   try {
     const o = {
+      suggestedName: 'writing.svg',
       types: [
         {
-          description: 'Text Files',
           accept: {
-            'text/plain': ['.txt'],
+            'image/svg+xml': ['.svg'],
           },
         },
       ],
@@ -84,12 +70,14 @@ function Editor() {
   const [file, setFile] = React.useState<File | undefined>()
   const [text, setText] = React.useState<string>('')
 
+  const glyphSvg = draw(text)
+
   const handleOpen = () => {
     openAsync(setText, setFile)
   }
 
   const handleSave = () => {
-    saveAsync(text, file)
+    saveAsync(glyphSvg, file)
   }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -104,7 +92,7 @@ function Editor() {
     <div>
       <div className="grid grid-rows-4 justify-items-center max-w-2xl pt-2 sm:pt-4">
         <div className="border-2 rounded-lg row-span-2 p-2 sm:row-span-3">
-          <Display text={text} />
+          <Display glyphSvg={glyphSvg} />
         </div>
         <div className="flex row-span-1">
           <textarea
@@ -113,17 +101,17 @@ function Editor() {
             className="border-2 rounded-lg p-2 m-2 mt-4 w-[50vw] sm:w-96"
           />
           <div className="flex flex-col mt-2">
-            <button
+            {/* <button
               onClick={handleOpen}
               className="border-2 rounded-lg p-2 m-2 hover:border-black"
             >
               Open
-            </button>
+            </button> */}
             <button
               onClick={handleSave}
               className="border-2 rounded-lg p-2 m-2 hover:border-black"
             >
-              Save
+              Download SVG
             </button>
           </div>
         </div>
