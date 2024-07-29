@@ -50,10 +50,10 @@ function e(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y,
-      box.x,
-      box.y + box.height
+      box.x + mid(box.width),
+      box.y + mid(Math.min(box.width, box.height)),
+      box.x + mid(box.width) + mid(Math.min(box.width, box.height)),
+      box.y
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
@@ -61,12 +61,12 @@ function e(box) {
       box.x + box.width,
       box.y + box.height
     ) +
-    // '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-    //   box.x,
-    //   box.y + box.height,
-    //   box.x + box.width, // mid(box.width),
-    //   box.y // + mid(box.height)
-    // ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
     '</g>\n'
   )
 }
@@ -101,20 +101,20 @@ function o(box) {
       box.x + mid(box.width),
       box.y + mid(box.height)
     ) +
-    // '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-    //   box.x + mid(box.width),
-    //   box.y,
-    //   box.x + mid(box.width) + quart(box.width),
-    //   box.y + mid(box.height)
-    // ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y,
       box.x + mid(box.width),
+      box.y + box.height - mid(Math.min(box.width, box.height)),
+      box.x + mid(box.width) - mid(Math.min(box.width, box.height)),
       box.y + box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
       box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
       box.y,
       box.x + mid(box.width),
       box.y + box.height
