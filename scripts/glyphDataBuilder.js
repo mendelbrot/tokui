@@ -51,9 +51,9 @@ function e(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + mid(box.width),
-      box.y + mid(Math.min(box.width, box.height)),
-      box.x + mid(box.width) + mid(Math.min(box.width, box.height)),
-      box.y
+      box.y + mid(box.height), // mid(Math.min(box.width, box.height)),
+      box.x + box.width, // mid(box.width) + mid(Math.min(box.width, box.height)),
+      box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
@@ -103,9 +103,9 @@ function o(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + mid(box.width),
-      box.y + box.height - mid(Math.min(box.width, box.height)),
-      box.x + mid(box.width) - mid(Math.min(box.width, box.height)),
-      box.y + box.height
+      box.y + mid(box.height), // box.height - mid(Math.min(box.width, box.height)),
+      box.x + box.width, // mid(box.width) + mid(Math.min(box.width, box.height)),
+      box.y + mid(box.height) // box.height
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
