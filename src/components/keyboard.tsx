@@ -3,12 +3,53 @@
 import React from 'react'
 import draw from '@/lib/draw'
 
+type KeyProps = React.PropsWithChildren & {
+  handleKeyboardPress: (keyboardKey: string) => void
+  keyboardKeys: string[]
+  columnsStyle?: string
+  pressedKey: string | null
+  setPressedKey: React.Dispatch<React.SetStateAction<string | null>>
+}
+
+function Key({
+  children,
+  handleKeyboardPress,
+  keyboardKeys,
+  columnsStyle = '',
+  pressedKey,
+  setPressedKey,
+}: KeyProps) {
+  const style = `flex items-center justify-center border-2 rounded-md border-black w-12 h-12 ${columnsStyle} ${
+    keyboardKeys.some((key) => key === pressedKey) ? 'border-lime-500' : ''
+  }`
+
+  return (
+    <div
+      className={style}
+      onClick={() => handleKeyboardPress(keyboardKeys[0])}
+      onPointerDown={() => setPressedKey(keyboardKeys[0])}
+      onPointerUp={() => setPressedKey(null)}
+    >
+      {children}
+    </div>
+  )
+}
+
 type Props = {
   text: string
   setText: React.Dispatch<React.SetStateAction<string>>
 }
 
-function keyboard({ text, setText }: Props) {
+function Keyboard({ text, setText }: Props) {
+  const [pressedKey, setPressedKey] = React.useState<string | null>(null)
+
+  const handleKeyDown = (key: string) => {
+    setPressedKey(key)
+  }
+  const handleKeyUp = () => {
+    setPressedKey(null)
+  }
+
   const appendSequence = (s: string) => {
     setText(text + s)
   }
@@ -21,9 +62,46 @@ function keyboard({ text, setText }: Props) {
     }
   }
 
+  const handleKeyboardPress = (keyboardKey: string) => {
+    console.log(0, keyboardKey)
+    switch (keyboardKey) {
+      case 'backspace': {
+        backspace()
+        break
+      }
+      default: {
+        console.log(1, keyboardKey)
+        appendSequence(keyboardKey)
+        break
+      }
+    }
+  }
+
+  React.useEffect(() => {
+    const handleKeyDownEvent = (event: KeyboardEvent) =>
+      setPressedKey(event.key)
+    const handleKeyUpEvent = (_event: KeyboardEvent) => setPressedKey(null)
+    // const handleKeyPressEvent = (event: KeyboardEvent) =>
+    //   setPressedKey(event.key)
+    window.addEventListener('keydown', handleKeyDownEvent)
+    window.addEventListener('keyup', handleKeyUpEvent)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDownEvent)
+      window.removeEventListener('keyup', handleKeyUpEvent)
+    }
+  }, [setPressedKey])
+
   return (
     <div>
       <div className="grid sm:grid-cols-10 grid-cols-6 gap-2 overflow-x-auto">
+        <Key
+          handleKeyboardPress={handleKeyboardPress}
+          keyboardKeys={['e']}
+          pressedKey={pressedKey}
+          setPressedKey={setPressedKey}
+        >
+          <div dangerouslySetInnerHTML={{ __html: draw('e') }} />
+        </Key>
         <div dangerouslySetInnerHTML={{ __html: draw('e') }} />
         <div dangerouslySetInnerHTML={{ __html: draw('e') }} />
         <div dangerouslySetInnerHTML={{ __html: draw('e') }} />
@@ -94,4 +172,4 @@ function keyboard({ text, setText }: Props) {
   )
 }
 
-export default keyboard
+export default Keyboard
