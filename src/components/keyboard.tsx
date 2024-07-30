@@ -9,6 +9,18 @@ type Props = {
 }
 
 function keyboard({ text, setText }: Props) {
+  const appendSequence = (s: string) => {
+    setText(text + s)
+  }
+
+  const backspace = () => {
+    if (text.endsWith('_ ')) {
+      setText(text.slice(0, -2))
+    } else {
+      setText(text.slice(0, -1))
+    }
+  }
+
   return (
     <div>
       <div className="grid sm:grid-cols-10 grid-cols-6 gap-2 overflow-x-auto">
@@ -36,6 +48,7 @@ function keyboard({ text, setText }: Props) {
 
         <div
           className="flex items-center justify-center border-2 rounded-md border-black w-12 h-12"
+          onClick={() => appendSequence('e')}
           dangerouslySetInnerHTML={{ __html: draw('e') }}
         />
         <div
@@ -53,22 +66,27 @@ function keyboard({ text, setText }: Props) {
 
         <div
           className="flex items-center justify-center border-2 rounded-md border-black w-12 h-12"
+          onClick={() => appendSequence(' #')}
           dangerouslySetInnerHTML={{ __html: '#' }}
         />
         <div
           className="sm:col-span-2 flex items-center justify-center border-2 rounded-md border-black h-12"
+          onClick={() => appendSequence(' _ ')}
           dangerouslySetInnerHTML={{ __html: 'space' }}
         />
         <div
           className="sm:col-span-4 col-span-2 flex items-center justify-center border-2 rounded-md border-black h-12"
+          onClick={() => appendSequence(' ')}
           dangerouslySetInnerHTML={{ __html: 'next word' }}
         />
         <div
           className="sm:col-span-2  flex items-center justify-center border-2 rounded-md border-black h-12"
+          onClick={() => appendSequence('\n')}
           dangerouslySetInnerHTML={{ __html: 'return' }}
         />
         <div
           className="flex items-center justify-center border-2 rounded-md border-black w-12 h-12"
+          onClick={backspace}
           dangerouslySetInnerHTML={{ __html: 'bks' }}
         />
       </div>
