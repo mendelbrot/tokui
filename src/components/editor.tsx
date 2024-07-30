@@ -2,6 +2,7 @@
 
 import React from 'react'
 import draw from '@/lib/draw'
+import Keyboard from '@/components/keyboard'
 
 type DisplayProps = { glyphSvg?: string }
 type DisplayComp = React.FunctionComponent<DisplayProps>
@@ -94,6 +95,7 @@ function Editor() {
         <div className="border-2 rounded-lg row-span-2 p-2 sm:row-span-3">
           <Display glyphSvg={glyphSvg} />
         </div>
+        <Keyboard text={text} setText={setText}/>
         <div className="flex row-span-1">
           <textarea
             value={text}
