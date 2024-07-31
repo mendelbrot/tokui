@@ -2,13 +2,14 @@
 
 import React from 'react'
 import draw from '@/lib/draw'
+import Keyboard from '@/components/keyboard'
 
 type DisplayProps = { glyphSvg?: string }
 type DisplayComp = React.FunctionComponent<DisplayProps>
 
 export const Display: DisplayComp = ({ glyphSvg }) => {
   return (
-    <div className="w-[80vw] sm:w-[576px] h-[240px] sm:h-[576px] overflow-y-auto">
+    <div className="w-[80vw] overflow-auto">
       {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
     </div>
   )
@@ -91,9 +92,10 @@ function Editor() {
   return (
     <div>
       <div className="grid grid-rows-4 justify-items-center max-w-2xl pt-2 sm:pt-4">
-        <div className="border-2 rounded-lg row-span-2 p-2 sm:row-span-3">
+        <div className="border-2 rounded-lg p-2">
           <Display glyphSvg={glyphSvg} />
         </div>
+        <Keyboard text={text} setText={setText} />
         <div className="flex row-span-1">
           <textarea
             value={text}
