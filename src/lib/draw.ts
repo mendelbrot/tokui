@@ -1,27 +1,28 @@
 import './stringFormat'
 import glyphData from '../data/glyphData.json'
 
-const glyphWidth = 40
-const glyphHeight = 40
+const glyphBaseDimensions = [40, 40]
 
-export function drawGlyph(
-  word: string,
-  phraseMode = false,
-  styles = ['white', 'black', '2']
-): string | null {
+type Settings = {
+  scale?: number
+  fill?: string
+  stroke?: string
+  strokeWidth?: number
+}
+
+const defaultSettings = {
+  scale: 1,
+  fill: 'none',
+  stroke: 'black',
+  strokeWidth: 2,
+}
+
+export function drawGlyph(word: string): string | null {
   if (word.length === 0) {
     return null
   }
 
-  const pakala = phraseMode
-    ? glyphData.special.Z
-    : // @ts-ignore
-      (glyphData.frames.svg.format(
-        glyphData.special.Z,
-        ...styles,
-        glyphWidth,
-        glyphHeight
-      ) as string)
+  const pakala = glyphData.special.Z
 
   if (word.length > 5) {
     return pakala
@@ -29,7 +30,11 @@ export function drawGlyph(
 
   if (glyphData.groups.S.some((i) => i === word)) {
     // @ts-ignore
-    return glyphData.special[word].format(...styles)
+    return glyphData.special[word].format(
+      defaultSettings.fill,
+      defaultSettings.stroke,
+      defaultSettings.strokeWidth
+    )
   }
 
   const sequence = word.split('')
@@ -71,26 +76,18 @@ export function drawGlyph(
     return accumulator + glyphData.letters[letter][glyphData.forms[form][index]]
   }, '')
 
-  if (phraseMode) {
-    return inner
-  } else {
-    // @ts-ignore
-    return glyphData.frames.svg.format(
-      inner,
-      ...styles,
-      glyphWidth,
-      glyphHeight
-    )
-  }
+  return inner
 }
 
 function draw(
   phrase: string,
   lineWrap = 0,
-  styles = ['white', 'black', '2']
+  settings: Settings = {}
 ): string {
   phrase = phrase.replace(/\r\n/g, '\n')
   lineWrap = lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive line wrap
+
+  settings = {...defaultSettings, ...settings}
 
   let x = 0
   let y = 0
@@ -103,9 +100,9 @@ function draw(
     if (word.length > 0) {
       // @ts-ignore
       glyphs += glyphData.frames.phraseMode.format(
-        x * glyphWidth,
-        y * glyphHeight,
-        drawGlyph(word, true)
+        x * glyphBaseDimensions[0],
+        y * glyphBaseDimensions[1],
+        drawGlyph(word)
       )
 
       if (x > maxX) {
@@ -161,9 +158,11 @@ function draw(
   // @ts-ignore
   return glyphData.frames.svg.format(
     glyphs,
-    ...styles,
-    (maxX + 1) * glyphWidth,
-    (y + 1) * glyphHeight
+    settings.fill,
+    settings.stroke,
+    settings.strokeWidth,
+    (maxX + 1) * glyphBaseDimensions[0],
+    (y + 1) * glyphBaseDimensions[1]
   )
 }
 

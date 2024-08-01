@@ -21,7 +21,7 @@ function Key({
 }: KeyProps) {
   const style = `flex items-center justify-center border-2 rounded-md border-black ${
     positioningStyle || 'w-12 h-12'
-  } ${keyboardKeys.some((key) => key === pressedKey) ? 'border-lime-500' : ''}`
+  } ${keyboardKeys.some((key) => key === pressedKey) ? 'bg-lime-200' : ''}`
 
   return (
     <div
