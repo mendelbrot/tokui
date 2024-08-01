@@ -19,58 +19,6 @@ function quart(z) {
   return Math.round(z * 25) / 100
 }
 
-function a(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      box.x + mid(box.width),
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + box.width,
-      box.y,
-      box.x,
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + mid(box.height),
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
-function e(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      box.x + mid(box.width),
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y + mid(box.height), // mid(Math.min(box.width, box.height)),
-      box.x + box.width, // mid(box.width) + mid(Math.min(box.width, box.height)),
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y + box.height,
-      box.x + box.width,
-      box.y + box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y,
-      box.x + mid(box.width),
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
-
 function i(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
@@ -94,6 +42,58 @@ function i(box) {
   )
 }
 
+function e(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function a(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x,
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
 function o(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
@@ -102,19 +102,19 @@ function o(box) {
       box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + mid(box.width),
-      box.y + mid(box.height), // box.height - mid(Math.min(box.width, box.height)),
-      box.x + box.width, // mid(box.width) + mid(Math.min(box.width, box.height)),
-      box.y + mid(box.height) // box.height
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
       box.y,
       box.x + box.width,
       box.y
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
       box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
       box.y,
       box.x + mid(box.width),
       box.y + box.height
@@ -129,12 +129,6 @@ function u(box) {
       box.transform,
       box.x + mid(box.width),
       box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x,
-      box.y,
-      box.x + box.width,
-      box.y
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
