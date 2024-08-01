@@ -4,7 +4,7 @@
     "_": ""
   },
   "frames": {
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{4}\" height=\"{5}\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" stroke-linecap=\"round\">\n{0}\n</g>\n</svg>",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{4}\" height=\"{5}\">\n<rect width=\"100%\" height=\"100%\" fill=\"{1}\" />\n<g stroke=\"{2}\" stroke-width=\"{3}\" transform=\"scale({6})\" stroke-linecap=\"round\">\n{0}\n</g>\n</svg>",
     "phraseMode": "<g transform=\"translate({0} {1})\">\n{2}\n</g>"
   },
   "forms": {

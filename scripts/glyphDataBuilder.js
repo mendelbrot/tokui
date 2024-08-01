@@ -648,7 +648,7 @@ const letters = {
 const frames = {
   svg: `<svg xmlns="http://www.w3.org/2000/svg" width="{4}" height="{5}">
 <rect width="100%" height="100%" fill="{1}" />
-<g stroke="{2}" stroke-width="{3}" stroke-linecap="round">
+<g stroke="{2}" stroke-width="{3}" transform="scale({6})" stroke-linecap="round">
 {0}
 </g>
 </svg>`,

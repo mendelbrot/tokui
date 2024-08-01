@@ -3,18 +3,28 @@ import glyphData from '../data/glyphData.json'
 
 const glyphBaseDimensions = [40, 40]
 
-type Settings = {
-  scale?: number
+export type Settings = {
   fill?: string
   stroke?: string
   strokeWidth?: number
+  scale?: number
+  lineWrap?: number
 }
 
-const defaultSettings = {
-  scale: 1,
+type HardSettings = {
+  fill: string
+  stroke: string
+  strokeWidth: number
+  scale: number
+  lineWrap: number
+}
+
+export const defaultSettings = {
   fill: 'none',
   stroke: 'black',
   strokeWidth: 2,
+  scale: 1,
+  lineWrap: 0,
 }
 
 export function drawGlyph(word: string): string | null {
@@ -79,15 +89,10 @@ export function drawGlyph(word: string): string | null {
   return inner
 }
 
-function draw(
-  phrase: string,
-  lineWrap = 0,
-  settings: Settings = {}
-): string {
+function draw(phrase: string, settings: Settings = {}): string {
+  const hardSettings: HardSettings = { ...defaultSettings, ...settings }
   phrase = phrase.replace(/\r\n/g, '\n')
-  lineWrap = lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive line wrap
-
-  settings = {...defaultSettings, ...settings}
+  const lineWrap = hardSettings.lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive line wrap
 
   let x = 0
   let y = 0
@@ -158,11 +163,12 @@ function draw(
   // @ts-ignore
   return glyphData.frames.svg.format(
     glyphs,
-    settings.fill,
-    settings.stroke,
-    settings.strokeWidth,
-    (maxX + 1) * glyphBaseDimensions[0],
-    (y + 1) * glyphBaseDimensions[1]
+    hardSettings.fill,
+    hardSettings.stroke,
+    hardSettings.strokeWidth,
+    (maxX + 1) * hardSettings.scale * glyphBaseDimensions[0],
+    (y + 1) * hardSettings.scale * glyphBaseDimensions[1],
+    hardSettings.scale
   )
 }
 
