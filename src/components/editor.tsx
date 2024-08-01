@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import draw from '@/lib/draw'
+import draw, { Settings, defaultSettings } from '@/lib/draw'
 import Keyboard from '@/components/keyboard'
 
 type DisplayProps = { glyphSvg?: string }
@@ -70,8 +70,9 @@ const saveAsync = async (text: string, file: File | undefined) => {
 function Editor() {
   const [file, setFile] = React.useState<File | undefined>()
   const [text, setText] = React.useState<string>('')
+  const [settings, setSettings] = React.useState<Settings>(defaultSettings)
 
-  const glyphSvg = draw(text)
+  const glyphSvg = draw(text, settings)
 
   const handleOpen = () => {
     openAsync(setText, setFile)
@@ -82,11 +83,12 @@ function Editor() {
   }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    try {
-      setText(e.target.value)
-    } catch (e) {
-      alert(e)
-    }
+    setText(e.target.value)
+  }
+
+  const handleScaleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newScale = Number(e.target.value)
+    setSettings({ ...settings, ...{ scale: Number(e.target.value) } })
   }
 
   return (
@@ -103,6 +105,14 @@ function Editor() {
             className="border-2 rounded-lg p-2 m-2 mt-4 w-[50vw] sm:w-96"
           />
           <div className="flex flex-col mt-2">
+            <input
+              type="number"
+              min="0.5"
+              max="5.0"
+              step="0.5"
+              onChange={handleScaleChange}
+              value={settings.scale}
+            />
             {/* <button
               onClick={handleOpen}
               className="border-2 rounded-lg p-2 m-2 hover:border-black"

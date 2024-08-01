@@ -21,7 +21,7 @@ function Key({
 }: KeyProps) {
   const style = `flex items-center justify-center border-2 rounded-md border-black ${
     positioningStyle || 'w-12 h-12'
-  } ${keyboardKeys.some((key) => key === pressedKey) ? 'border-lime-500' : ''}`
+  } ${keyboardKeys.some((key) => key === pressedKey) ? 'bg-lime-200' : ''}`
 
   return (
     <div
@@ -413,32 +413,6 @@ function Keyboard({ text, setText }: Props) {
         >
           <div dangerouslySetInnerHTML={{ __html: 'bks' }} />
         </Key>
-
-        {/* <div
-          className="flex items-center justify-center border-2 rounded-md border-black w-12 h-12"
-          // onClick={() => appendSequence(' #')}
-          dangerouslySetInnerHTML={{ __html: '#' }}
-        />
-        <div
-          className="sm:col-span-2 flex items-center justify-center border-2 rounded-md border-black h-12"
-          // onClick={() => appendSequence(' _ ')}
-          dangerouslySetInnerHTML={{ __html: 'space' }}
-        />
-        <div
-          className="sm:col-span-4 col-span-2 flex items-center justify-center border-2 rounded-md border-black h-12"
-          // onClick={() => appendSequence(' ')}
-          dangerouslySetInnerHTML={{ __html: 'next word' }}
-        />
-        <div
-          className="sm:col-span-2  flex items-center justify-center border-2 rounded-md border-black h-12"
-          // onClick={() => appendSequence('\n')}
-          dangerouslySetInnerHTML={{ __html: 'return' }}
-        />
-        <div
-          className="flex items-center justify-center border-2 rounded-md border-black w-12 h-12"
-          // onClick={Backspace}
-          dangerouslySetInnerHTML={{ __html: 'bks' }}
-        /> */}
       </div>
     </div>
   )
