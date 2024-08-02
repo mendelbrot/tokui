@@ -20,7 +20,7 @@ function quart(z) {
 }
 
 function third(z) {
-  return Math.round(z * 0.3333) / 100
+  return Math.round(z * 33.3333) / 100
 }
 
 function i(box) {
