@@ -19,6 +19,10 @@ function quart(z) {
   return Math.round(z * 25) / 100
 }
 
+function third(z) {
+  return Math.round(z * 0.3333) / 100
+}
+
 function i(box) {
   return (
     '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
@@ -781,9 +785,159 @@ const pakala = `
 <line x1="16" y1="19" x2="27" y2="21" />
 <line x1="27" y1="21" x2="14" y2="36" />`
 
+function dashdot(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
+function colon(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y + mid(box.height),
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function plus(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + mid(box.height),
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y + box.height,
+      box.x + box.width,
+      box.y + mid(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
+function minus(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function times(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y + mid(box.height),
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function divide(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function equal(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + third(box.height),
+      box.x + box.width,
+      box.y + third(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height - third(box.height),
+      box.x + box.width,
+      box.y + box.height - third(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
 const special = {
   Z: pakala,
   _: '', // space
+  '.': dashdot(boxes.F),
+  ':': colon(boxes.F),
+  '+': plus(boxes.F),
+  '-': minus(boxes.F),
+  '*': times(boxes.F),
+  '/': divide(boxes.F),
+  '=': equal(boxes.F),
 }
 
 const V = ['i', 'e', 'a', 'o', 'u']
@@ -797,7 +951,7 @@ const groups = {
   V: ['i', 'e', 'a', 'o', 'u'],
   C: ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y'],
   N: ['0', '1', '2', '3', '4', '5'],
-  S: ['Z', '_'],
+  S: Object.keys(special),
 }
 
 groups['X'] = groups.V.concat(groups.C, groups.N, groups.S)
