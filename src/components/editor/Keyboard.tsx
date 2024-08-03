@@ -16,9 +16,7 @@ type Props = {
 function Keyboard({ text, setText }: Props) {
   const [pressedKey, setPressedKey] = React.useState<string | null>(null)
   const [layer, setLayer] = React.useState<number>(0)
-  const [windowWidth, setWindowWidth] = React.useState<number>(
-    window.innerWidth
-  )
+  const [windowWidth, setWindowWidth] = React.useState<number>(0)
 
   const handleKeyboardPress = React.useCallback(
     (keyboardKey: string) => {
