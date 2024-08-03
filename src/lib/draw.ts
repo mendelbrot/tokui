@@ -11,7 +11,7 @@ export type Settings = {
   lineWrap?: number
 }
 
-type HardSettings = {
+export type HardSettings = {
   fill: string
   stroke: string
   strokeWidth: number
@@ -24,7 +24,7 @@ export const defaultSettings = {
   stroke: 'black',
   strokeWidth: 2,
   scale: 1,
-  lineWrap: 0,
+  lineWrap: 8,
 }
 
 export function drawGlyph(word: string): string | null {

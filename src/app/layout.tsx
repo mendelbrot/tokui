@@ -14,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="mx-4 mb-4">
-        <Nav />
+      <body className="m-4">
+        {/* <Nav /> */}
         {children}
       </body>
     </html>

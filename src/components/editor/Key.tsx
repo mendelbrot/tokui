@@ -24,7 +24,7 @@ function Key({
   } ${keyboardKeys.some((key) => key === pressedKey) ? 'bg-lime-200' : ''}`
 
   return (
-    <div
+    <button
       className={style}
       onPointerDown={() => setPressedKey(keyboardKeys[0])}
       onPointerUp={() => {
@@ -33,7 +33,7 @@ function Key({
       }}
     >
       {children}
-    </div>
+    </button>
   )
 }
 

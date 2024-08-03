@@ -10,7 +10,7 @@ type Props = {
 
 function Display({ glyphSvg, cursorPosition, moveTo }: Props) {
   return (
-    <div className="w-[80vw] overflow-auto">
+    <div className="overflow-auto">
       {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
     </div>
   )
