@@ -138,11 +138,11 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={[' ']}
+          keyboardKeys={['6']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('').glyphSvg }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('6').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
