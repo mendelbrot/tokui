@@ -2,145 +2,33 @@
 
 import React from 'react'
 import draw from '@/lib/draw'
+import Key from '../Key'
 
-type KeyProps = React.PropsWithChildren & {
+type Props = {
   handleKeyboardPress: (keyboardKey: string) => void
-  keyboardKeys: string[]
-  positioningStyle?: string
   pressedKey: string | null
   setPressedKey: React.Dispatch<React.SetStateAction<string | null>>
 }
 
-function Key({
-  children,
-  handleKeyboardPress,
-  keyboardKeys,
-  pressedKey,
-  setPressedKey,
-  positioningStyle,
-}: KeyProps) {
-  const style = `flex items-center justify-center border-2 rounded-md border-black ${
-    positioningStyle || 'w-12 h-12'
-  } ${keyboardKeys.some((key) => key === pressedKey) ? 'bg-lime-200' : ''}`
-
-  return (
-    <div
-      className={style}
-      onPointerDown={() => setPressedKey(keyboardKeys[0])}
-      onPointerUp={() => {
-        setPressedKey(null)
-        handleKeyboardPress(keyboardKeys[0])
-      }}
-    >
-      {children}
-    </div>
-  )
-}
-
-type Props = {
-  text: string
-  setText: React.Dispatch<React.SetStateAction<string>>
-}
-
-function Keyboard({ text, setText }: Props) {
-  const [pressedKey, setPressedKey] = React.useState<string | null>(null)
-
-  const handleKeyboardPress = React.useCallback(
-    (keyboardKey: string) => {
-      switch (keyboardKey) {
-        case 'Backspace': {
-          if (text.endsWith('_ ')) {
-            setText(text.slice(0, -2))
-          } else {
-            setText(text.slice(0, -1))
-          }
-          break
-        }
-        case 'Enter': {
-          setText(text + '\n')
-          break
-        }
-        case '#': {
-          setText(text + ' #')
-          break
-        }
-        case '_': {
-          setText(text + ' _ ')
-          break
-        }
-        case 'm':
-        case 'n':
-        case 'g':
-        case 'p':
-        case 't':
-        case 'k':
-        case 'f':
-        case 's':
-        case 'h':
-        case 'w':
-        case 'l':
-        case 'y':
-        case 'i':
-        case 'e':
-        case 'a':
-        case 'o':
-        case 'u':
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case ' ': {
-          setText(text + keyboardKey)
-          break
-        }
-        default: {
-          break
-        }
-      }
-    },
-    [text, setText]
-  )
-
-  React.useEffect(() => {
-    const handleKeyDownEvent = (event: KeyboardEvent) => {
-      if (event.key === ' ') {
-        // prevent space key press from scrolling the page down
-        event.preventDefault()
-      }
-      setPressedKey(event.key)
-      handleKeyboardPress(event.key)
-    }
-
-    const handleKeyUpEvent = (_event: KeyboardEvent) => setPressedKey(null)
-
-    window.addEventListener('keydown', handleKeyDownEvent)
-    window.addEventListener('keyup', handleKeyUpEvent)
-    return () => {
-      window.removeEventListener('keydown', handleKeyDownEvent)
-      window.removeEventListener('keyup', handleKeyUpEvent)
-    }
-  }, [setPressedKey, handleKeyboardPress])
-
+function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
   return (
     <div>
-      <div className="grid sm:grid-cols-10 grid-cols-6 gap-2 overflow-x-auto">
+      <div className="grid grid-cols-10 gap-2 overflow-x-auto">
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={['_']}
+          keyboardKeys={['+']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('_') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('+').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={['_']}
+          keyboardKeys={['-']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('_') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('-').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -148,7 +36,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('m') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('m').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -156,7 +44,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('n') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('n').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -164,7 +52,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('g') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('g').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -172,7 +60,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('p') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('p').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -180,7 +68,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('t') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('t').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -188,7 +76,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('k') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('k').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -196,7 +84,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('4') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('4').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -204,24 +92,24 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('5') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('5').glyphSvg }} />
         </Key>
 
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={[' ']}
+          keyboardKeys={['*']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw(' ') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('*').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={[' ']}
+          keyboardKeys={['/']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw(' ') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('/').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -229,7 +117,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('f') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('f').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -237,7 +125,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('s') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('s').glyphSvg }} />
         </Key>
 
         <Key
@@ -246,7 +134,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('h') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('h').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -254,7 +142,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('w') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('w').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -262,7 +150,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('l') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('l').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -270,7 +158,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('y') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('y').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -278,7 +166,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('2') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('2').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -286,24 +174,32 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('3') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('3').glyphSvg }} />
         </Key>
 
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={['_']}
+          keyboardKeys={['=']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('_') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('=').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={['_']}
+          keyboardKeys={[':']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('_') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw(':').glyphSvg }} />
+        </Key>
+        <Key
+          handleKeyboardPress={handleKeyboardPress}
+          keyboardKeys={['.']}
+          pressedKey={pressedKey}
+          setPressedKey={setPressedKey}
+        >
+          <div dangerouslySetInnerHTML={{ __html: draw('.').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -311,7 +207,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('i') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('i').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -319,7 +215,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('e') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('e').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -327,7 +223,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('a') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('a').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -335,7 +231,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('o') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('o').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -343,15 +239,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('u') }} />
-        </Key>
-        <Key
-          handleKeyboardPress={handleKeyboardPress}
-          keyboardKeys={['_']}
-          pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
-        >
-          <div dangerouslySetInnerHTML={{ __html: draw('_') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('u').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -359,7 +247,7 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('0') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('0').glyphSvg }} />
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -367,9 +255,17 @@ function Keyboard({ text, setText }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: draw('1') }} />
+          <div dangerouslySetInnerHTML={{ __html: draw('1').glyphSvg }} />
         </Key>
 
+        <Key
+          handleKeyboardPress={handleKeyboardPress}
+          keyboardKeys={['Alt']}
+          pressedKey={pressedKey}
+          setPressedKey={setPressedKey}
+        >
+          <div dangerouslySetInnerHTML={{ __html: 'alt' }} />
+        </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['#']}
@@ -383,7 +279,7 @@ function Keyboard({ text, setText }: Props) {
           keyboardKeys={['_']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
-          positioningStyle="sm:col-span-2 h-12"
+          positioningStyle="col-span-2 h-12"
         >
           <div dangerouslySetInnerHTML={{ __html: 'space' }} />
         </Key>
@@ -392,7 +288,7 @@ function Keyboard({ text, setText }: Props) {
           keyboardKeys={[' ']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
-          positioningStyle="sm:col-span-4 col-span-2 h-12"
+          positioningStyle="col-span-2 h-12"
         >
           <div dangerouslySetInnerHTML={{ __html: 'next word' }} />
         </Key>
@@ -401,7 +297,7 @@ function Keyboard({ text, setText }: Props) {
           keyboardKeys={['Enter']}
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
-          positioningStyle="sm:col-span-2 h-12"
+          positioningStyle="col-span-2 h-12"
         >
           <div dangerouslySetInnerHTML={{ __html: 'return' }} />
         </Key>
@@ -413,9 +309,17 @@ function Keyboard({ text, setText }: Props) {
         >
           <div dangerouslySetInnerHTML={{ __html: 'bks' }} />
         </Key>
+        <Key
+          handleKeyboardPress={handleKeyboardPress}
+          keyboardKeys={['Alt']}
+          pressedKey={pressedKey}
+          setPressedKey={setPressedKey}
+        >
+          <div dangerouslySetInnerHTML={{ __html: 'alt' }} />
+        </Key>
       </div>
     </div>
   )
 }
 
-export default Keyboard
+export default Normal0

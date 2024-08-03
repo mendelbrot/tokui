@@ -2,7 +2,7 @@
 
 import React from 'react'
 import draw, { Settings, defaultSettings } from '@/lib/draw'
-import Keyboard from '@/components/keyboard'
+import Keyboard from '@/components/editor/Keyboard'
 
 type DisplayProps = { glyphSvg?: string }
 type DisplayComp = React.FunctionComponent<DisplayProps>
@@ -72,7 +72,8 @@ function Editor() {
   const [text, setText] = React.useState<string>('')
   const [settings, setSettings] = React.useState<Settings>(defaultSettings)
 
-  const glyphSvg = draw(text, settings)
+  const {glyphSvg, cursorMap } = draw(text, settings)
+  console.table(cursorMap)
 
   const handleOpen = () => {
     openAsync(setText, setFile)
