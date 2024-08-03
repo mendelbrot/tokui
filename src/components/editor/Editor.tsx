@@ -2,7 +2,7 @@
 
 import React from 'react'
 import draw, { Settings, defaultSettings } from '@/lib/draw'
-import Keyboard from '@/components/keyboard'
+import Keyboard from '@/components/editor/Keyboard'
 
 type DisplayProps = { glyphSvg?: string }
 type DisplayComp = React.FunctionComponent<DisplayProps>
