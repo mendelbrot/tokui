@@ -89,7 +89,10 @@ export function drawGlyph(word: string): string | null {
   return inner
 }
 
-function draw(phrase: string, settings: Settings = {}): string {
+function draw(
+  phrase: string,
+  settings: Settings = {}
+): { glyphSvg: string; cursorMap: number[][] } {
   const hardSettings: HardSettings = { ...defaultSettings, ...settings }
   phrase = phrase.replace(/\r\n/g, '\n')
   const lineWrap = hardSettings.lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive line wrap
@@ -101,7 +104,9 @@ function draw(phrase: string, settings: Settings = {}): string {
   let ponaMode = false
   let glyphs = ''
 
-  function addGlyph() {
+  let cursorMap: number[][] = [[]]
+
+  function addGlyph(i: number) {
     if (word.length > 0) {
       // @ts-ignore
       glyphs += glyphData.frames.phraseMode.format(
@@ -109,6 +114,7 @@ function draw(phrase: string, settings: Settings = {}): string {
         y * glyphBaseDimensions[1],
         drawGlyph(word)
       )
+      cursorMap[y].push(i)
 
       if (x > maxX) {
         maxX = x
@@ -118,6 +124,7 @@ function draw(phrase: string, settings: Settings = {}): string {
       x += 1
 
       if (lineWrap !== -1 && x > lineWrap) {
+        cursorMap.push([])
         x = 0
         y += 1
       }
@@ -126,14 +133,15 @@ function draw(phrase: string, settings: Settings = {}): string {
 
   for (let i = 0; i < phrase.length; i++) {
     if (phrase[i] === ' ') {
-      addGlyph()
+      addGlyph(i)
       ponaMode = false
 
       continue
     }
 
     if (phrase[i] === '\n') {
-      addGlyph()
+      addGlyph(i)
+      cursorMap.push([])
       x = 0
       y += 1
       ponaMode = false
@@ -142,7 +150,7 @@ function draw(phrase: string, settings: Settings = {}): string {
     }
 
     if (phrase[i] === '#') {
-      addGlyph()
+      addGlyph(i)
       ponaMode = true
 
       continue
@@ -150,7 +158,7 @@ function draw(phrase: string, settings: Settings = {}): string {
 
     if (ponaMode === true) {
       word = phrase[i]
-      addGlyph()
+      addGlyph(i)
 
       continue
     }
@@ -158,18 +166,21 @@ function draw(phrase: string, settings: Settings = {}): string {
     word += phrase[i]
   }
 
-  addGlyph()
+  addGlyph(phrase.length)
 
-  // @ts-ignore
-  return glyphData.frames.svg.format(
-    glyphs,
-    hardSettings.fill,
-    hardSettings.stroke,
-    hardSettings.strokeWidth,
-    (maxX + 1) * hardSettings.scale * glyphBaseDimensions[0],
-    (y + 1) * hardSettings.scale * glyphBaseDimensions[1],
-    hardSettings.scale
-  )
+  return {
+    // @ts-ignore
+    glyphSvg: glyphData.frames.svg.format(
+      glyphs,
+      hardSettings.fill,
+      hardSettings.stroke,
+      hardSettings.strokeWidth,
+      (maxX + 1) * hardSettings.scale * glyphBaseDimensions[0],
+      (y + 1) * hardSettings.scale * glyphBaseDimensions[1],
+      hardSettings.scale
+    ),
+    cursorMap,
+  }
 }
 
 export default draw

@@ -72,7 +72,8 @@ function Editor() {
   const [text, setText] = React.useState<string>('')
   const [settings, setSettings] = React.useState<Settings>(defaultSettings)
 
-  const glyphSvg = draw(text, settings)
+  const {glyphSvg, cursorMap } = draw(text, settings)
+  console.table(cursorMap)
 
   const handleOpen = () => {
     openAsync(setText, setFile)
