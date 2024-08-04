@@ -14,7 +14,7 @@ type Props = {
 function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
   return (
     <div>
-      <div className="grid grid-cols-6 gap-2 overflow-x-auto">
+      <div className="grid grid-cols-6 gap-2">
         <Key
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['+']}

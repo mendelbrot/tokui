@@ -4,10 +4,16 @@ import React from 'react'
 import draw, { HardSettings, defaultSettings } from '@/lib/draw'
 import Keyboard from '@/components/editor/Keyboard'
 import Display from './Display'
+import { IoCodeDownload } from 'react-icons/io5'
+import { HiMagnifyingGlassMinus, HiMagnifyingGlassPlus } from 'react-icons/hi2'
+import { CiSquareMinus, CiSquarePlus } from 'react-icons/ci'
+import { BsFiletypeTxt } from 'react-icons/bs'
 
 const maxScaleValue = 5
 const minScaleValue = 0.5
 const scaleIncrementValue = 0.5
+
+const iconSize = '32px'
 
 const downloadSvgAsync = async (glyphSvg: string) => {
   try {
@@ -62,14 +68,14 @@ function Editor() {
     incrementLineWrap: () => {
       setSettingsValue({
         ...settingsValue,
-        ...{ scale: settingsValue.lineWrap - 1 },
+        ...{ lineWrap: settingsValue.lineWrap + 1 },
       })
     },
     decrementLineWrap: () => {
       if (settingsValue.lineWrap > 0) {
         setSettingsValue({
           ...settingsValue,
-          ...{ scale: settingsValue.lineWrap - 1 },
+          ...{ lineWrap: settingsValue.lineWrap - 1 },
         })
       }
     },
@@ -115,32 +121,47 @@ function Editor() {
 
   return (
     <div>
-      <div className="flex flex-col max-w-2xl h-screen">
-        <div className="flex flex-row mt-2 border-2">
-          <input
-            type="number"
-            min="0.5"
-            max="5.0"
-            step="0.5"
-            onChange={handleScaleChange}
-            value={settingsValue.scale}
-          />
-          <button onClick={handleDownloadSvg} className="border p">
-            Download SVG
-          </button>
+      <div className="flex flex-col h-screen w-[344px] sm:w-[568px] p-[16px]">
+        <div className="flex flex-row mt-2 justify-between">
+          <div>
+            <button onClick={settings.decrementScale}>
+              <HiMagnifyingGlassMinus size={iconSize} />
+            </button>
+            <button onClick={settings.incrementScale}>
+              <HiMagnifyingGlassPlus size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button onClick={settings.decrementLineWrap}>
+              <CiSquareMinus size={iconSize} />
+            </button>
+            <button onClick={settings.incrementLineWrap}>
+              <CiSquarePlus size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button onClick={() => {}}>
+              <BsFiletypeTxt size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button onClick={handleDownloadSvg}>
+              <IoCodeDownload size={iconSize} />
+            </button>
+          </div>
         </div>
-        <div className="border-2 rounded-lg p-2 flex-1">
-          <Display
-            glyphSvg={glyphSvg}
-            cursorPosition={cursorPosition}
-            moveTo={cursor.moveTo}
-          />
-        </div>
-        <Keyboard
-          text={text}
-          setText={setText}
-          windowWidth={windowDimensions[0]}
+        <Display
+          glyphSvg={glyphSvg}
+          cursorPosition={cursorPosition}
+          moveTo={cursor.moveTo}
         />
+        <div className="flex flex-row items-center">
+          <Keyboard
+            text={text}
+            setText={setText}
+            windowWidth={windowDimensions[0]}
+          />
+        </div>
       </div>
     </div>
   )
