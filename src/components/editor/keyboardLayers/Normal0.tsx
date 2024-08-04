@@ -264,7 +264,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: 'alt' }} />
+          alt
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -272,7 +272,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: '#' }} />
+          #
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -281,7 +281,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
-          <div dangerouslySetInnerHTML={{ __html: 'space' }} />
+          space
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -290,7 +290,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
-          <div dangerouslySetInnerHTML={{ __html: 'next word' }} />
+          next word
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -299,7 +299,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
-          <div dangerouslySetInnerHTML={{ __html: 'return' }} />
+          return
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -307,7 +307,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: 'bks' }} />
+          bks
         </Key>
         <Key
           handleKeyboardPress={handleKeyboardPress}
@@ -315,7 +315,7 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           pressedKey={pressedKey}
           setPressedKey={setPressedKey}
         >
-          <div dangerouslySetInnerHTML={{ __html: 'alt' }} />
+          alt
         </Key>
       </div>
     </div>
