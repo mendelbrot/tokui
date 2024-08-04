@@ -11,12 +11,12 @@ const screens = { sm: 640 }
 type Props = {
   text: string
   setText: React.Dispatch<React.SetStateAction<string>>
+  windowWidth: number
 }
 
-function Keyboard({ text, setText }: Props) {
+function Keyboard({ text, setText, windowWidth }: Props) {
   const [pressedKey, setPressedKey] = React.useState<string | null>(null)
   const [layer, setLayer] = React.useState<number>(0)
-  const [windowWidth, setWindowWidth] = React.useState<number>(0)
 
   const handleKeyboardPress = React.useCallback(
     (keyboardKey: string) => {
@@ -111,19 +111,13 @@ function Keyboard({ text, setText }: Props) {
 
     const handleKeyUpEvent = (_event: KeyboardEvent) => setPressedKey(null)
 
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth)
-    }
-
     window.addEventListener('keydown', handleKeyDownEvent)
-    window.addEventListener('resize', handleWindowResize)
     window.addEventListener('keyup', handleKeyUpEvent)
     return () => {
       window.removeEventListener('keydown', handleKeyDownEvent)
       window.removeEventListener('keyup', handleKeyUpEvent)
-      window.removeEventListener('resize', handleWindowResize)
     }
-  }, [setPressedKey, handleKeyboardPress])
+  }, [handleKeyboardPress])
 
   if (windowWidth < screens.sm) {
     if (layer === 0) {

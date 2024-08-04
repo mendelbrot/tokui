@@ -1,52 +1,24 @@
 'use client'
 
 import React from 'react'
-import draw, { Settings, defaultSettings } from '@/lib/draw'
+import draw, { HardSettings, defaultSettings } from '@/lib/draw'
 import Keyboard from '@/components/editor/Keyboard'
+import Display from './Display'
+import { IoCodeDownload } from 'react-icons/io5'
+import { HiMagnifyingGlassMinus, HiMagnifyingGlassPlus } from 'react-icons/hi2'
+import { CiSquareMinus, CiSquarePlus } from 'react-icons/ci'
+import { BsFiletypeTxt } from 'react-icons/bs'
+import { BsCopy } from 'react-icons/bs'
 
-type DisplayProps = { glyphSvg?: string }
-type DisplayComp = React.FunctionComponent<DisplayProps>
+const maxScaleValue = 5
+const minScaleValue = 0.5
+const scaleIncrementValue = 0.5
 
-export const Display: DisplayComp = ({ glyphSvg }) => {
-  return (
-    <div className="w-[80vw] overflow-auto">
-      {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
-    </div>
-  )
-}
+const iconSize = '32px'
 
-type SetText = React.Dispatch<React.SetStateAction<string>>
-type SetFile = React.Dispatch<React.SetStateAction<File | undefined>>
-
-const openAsync = async (setText: SetText, setFile: SetFile) => {
+const downloadSvgAsync = async (glyphSvg: string) => {
   try {
-    if (!Object.hasOwn(window, 'showOpenFilePicker')) {
-      throw new Error('File picker is not supported on this device')
-    }
-    const [filehandle] = await window.showOpenFilePicker({ multiple: false })
-    const file = await filehandle.getFile()
-    if (file) {
-      setFile(file)
-      let reader = new FileReader()
-      reader.onload = (e) => {
-        if (!Object.hasOwn(e, 'target')) {
-          throw new Error('No file was selected')
-        }
-        const text: string = e.target?.result?.toString() || ''
-        setText(text)
-      }
-      reader.onerror = (e) => alert(e)
-      reader.readAsText(file)
-    }
-  } catch (e) {
-    alert(e)
-  }
-}
-
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker#options
-const saveAsync = async (text: string, file: File | undefined) => {
-  try {
-    const o = {
+    const options = {
       suggestedName: 'writing.svg',
       types: [
         {
@@ -56,11 +28,10 @@ const saveAsync = async (text: string, file: File | undefined) => {
         },
       ],
     }
-    const options = file?.name ? { ...o, suggestedName: file.name } : o
 
     const handle = await window.showSaveFilePicker(options)
     const writable = await handle.createWritable()
-    await writable.write(text)
+    await writable.write(glyphSvg)
     await writable.close()
   } catch (e) {
     alert(e)
@@ -68,66 +39,186 @@ const saveAsync = async (text: string, file: File | undefined) => {
 }
 
 function Editor() {
-  const [file, setFile] = React.useState<File | undefined>()
   const [text, setText] = React.useState<string>('')
-  const [settings, setSettings] = React.useState<Settings>(defaultSettings)
+  const [cursorPosition, setCursorPosition] = React.useState<number[]>([0, 0])
+  const [settingsValue, setSettingsValue] =
+    React.useState<HardSettings>(defaultSettings)
+  const [windowDimensions, setWindowDimensions] = React.useState<number[]>([
+    0, 0,
+  ])
+  const [textMode, setTextMode] = React.useState<boolean>(false)
+  const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
 
-  const {glyphSvg, cursorMap } = draw(text, settings)
-  console.table(cursorMap)
+  const { glyphSvg, cursorMap } = draw(text, settingsValue)
+  // console.table(cursorMap)
 
-  const handleOpen = () => {
-    openAsync(setText, setFile)
+  const handleDownloadSvg = () => {
+    downloadSvgAsync(glyphSvg)
   }
 
-  const handleSave = () => {
-    saveAsync(glyphSvg, file)
+  const handleScaleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSettingsValue({ ...settingsValue, ...{ scale: Number(e.target.value) } })
+  }
+
+  const handleLineWrapChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSettingsValue({
+      ...settingsValue,
+      ...{ lineWrap: Number(e.target.value) },
+    })
+  }
+
+  const settings = {
+    incrementLineWrap: () => {
+      setSettingsValue({
+        ...settingsValue,
+        ...{ lineWrap: settingsValue.lineWrap + 1 },
+      })
+    },
+    decrementLineWrap: () => {
+      if (settingsValue.lineWrap > 0) {
+        setSettingsValue({
+          ...settingsValue,
+          ...{ lineWrap: settingsValue.lineWrap - 1 },
+        })
+      }
+    },
+    incrementScale: () => {
+      if (settingsValue.scale < maxScaleValue) {
+        setSettingsValue({
+          ...settingsValue,
+          ...{ scale: settingsValue.scale + scaleIncrementValue },
+        })
+      }
+    },
+    decrementScale: () => {
+      if (settingsValue.scale > minScaleValue) {
+        setSettingsValue({
+          ...settingsValue,
+          ...{ scale: settingsValue.scale - scaleIncrementValue },
+        })
+      }
+    },
+  }
+
+  const cursor = {
+    moveTo: (position: number[]) => {},
+    up: () => {},
+    down: () => {},
+    left: () => {},
+    right: () => {},
   }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value)
   }
 
-  const handleScaleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newScale = Number(e.target.value)
-    setSettings({ ...settings, ...{ scale: Number(e.target.value) } })
-  }
+  React.useEffect(() => {
+    setWindowDimensions([window.innerWidth, window.innerHeight])
+
+    const handleWindowResize = () => {
+      setWindowDimensions([window.innerWidth, window.innerHeight])
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [])
+
+  React.useEffect(() => {
+    if (textMode && textareaRef.current) {
+      textareaRef.current.focus()
+    }
+  }, [textMode])
 
   return (
     <div>
-      <div className="grid grid-rows-4 justify-items-center max-w-2xl pt-2 sm:pt-4">
-        <div className="border-2 rounded-lg p-2">
-          <Display glyphSvg={glyphSvg} />
-        </div>
-        <Keyboard text={text} setText={setText} />
-        <div className="flex row-span-1">
-          <textarea
-            value={text}
-            onChange={handleTextChange}
-            className="border-2 rounded-lg p-2 m-2 mt-4 w-[50vw] sm:w-96"
-          />
-          <div className="flex flex-col mt-2">
-            <input
-              type="number"
-              min="0.5"
-              max="5.0"
-              step="0.5"
-              onChange={handleScaleChange}
-              value={settings.scale}
-            />
-            {/* <button
-              onClick={handleOpen}
-              className="border-2 rounded-lg p-2 m-2 hover:border-black"
-            >
-              Open
-            </button> */}
+      <div className="flex flex-col h-screen w-[344px] sm:w-[568px] p-[16px]">
+        <div className="flex flex-row justify-between">
+          <div>
             <button
-              onClick={handleSave}
-              className="border-2 rounded-lg p-2 m-2 hover:border-black"
+              onClick={settings.decrementScale}
+              className="active:bg-lime-300 p-1 rounded-lg"
             >
-              Download SVG
+              <HiMagnifyingGlassMinus size={iconSize} />
+            </button>
+            <button
+              onClick={settings.incrementScale}
+              className="active:bg-lime-300 p-1 rounded-lg"
+            >
+              <HiMagnifyingGlassPlus size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={settings.decrementLineWrap}
+              className="active:bg-lime-300 p-1 rounded-lg"
+            >
+              <CiSquareMinus size={iconSize} />
+            </button>
+            <button
+              onClick={settings.incrementLineWrap}
+              className="active:bg-lime-300 p-1 rounded-lg"
+            >
+              <CiSquarePlus size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={() => {
+                setTextMode(!textMode)
+              }}
+              className={
+                textMode ? 'bg-lime-300 p-1 rounded-lg' : 'p-1 rounded-lg'
+              }
+            >
+              <BsFiletypeTxt size={iconSize} />
+            </button>
+            <button
+              className="active:bg-lime-300 p-1 rounded-lg"
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(text)
+                } catch (e) {
+                  alert(e)
+                }
+              }}
+            >
+              <BsCopy size={iconSize} />
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={handleDownloadSvg}
+              className="active:bg-lime-300 p-1 rounded-lg"
+            >
+              <IoCodeDownload size={iconSize} />
             </button>
           </div>
         </div>
+        <Display
+          glyphSvg={glyphSvg}
+          cursorPosition={cursorPosition}
+          moveTo={cursor.moveTo}
+        />
+        <div className={!textMode ? 'hidden' : 'h-[216px]'}>
+          <textarea
+            ref={textareaRef}
+            value={text}
+            onChange={handleTextChange}
+            className="border border-slate-700 rounded-lg p-2 h-[216px] w-[312px] sm:w-[536px]"
+          />
+        </div>
+        {!textMode && (
+          <div className="flex flex-row items-center">
+            <Keyboard
+              text={text}
+              setText={setText}
+              windowWidth={windowDimensions[0]}
+            />
+          </div>
+        )}
       </div>
     </div>
   )

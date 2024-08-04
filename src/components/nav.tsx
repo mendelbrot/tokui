@@ -8,7 +8,7 @@ const Nav = () => {
   const pathname = usePathname()
 
   return (
-    <div className="sticky top-0 z-50 bg-white py-4 border-b-2 mb-4">
+    <div className="sticky top-0 z-50 bg-white pb-4 border-b-2 mb-4">
       {navItems.map((item) => (
         <Link
           href={item.url}
