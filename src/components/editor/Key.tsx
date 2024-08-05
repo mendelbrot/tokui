@@ -19,7 +19,7 @@ function Key({
   setPressedKey,
   positioningStyle,
 }: Props) {
-  const style = `flex items-center justify-center border rounded-md border-slate-700 ${
+  const style = `flex items-center justify-center border rounded-md border-slate-700 active:bg-lime-200 ${
     positioningStyle || 'w-12 h-12'
   } ${
     keyboardKeys && keyboardKeys.some((key) => key === pressedKey)
@@ -30,14 +30,8 @@ function Key({
   return (
     <button
       className={style}
-      onPointerDown={() => {
+      onClick={() => {
         if (keyboardKeys) {
-          setPressedKey(keyboardKeys[0])
-        }
-      }}
-      onPointerUp={() => {
-        if (keyboardKeys) {
-          setPressedKey(null)
           handleKeyboardPress(keyboardKeys[0])
         }
       }}

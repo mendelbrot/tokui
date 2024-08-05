@@ -12,9 +12,16 @@ type Props = {
   text: string
   setText: React.Dispatch<React.SetStateAction<string>>
   windowWidth: number
+  cursor: {
+    moveTo: (position: number[]) => void
+    up: () => void
+    down: () => void
+    left: () => void
+    right: () => void
+  }
 }
 
-function Keyboard({ text, setText, windowWidth }: Props) {
+function Keyboard({ text, setText, windowWidth, cursor }: Props) {
   const [pressedKey, setPressedKey] = React.useState<string | null>(null)
   const [layer, setLayer] = React.useState<number>(0)
 
@@ -45,11 +52,20 @@ function Keyboard({ text, setText, windowWidth }: Props) {
           setText(text + ' _ ')
           break
         }
-        case 'ArrowUp':
-        case 'ArrowDown':
-        case 'ArrowLeft':
+        case 'ArrowUp': {
+          cursor.up()
+          break
+        }
+        case 'ArrowDown': {
+          cursor.down()
+          break
+        }
+        case 'ArrowLeft': {
+          cursor.left()
+          break
+        }
         case 'ArrowRight': {
-          // TODO
+          cursor.right()
           break
         }
         case '0':
@@ -96,7 +112,7 @@ function Keyboard({ text, setText, windowWidth }: Props) {
         }
       }
     },
-    [text, setText, layer, setLayer]
+    [text, setText, layer, setLayer, cursor]
   )
 
   React.useEffect(() => {

@@ -1,7 +1,7 @@
 import './stringFormat'
 import glyphData from '../data/glyphData.json'
 
-const glyphBaseDimensions = [40, 40]
+export const glyphBaseDimensions = [40, 40]
 
 export type Settings = {
   fill?: string
@@ -23,7 +23,7 @@ export const defaultSettings = {
   fill: 'none',
   stroke: 'black',
   strokeWidth: 2,
-  scale: 1,
+  scale: 1.5,
   lineWrap: 8,
 }
 
@@ -114,7 +114,11 @@ function draw(
         y * glyphBaseDimensions[1],
         drawGlyph(word)
       )
-      cursorMap[y].push(i)
+      if (cursorMap[y].length === 1 && phrase[cursorMap[y][0]] === '\n') {
+        cursorMap[y][0] = i
+      } else {
+        cursorMap[y].push(i)
+      }
 
       if (x > maxX) {
         maxX = x
@@ -141,7 +145,7 @@ function draw(
 
     if (phrase[i] === '\n') {
       addGlyph(i)
-      cursorMap.push([])
+      cursorMap.push([i])
       x = 0
       y += 1
       ponaMode = false
