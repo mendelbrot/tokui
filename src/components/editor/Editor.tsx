@@ -120,8 +120,8 @@ function Editor() {
   }, [textMode])
 
   return (
-    <div>
-      <div className="flex flex-col h-screen w-[344px] sm:w-[568px] p-[16px] items-center">
+    <div className="flex flex-col items-center w-screen">
+      <div className="flex flex-col h-screen w-[344px] sm:w-[568px] p-[16px]">
         <div>
           <SettingsBar
             settings={settings}
