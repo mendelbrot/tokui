@@ -63,14 +63,39 @@ function Editor() {
 
   const cursor = {
     moveTo: (position: number[]) => {
-      if (position[0] < cursorMap.length && position[1] < cursorMap[0].length) {
+      if (
+        position[1] < cursorMap.length &&
+        position[0] < cursorMap[position[1]].length
+      ) {
         setCursorPosition(position)
       }
     },
-    up: () => {},
-    down: () => {},
-    left: () => {},
-    right: () => {},
+    up: () => {
+      if (cursorPosition[1] > 0) {
+        setCursorPosition([
+          Math.min(cursorPosition[0], cursorMap[cursorPosition[1] - 1].length - 1),
+          cursorPosition[1] - 1,
+        ])
+      }
+    },
+    down: () => {
+      if (cursorPosition[1] < cursorMap.length - 1) {
+        setCursorPosition([
+          Math.min(cursorPosition[0], cursorMap[cursorPosition[1] + 1].length - 1),
+          cursorPosition[1] + 1,
+        ])
+      }
+    },
+    left: () => {
+      if (cursorPosition[0] > 0) {
+        setCursorPosition([cursorPosition[0] - 1, cursorPosition[1]])
+      }
+    },
+    right: () => {
+      if (cursorPosition[0] < cursorMap[cursorPosition[1]].length - 1) {
+        setCursorPosition([cursorPosition[0] + 1, cursorPosition[1]])
+      }
+    },
   }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -156,6 +181,7 @@ function Editor() {
               text={text}
               setText={setText}
               windowWidth={windowDimensions[0]}
+              cursor={cursor}
             />
           </div>
         )}
