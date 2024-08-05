@@ -38,9 +38,11 @@ function Display({
                 cursorPosition[1] === Yrow &&
                 cursorPosition[0] === Xcol
               ) {
-                itemClass = 'border-2 border-red-500 border-dashed'
+                itemClass =
+                  'border-2 border-red-500 border-dashed  bg-yellow-300/10'
               } else if (gridMode) {
-                itemClass = 'border-b border-r border-blue-400'
+                itemClass =
+                  'border-b border-r border-blue-400'
                 if (
                   Yrow === 0 ||
                   cursorMap[Yrow - 1].length - 1 < Xcol
