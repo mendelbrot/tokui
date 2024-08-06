@@ -14,6 +14,8 @@ const maxScaleValue = 5
 const minScaleValue = 0.5
 const scaleIncrementValue = 0.5
 
+const screens = { sm: 640 }
+
 function Editor() {
   const [text, setText] = React.useState<string>('')
   const [cursorPosition, setCursorPosition] = React.useState<number[]>([0, 0])
@@ -25,22 +27,40 @@ function Editor() {
   const [textMode, setTextMode] = React.useState<boolean>(false)
   const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
 
+  const smallScreen = windowDimensions[0] < screens.sm
+
   const { glyphSvg, cursorMap } = draw(text, settingsValue)
-  // console.table(cursorMap)
 
   const settings = {
-    incrementLineWrap: () => {
-      setSettingsValue({
-        ...settingsValue,
-        ...{ lineWrap: settingsValue.lineWrap + 1 },
-      })
-    },
-    decrementLineWrap: () => {
-      if (settingsValue.lineWrap > 0) {
+    toggleLineWrap: () => {
+      if (settingsValue.lineWrap) {
         setSettingsValue({
           ...settingsValue,
-          ...{ lineWrap: settingsValue.lineWrap - 1 },
+          ...{ lineWrap: null },
         })
+      } else {
+        setSettingsValue({
+          ...settingsValue,
+          ...{ lineWrap: defaultSettings.lineWrap },
+        })
+      }
+    },
+    incrementLineWrap: () => {
+      if (settingsValue.lineWrap) {
+        setSettingsValue({
+          ...settingsValue,
+          ...{ lineWrap: settingsValue.lineWrap + 1 },
+        })
+      }
+    },
+    decrementLineWrap: () => {
+      if (settingsValue.lineWrap) {
+        if (settingsValue.lineWrap > 0) {
+          setSettingsValue({
+            ...settingsValue,
+            ...{ lineWrap: settingsValue.lineWrap - 1 },
+          })
+        }
       }
     },
     incrementScale: () => {
@@ -73,7 +93,10 @@ function Editor() {
     up: () => {
       if (cursorPosition[1] > 0) {
         setCursorPosition([
-          Math.min(cursorPosition[0], cursorMap[cursorPosition[1] - 1].length - 1),
+          Math.min(
+            cursorPosition[0],
+            cursorMap[cursorPosition[1] - 1].length - 1
+          ),
           cursorPosition[1] - 1,
         ])
       }
@@ -81,7 +104,10 @@ function Editor() {
     down: () => {
       if (cursorPosition[1] < cursorMap.length - 1) {
         setCursorPosition([
-          Math.min(cursorPosition[0], cursorMap[cursorPosition[1] + 1].length - 1),
+          Math.min(
+            cursorPosition[0],
+            cursorMap[cursorPosition[1] + 1].length - 1
+          ),
           cursorPosition[1] + 1,
         ])
       }
@@ -150,10 +176,12 @@ function Editor() {
         <div>
           <SettingsBar
             settings={settings}
+            settingsValue={settingsValue}
             textMode={textMode}
             setTextMode={setTextMode}
             text={text}
             downloadSvgAsync={downloadSvgAsync}
+            smallScreen={smallScreen}
           />
         </div>
         <div className="w-[312px] sm:w-[536px] border rounded-lg p-2 my-2 flex-1 overflow-auto border-slate-700">
@@ -164,6 +192,7 @@ function Editor() {
             moveTo={cursor.moveTo}
             glyphSize={settingsValue.scale * glyphBaseDimensions[0]}
             gridMode
+            lineWrap={settingsValue.lineWrap}
           />
         </div>
 
@@ -180,8 +209,11 @@ function Editor() {
             <Keyboard
               text={text}
               setText={setText}
-              windowWidth={windowDimensions[0]}
+              smallScreen={smallScreen}
               cursor={cursor}
+              cursorPosition={cursorPosition}
+              setCursorPosition={setCursorPosition}
+              cursorMap={cursorMap}
             />
           </div>
         )}

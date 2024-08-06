@@ -8,7 +8,7 @@ export type Settings = {
   stroke?: string
   strokeWidth?: number
   scale?: number
-  lineWrap?: number
+  lineWrap?: number | null
 }
 
 export type HardSettings = {
@@ -16,7 +16,7 @@ export type HardSettings = {
   stroke: string
   strokeWidth: number
   scale: number
-  lineWrap: number
+  lineWrap: number | null
 }
 
 export const defaultSettings = {
@@ -95,16 +95,16 @@ function draw(
 ): { glyphSvg: string; cursorMap: number[][] } {
   const hardSettings: HardSettings = { ...defaultSettings, ...settings }
   phrase = phrase.replace(/\r\n/g, '\n')
-  const lineWrap = hardSettings.lineWrap - 1 // indices start at zero so the lineWrap is less than the intuitive line wrap
+  const lineWrap = hardSettings.lineWrap ? hardSettings.lineWrap - 1 : null // indices start at zero so the lineWrap is less than the intuitive line wrap
 
   let x = 0
   let y = 0
-  let maxX = Math.max(lineWrap, 0)
+  let maxX = lineWrap ? Math.max(lineWrap, 0) : 0
   let word = ''
   let ponaMode = false
   let glyphs = ''
 
-  let cursorMap: number[][] = [[]]
+  let cursorMap: number[][] = [[0]]
 
   function addGlyph(i: number) {
     if (word.length > 0) {
@@ -127,7 +127,7 @@ function draw(
       word = ''
       x += 1
 
-      if (lineWrap !== -1 && x > lineWrap) {
+      if (lineWrap && x > lineWrap) {
         cursorMap.push([])
         x = 0
         y += 1
