@@ -115,9 +115,10 @@ function draw(
         drawGlyph(word)
       )
       if (cursorMap[y].length === 1 && phrase[cursorMap[y][0]] === '\n') {
-        cursorMap[y][0] = i
+        cursorMap[y][0] = i + word.length
+        // cursorMap.push([i + word.length])
       } else {
-        cursorMap[y].push(i)
+        cursorMap[y].push(i + word.length)
       }
 
       if (x > maxX) {
@@ -128,7 +129,7 @@ function draw(
       x += 1
 
       if (lineWrap && x > lineWrap) {
-        cursorMap.push([])
+        cursorMap.push([i + word.length])
         x = 0
         y += 1
       }

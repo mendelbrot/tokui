@@ -36,13 +36,6 @@ function Keyboard({
 
   const handleKeyboardPress = React.useCallback(
     (keyboardKey: string) => {
-      // const textBefore = text.slice(
-      //   0,
-      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
-      // )
-      // const textAfter = text.slice(
-      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
-      // )
       console.clear()
       console.log('cursorPosition', cursorPosition.toString())
       // console.log('text', text)
@@ -51,8 +44,17 @@ function Keyboard({
         'break index',
         cursorMap[cursorPosition[1]][cursorPosition[0]]
       )
-      // console.log('textBefore', textBefore)
-      // console.log('textAfter', textAfter)
+
+      const textBefore = text.slice(
+        0,
+        cursorMap[cursorPosition[0]][cursorPosition[1]]
+      )
+      const textAfter = text.slice(
+        cursorMap[cursorPosition[0]][cursorPosition[1]]
+      )
+      
+      console.log('textBefore', textBefore)
+      console.log('textAfter', textAfter)
 
       switch (keyboardKey) {
         case 'Alt': {

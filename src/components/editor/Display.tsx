@@ -21,9 +21,6 @@ function Display({
   gridMode,
   lineWrap,
 }: Props) {
-  const lineWrapBarClassName = lineWrap
-    ? `border-l border-slate-700 w-2`
-    : undefined
   return (
     <div style={{ display: 'grid' }}>
       <div
@@ -36,11 +33,20 @@ function Display({
       </div>
       <div style={{ gridColumn: '1', gridRow: '1' }}>
         <div className="flex flex-row">
-          <div
-            style={{
-              width: lineWrap ? `${glyphSize * lineWrap}px` : undefined,
-            }}
-          >
+          <div>
+            <div className={'flex flex-row items-start'}>
+              {lineWrap &&
+                Array.from({ length: lineWrap }, (_item, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      width: glyphSize,
+                      height: 0,
+                      visibility: 'hidden',
+                    }}
+                  />
+                ))}
+            </div>
             {cursorMap.map((row, Yrow) => {
               return (
                 <div
