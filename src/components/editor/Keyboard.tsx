@@ -6,12 +6,10 @@ import Normal1 from './keyboardLayers/Normal1'
 import Small0 from './keyboardLayers/Small0'
 import Small1 from './keyboardLayers/Small1'
 
-const screens = { sm: 640 }
-
 type Props = {
   text: string
   setText: React.Dispatch<React.SetStateAction<string>>
-  windowWidth: number
+  smallScreen: boolean
   cursor: {
     moveTo: (position: number[]) => void
     up: () => void
@@ -19,14 +17,43 @@ type Props = {
     left: () => void
     right: () => void
   }
+  cursorPosition: number[]
+  setCursorPosition: React.Dispatch<React.SetStateAction<number[]>>
+  cursorMap: number[][]
 }
 
-function Keyboard({ text, setText, windowWidth, cursor }: Props) {
+function Keyboard({
+  text,
+  setText,
+  smallScreen,
+  cursor,
+  cursorPosition,
+  setCursorPosition,
+  cursorMap,
+}: Props) {
   const [pressedKey, setPressedKey] = React.useState<string | null>(null)
   const [layer, setLayer] = React.useState<number>(0)
 
   const handleKeyboardPress = React.useCallback(
     (keyboardKey: string) => {
+      // const textBefore = text.slice(
+      //   0,
+      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
+      // )
+      // const textAfter = text.slice(
+      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
+      // )
+      console.clear()
+      console.log('cursorPosition', cursorPosition.toString())
+      // console.log('text', text)
+      console.table(cursorMap)
+      console.log(
+        'break index',
+        cursorMap[cursorPosition[1]][cursorPosition[0]]
+      )
+      // console.log('textBefore', textBefore)
+      // console.log('textAfter', textAfter)
+
       switch (keyboardKey) {
         case 'Alt': {
           setLayer((layer + 1) % 2)
@@ -112,7 +139,7 @@ function Keyboard({ text, setText, windowWidth, cursor }: Props) {
         }
       }
     },
-    [text, setText, layer, setLayer, cursor]
+    [text, setText, layer, setLayer, cursor, cursorMap, cursorPosition]
   )
 
   React.useEffect(() => {
@@ -135,7 +162,7 @@ function Keyboard({ text, setText, windowWidth, cursor }: Props) {
     }
   }, [handleKeyboardPress])
 
-  if (windowWidth < screens.sm) {
+  if (smallScreen) {
     if (layer === 0) {
       return (
         <Small0
