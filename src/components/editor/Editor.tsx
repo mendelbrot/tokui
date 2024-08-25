@@ -1,14 +1,20 @@
 'use client'
 
 import React from 'react'
-import draw, {
-  HardSettings,
+// import draw, {
+//   HardSettings,
+//   defaultSettings,
+//   glyphBaseDimensions,
+// } from '@/lib/draw'
+import EditorClass, {
   defaultSettings,
   glyphBaseDimensions,
-} from '@/lib/draw'
+  initialEditorProjection,
+} from '@/lib/Editor'
 import Keyboard from '@/components/editor/Keyboard'
 import Display from './Display'
 import SettingsBar from './SettingsBar'
+import { EditorProjection, Settings } from '@/lib/EditorTypes'
 
 const maxScaleValue = 5
 const minScaleValue = 0.5
@@ -17,10 +23,17 @@ const scaleIncrementValue = 0.5
 const screens = { sm: 640 }
 
 function Editor() {
-  const [text, setText] = React.useState<string>('')
-  const [cursorPosition, setCursorPosition] = React.useState<number[]>([0, 0])
-  const [settingsValue, setSettingsValue] =
-    React.useState<HardSettings>(defaultSettings)
+  const [
+    { settings, cursorPosition, writing, writingRep, writingSvg },
+    setEditorProjection,
+  ] = React.useState<EditorProjection>(initialEditorProjection)
+
+  const editor = React.useRef(new EditorClass(setEditorProjection))
+
+  // const [text, setText] = React.useState<string>('')
+  // const [cursorPosition, setCursorPosition] = React.useState<number[]>([0, 0])
+  // const [settingsValue, setSettingsValue] =
+  //   React.useState<Settings>(defaultSettings)
   const [windowDimensions, setWindowDimensions] = React.useState<number[]>([
     0, 0,
   ])
@@ -31,98 +44,98 @@ function Editor() {
 
   const { glyphSvg, cursorMap } = draw(text, settingsValue)
 
-  const settings = {
-    toggleLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: null },
-        })
-      } else {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: defaultSettings.lineWrap },
-        })
-      }
-    },
-    incrementLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: settingsValue.lineWrap + 1 },
-        })
-      }
-    },
-    decrementLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        if (settingsValue.lineWrap > 0) {
-          setSettingsValue({
-            ...settingsValue,
-            ...{ lineWrap: settingsValue.lineWrap - 1 },
-          })
-        }
-      }
-    },
-    incrementScale: () => {
-      if (settingsValue.scale < maxScaleValue) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ scale: settingsValue.scale + scaleIncrementValue },
-        })
-      }
-    },
-    decrementScale: () => {
-      if (settingsValue.scale > minScaleValue) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ scale: settingsValue.scale - scaleIncrementValue },
-        })
-      }
-    },
-  }
+  // const settings = {
+  //   toggleLineWrap: () => {
+  //     if (settingsValue.lineWrap) {
+  //       setSettingsValue({
+  //         ...settingsValue,
+  //         ...{ lineWrap: null },
+  //       })
+  //     } else {
+  //       setSettingsValue({
+  //         ...settingsValue,
+  //         ...{ lineWrap: defaultSettings.lineWrap },
+  //       })
+  //     }
+  //   },
+  //   incrementLineWrap: () => {
+  //     if (settingsValue.lineWrap) {
+  //       setSettingsValue({
+  //         ...settingsValue,
+  //         ...{ lineWrap: settingsValue.lineWrap + 1 },
+  //       })
+  //     }
+  //   },
+  //   decrementLineWrap: () => {
+  //     if (settingsValue.lineWrap) {
+  //       if (settingsValue.lineWrap > 1) {
+  //         setSettingsValue({
+  //           ...settingsValue,
+  //           ...{ lineWrap: settingsValue.lineWrap - 1 },
+  //         })
+  //       }
+  //     }
+  //   },
+  //   incrementScale: () => {
+  //     if (settingsValue.scale < maxScaleValue) {
+  //       setSettingsValue({
+  //         ...settingsValue,
+  //         ...{ scale: settingsValue.scale + scaleIncrementValue },
+  //       })
+  //     }
+  //   },
+  //   decrementScale: () => {
+  //     if (settingsValue.scale > minScaleValue) {
+  //       setSettingsValue({
+  //         ...settingsValue,
+  //         ...{ scale: settingsValue.scale - scaleIncrementValue },
+  //       })
+  //     }
+  //   },
+  // }
 
-  const cursor = {
-    moveTo: (position: number[]) => {
-      if (
-        position[1] < cursorMap.length &&
-        position[0] < cursorMap[position[1]].length
-      ) {
-        setCursorPosition(position)
-      }
-    },
-    up: () => {
-      if (cursorPosition[1] > 0) {
-        setCursorPosition([
-          Math.min(
-            cursorPosition[0],
-            cursorMap[cursorPosition[1] - 1].length - 1
-          ),
-          cursorPosition[1] - 1,
-        ])
-      }
-    },
-    down: () => {
-      if (cursorPosition[1] < cursorMap.length - 1) {
-        setCursorPosition([
-          Math.min(
-            cursorPosition[0],
-            cursorMap[cursorPosition[1] + 1].length - 1
-          ),
-          cursorPosition[1] + 1,
-        ])
-      }
-    },
-    left: () => {
-      if (cursorPosition[0] > 0) {
-        setCursorPosition([cursorPosition[0] - 1, cursorPosition[1]])
-      }
-    },
-    right: () => {
-      if (cursorPosition[0] < cursorMap[cursorPosition[1]].length - 1) {
-        setCursorPosition([cursorPosition[0] + 1, cursorPosition[1]])
-      }
-    },
-  }
+  // const cursor = {
+  //   moveTo: (position: number[]) => {
+  //     if (
+  //       position[1] < cursorMap.length &&
+  //       position[0] < cursorMap[position[1]].length
+  //     ) {
+  //       setCursorPosition(position)
+  //     }
+  //   },
+  //   up: () => {
+  //     if (cursorPosition[1] > 0) {
+  //       setCursorPosition([
+  //         Math.min(
+  //           cursorPosition[0],
+  //           cursorMap[cursorPosition[1] - 1].length - 1
+  //         ),
+  //         cursorPosition[1] - 1,
+  //       ])
+  //     }
+  //   },
+  //   down: () => {
+  //     if (cursorPosition[1] < cursorMap.length - 1) {
+  //       setCursorPosition([
+  //         Math.min(
+  //           cursorPosition[0],
+  //           cursorMap[cursorPosition[1] + 1].length - 1
+  //         ),
+  //         cursorPosition[1] + 1,
+  //       ])
+  //     }
+  //   },
+  //   left: () => {
+  //     if (cursorPosition[0] > 0) {
+  //       setCursorPosition([cursorPosition[0] - 1, cursorPosition[1]])
+  //     }
+  //   },
+  //   right: () => {
+  //     if (cursorPosition[0] < cursorMap[cursorPosition[1]].length - 1) {
+  //       setCursorPosition([cursorPosition[0] + 1, cursorPosition[1]])
+  //     }
+  //   },
+  // }
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value)

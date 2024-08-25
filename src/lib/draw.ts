@@ -95,11 +95,11 @@ function draw(
 ): { glyphSvg: string; cursorMap: number[][] } {
   const hardSettings: HardSettings = { ...defaultSettings, ...settings }
   phrase = phrase.replace(/\r\n/g, '\n')
-  const lineWrap = hardSettings.lineWrap ? hardSettings.lineWrap - 1 : null // indices start at zero so the lineWrap is less than the intuitive line wrap
+  const lineWrap = hardSettings.lineWrap !== null ? hardSettings.lineWrap - 1 : null // indices start at zero so the lineWrap is less than the intuitive line wrap
 
   let x = 0
   let y = 0
-  let maxX = lineWrap ? Math.max(lineWrap, 0) : 0
+  let maxX = lineWrap !== null ? Math.max(lineWrap, 0) : 0
   let word = ''
   let ponaMode = false
   let glyphs = ''
@@ -114,11 +114,13 @@ function draw(
         y * glyphBaseDimensions[1],
         drawGlyph(word)
       )
-      if (cursorMap[y].length === 1 && phrase[cursorMap[y][0]] === '\n') {
-        cursorMap[y][0] = i + word.length
-        // cursorMap.push([i + word.length])
+      if (
+        cursorMap[y].length === 1 &&
+        (phrase[cursorMap[y][0] - 1] === '\n' || cursorMap[y][0] === 0)
+      ) {
+        cursorMap[y][0] = i
       } else {
-        cursorMap[y].push(i + word.length)
+        cursorMap[y].push(i)
       }
 
       if (x > maxX) {
@@ -128,8 +130,11 @@ function draw(
       word = ''
       x += 1
 
-      if (lineWrap && x > lineWrap) {
-        cursorMap.push([i + word.length])
+      if (lineWrap !== null && x > lineWrap) {
+        // if (phrase[i] !== '\n') {
+        //   cursorMap.push([])
+        // }
+
         x = 0
         y += 1
       }
@@ -146,7 +151,7 @@ function draw(
 
     if (phrase[i] === '\n') {
       addGlyph(i)
-      cursorMap.push([i])
+      cursorMap.push([i + 1])
       x = 0
       y += 1
       ponaMode = false
