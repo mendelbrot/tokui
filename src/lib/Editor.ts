@@ -10,11 +10,6 @@ import {
   Cell,
 } from './EditorTypes'
 
-export const glyphBaseDimensions = [40, 40]
-const maxScaleValue = 5
-const minScaleValue = 0.5
-const scaleIncrementValue = 0.5
-
 export const editorParameters = {
   glyphBaseSize: 40,
   maxScale: 5,
@@ -100,26 +95,118 @@ class Editor {
 
       if (appendCell) {
         this._writingRep[-1].push({
-        index: i,
-        word,
-        ponaMode,
-        lineBreak,
-      })
-      word = ''
+          index: i,
+          word,
+          ponaMode,
+          lineBreak,
+        })
+        word = ''
 
-      if (
-        this._settingsValue.lineWrap &&
-        this._writingRep[-1].length > this._settingsValue.lineWrap
-      ) {
-        this._writingRep.push([])
-      }
+        if (
+          this._settingsValue.lineWrap &&
+          this._writingRep[-1].length > this._settingsValue.lineWrap
+        ) {
+          this._writingRep.push([])
+        }
       } else {
         word += this._writing[i]
       }
     }
   }
 
-  private _draw() {}
+  private _drawGlyph(word: string): string | null {
+    if (word.length === 0) {
+      return null
+    }
+
+    const pakala = glyphData.special.Z
+
+    if (word.length > 5) {
+      return pakala
+    }
+
+    if (glyphData.groups.S.some((i) => i === word)) {
+      // @ts-ignore
+      return glyphData.special[word].format(
+        this._settingsValue.fill,
+        this._settingsValue.stroke,
+        this._settingsValue.strokeWidth
+      )
+    }
+
+    const sequence = word.split('')
+    let form = 'pakala'
+
+    if (sequence.length === 1) {
+      if (glyphData.groups.Y.some((i) => i === sequence[0])) {
+        form = 'X'
+      }
+    } else {
+      if (
+        sequence.every((letter) => glyphData.groups.Y.some((i) => i === letter))
+      ) {
+        if (
+          glyphData.groups.VN.some((i) => i === sequence[0]) ||
+          sequence.every((letter) =>
+            glyphData.groups.CN.some((i) => i === letter)
+          )
+        ) {
+          if (sequence.length < 5) {
+            form = 'B' + sequence.length
+          }
+        } else {
+          form = 'A' + sequence.length
+        }
+      }
+    }
+
+    if (form === 'pakala') {
+      return pakala
+    }
+
+    const inner = sequence.reduce((accumulator, letter, index) => {
+      return (
+        // @ts-ignore
+        accumulator + glyphData.letters[letter][glyphData.forms[form][index]]
+      )
+    }, '')
+
+    return inner
+  }
+
+  private _draw() {
+    let glyphs = ''
+
+    for (let y = 0; y < this._writingRep.length; y += 1) {
+      for (let x = 0; x < this._writingRep[y].length; x += 1) {
+        let word = this._writingRep[y][x].word
+        // @ts-ignore
+        glyphs += glyphData.frames.phraseMode.format(
+          x * editorParameters.glyphBaseSize,
+          y * editorParameters.glyphBaseSize,
+          this._drawGlyph(word)
+        )
+      }
+    }
+
+    const Xmax = this._writingRep.reduce(
+      (max, item) => Math.max(max, item.length),
+      -Infinity
+    )
+
+    const Ymax = this._writingRep.length
+
+    // @ts-ignore
+    this._writingSvg = glyphData.frames.svg.format(
+      glyphs,
+      this._settingsValue.fill,
+      this._settingsValue.stroke,
+      this._settingsValue.strokeWidth,
+      (Xmax + 1) * this._settingsValue.scale * editorParameters.glyphBaseSize,
+      (Ymax + 1) * this._settingsValue.scale * editorParameters.glyphBaseSize,
+      this._settingsValue.scale
+    )
+  }
 
   private _project() {
     this.projectionCallback({
@@ -159,15 +246,15 @@ class Editor {
       }
     },
     incrementScale: () => {
-      if (this._settingsValue.scale < maxScaleValue) {
-        this._settingsValue.scale += scaleIncrementValue
+      if (this._settingsValue.scale < editorParameters.maxScale) {
+        this._settingsValue.scale += editorParameters.scaleIncrement
         this._draw()
         this._project()
       }
     },
     decrementScale: () => {
-      if (this._settingsValue.scale > minScaleValue) {
-        this._settingsValue.scale -= scaleIncrementValue
+      if (this._settingsValue.scale > editorParameters.minScale) {
+        this._settingsValue.scale -= editorParameters.scaleIncrement
         this._draw()
         this._project()
       }
