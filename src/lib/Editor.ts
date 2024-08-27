@@ -318,16 +318,38 @@ class Editor {
     },
   }
 
-  public insert(word: string) {
-    this._parse()
-    this._draw()
-    this._project()
-  }
+  public writing = {
+    insert: (word: string) => {
+      const index =
+        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
 
-  public delete() {
-    this._parse()
-    this._draw()
-    this._project()
+      this._writing =
+        this._writing.slice(0, index) + word + this._writing.slice(index)
+
+      this._parse()
+      this._draw()
+      this._project()
+    },
+
+    delete: () => {
+      const index =
+        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
+
+      this._writing =
+        this._writing.slice(0, index) + this._writing.slice(index + 1)
+
+      this._parse()
+      this._draw()
+      this._project()
+    },
+
+    set: (writing: string) => {
+      this._writing = writing
+
+      this._parse()
+      this._draw()
+      this._project()
+    },
   }
 }
 
