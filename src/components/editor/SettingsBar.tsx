@@ -13,7 +13,7 @@ const iconSize = '32px'
 const miniButtonClassName = 'active:bg-lime-300 p-1 rounded-lg'
 const miniSettingsMeterClassName =
   'w-8 h-8 content-center p-1 rounded-lg border border-slate-700'
-
+  
 type Props = React.PropsWithChildren & {
   settings: {
     toggleLineWrap: () => void
@@ -25,7 +25,7 @@ type Props = React.PropsWithChildren & {
   settingsValue: HardSettings
   textMode: boolean
   setTextMode: React.Dispatch<React.SetStateAction<boolean>>
-  text: string
+  copyWritingToClipbpoadAsync: () => Promise<void>
   downloadSvgAsync: () => Promise<void>
   smallScreen: boolean
 }
@@ -35,7 +35,7 @@ function SettingsBar({
   settingsValue,
   textMode,
   setTextMode,
-  text,
+  copyWritingToClipbpoadAsync,
   downloadSvgAsync,
   smallScreen,
 }: Props) {
@@ -105,13 +105,7 @@ function SettingsBar({
         </button>
         <button
           className={miniButtonClassName}
-          onClick={async () => {
-            try {
-              await navigator.clipboard.writeText(text)
-            } catch (e) {
-              alert(e)
-            }
-          }}
+          onClick={() => copyWritingToClipbpoadAsync()}
         >
           <BsCopy size={iconSize} />
         </button>

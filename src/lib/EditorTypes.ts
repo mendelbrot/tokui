@@ -14,15 +14,7 @@ export type SettingsValue = {
   lineWrap: number | null
 }
 
-export type EditorModelProjection = {
-  settingsValue: SettingsValue
-  cursorPosition: [number, number]
-  writing: string
-  writingRep: WritingRep
-  writingSvg: string
-}
-
-export type ProjectionCallback = (editorProjection: EditorModelProjection) => any
+export type CursorPosition = [number, number]
 
 export type Cell = {
   index: number
@@ -33,4 +25,14 @@ export type Cell = {
 
 export type WritingRep = Cell[][]
 
-export type CursorPosition = [number, number]
+export type EditorModelProjection = {
+  settingsValue: SettingsValue
+  cursorPosition: CursorPosition
+  writingValue: string
+  writingRep: WritingRep
+  writingSvg: string
+}
+
+export type ProjectionCallback = (editorProjection: EditorModelProjection) => any
+
+

@@ -28,37 +28,33 @@ export const defaultSettings: SettingsValue = {
 export const initialEditorProjection: EditorModelProjection = {
   settingsValue: defaultSettings,
   cursorPosition: [0, 0],
-  writing: '',
+  writingValue: '',
   writingRep: [[{ index: 0, word: '', ponaMode: false, lineBreak: false }]],
   writingSvg: '',
 }
 
 type ConstructorParams = {
   writing?: string
-  cursorPosition?: CursorPosition
+  cursor?: CursorPosition
   settings?: SoftSettingsValue
 }
 
 class Editor {
   private projectionCallback: ProjectionCallback
   private _settingsValue: SettingsValue
-  private _writing: string
+  private _writingValue: string
   private _writingRep: WritingRep
   private _writingSvg: string
   private _cursorPosition: CursorPosition
 
   constructor(
     projectionCallback: ProjectionCallback,
-    {
-      writing = '',
-      cursorPosition = [0, 0],
-      settings = {},
-    }: ConstructorParams = {}
+    { writing = '', cursor = [0, 0], settings = {} }: ConstructorParams = {}
   ) {
     this.projectionCallback = projectionCallback
     this._settingsValue = { ...defaultSettings, ...settings }
-    this._cursorPosition = cursorPosition
-    this._writing = writing
+    this._cursorPosition = cursor
+    this._writingValue = writing
     this._writingRep = initialEditorProjection.writingRep
     this._writingSvg = initialEditorProjection.writingSvg
 
@@ -67,34 +63,39 @@ class Editor {
     this._project()
   }
 
-  private _parse() {
+  private static _static_parse(
+    writingValue: string,
+    settingsValue: SettingsValue
+  ): WritingRep {
     let word = ''
     let ponaMode = false
 
-    for (let i = 0; i < this._writing.length; i += 1) {
+    const writingRep: WritingRep = [[]]
+
+    for (let i = 0; i < writingValue.length; i += 1) {
       let lineBreak = false
       let appendCell = false
 
-      if (this._writing[i] === ' ') {
+      if (writingValue[i] === ' ') {
         appendCell = true
         ponaMode = false
-      } else if (this._writing[i] === '\n') {
-        this._writingRep.push([])
+      } else if (writingValue[i] === '\n') {
+        writingRep.push([])
         appendCell = true
         lineBreak = true
         ponaMode = false
       } else if (ponaMode === true) {
-        word = this._writing[i]
+        word = writingValue[i]
         appendCell = true
-      } else if (this._writing[i] === '#') {
+      } else if (writingValue[i] === '#') {
         ponaMode = true
-      } else if (this._writing.length === i - 1) {
-        word += this._writing[i]
+      } else if (writingValue.length === i - 1) {
+        word += writingValue[i]
         appendCell = true
       }
 
       if (appendCell) {
-        this._writingRep[-1].push({
+        writingRep[-1].push({
           index: i,
           word,
           ponaMode,
@@ -103,18 +104,30 @@ class Editor {
         word = ''
 
         if (
-          this._settingsValue.lineWrap &&
-          this._writingRep[-1].length > this._settingsValue.lineWrap
+          settingsValue.lineWrap &&
+          writingRep[-1].length > settingsValue.lineWrap
         ) {
-          this._writingRep.push([])
+          writingRep.push([])
         }
       } else {
-        word += this._writing[i]
+        word += writingValue[i]
       }
     }
+
+    return writingRep
   }
 
-  private _drawGlyph(word: string): string | null {
+  private _parse() {
+    this._writingRep = Editor._static_parse(
+      this._writingValue,
+      this._settingsValue
+    )
+  }
+
+  private static _static_drawGlyph(
+    word: string,
+    settingsValue: SettingsValue
+  ): string | null {
     if (word.length === 0) {
       return null
     }
@@ -128,9 +141,9 @@ class Editor {
     if (glyphData.groups.S.some((i) => i === word)) {
       // @ts-ignore
       return glyphData.special[word].format(
-        this._settingsValue.fill,
-        this._settingsValue.stroke,
-        this._settingsValue.strokeWidth
+        settingsValue.fill,
+        settingsValue.stroke,
+        settingsValue.strokeWidth
       )
     }
 
@@ -174,37 +187,49 @@ class Editor {
     return inner
   }
 
-  private _draw() {
+  private static _static_draw(
+    writingRep: WritingRep,
+    settingsValue: SettingsValue
+  ): string {
     let glyphs = ''
 
-    for (let y = 0; y < this._writingRep.length; y += 1) {
-      for (let x = 0; x < this._writingRep[y].length; x += 1) {
-        let word = this._writingRep[y][x].word
+    for (let y = 0; y < writingRep.length; y += 1) {
+      for (let x = 0; x < writingRep[y].length; x += 1) {
+        let word = writingRep[y][x].word
         // @ts-ignore
         glyphs += glyphData.frames.phraseMode.format(
           x * editorParameters.glyphBaseSize,
           y * editorParameters.glyphBaseSize,
-          this._drawGlyph(word)
+          Editor._static_drawGlyph(word, settingsValue)
         )
       }
     }
 
-    const Xmax = this._writingRep.reduce(
+    const Xmax = writingRep.reduce(
       (max, item) => Math.max(max, item.length),
       -Infinity
     )
 
-    const Ymax = this._writingRep.length
+    const Ymax = writingRep.length
 
     // @ts-ignore
-    this._writingSvg = glyphData.frames.svg.format(
+    const writingSvg = glyphData.frames.svg.format(
       glyphs,
-      this._settingsValue.fill,
-      this._settingsValue.stroke,
-      this._settingsValue.strokeWidth,
-      (Xmax + 1) * this._settingsValue.scale * editorParameters.glyphBaseSize,
-      (Ymax + 1) * this._settingsValue.scale * editorParameters.glyphBaseSize,
-      this._settingsValue.scale
+      settingsValue.fill,
+      settingsValue.stroke,
+      settingsValue.strokeWidth,
+      (Xmax + 1) * settingsValue.scale * editorParameters.glyphBaseSize,
+      (Ymax + 1) * settingsValue.scale * editorParameters.glyphBaseSize,
+      settingsValue.scale
+    )
+
+    return writingSvg
+  }
+
+  private _draw() {
+    this._writingSvg = Editor._static_draw(
+      this._writingRep,
+      this._settingsValue
     )
   }
 
@@ -212,10 +237,18 @@ class Editor {
     this.projectionCallback({
       settingsValue: this._settingsValue,
       cursorPosition: this._cursorPosition,
-      writing: this._writing,
+      writingValue: this._writingValue,
       writingRep: this._writingRep,
       writingSvg: this._writingSvg,
     })
+  }
+
+  public static draw(writing: string, settings: SoftSettingsValue = {}) {
+    const settingsValue = { ...defaultSettings, ...settings }
+    return Editor._static_draw(
+      Editor._static_parse(writing, settingsValue),
+      settingsValue
+    )
   }
 
   public settings = {
@@ -323,8 +356,10 @@ class Editor {
       const index =
         this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
 
-      this._writing =
-        this._writing.slice(0, index) + word + this._writing.slice(index)
+      this._writingValue =
+        this._writingValue.slice(0, index) +
+        word +
+        this._writingValue.slice(index)
 
       this._parse()
       this._draw()
@@ -335,16 +370,16 @@ class Editor {
       const index =
         this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
 
-      this._writing =
-        this._writing.slice(0, index) + this._writing.slice(index + 1)
+      this._writingValue =
+        this._writingValue.slice(0, index) + this._writingValue.slice(index + 1)
 
       this._parse()
       this._draw()
       this._project()
     },
 
-    set: (writing: string) => {
-      this._writing = writing
+    set: (writingValue: string) => {
+      this._writingValue = writingValue
 
       this._parse()
       this._draw()
@@ -352,5 +387,7 @@ class Editor {
     },
   }
 }
+
+export type Writing = Editor['writing']
 
 export default Editor

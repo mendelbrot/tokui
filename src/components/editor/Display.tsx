@@ -1,20 +1,21 @@
 'use client'
 
+import { CursorPosition, WritingRep } from '@/lib/EditorTypes'
 import React from 'react'
 
 type Props = {
-  glyphSvg: string
-  cursorPosition: number[] | null
-  moveTo: (position: number[]) => void
+  writingSvg: string
+  cursorPosition: CursorPosition | null
+  moveTo: (position: CursorPosition) => void
   glyphSize: number
-  cursorMap: number[][]
+  writingRep: WritingRep
   gridMode: boolean
   lineWrap: number | null
 }
 
 function Display({
-  glyphSvg,
-  cursorMap,
+  writingSvg,
+  writingRep,
   cursorPosition,
   moveTo,
   glyphSize,
@@ -29,7 +30,7 @@ function Display({
           gridRow: '1',
         }}
       >
-        {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
+        {writingSvg && <div dangerouslySetInnerHTML={{ __html: writingSvg }} />}
       </div>
       <div style={{ gridColumn: '1', gridRow: '1' }}>
         <div className="flex flex-row">
@@ -47,7 +48,7 @@ function Display({
                   />
                 ))}
             </div>
-            {cursorMap.map((row, Yrow) => {
+            {writingRep.map((row, Yrow) => {
               return (
                 <div
                   key={Yrow}
@@ -58,7 +59,7 @@ function Display({
                     let itemClass: string | undefined = undefined
                     if (gridMode) {
                       itemClass = 'border-b border-r border-blue-400'
-                      if (Yrow === 0 || cursorMap[Yrow - 1].length - 1 < Xcol) {
+                      if (Yrow === 0 || writingRep[Yrow - 1].length - 1 < Xcol) {
                         itemClass += ' border-t'
                       }
                       if (Xcol === 0) {
@@ -80,7 +81,7 @@ function Display({
                         style={{ width: glyphSize, height: glyphSize }}
                         onClick={() => moveTo([Xcol, Yrow])}
                       >
-                        {cursorMap[Yrow][Xcol]}
+                        {/* {writingRep[Yrow][Xcol]} */}
                       </div>
                     )
                   })}

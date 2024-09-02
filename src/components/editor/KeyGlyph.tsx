@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import draw from '@/lib/draw'
+import Editor from '@/lib/Editor'
 
 type Props = React.PropsWithChildren & {
   glyphText: string
@@ -11,7 +11,7 @@ function KeyGlyph({ glyphText }: Props) {
   return (
     <div
       dangerouslySetInnerHTML={{
-        __html: draw(glyphText, { lineWrap: 0, scale: 1 }).glyphSvg,
+        __html: Editor.draw(glyphText, { lineWrap: 0, scale: 1 }),
       }}
     />
   )

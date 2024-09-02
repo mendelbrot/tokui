@@ -1,13 +1,7 @@
 'use client'
 
 import React from 'react'
-// import draw, {
-//   HardSettings,
-//   defaultSettings,
-//   glyphBaseDimensions,
-// } from '@/lib/draw'
 import EditorClass, {
-  defaultSettings,
   editorParameters,
   initialEditorProjection,
 } from '@/lib/Editor'
@@ -16,20 +10,18 @@ import Display from './Display'
 import SettingsBar from './SettingsBar'
 import {
   EditorModelProjection,
-  SettingsValue,
-  SoftSettingsValue,
 } from '@/lib/EditorTypes'
 
 const screens = { sm: 640 }
 
 function Editor() {
   const [
-    { settingsValue, cursorPosition, writing, writingRep, writingSvg },
+    { settingsValue, cursorPosition, writingValue, writingRep, writingSvg },
     setEditorProjection,
   ] = React.useState<EditorModelProjection>(initialEditorProjection)
 
-  let editor = React.useRef<EditorClass | undefined>() 
-  if (!editor.current){
+  let editor = React.useRef<EditorClass | undefined>()
+  if (!editor.current) {
     editor.current = new EditorClass(setEditorProjection)
   }
 
@@ -42,7 +34,17 @@ function Editor() {
   const smallScreen = windowDimensions[0] < screens.sm
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    editor.current?.writing.set(e.target.value)
+    if (editor.current) {
+      editor.current.writing.set(e.target.value)
+    }
+  }
+
+  const copyWritingToClipbpoadAsync = async () => {
+    try {
+      await navigator.clipboard.writeText(writingValue)
+    } catch (e) {
+      alert(e)
+    }
   }
 
   const downloadSvgAsync = async () => {
@@ -96,7 +98,7 @@ function Editor() {
             settingsValue={settingsValue}
             textMode={textMode}
             setTextMode={setTextMode}
-            text={text}
+            copyWritingToClipbpoadAsync={copyWritingToClipbpoadAsync}
             downloadSvgAsync={downloadSvgAsync}
             smallScreen={smallScreen}
           />
@@ -106,7 +108,7 @@ function Editor() {
             writingSvg={writingSvg}
             writingRep={writingRep}
             cursorPosition={cursorPosition}
-            moveTo={editor.current?.cursor.moveTo}
+            moveTo={editor.current.cursor.moveTo}
             glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
             gridMode
             lineWrap={settingsValue.lineWrap}
@@ -116,7 +118,7 @@ function Editor() {
         <div className={!textMode ? 'hidden' : 'h-[216px]'}>
           <textarea
             ref={textareaRef}
-            value={writing}
+            value={writingValue}
             onChange={handleTextChange}
             className="border border-slate-700 rounded-lg p-2 h-[216px] w-[312px] sm:w-[536px]"
           />
@@ -124,13 +126,9 @@ function Editor() {
         {!textMode && (
           <div className="flex flex-row items-center">
             <Keyboard
-              text={writing}
-              setText={editor.current.writing.set}
               smallScreen={smallScreen}
-              cursor={cursor}
-              cursorPosition={cursorPosition}
-              setCursorPosition={setCursorPosition}
-              cursorMap={cursorMap}
+              writing={editor.current.writing}
+              cursor={editor.current.cursor}
             />
           </div>
         )}
