@@ -11,7 +11,7 @@ function KeyGlyph({ glyphText }: Props) {
   return (
     <div
       dangerouslySetInnerHTML={{
-        __html: Editor.draw(glyphText, { lineWrap: 0, scale: 1 }),
+        __html: Editor.draw(glyphText, { lineWrap: null, scale: 1 }),
       }}
     />
   )

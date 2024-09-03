@@ -69,6 +69,11 @@ function Editor() {
     }
   }
 
+  console.clear()
+  console.log(writingValue)
+  console.table(writingRep)
+  console.log(writingSvg)
+
   React.useEffect(() => {
     setWindowDimensions([window.innerWidth, window.innerHeight])
 

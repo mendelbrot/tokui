@@ -25,12 +25,19 @@ export const defaultSettings: SettingsValue = {
   lineWrap: 8,
 }
 
+export const initial = {
+  cell: { index: 0, word: '_', ponaMode: false, lineBreak: false },
+  writingValue: '_',
+  writingSvg:
+    '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"></svg>',
+}
+
 export const initialEditorProjection: EditorModelProjection = {
   settingsValue: defaultSettings,
   cursorPosition: [0, 0],
-  writingValue: '',
-  writingRep: [[{ index: 0, word: '', ponaMode: false, lineBreak: false }]],
-  writingSvg: '',
+  writingValue: initial.writingValue,
+  writingRep: [[initial.cell]],
+  writingSvg: initial.writingSvg,
 }
 
 type ConstructorParams = {
@@ -72,15 +79,15 @@ class Editor {
 
     const writingRep: WritingRep = [[]]
 
+    let lineWrap = false
     for (let i = 0; i < writingValue.length; i += 1) {
-      let lineBreak = false
       let appendCell = false
+      let lineBreak = false
 
       if (writingValue[i] === ' ') {
         appendCell = true
         ponaMode = false
       } else if (writingValue[i] === '\n') {
-        writingRep.push([])
         appendCell = true
         lineBreak = true
         ponaMode = false
@@ -89,25 +96,37 @@ class Editor {
         appendCell = true
       } else if (writingValue[i] === '#') {
         ponaMode = true
-      } else if (writingValue.length === i - 1) {
+      } else if (writingValue.length === i + 1) {
         word += writingValue[i]
         appendCell = true
       }
 
       if (appendCell) {
-        writingRep[-1].push({
-          index: i,
-          word,
-          ponaMode,
-          lineBreak,
-        })
+        if (word !== ' ') {
+          if (lineWrap) {
+            writingRep.push([])
+            lineWrap = false
+          }
+          const nextCell = {
+            index: i,
+            word,
+            ponaMode,
+            lineBreak,
+          }
+          // @ts-ignore
+          writingRep.at(-1).push(nextCell)
+        }
         word = ''
+        if (lineBreak) {
+          writingRep.push([])
+        }
 
         if (
           settingsValue.lineWrap &&
-          writingRep[-1].length > settingsValue.lineWrap
+          // @ts-ignore
+          writingRep.at(-1).length === settingsValue.lineWrap
         ) {
-          writingRep.push([])
+          lineWrap = true
         }
       } else {
         word += writingValue[i]
