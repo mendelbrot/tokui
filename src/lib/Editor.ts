@@ -75,54 +75,50 @@ class Editor {
     settingsValue: SettingsValue
   ): WritingRep {
     const writingRep: WritingRep = [[]]
-
     let word = ''
 
-    type Perception = {
-      isSpace: () => boolean
-      isLineBreak: () => boolean
-      isHash: () => boolean
-      isPonaMode: () => boolean
-      isEmptyWord: () => boolean
-      isAfterLineBreak: () => boolean
-      isAfterLineWrap: () => boolean
-      isEndOfWriting: () => boolean
+    const perception = {
+      isSpace: (i: number) => writingValue[i] === ' ',
+      isLineBreak: (i: number) => writingValue[i] === '\n',
+      isHash: (i: number) => writingValue[i] === '#',
+      isPonaMode: (i: number) =>
+        writingValue[i] !== ' ' &&
+        writingValue[i] !== '\n' &&
+        (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
+          writingValue[i - 1] === '#' ||
+          (writingRep.at(-1)?.length === 0 &&
+            writingRep.at(-2)?.at(-1)?.ponaMode === true)),
+      isAfterPonaMode: (i: number) =>
+        (writingValue[i] === ' ' || writingValue[i] === '\n') &&
+        (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
+          (writingRep.at(-1)?.length === 0 &&
+            writingRep.at(-2)?.at(-1)?.ponaMode === true)),
+      isEmptyWord: () => word === '',
+      isAfterLineBreak: () => writingRep.at(-1)?.at(-1)?.lineBreak === true,
+      isAfterLineWrap: () =>
+        settingsValue.lineWrap !== null &&
+        writingRep.at(-1)?.length === settingsValue.lineWrap,
+      isEndOfWriting: (i: number) => i === writingValue.length,
     }
 
     for (let i = 0; i <= writingValue.length; i += 1) {
-      const perception: Perception = {
-        isSpace: () => writingValue[i] === ' ',
-        isLineBreak: () => writingValue[i] === '\n',
-        isHash: () => writingValue[i] === '#',
-        isPonaMode: () =>
-          writingValue[i] !== ' ' &&
-          writingValue[i] !== '\n' &&
-          (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
-            writingValue[i - 1] === '#'),
-        isEmptyWord: () => word === '',
-        isAfterLineBreak: () => writingRep.at(-1)?.at(-1)?.lineBreak === true,
-        isAfterLineWrap: () =>
-          settingsValue.lineWrap !== null &&
-          writingRep.at(-1)?.length === settingsValue.lineWrap,
-        isEndOfWriting: () => i === writingValue.length,
-      }
-
+      // including the number after the last array index in the loop: i <= writingValue.length
       if (
-        !perception.isSpace() &&
-        !perception.isLineBreak() &&
-        !perception.isHash() &&
-        !perception.isPonaMode() &&
-        !perception.isEndOfWriting()
+        !perception.isSpace(i) &&
+        !perception.isLineBreak(i) &&
+        !perception.isHash(i) &&
+        !perception.isPonaMode(i) &&
+        !perception.isEndOfWriting(i)
       ) {
         word += writingValue[i]
         continue
       }
 
-      if (perception.isHash()) {
+      if (perception.isHash(i)) {
         continue
       }
 
-      if (perception.isPonaMode() && !perception.isEndOfWriting()) {
+      if (perception.isPonaMode(i) && !perception.isEndOfWriting(i)) {
         word = writingValue[i]
       }
 
@@ -130,14 +126,19 @@ class Editor {
         writingRep.push([])
       }
 
-      // @ts-ignore
-      writingRep.at(-1).push({
-        index: i,
-        word: perception.isEmptyWord() ? '_' : word,
-        ponaMode: perception.isPonaMode(),
-        lineBreak: perception.isLineBreak(),
-        skip: perception.isEmptyWord(),
-      })
+      if (!perception.isAfterPonaMode(i)) {
+        writingRep.at(-1)?.push({
+          index: i,
+          word: perception.isEmptyWord() ? '_' : word,
+          ponaMode: perception.isPonaMode(i),
+          lineBreak: perception.isLineBreak(i),
+          skip: perception.isEmptyWord(),
+        })
+      } else {
+        writingRep.at(-1)?.at(-1)?.ponaMode === false
+        writingRep.at(-1)?.at(-1)?.lineBreak === perception.isLineBreak(i)
+      }
+        
 
       word = ''
     }
