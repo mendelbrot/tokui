@@ -26,7 +26,7 @@ export const defaultSettings: SettingsValue = {
 }
 
 export const initial = {
-  cell: { index: 0, word: '_', ponaMode: false, lineBreak: false },
+  cell: { index: 0, word: '_', ponaMode: false, lineBreak: false, skip: false },
   writingValue: '_',
   writingSvg:
     '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"></svg>',
@@ -74,65 +74,73 @@ class Editor {
     writingValue: string,
     settingsValue: SettingsValue
   ): WritingRep {
-    let word = ''
-    let ponaMode = false
-
     const writingRep: WritingRep = [[]]
 
-    let lineWrap = false
-    for (let i = 0; i < writingValue.length; i += 1) {
-      let appendCell = false
-      let lineBreak = false
+    let word = ''
 
-      if (writingValue[i] === ' ') {
-        appendCell = true
-        ponaMode = false
-      } else if (writingValue[i] === '\n') {
-        appendCell = true
-        lineBreak = true
-        ponaMode = false
-      } else if (ponaMode === true) {
-        word = writingValue[i]
-        appendCell = true
-      } else if (writingValue[i] === '#') {
-        ponaMode = true
-      } else if (writingValue.length === i + 1) {
-        word += writingValue[i]
-        appendCell = true
-      }
-
-      if (appendCell) {
-        if (word !== ' ') {
-          if (lineWrap) {
-            writingRep.push([])
-            lineWrap = false
-          }
-          const nextCell = {
-            index: i,
-            word,
-            ponaMode,
-            lineBreak,
-          }
-          // @ts-ignore
-          writingRep.at(-1).push(nextCell)
-        }
-        word = ''
-        if (lineBreak) {
-          writingRep.push([])
-        }
-
-        if (
-          settingsValue.lineWrap &&
-          // @ts-ignore
-          writingRep.at(-1).length === settingsValue.lineWrap
-        ) {
-          lineWrap = true
-        }
-      } else {
-        word += writingValue[i]
-      }
+    type Perception = {
+      isSpace: () => boolean
+      isLineBreak: () => boolean
+      isHash: () => boolean
+      isPonaMode: () => boolean
+      isEmptyWord: () => boolean
+      isAfterLineBreak: () => boolean
+      isAfterLineWrap: () => boolean
+      isEndOfWriting: () => boolean
     }
 
+    for (let i = 0; i <= writingValue.length; i += 1) {
+      const perception: Perception = {
+        isSpace: () => writingValue[i] === ' ',
+        isLineBreak: () => writingValue[i] === '\n',
+        isHash: () => writingValue[i] === '#',
+        isPonaMode: () =>
+          writingValue[i] !== ' ' &&
+          writingValue[i] !== '\n' &&
+          (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
+            writingValue[i - 1] === '#'),
+        isEmptyWord: () => word === '',
+        isAfterLineBreak: () => writingRep.at(-1)?.at(-1)?.lineBreak === true,
+        isAfterLineWrap: () =>
+          settingsValue.lineWrap !== null &&
+          writingRep.at(-1)?.length === settingsValue.lineWrap,
+        isEndOfWriting: () => i === writingValue.length,
+      }
+
+      if (
+        !perception.isSpace() &&
+        !perception.isLineBreak() &&
+        !perception.isHash() &&
+        !perception.isPonaMode() &&
+        !perception.isEndOfWriting()
+      ) {
+        word += writingValue[i]
+        continue
+      }
+
+      if (perception.isHash()) {
+        continue
+      }
+
+      if (perception.isPonaMode() && !perception.isEndOfWriting()) {
+        word = writingValue[i]
+      }
+
+      if (perception.isAfterLineBreak() || perception.isAfterLineWrap()) {
+        writingRep.push([])
+      }
+
+      // @ts-ignore
+      writingRep.at(-1).push({
+        index: i,
+        word: perception.isEmptyWord() ? '_' : word,
+        ponaMode: perception.isPonaMode(),
+        lineBreak: perception.isLineBreak(),
+        skip: perception.isEmptyWord(),
+      })
+
+      word = ''
+    }
     return writingRep
   }
 
@@ -214,6 +222,7 @@ class Editor {
 
     for (let y = 0; y < writingRep.length; y += 1) {
       for (let x = 0; x < writingRep[y].length; x += 1) {
+        console.log(x, y, writingRep[y][x])
         let word = writingRep[y][x].word
         // @ts-ignore
         glyphs += glyphData.frames.phraseMode.format(
@@ -237,8 +246,8 @@ class Editor {
       settingsValue.fill,
       settingsValue.stroke,
       settingsValue.strokeWidth,
-      (Xmax + 1) * settingsValue.scale * editorParameters.glyphBaseSize,
-      (Ymax + 1) * settingsValue.scale * editorParameters.glyphBaseSize,
+      Xmax * settingsValue.scale * editorParameters.glyphBaseSize,
+      Ymax * settingsValue.scale * editorParameters.glyphBaseSize,
       settingsValue.scale
     )
 

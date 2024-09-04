@@ -21,6 +21,7 @@ export type Cell = {
   word: string
   ponaMode: boolean
   lineBreak: boolean
+  skip: boolean
 }
 
 export type WritingRep = Cell[][]
