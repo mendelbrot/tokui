@@ -66,14 +66,14 @@ function Display({
                         itemClass += ' border-l'
                       }
                     }
-                    // if (
-                    //   cursorPosition &&
-                    //   cursorPosition[1] === Yrow &&
-                    //   cursorPosition[0] === Xcol
-                    // ) {
-                    //   itemClass =
-                    //     'border-2 border-red-500 border-dashed  bg-yellow-300/10'
-                    // }
+                    if (
+                      cursorPosition &&
+                      cursorPosition[1] === Yrow &&
+                      cursorPosition[0] === Xcol
+                    ) {
+                      itemClass =
+                        'border-2 border-red-500 border-dashed  bg-yellow-300/10'
+                    }
                     return (
                       <div
                         key={Xcol}
@@ -81,7 +81,11 @@ function Display({
                         style={{ width: glyphSize, height: glyphSize }}
                         onClick={() => moveTo([Xcol, Yrow])}
                       >
-                        {/* {writingRep[Yrow][Xcol]} */}
+                        {writingRep[Yrow][Xcol].index}
+                        <br />
+                        {writingRep[Yrow][Xcol].ponaMode && 'p'}
+                        {writingRep[Yrow][Xcol].lineBreak && 'b'}
+                        {writingRep[Yrow][Xcol].skip && 's'}
                       </div>
                     )
                   })}

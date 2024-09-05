@@ -71,8 +71,9 @@ function Editor() {
 
   console.clear()
   console.log(writingValue)
+  console.log(cursorPosition)
+  console.log(writingRep[cursorPosition[1]][cursorPosition[0]])
   console.table(writingRep)
-  console.log(writingSvg)
 
   React.useEffect(() => {
     setWindowDimensions([window.innerWidth, window.innerHeight])
@@ -112,7 +113,7 @@ function Editor() {
           <Display
             writingSvg={writingSvg}
             writingRep={writingRep}
-            cursorPosition={cursorPosition}
+            cursorPosition={!textMode ? cursorPosition : null}
             moveTo={editor.current.cursor.moveTo}
             glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
             gridMode

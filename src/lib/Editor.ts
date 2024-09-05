@@ -88,11 +88,11 @@ class Editor {
           writingValue[i - 1] === '#' ||
           (writingRep.at(-1)?.length === 0 &&
             writingRep.at(-2)?.at(-1)?.ponaMode === true)),
-      isAfterPonaMode: (i: number) =>
-        (writingValue[i] === ' ' || writingValue[i] === '\n') &&
-        (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
-          (writingRep.at(-1)?.length === 0 &&
-            writingRep.at(-2)?.at(-1)?.ponaMode === true)),
+      // isAfterPonaMode: (i: number) =>
+      //   (writingValue[i] === ' ' || writingValue[i] === '\n') &&
+      //   (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
+      //     (writingRep.at(-1)?.length === 0 &&
+      //       writingRep.at(-2)?.at(-1)?.ponaMode === true)),
       isEmptyWord: () => word === '',
       isAfterLineBreak: () => writingRep.at(-1)?.at(-1)?.lineBreak === true,
       isAfterLineWrap: () =>
@@ -126,19 +126,13 @@ class Editor {
         writingRep.push([])
       }
 
-      if (!perception.isAfterPonaMode(i)) {
-        writingRep.at(-1)?.push({
-          index: i,
-          word: perception.isEmptyWord() ? '_' : word,
-          ponaMode: perception.isPonaMode(i),
-          lineBreak: perception.isLineBreak(i),
-          skip: perception.isEmptyWord(),
-        })
-      } else {
-        writingRep.at(-1)?.at(-1)?.ponaMode === false
-        writingRep.at(-1)?.at(-1)?.lineBreak === perception.isLineBreak(i)
-      }
-        
+      writingRep.at(-1)?.push({
+        index: i,
+        word: perception.isEmptyWord() ? '_' : word,
+        ponaMode: perception.isPonaMode(i),
+        lineBreak: perception.isLineBreak(i),
+        skip: perception.isEmptyWord(),
+      })
 
       word = ''
     }
@@ -223,7 +217,6 @@ class Editor {
 
     for (let y = 0; y < writingRep.length; y += 1) {
       for (let x = 0; x < writingRep[y].length; x += 1) {
-        console.log(x, y, writingRep[y][x])
         let word = writingRep[y][x].word
         // @ts-ignore
         glyphs += glyphData.frames.phraseMode.format(

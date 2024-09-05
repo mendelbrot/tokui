@@ -5,7 +5,6 @@ import Normal0 from './keyboardLayers/Normal0'
 import Normal1 from './keyboardLayers/Normal1'
 import Small0 from './keyboardLayers/Small0'
 import Small1 from './keyboardLayers/Small1'
-import { CursorPosition } from '@/lib/EditorTypes'
 import Editor from '@/lib/Editor'
 
 type Props = {
