@@ -381,17 +381,42 @@ class Editor {
   }
 
   public writing = {
-    insert: (word: string) => {
-      const index =
-        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
+    insert: (characters: string) => {
+      const cell =
+        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
+
+      console.clear()
+      console.log(characters)
+      console.log(cell)
+
+      let characters_to_insert = characters
+      let index_to_insert_at = cell.index
+
+      if (characters === '_') {
+        characters_to_insert = ' _ '
+      }
+
+      if (cell.ponaMode && !cell.skip) {
+        index_to_insert_at = cell.index + 1
+      }
 
       this._writingValue =
-        this._writingValue.slice(0, index) +
-        word +
-        this._writingValue.slice(index)
+        this._writingValue.slice(0, index_to_insert_at) +
+        characters_to_insert +
+        this._writingValue.slice(index_to_insert_at)
 
       this._parse()
       this._draw()
+
+      if (characters === '\n' || characters === ' ' || cell.ponaMode) {
+        this.cursor.right()
+      }
+
+      if (characters === '_') {
+        this.cursor.right()
+        this.cursor.right()
+      }
+
       this._project()
     },
 

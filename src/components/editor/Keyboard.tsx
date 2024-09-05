@@ -49,6 +49,8 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
           break
         }
         case '#':
+          writing.insert(keyboardKey)
+          break
         case '_':
           writing.insert(keyboardKey)
           break

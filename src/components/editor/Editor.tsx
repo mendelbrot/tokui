@@ -8,9 +8,7 @@ import EditorClass, {
 import Keyboard from '@/components/editor/Keyboard'
 import Display from './Display'
 import SettingsBar from './SettingsBar'
-import {
-  EditorModelProjection,
-} from '@/lib/EditorTypes'
+import { EditorModelProjection } from '@/lib/EditorTypes'
 
 const screens = { sm: 640 }
 
@@ -69,12 +67,9 @@ function Editor() {
     }
   }
 
-  console.clear()
-  console.log(writingValue)
-  console.log(cursorPosition)
-  console.log(writingRep[cursorPosition[1]][cursorPosition[0]])
-  console.table(writingRep)
-
+  if (textMode && !writingRep?.at(cursorPosition[1])?.at(cursorPosition[0])) {
+    editor.current.cursor.moveTo([0, 0])
+  }
   React.useEffect(() => {
     setWindowDimensions([window.innerWidth, window.innerHeight])
 
