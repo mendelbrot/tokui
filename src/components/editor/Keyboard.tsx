@@ -125,7 +125,6 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         <Small0
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     } else {
@@ -133,7 +132,6 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         <Small1
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     }
@@ -143,7 +141,6 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         <Normal0
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     } else {
@@ -151,7 +148,6 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         <Normal1
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     }

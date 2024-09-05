@@ -7,10 +7,9 @@ import KeyGlyph from '../KeyGlyph'
 type Props = {
   handleKeyboardPress: (keyboardKey: string) => void
   pressedKey: string | null
-  setPressedKey: React.Dispatch<React.SetStateAction<string | null>>
 }
 
-function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
+function Normal0({ handleKeyboardPress, pressedKey }: Props) {
   return (
     <div>
       <div className="grid grid-cols-10 gap-2">
@@ -18,7 +17,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['+']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="+" />
         </Key>
@@ -26,7 +24,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['-']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="-" />
         </Key>
@@ -34,7 +31,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['m']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="m" />
         </Key>
@@ -42,7 +38,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['n']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="n" />
         </Key>
@@ -50,7 +45,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['g']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="g" />
         </Key>
@@ -58,7 +52,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['p']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="p" />
         </Key>
@@ -66,7 +59,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['t']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="t" />
         </Key>
@@ -74,7 +66,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['k']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="k" />
         </Key>
@@ -82,7 +73,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['4']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="4" />
         </Key>
@@ -90,7 +80,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['5']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="5" />
         </Key>
@@ -99,7 +88,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['*']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="*" />
         </Key>
@@ -107,7 +95,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['/']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="/" />
         </Key>
@@ -115,7 +102,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['f']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="f" />
         </Key>
@@ -123,7 +109,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['s']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="s" />
         </Key>
@@ -132,7 +117,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['h']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="h" />
         </Key>
@@ -140,7 +124,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['w']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="w" />
         </Key>
@@ -148,7 +131,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['l']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="l" />
         </Key>
@@ -156,7 +138,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['y']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="y" />
         </Key>
@@ -164,7 +145,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['2']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="2" />
         </Key>
@@ -172,7 +152,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['3']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="3" />
         </Key>
@@ -181,7 +160,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['6']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="6" />
         </Key>
@@ -189,7 +167,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['7']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="7" />
         </Key>
@@ -197,7 +174,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['.']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="." />
         </Key>
@@ -205,7 +181,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['i']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="i" />
         </Key>
@@ -213,7 +188,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['e']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="e" />
         </Key>
@@ -221,7 +195,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['a']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="a" />
         </Key>
@@ -229,7 +202,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['o']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="o" />
         </Key>
@@ -237,7 +209,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['u']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="u" />
         </Key>
@@ -245,7 +216,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['0']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="0" />
         </Key>
@@ -253,7 +223,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['1']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           <KeyGlyph glyphText="1" />
         </Key>
@@ -262,7 +231,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['Alt']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           alt
         </Key>
@@ -270,7 +238,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['#']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           #
         </Key>
@@ -278,7 +245,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['_']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
           space
@@ -287,7 +253,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={[' ']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
           next word
@@ -296,7 +261,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['Enter']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
           positioningStyle="col-span-2 h-12"
         >
           return
@@ -305,7 +269,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['Backspace']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           bks
         </Key>
@@ -313,7 +276,6 @@ function Normal0({ handleKeyboardPress, pressedKey, setPressedKey }: Props) {
           handleKeyboardPress={handleKeyboardPress}
           keyboardKeys={['Alt']}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         >
           alt
         </Key>
