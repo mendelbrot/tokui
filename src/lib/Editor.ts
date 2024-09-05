@@ -7,7 +7,6 @@ import {
   SettingsValue,
   WritingRep,
   EditorModelProjection,
-  Cell,
 } from './EditorTypes'
 
 export const editorParameters = {
@@ -26,7 +25,7 @@ export const defaultSettings: SettingsValue = {
 }
 
 export const initial = {
-  cell: { index: 0, word: '_', ponaMode: false, lineBreak: false, skip: false },
+  cell: { index: 0, word: '_', ponaMode: false, lineBreak: false, skip: true },
   writingValue: '_',
   writingSvg:
     '<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"></svg>',
@@ -88,11 +87,6 @@ class Editor {
           writingValue[i - 1] === '#' ||
           (writingRep.at(-1)?.length === 0 &&
             writingRep.at(-2)?.at(-1)?.ponaMode === true)),
-      // isAfterPonaMode: (i: number) =>
-      //   (writingValue[i] === ' ' || writingValue[i] === '\n') &&
-      //   (writingRep.at(-1)?.at(-1)?.ponaMode === true ||
-      //     (writingRep.at(-1)?.length === 0 &&
-      //       writingRep.at(-2)?.at(-1)?.ponaMode === true)),
       isEmptyWord: () => word === '',
       isAfterLineBreak: () => writingRep.at(-1)?.at(-1)?.lineBreak === true,
       isAfterLineWrap: () =>
@@ -357,6 +351,14 @@ class Editor {
           this._cursorPosition[1],
         ]
         this._project()
+      } else {
+        if (this._cursorPosition[1] > 0) {
+          this._cursorPosition = [
+            this._writingRep[this._cursorPosition[1] - 1].length - 1,
+            this._cursorPosition[1] - 1,
+          ]
+          this._project()
+        }
       }
     },
     right: () => {
@@ -369,6 +371,11 @@ class Editor {
           this._cursorPosition[1],
         ]
         this._project()
+      } else {
+        if (this._cursorPosition[1] < this._writingRep.length - 1) {
+          this._cursorPosition = [0, this._cursorPosition[1] + 1]
+          this._project()
+        }
       }
     },
   }

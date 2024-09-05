@@ -59,7 +59,10 @@ function Display({
                     let itemClass: string | undefined = undefined
                     if (gridMode) {
                       itemClass = 'border-b border-r border-blue-400'
-                      if (Yrow === 0 || writingRep[Yrow - 1].length - 1 < Xcol) {
+                      if (
+                        Yrow === 0 ||
+                        writingRep[Yrow - 1].length - 1 < Xcol
+                      ) {
                         itemClass += ' border-t'
                       }
                       if (Xcol === 0) {
@@ -79,7 +82,9 @@ function Display({
                         key={Xcol}
                         className={itemClass}
                         style={{ width: glyphSize, height: glyphSize }}
-                        onClick={() => moveTo([Xcol, Yrow])}
+                        onClick={() => {
+                          if (cursorPosition) moveTo([Xcol, Yrow])
+                        }}
                       >
                         {writingRep[Yrow][Xcol].index}
                         <br />
