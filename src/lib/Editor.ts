@@ -47,12 +47,28 @@ type ConstructorParams = {
 }
 
 class Editor {
-  private _projectionCallback: ProjectionCallback
+  public projectionCallback: ProjectionCallback
   private _settingsValue: SettingsValue
   private _writingValue: string
   private _writingRep: WritingRep
   private _writingSvg: string
   private _cursorPosition: CursorPosition
+
+  get settingsValue() {
+    return this._settingsValue
+  }
+  get writingValue() {
+    return this._writingValue
+  }
+  get writingRep() {
+    return this._writingRep
+  }
+  get writingSvg() {
+    return this._writingSvg
+  }
+  get cursorPosition() {
+    return this._cursorPosition
+  }
 
   constructor({
     projectionCallback = () => {},
@@ -60,7 +76,7 @@ class Editor {
     cursor = [0, 0],
     settings = {},
   }: ConstructorParams = {}) {
-    this._projectionCallback = projectionCallback
+    this.projectionCallback = projectionCallback
     this._settingsValue = { ...defaultSettings, ...settings }
     this._cursorPosition = cursor
     this._writingValue = writing
@@ -252,7 +268,7 @@ class Editor {
   }
 
   public project() {
-    this._projectionCallback({
+    this.projectionCallback({
       settingsValue: this._settingsValue,
       cursorPosition: this._cursorPosition,
       writingValue: this._writingValue,
@@ -272,6 +288,12 @@ class Editor {
   }
 
   public settings = {
+    setTo: (settings: SoftSettingsValue) => {
+      this._settingsValue = { ...defaultSettings, ...settings }
+      this._parse()
+      this._draw()
+      return this
+    },
     toggleLineWrap: () => {
       if (this._settingsValue.lineWrap) {
         this._settingsValue.lineWrap = null
@@ -280,7 +302,6 @@ class Editor {
       }
       this._parse()
       this._draw()
-
       return this
     },
     incrementLineWrap: () => {
@@ -323,7 +344,6 @@ class Editor {
       ) {
         this._cursorPosition = position
       }
-
       return this
     },
     up: () => {
@@ -336,7 +356,6 @@ class Editor {
           this._cursorPosition[1] - 1,
         ]
       }
-
       return this
     },
     down: () => {
@@ -349,7 +368,6 @@ class Editor {
           this._cursorPosition[1] + 1,
         ]
       }
-
       return this
     },
     left: () => {
@@ -366,7 +384,6 @@ class Editor {
           ]
         }
       }
-
       return this
     },
     right: () => {
@@ -383,12 +400,17 @@ class Editor {
           this._cursorPosition = [0, this._cursorPosition[1] + 1]
         }
       }
-
       return this
     },
   }
 
   public writing = {
+    setTo: (writing: string) => {
+      this._writingValue = writing
+      this._parse()
+      this._draw()
+      return this
+    },
     insert: (characters: string) => {
       const cell =
         this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
