@@ -1,12 +1,13 @@
 'use client'
 
+import Editor from '@/lib/Editor'
 import { CursorPosition, WritingRep } from '@/lib/EditorTypes'
 import React from 'react'
 
 type Props = {
   writingSvg: string
   cursorPosition: CursorPosition | null
-  moveTo: (position: CursorPosition) => void
+  moveTo: Editor["cursor"]["moveTo"]
   glyphSize: number
   writingRep: WritingRep
   gridMode: boolean
@@ -83,7 +84,7 @@ function Display({
                         className={itemClass}
                         style={{ width: glyphSize, height: glyphSize }}
                         onClick={() => {
-                          if (cursorPosition) moveTo([Xcol, Yrow])
+                          if (cursorPosition) moveTo([Xcol, Yrow]).project()
                         }}
                       >
                         {writingRep[Yrow][Xcol].index}

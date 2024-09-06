@@ -40,24 +40,27 @@ export const initialEditorProjection: EditorModelProjection = {
 }
 
 type ConstructorParams = {
+  projectionCallback?: ProjectionCallback
   writing?: string
   cursor?: CursorPosition
   settings?: SoftSettingsValue
 }
 
 class Editor {
-  private projectionCallback: ProjectionCallback
+  private _projectionCallback: ProjectionCallback
   private _settingsValue: SettingsValue
   private _writingValue: string
   private _writingRep: WritingRep
   private _writingSvg: string
   private _cursorPosition: CursorPosition
 
-  constructor(
-    projectionCallback: ProjectionCallback,
-    { writing = '', cursor = [0, 0], settings = {} }: ConstructorParams = {}
-  ) {
-    this.projectionCallback = projectionCallback
+  constructor({
+    projectionCallback = () => {},
+    writing = '',
+    cursor = [0, 0],
+    settings = {},
+  }: ConstructorParams = {}) {
+    this._projectionCallback = projectionCallback
     this._settingsValue = { ...defaultSettings, ...settings }
     this._cursorPosition = cursor
     this._writingValue = writing
@@ -66,7 +69,6 @@ class Editor {
 
     this._parse()
     this._draw()
-    this._project()
   }
 
   private static _static_parse(
@@ -249,14 +251,16 @@ class Editor {
     )
   }
 
-  private _project() {
-    this.projectionCallback({
+  public project() {
+    this._projectionCallback({
       settingsValue: this._settingsValue,
       cursorPosition: this._cursorPosition,
       writingValue: this._writingValue,
       writingRep: this._writingRep,
       writingSvg: this._writingSvg,
     })
+
+    return this
   }
 
   public static draw(writing: string, settings: SoftSettingsValue = {}) {
@@ -276,37 +280,38 @@ class Editor {
       }
       this._parse()
       this._draw()
-      this._project()
+
+      return this
     },
     incrementLineWrap: () => {
       if (this._settingsValue.lineWrap) {
         this._settingsValue.lineWrap += 1
         this._parse()
         this._draw()
-        this._project()
       }
+      return this
     },
     decrementLineWrap: () => {
       if (this._settingsValue.lineWrap) {
         this._settingsValue.lineWrap -= 1
         this._parse()
         this._draw()
-        this._project()
       }
+      return this
     },
     incrementScale: () => {
       if (this._settingsValue.scale < editorParameters.maxScale) {
         this._settingsValue.scale += editorParameters.scaleIncrement
         this._draw()
-        this._project()
       }
+      return this
     },
     decrementScale: () => {
       if (this._settingsValue.scale > editorParameters.minScale) {
         this._settingsValue.scale -= editorParameters.scaleIncrement
         this._draw()
-        this._project()
       }
+      return this
     },
   }
 
@@ -317,8 +322,9 @@ class Editor {
         position[0] < this._writingRep[position[1]].length
       ) {
         this._cursorPosition = position
-        this._project()
       }
+
+      return this
     },
     up: () => {
       if (this._cursorPosition[1] > 0) {
@@ -329,8 +335,9 @@ class Editor {
           ),
           this._cursorPosition[1] - 1,
         ]
-        this._project()
       }
+
+      return this
     },
     down: () => {
       if (this._cursorPosition[1] < this._writingRep.length - 1) {
@@ -341,8 +348,9 @@ class Editor {
           ),
           this._cursorPosition[1] + 1,
         ]
-        this._project()
       }
+
+      return this
     },
     left: () => {
       if (this._cursorPosition[0] > 0) {
@@ -350,16 +358,16 @@ class Editor {
           this._cursorPosition[0] - 1,
           this._cursorPosition[1],
         ]
-        this._project()
       } else {
         if (this._cursorPosition[1] > 0) {
           this._cursorPosition = [
             this._writingRep[this._cursorPosition[1] - 1].length - 1,
             this._cursorPosition[1] - 1,
           ]
-          this._project()
         }
       }
+
+      return this
     },
     right: () => {
       if (
@@ -370,13 +378,13 @@ class Editor {
           this._cursorPosition[0] + 1,
           this._cursorPosition[1],
         ]
-        this._project()
       } else {
         if (this._cursorPosition[1] < this._writingRep.length - 1) {
           this._cursorPosition = [0, this._cursorPosition[1] + 1]
-          this._project()
         }
       }
+
+      return this
     },
   }
 
@@ -417,7 +425,7 @@ class Editor {
         this.cursor.right()
       }
 
-      this._project()
+      return this
     },
 
     delete: () => {
@@ -429,7 +437,8 @@ class Editor {
 
       this._parse()
       this._draw()
-      this._project()
+
+      return this
     },
 
     set: (writingValue: string) => {
@@ -437,7 +446,8 @@ class Editor {
 
       this._parse()
       this._draw()
-      this._project()
+
+      return this
     },
   }
 }

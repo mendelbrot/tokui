@@ -25,34 +25,34 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
           break
         }
         case 'Backspace': {
-          writing.delete()
+          writing.delete().project()
           break
         }
         case 'Enter': {
-          writing.insert('\n')
+          writing.insert('\n').project()
           break
         }
         case 'ArrowUp': {
-          cursor.up()
+          cursor.up().project()
           break
         }
         case 'ArrowDown': {
-          cursor.down()
+          cursor.down().project()
           break
         }
         case 'ArrowLeft': {
-          cursor.left()
+          cursor.left().project()
           break
         }
         case 'ArrowRight': {
-          cursor.right()
+          cursor.right().project()
           break
         }
         case '#':
-          writing.insert(keyboardKey)
+          writing.insert(keyboardKey).project()
           break
         case '_':
-          writing.insert(keyboardKey)
+          writing.insert(keyboardKey).project()
           break
         case '0':
         case '1':
@@ -69,7 +69,7 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         case '.':
         case '6':
         case '7': {
-          writing.insert(keyboardKey)
+          writing.insert(keyboardKey).project()
           break
         }
         case 'm':
@@ -90,7 +90,7 @@ function Keyboard({ smallScreen, writing, cursor }: Props) {
         case 'o':
         case 'u':
         case ' ': {
-          writing.insert(keyboardKey)
+          writing.insert(keyboardKey).project()
           break
         }
         default: {

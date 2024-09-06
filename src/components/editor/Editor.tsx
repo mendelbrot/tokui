@@ -20,8 +20,12 @@ function Editor() {
 
   let editor = React.useRef<EditorClass | undefined>()
   if (!editor.current) {
-    editor.current = new EditorClass(setEditorProjection)
+    editor.current = new EditorClass({
+      projectionCallback: setEditorProjection,
+    })
   }
+
+  const { settings, cursor, writing } = editor.current
 
   const [windowDimensions, setWindowDimensions] = React.useState<number[]>([
     0, 0,
@@ -32,9 +36,7 @@ function Editor() {
   const smallScreen = windowDimensions[0] < screens.sm
 
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (editor.current) {
-      editor.current.writing.set(e.target.value)
-    }
+    writing.set(e.target.value).project()
   }
 
   const copyWritingToClipbpoadAsync = async () => {
@@ -68,7 +70,7 @@ function Editor() {
   }
 
   if (textMode && !writingRep?.at(cursorPosition[1])?.at(cursorPosition[0])) {
-    editor.current.cursor.moveTo([0, 0])
+    cursor.moveTo([0, 0]).project()
   }
   React.useEffect(() => {
     setWindowDimensions([window.innerWidth, window.innerHeight])
@@ -95,7 +97,7 @@ function Editor() {
       <div className="flex flex-col h-screen w-[344px] sm:w-[568px] p-[16px]">
         <div>
           <SettingsBar
-            settings={editor.current.settings}
+            settings={settings}
             settingsValue={settingsValue}
             textMode={textMode}
             setTextMode={setTextMode}
@@ -109,7 +111,7 @@ function Editor() {
             writingSvg={writingSvg}
             writingRep={writingRep}
             cursorPosition={!textMode ? cursorPosition : null}
-            moveTo={editor.current.cursor.moveTo}
+            moveTo={cursor.moveTo}
             glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
             gridMode
             lineWrap={settingsValue.lineWrap}
@@ -128,8 +130,8 @@ function Editor() {
           <div className="flex flex-row items-center">
             <Keyboard
               smallScreen={smallScreen}
-              writing={editor.current.writing}
-              cursor={editor.current.cursor}
+              writing={writing}
+              cursor={cursor}
             />
           </div>
         )}
