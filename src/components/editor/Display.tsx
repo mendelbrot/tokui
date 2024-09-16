@@ -76,7 +76,7 @@ function Display({
                       cursorPosition[0] === Xcol
                     ) {
                       itemClass =
-                        'border-2 border-red-500 border-dashed  bg-yellow-300/10'
+                        'border-2 border-amber-500'
                     }
                     return (
                       <div
@@ -86,13 +86,7 @@ function Display({
                         onClick={() => {
                           if (cursorPosition) moveTo([Xcol, Yrow]).project()
                         }}
-                      >
-                        {writingRep[Yrow][Xcol].index}
-                        <br />
-                        {writingRep[Yrow][Xcol].ponaMode && 'p'}
-                        {writingRep[Yrow][Xcol].lineBreak && 'b'}
-                        {writingRep[Yrow][Xcol].skip && 's'}
-                      </div>
+                      />
                     )
                   })}
                 </div>

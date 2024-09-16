@@ -7,6 +7,7 @@ import {
   SettingsValue,
   WritingRep,
   EditorModelProjection,
+  EditorConstructorParams,
 } from './EditorTypes'
 
 export const editorParameters = {
@@ -39,13 +40,6 @@ export const initialEditorProjection: EditorModelProjection = {
   writingSvg: initial.writingSvg,
 }
 
-type ConstructorParams = {
-  projectionCallback?: ProjectionCallback
-  writing?: string
-  cursor?: CursorPosition
-  settings?: SoftSettingsValue
-}
-
 class Editor {
   public projectionCallback: ProjectionCallback
   private _settingsValue: SettingsValue
@@ -75,7 +69,7 @@ class Editor {
     writing = '',
     cursor = [0, 0],
     settings = {},
-  }: ConstructorParams = {}) {
+  }: EditorConstructorParams = {}) {
     this.projectionCallback = projectionCallback
     this._settingsValue = { ...defaultSettings, ...settings }
     this._cursorPosition = cursor
@@ -268,6 +262,10 @@ class Editor {
   }
 
   public project() {
+    console.clear()
+    console.log(this._writingValue)
+    console.table(this.writingRep)
+
     this.projectionCallback({
       settingsValue: this._settingsValue,
       cursorPosition: this._cursorPosition,
@@ -415,15 +413,28 @@ class Editor {
       const cell =
         this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
 
-      console.clear()
-      console.log(characters)
-      console.log(cell)
-
       let characters_to_insert = characters
       let index_to_insert_at = cell.index
 
-      if (characters === '_') {
+      if (
+        characters === '_' &&
+        this._writingValue.at(index_to_insert_at - 1) !== ' '
+      ) {
         characters_to_insert = ' _ '
+      }
+
+      if (
+        characters === '_' &&
+        this._writingValue.at(index_to_insert_at - 1) === ' '
+      ) {
+        characters_to_insert = '_ '
+      }
+
+      if (
+        characters === ' ' &&
+        this._writingValue.at(index_to_insert_at - 1) === ' '
+      ) {
+        characters_to_insert = '_ '
       }
 
       if (cell.ponaMode && !cell.skip) {
@@ -438,27 +449,52 @@ class Editor {
       this._parse()
       this._draw()
 
-      if (characters === '\n' || characters === ' ' || cell.ponaMode) {
+      if (
+        characters_to_insert === '\n' ||
+        characters_to_insert === ' ' ||
+        characters_to_insert === '_ ' ||
+        cell.ponaMode
+      ) {
         this.cursor.right()
       }
 
-      if (characters === '_') {
-        this.cursor.right()
-        this.cursor.right()
+      if (characters_to_insert === ' _ ') {
+        this.cursor.right().cursor.right()
       }
 
       return this
     },
-
     delete: () => {
       const index =
-        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]].index
+        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
+          .index - 1
+
+      let leftIndex = index
+      let rightIndex = index
+
+      let surroundingCharacters = [
+        this.writingValue.at(index - 1),
+        this.writingValue.at(index),
+        this.writingValue.at(index + 1),
+      ]
+
+      if (surroundingCharacters[0] === ' ') {
+        leftIndex = index - 1
+      }
 
       this._writingValue =
-        this._writingValue.slice(0, index) + this._writingValue.slice(index + 1)
+        this._writingValue.slice(0, leftIndex) +
+        this._writingValue.slice(rightIndex + 1)
 
       this._parse()
       this._draw()
+
+      if (
+        surroundingCharacters[0] === ' ' ||
+        surroundingCharacters[1] === '\n'
+      ) {
+        this.cursor.left()
+      }
 
       return this
     },
@@ -473,7 +509,5 @@ class Editor {
     },
   }
 }
-
-export type Writing = Editor['writing']
 
 export default Editor

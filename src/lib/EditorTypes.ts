@@ -36,4 +36,9 @@ export type EditorModelProjection = {
 
 export type ProjectionCallback = (editorProjection: EditorModelProjection) => any
 
-
+export type EditorConstructorParams = {
+  projectionCallback?: ProjectionCallback
+  writing?: string
+  cursor?: CursorPosition
+  settings?: SoftSettingsValue
+}

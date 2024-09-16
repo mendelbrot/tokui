@@ -31,6 +31,7 @@ function Editor() {
     0, 0,
   ])
   const [textMode, setTextMode] = React.useState<boolean>(false)
+  const [gridMode, setGridMode] = React.useState<boolean>(false)
   const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
 
   const smallScreen = windowDimensions[0] < screens.sm
@@ -113,7 +114,7 @@ function Editor() {
             cursorPosition={!textMode ? cursorPosition : null}
             moveTo={cursor.moveTo}
             glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
-            gridMode
+            gridMode={gridMode}
             lineWrap={settingsValue.lineWrap}
           />
         </div>
