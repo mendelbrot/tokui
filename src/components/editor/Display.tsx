@@ -7,11 +7,12 @@ import React from 'react'
 type Props = {
   writingSvg: string
   cursorPosition: CursorPosition | null
-  moveTo: Editor["cursor"]["moveTo"]
+  moveTo: Editor['cursor']['moveTo']
   glyphSize: number
   writingRep: WritingRep
   gridMode: boolean
   lineWrap: number | null
+  displayHeight: number | undefined
 }
 
 function Display({
@@ -22,6 +23,7 @@ function Display({
   glyphSize,
   gridMode,
   lineWrap,
+  displayHeight,
 }: Props) {
   return (
     <div style={{ display: 'grid' }}>
@@ -56,9 +58,15 @@ function Display({
                   className={'flex flex-row items-start'}
                   style={{ height: glyphSize }}
                 >
-                  {row.map((_item, Xcol) => {
+                  {row.map((item, Xcol) => {
                     let itemClass: string | undefined = undefined
-                    if (gridMode) {
+                    if (
+                      cursorPosition &&
+                      cursorPosition[1] === Yrow &&
+                      cursorPosition[0] === Xcol
+                    ) {
+                      itemClass = 'border-2 border-amber-500'
+                    } else if (gridMode) {
                       itemClass = 'border-b border-r border-blue-400'
                       if (
                         Yrow === 0 ||
@@ -70,14 +78,11 @@ function Display({
                         itemClass += ' border-l'
                       }
                     }
-                    if (
-                      cursorPosition &&
-                      cursorPosition[1] === Yrow &&
-                      cursorPosition[0] === Xcol
-                    ) {
-                      itemClass =
-                        'border-2 border-amber-500'
+
+                    if (item.ponaMode) {
+                      itemClass += ' bg-lime-300/30'
                     }
+
                     return (
                       <div
                         key={Xcol}
@@ -93,7 +98,12 @@ function Display({
               )
             })}
           </div>
-          {lineWrap && <div className="border-l border-slate-700 w-2" />}
+          {lineWrap && (
+            <div
+              className="border-l border-slate-700 w-2"
+              style={{ minHeight: displayHeight }}
+            />
+          )}
         </div>
       </div>
     </div>

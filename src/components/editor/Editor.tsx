@@ -30,9 +30,13 @@ function Editor() {
   const [windowDimensions, setWindowDimensions] = React.useState<number[]>([
     0, 0,
   ])
+  const [displayHeight, setDisplayHeight] = React.useState<number | undefined>(
+    undefined
+  )
   const [textMode, setTextMode] = React.useState<boolean>(false)
   const [gridMode, setGridMode] = React.useState<boolean>(false)
   const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
+  const displayRef = React.useRef<HTMLDivElement | null>(null)
 
   const smallScreen = windowDimensions[0] < screens.sm
 
@@ -74,11 +78,14 @@ function Editor() {
     cursor.moveTo([0, 0]).project()
   }
   React.useEffect(() => {
-    setWindowDimensions([window.innerWidth, window.innerHeight])
-
     const handleWindowResize = () => {
       setWindowDimensions([window.innerWidth, window.innerHeight])
+      if (displayRef.current?.offsetHeight) {
+        setDisplayHeight(displayRef.current?.offsetHeight - 20)
+      }
     }
+
+    handleWindowResize()
 
     window.addEventListener('resize', handleWindowResize)
 
@@ -107,7 +114,10 @@ function Editor() {
             smallScreen={smallScreen}
           />
         </div>
-        <div className="w-[312px] sm:w-[536px] border rounded-lg p-2 my-2 flex-1 overflow-auto border-slate-700">
+        <div
+          className="w-[312px] sm:w-[536px] border rounded-lg p-2 my-2 flex-1 overflow-auto border-slate-700"
+          ref={displayRef}
+        >
           <Display
             writingSvg={writingSvg}
             writingRep={writingRep}
@@ -116,6 +126,7 @@ function Editor() {
             glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
             gridMode={gridMode}
             lineWrap={settingsValue.lineWrap}
+            displayHeight={displayHeight}
           />
         </div>
 
