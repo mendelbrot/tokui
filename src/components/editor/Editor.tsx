@@ -34,7 +34,7 @@ function Editor() {
     undefined
   )
   const [textMode, setTextMode] = React.useState<boolean>(false)
-  const [gridMode, setGridMode] = React.useState<boolean>(false)
+  const [gridMode, setGridMode] = React.useState<boolean>(true)
   const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
   const displayRef = React.useRef<HTMLDivElement | null>(null)
 

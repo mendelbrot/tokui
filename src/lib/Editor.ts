@@ -286,7 +286,7 @@ class Editor {
   }
 
   public settings = {
-    setTo: (settings: SoftSettingsValue) => {
+    set: (settings: SoftSettingsValue) => {
       this._settingsValue = { ...defaultSettings, ...settings }
       this._parse()
       this._draw()
@@ -403,108 +403,110 @@ class Editor {
   }
 
   public writing = {
-    setTo: (writing: string) => {
-      this._writingValue = writing
+    set: (writingValue: string) => {
+      this._writingValue = writingValue
       this._parse()
       this._draw()
       return this
     },
     insert: (characters: string) => {
-      const cell =
-        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
+      const cell = this._writingRep
+        .at(this._cursorPosition[1])
+        ?.at(this._cursorPosition[0])
 
-      let characters_to_insert = characters
-      let index_to_insert_at = cell.index
+      if (cell) {
+        let characters_to_insert = characters
+        let index_to_insert_at = cell.index
 
-      if (
-        characters === '_' &&
-        this._writingValue.at(index_to_insert_at - 1) !== ' '
-      ) {
-        characters_to_insert = ' _ '
+        if (cell.ponaMode && !cell.skip) {
+          index_to_insert_at = cell.index + 1
+        }
+
+        const cellAndNextAreBothPona =
+          cell.ponaMode &&
+          this._writingRep
+            .at(this._cursorPosition[1])
+            ?.at(this._cursorPosition[0] + 1)?.ponaMode
+            ? true
+            : false
+
+        if (cellAndNextAreBothPona) {
+          if (characters === ' ' || characters === '_') {
+            characters_to_insert = ' #'
+          }
+        } else if (this._writingValue.at(index_to_insert_at - 1) === ' ') {
+          if (characters === ' ' || characters === '_') {
+            characters_to_insert = '_ '
+          }
+        } else {
+          if (characters === '_') {
+            characters_to_insert = ' _ '
+          }
+        }
+
+        this._writingValue =
+          this._writingValue.slice(0, index_to_insert_at) +
+          characters_to_insert +
+          this._writingValue.slice(index_to_insert_at)
+
+        this._parse()
+        this._draw()
+
+        if (
+          characters_to_insert === '\n' ||
+          characters_to_insert === ' ' ||
+          characters_to_insert === '_ ' ||
+          cell.ponaMode
+        ) {
+          this.cursor.right()
+        }
+
+        if (characters_to_insert === ' _ ') {
+          this.cursor.right().cursor.right()
+        }
       }
-
-      if (
-        characters === '_' &&
-        this._writingValue.at(index_to_insert_at - 1) === ' '
-      ) {
-        characters_to_insert = '_ '
-      }
-
-      if (
-        characters === ' ' &&
-        this._writingValue.at(index_to_insert_at - 1) === ' '
-      ) {
-        characters_to_insert = '_ '
-      }
-
-      if (cell.ponaMode && !cell.skip) {
-        index_to_insert_at = cell.index + 1
-      }
-
-      this._writingValue =
-        this._writingValue.slice(0, index_to_insert_at) +
-        characters_to_insert +
-        this._writingValue.slice(index_to_insert_at)
-
-      this._parse()
-      this._draw()
-
-      if (
-        characters_to_insert === '\n' ||
-        characters_to_insert === ' ' ||
-        characters_to_insert === '_ ' ||
-        cell.ponaMode
-      ) {
-        this.cursor.right()
-      }
-
-      if (characters_to_insert === ' _ ') {
-        this.cursor.right().cursor.right()
-      }
-
       return this
     },
     delete: () => {
-      const index =
-        this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
-          .index - 1
+      const cell = this._writingRep
+        .at(this._cursorPosition[1])
+        ?.at(this._cursorPosition[0])
 
-      let leftIndex = index
-      let rightIndex = index
+      if (cell) {
+        const index =
+          this._writingRep[this._cursorPosition[1]][this._cursorPosition[0]]
+            .index - 1
 
-      let surroundingCharacters = [
-        this.writingValue.at(index - 1),
-        this.writingValue.at(index),
-        this.writingValue.at(index + 1),
-      ]
+        let leftIndex = index
+        let rightIndex = index
 
-      if (surroundingCharacters[0] === ' ') {
-        leftIndex = index - 1
+        const surroundingCharacters = [
+          this.writingValue.at(index - 1),
+          this.writingValue.at(index),
+          this.writingValue.at(index + 1),
+        ]
+
+        const ponaMode = cell.ponaMode
+
+        if (surroundingCharacters[0] === ' ') {
+          leftIndex = index - 1
+        }
+
+        this._writingValue =
+          this._writingValue.slice(0, leftIndex) +
+          this._writingValue.slice(rightIndex + 1)
+
+        this._parse()
+        this._draw()
+
+        if (
+          surroundingCharacters[0] === ' ' ||
+          surroundingCharacters[1] === '\n' ||
+          ponaMode
+        ) {
+          this.cursor.left()
+        }
       }
-
-      this._writingValue =
-        this._writingValue.slice(0, leftIndex) +
-        this._writingValue.slice(rightIndex + 1)
-
-      this._parse()
-      this._draw()
-
-      if (
-        surroundingCharacters[0] === ' ' ||
-        surroundingCharacters[1] === '\n'
-      ) {
-        this.cursor.left()
-      }
-
-      return this
-    },
-
-    set: (writingValue: string) => {
-      this._writingValue = writingValue
-
-      this._parse()
-      this._draw()
-
       return this
     },
   }
