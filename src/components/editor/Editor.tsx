@@ -1,131 +1,55 @@
 'use client'
 
 import React from 'react'
-import draw, {
-  HardSettings,
-  defaultSettings,
-  glyphBaseDimensions,
-} from '@/lib/draw'
+import EditorClass, {
+  editorParameters,
+  initialEditorProjection,
+} from '@/lib/Editor'
 import Keyboard from '@/components/editor/Keyboard'
 import Display from './Display'
 import SettingsBar from './SettingsBar'
-
-const maxScaleValue = 5
-const minScaleValue = 0.5
-const scaleIncrementValue = 0.5
+import { EditorModelProjection } from '@/lib/EditorTypes'
 
 const screens = { sm: 640 }
 
 function Editor() {
-  const [text, setText] = React.useState<string>('')
-  const [cursorPosition, setCursorPosition] = React.useState<number[]>([0, 0])
-  const [settingsValue, setSettingsValue] =
-    React.useState<HardSettings>(defaultSettings)
+  const [
+    { settingsValue, cursorPosition, writingValue, writingRep, writingSvg },
+    setEditorProjection,
+  ] = React.useState<EditorModelProjection>(initialEditorProjection)
+
+  let editor = React.useRef<EditorClass | undefined>()
+  if (!editor.current) {
+    editor.current = new EditorClass({
+      projectionCallback: setEditorProjection,
+    })
+  }
+
+  const { settings, cursor, writing } = editor.current
+
   const [windowDimensions, setWindowDimensions] = React.useState<number[]>([
     0, 0,
   ])
+  const [displayHeight, setDisplayHeight] = React.useState<number | undefined>(
+    undefined
+  )
   const [textMode, setTextMode] = React.useState<boolean>(false)
+  const [gridMode, setGridMode] = React.useState<boolean>(true)
   const textareaRef = React.useRef<HTMLTextAreaElement | null>(null)
+  const displayRef = React.useRef<HTMLDivElement | null>(null)
 
   const smallScreen = windowDimensions[0] < screens.sm
 
-  const { glyphSvg, cursorMap } = draw(text, settingsValue)
-
-  const settings = {
-    toggleLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: null },
-        })
-      } else {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: defaultSettings.lineWrap },
-        })
-      }
-    },
-    incrementLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ lineWrap: settingsValue.lineWrap + 1 },
-        })
-      }
-    },
-    decrementLineWrap: () => {
-      if (settingsValue.lineWrap) {
-        if (settingsValue.lineWrap > 0) {
-          setSettingsValue({
-            ...settingsValue,
-            ...{ lineWrap: settingsValue.lineWrap - 1 },
-          })
-        }
-      }
-    },
-    incrementScale: () => {
-      if (settingsValue.scale < maxScaleValue) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ scale: settingsValue.scale + scaleIncrementValue },
-        })
-      }
-    },
-    decrementScale: () => {
-      if (settingsValue.scale > minScaleValue) {
-        setSettingsValue({
-          ...settingsValue,
-          ...{ scale: settingsValue.scale - scaleIncrementValue },
-        })
-      }
-    },
-  }
-
-  const cursor = {
-    moveTo: (position: number[]) => {
-      if (
-        position[1] < cursorMap.length &&
-        position[0] < cursorMap[position[1]].length
-      ) {
-        setCursorPosition(position)
-      }
-    },
-    up: () => {
-      if (cursorPosition[1] > 0) {
-        setCursorPosition([
-          Math.min(
-            cursorPosition[0],
-            cursorMap[cursorPosition[1] - 1].length - 1
-          ),
-          cursorPosition[1] - 1,
-        ])
-      }
-    },
-    down: () => {
-      if (cursorPosition[1] < cursorMap.length - 1) {
-        setCursorPosition([
-          Math.min(
-            cursorPosition[0],
-            cursorMap[cursorPosition[1] + 1].length - 1
-          ),
-          cursorPosition[1] + 1,
-        ])
-      }
-    },
-    left: () => {
-      if (cursorPosition[0] > 0) {
-        setCursorPosition([cursorPosition[0] - 1, cursorPosition[1]])
-      }
-    },
-    right: () => {
-      if (cursorPosition[0] < cursorMap[cursorPosition[1]].length - 1) {
-        setCursorPosition([cursorPosition[0] + 1, cursorPosition[1]])
-      }
-    },
-  }
-
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value)
+    writing.set(e.target.value).project()
+  }
+
+  const copyWritingToClipbpoadAsync = async () => {
+    try {
+      await navigator.clipboard.writeText(writingValue)
+    } catch (e) {
+      alert(e)
+    }
   }
 
   const downloadSvgAsync = async () => {
@@ -143,19 +67,25 @@ function Editor() {
 
       const handle = await window.showSaveFilePicker(options)
       const writable = await handle.createWritable()
-      await writable.write(glyphSvg)
+      await writable.write(writingSvg)
       await writable.close()
     } catch (e) {
       alert(e)
     }
   }
 
+  if (textMode && !writingRep?.at(cursorPosition[1])?.at(cursorPosition[0])) {
+    cursor.moveTo([0, 0]).project()
+  }
   React.useEffect(() => {
-    setWindowDimensions([window.innerWidth, window.innerHeight])
-
     const handleWindowResize = () => {
       setWindowDimensions([window.innerWidth, window.innerHeight])
+      if (displayRef.current?.offsetHeight) {
+        setDisplayHeight(displayRef.current?.offsetHeight - 20)
+      }
     }
+
+    handleWindowResize()
 
     window.addEventListener('resize', handleWindowResize)
 
@@ -179,27 +109,31 @@ function Editor() {
             settingsValue={settingsValue}
             textMode={textMode}
             setTextMode={setTextMode}
-            text={text}
+            copyWritingToClipbpoadAsync={copyWritingToClipbpoadAsync}
             downloadSvgAsync={downloadSvgAsync}
             smallScreen={smallScreen}
           />
         </div>
-        <div className="w-[312px] sm:w-[536px] border rounded-lg p-2 my-2 flex-1 overflow-auto border-slate-700">
+        <div
+          className="w-[312px] sm:w-[536px] border rounded-lg p-2 my-2 flex-1 overflow-auto border-slate-700"
+          ref={displayRef}
+        >
           <Display
-            glyphSvg={glyphSvg}
-            cursorMap={cursorMap}
-            cursorPosition={cursorPosition}
+            writingSvg={writingSvg}
+            writingRep={writingRep}
+            cursorPosition={!textMode ? cursorPosition : null}
             moveTo={cursor.moveTo}
-            glyphSize={settingsValue.scale * glyphBaseDimensions[0]}
-            gridMode
+            glyphSize={settingsValue.scale * editorParameters.glyphBaseSize}
+            gridMode={gridMode}
             lineWrap={settingsValue.lineWrap}
+            displayHeight={displayHeight}
           />
         </div>
 
         <div className={!textMode ? 'hidden' : 'h-[216px]'}>
           <textarea
             ref={textareaRef}
-            value={text}
+            value={writingValue}
             onChange={handleTextChange}
             className="border border-slate-700 rounded-lg p-2 h-[216px] w-[312px] sm:w-[536px]"
           />
@@ -207,13 +141,9 @@ function Editor() {
         {!textMode && (
           <div className="flex flex-row items-center">
             <Keyboard
-              text={text}
-              setText={setText}
               smallScreen={smallScreen}
+              writing={writing}
               cursor={cursor}
-              cursorPosition={cursorPosition}
-              setCursorPosition={setCursorPosition}
-              cursorMap={cursorMap}
             />
           </div>
         )}

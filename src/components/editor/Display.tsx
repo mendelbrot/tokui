@@ -1,29 +1,30 @@
 'use client'
 
+import Editor from '@/lib/Editor'
+import { CursorPosition, WritingRep } from '@/lib/EditorTypes'
 import React from 'react'
 
 type Props = {
-  glyphSvg: string
-  cursorPosition: number[] | null
-  moveTo: (position: number[]) => void
+  writingSvg: string
+  cursorPosition: CursorPosition | null
+  moveTo: Editor['cursor']['moveTo']
   glyphSize: number
-  cursorMap: number[][]
+  writingRep: WritingRep
   gridMode: boolean
   lineWrap: number | null
+  displayHeight: number | undefined
 }
 
 function Display({
-  glyphSvg,
-  cursorMap,
+  writingSvg,
+  writingRep,
   cursorPosition,
   moveTo,
   glyphSize,
   gridMode,
   lineWrap,
+  displayHeight,
 }: Props) {
-  const lineWrapBarClassName = lineWrap
-    ? `border-l border-slate-700 w-2`
-    : undefined
   return (
     <div style={{ display: 'grid' }}>
       <div
@@ -32,56 +33,77 @@ function Display({
           gridRow: '1',
         }}
       >
-        {glyphSvg && <div dangerouslySetInnerHTML={{ __html: glyphSvg }} />}
+        {writingSvg && <div dangerouslySetInnerHTML={{ __html: writingSvg }} />}
       </div>
       <div style={{ gridColumn: '1', gridRow: '1' }}>
         <div className="flex flex-row">
-          <div
-            style={{
-              width: lineWrap ? `${glyphSize * lineWrap}px` : undefined,
-            }}
-          >
-            {cursorMap.map((row, Yrow) => {
+          <div>
+            <div className={'flex flex-row items-start'}>
+              {lineWrap &&
+                Array.from({ length: lineWrap }, (_item, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      width: glyphSize,
+                      height: 0,
+                      visibility: 'hidden',
+                    }}
+                  />
+                ))}
+            </div>
+            {writingRep.map((row, Yrow) => {
               return (
                 <div
                   key={Yrow}
                   className={'flex flex-row items-start'}
                   style={{ height: glyphSize }}
                 >
-                  {row.map((_item, Xcol) => {
+                  {row.map((item, Xcol) => {
                     let itemClass: string | undefined = undefined
                     if (
                       cursorPosition &&
                       cursorPosition[1] === Yrow &&
                       cursorPosition[0] === Xcol
                     ) {
-                      itemClass =
-                        'border-2 border-red-500 border-dashed  bg-yellow-300/10'
+                      itemClass = 'border-2 border-amber-500'
                     } else if (gridMode) {
                       itemClass = 'border-b border-r border-blue-400'
-                      if (Yrow === 0 || cursorMap[Yrow - 1].length - 1 < Xcol) {
+                      if (
+                        Yrow === 0 ||
+                        writingRep[Yrow - 1].length - 1 < Xcol
+                      ) {
                         itemClass += ' border-t'
                       }
                       if (Xcol === 0) {
                         itemClass += ' border-l'
                       }
                     }
+
+                    if (item.ponaMode) {
+                      itemClass += ' bg-lime-300/30'
+                    }
+
                     return (
                       <div
                         key={Xcol}
                         className={itemClass}
                         style={{ width: glyphSize, height: glyphSize }}
-                        onClick={() => moveTo([Xcol, Yrow])}
-                      >
-                        {cursorMap[Yrow][Xcol]}
-                      </div>
+                        onClick={() => {
+                          if (cursorPosition) moveTo([Xcol, Yrow]).project()
+                        }}
+                      />
                     )
                   })}
                 </div>
               )
             })}
           </div>
-          {lineWrap && <div className="border-l border-slate-700 w-2" />}
+          {lineWrap && (
+            <div
+              className="border-l border-slate-700 w-2"
+              style={{ minHeight: displayHeight }}
+            />
+          )}
         </div>
       </div>
     </div>

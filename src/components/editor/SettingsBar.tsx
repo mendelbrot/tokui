@@ -8,24 +8,19 @@ import { CiSquareMinus, CiSquarePlus } from 'react-icons/ci'
 import { BsFiletypeTxt } from 'react-icons/bs'
 import { BsCopy } from 'react-icons/bs'
 import { MdWrapText } from 'react-icons/md'
+import Editor from '@/lib/Editor'
 
 const iconSize = '32px'
 const miniButtonClassName = 'active:bg-lime-300 p-1 rounded-lg'
 const miniSettingsMeterClassName =
   'w-8 h-8 content-center p-1 rounded-lg border border-slate-700'
-
+  
 type Props = React.PropsWithChildren & {
-  settings: {
-    toggleLineWrap: () => void
-    incrementLineWrap: () => void
-    decrementLineWrap: () => void
-    incrementScale: () => void
-    decrementScale: () => void
-  }
+  settings: Editor["settings"]
   settingsValue: HardSettings
   textMode: boolean
   setTextMode: React.Dispatch<React.SetStateAction<boolean>>
-  text: string
+  copyWritingToClipbpoadAsync: () => Promise<void>
   downloadSvgAsync: () => Promise<void>
   smallScreen: boolean
 }
@@ -35,7 +30,7 @@ function SettingsBar({
   settingsValue,
   textMode,
   setTextMode,
-  text,
+  copyWritingToClipbpoadAsync,
   downloadSvgAsync,
   smallScreen,
 }: Props) {
@@ -43,7 +38,7 @@ function SettingsBar({
     <div className="flex flex-row justify-between">
       <div className="flex flex-row items-center">
         <button
-          onClick={settings.decrementScale}
+          onClick={() => settings.decrementScale().project()}
           className={miniButtonClassName}
         >
           <HiMagnifyingGlassMinus size={iconSize} />
@@ -54,7 +49,7 @@ function SettingsBar({
           </div>
         )}
         <button
-          onClick={settings.incrementScale}
+          onClick={() => settings.incrementScale().project()}
           className={miniButtonClassName}
         >
           <HiMagnifyingGlassPlus size={iconSize} />
@@ -62,7 +57,7 @@ function SettingsBar({
       </div>
       <div className="flex flex-row items-center">
         <button
-          onClick={settings.toggleLineWrap}
+          onClick={() => settings.toggleLineWrap().project()}
           className={
             settingsValue.lineWrap
               ? 'bg-lime-300 p-1 rounded-lg'
@@ -76,7 +71,7 @@ function SettingsBar({
           style={{ visibility: settingsValue.lineWrap ? 'visible' : 'hidden' }}
         >
           <button
-            onClick={settings.decrementLineWrap}
+            onClick={() => settings.decrementLineWrap().project()}
             className={miniButtonClassName}
           >
             <CiSquareMinus size={iconSize} />
@@ -87,7 +82,7 @@ function SettingsBar({
             </div>
           )}
           <button
-            onClick={settings.incrementLineWrap}
+            onClick={() => settings.incrementLineWrap().project()}
             className={miniButtonClassName}
           >
             <CiSquarePlus size={iconSize} />
@@ -105,13 +100,7 @@ function SettingsBar({
         </button>
         <button
           className={miniButtonClassName}
-          onClick={async () => {
-            try {
-              await navigator.clipboard.writeText(text)
-            } catch (e) {
-              alert(e)
-            }
-          }}
+          onClick={() => copyWritingToClipbpoadAsync()}
         >
           <BsCopy size={iconSize} />
         </button>

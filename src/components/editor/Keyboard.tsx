@@ -5,96 +5,55 @@ import Normal0 from './keyboardLayers/Normal0'
 import Normal1 from './keyboardLayers/Normal1'
 import Small0 from './keyboardLayers/Small0'
 import Small1 from './keyboardLayers/Small1'
+import Editor from '@/lib/Editor'
 
 type Props = {
-  text: string
-  setText: React.Dispatch<React.SetStateAction<string>>
   smallScreen: boolean
-  cursor: {
-    moveTo: (position: number[]) => void
-    up: () => void
-    down: () => void
-    left: () => void
-    right: () => void
-  }
-  cursorPosition: number[]
-  setCursorPosition: React.Dispatch<React.SetStateAction<number[]>>
-  cursorMap: number[][]
+  writing: Editor['writing']
+  cursor: Editor['cursor']
 }
 
-function Keyboard({
-  text,
-  setText,
-  smallScreen,
-  cursor,
-  cursorPosition,
-  setCursorPosition,
-  cursorMap,
-}: Props) {
+function Keyboard({ smallScreen, writing, cursor }: Props) {
   const [pressedKey, setPressedKey] = React.useState<string | null>(null)
   const [layer, setLayer] = React.useState<number>(0)
 
   const handleKeyboardPress = React.useCallback(
     (keyboardKey: string) => {
-      // const textBefore = text.slice(
-      //   0,
-      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
-      // )
-      // const textAfter = text.slice(
-      //   cursorMap[cursorPosition[0]][cursorPosition[1]]
-      // )
-      console.clear()
-      console.log('cursorPosition', cursorPosition.toString())
-      // console.log('text', text)
-      console.table(cursorMap)
-      console.log(
-        'break index',
-        cursorMap[cursorPosition[1]][cursorPosition[0]]
-      )
-      // console.log('textBefore', textBefore)
-      // console.log('textAfter', textAfter)
-
       switch (keyboardKey) {
         case 'Alt': {
           setLayer((layer + 1) % 2)
           break
         }
         case 'Backspace': {
-          if (text.endsWith('_ ')) {
-            setText(text.slice(0, -2))
-          } else {
-            setText(text.slice(0, -1))
-          }
+          writing.delete().project()
           break
         }
         case 'Enter': {
-          setText(text + '\n')
-          break
-        }
-        case '#': {
-          setText(text + ' #')
-          break
-        }
-        case '_': {
-          setText(text + ' _ ')
+          writing.insert('\n').project()
           break
         }
         case 'ArrowUp': {
-          cursor.up()
+          cursor.up().project()
           break
         }
         case 'ArrowDown': {
-          cursor.down()
+          cursor.down().project()
           break
         }
         case 'ArrowLeft': {
-          cursor.left()
+          cursor.left().project()
           break
         }
         case 'ArrowRight': {
-          cursor.right()
+          cursor.right().project()
           break
         }
+        case '#':
+          writing.insert(keyboardKey).project()
+          break
+        case '_':
+          writing.insert(keyboardKey).project()
+          break
         case '0':
         case '1':
         case '2':
@@ -110,7 +69,7 @@ function Keyboard({
         case '.':
         case '6':
         case '7': {
-          setText(text + keyboardKey + ' ')
+          writing.insert(keyboardKey).project()
           break
         }
         case 'm':
@@ -131,7 +90,7 @@ function Keyboard({
         case 'o':
         case 'u':
         case ' ': {
-          setText(text + keyboardKey)
+          writing.insert(keyboardKey).project()
           break
         }
         default: {
@@ -139,7 +98,7 @@ function Keyboard({
         }
       }
     },
-    [text, setText, layer, setLayer, cursor, cursorMap, cursorPosition]
+    [writing, cursor, layer]
   )
 
   React.useEffect(() => {
@@ -168,7 +127,6 @@ function Keyboard({
         <Small0
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     } else {
@@ -176,7 +134,6 @@ function Keyboard({
         <Small1
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     }
@@ -186,7 +143,6 @@ function Keyboard({
         <Normal0
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     } else {
@@ -194,7 +150,6 @@ function Keyboard({
         <Normal1
           handleKeyboardPress={handleKeyboardPress}
           pressedKey={pressedKey}
-          setPressedKey={setPressedKey}
         />
       )
     }
