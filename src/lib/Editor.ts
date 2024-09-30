@@ -492,19 +492,22 @@ class Editor {
           leftIndex = index - 1
         }
 
-        this._writingValue =
-          this._writingValue.slice(0, leftIndex) +
-          this._writingValue.slice(rightIndex + 1)
+        if (leftIndex >= 0) {
+          this._writingValue =
+            this._writingValue.slice(0, leftIndex) +
+            this._writingValue.slice(rightIndex + 1)
 
-        this._parse()
-        this._draw()
+          this._parse()
+          this._draw()
 
-        if (
-          surroundingCharacters[0] === ' ' ||
-          surroundingCharacters[1] === '\n' ||
-          ponaMode
-        ) {
-          this.cursor.left()
+          if (
+            surroundingCharacters[0] === ' ' ||
+            surroundingCharacters[1] === '\n' ||
+            surroundingCharacters[1] === ' ' ||
+            ponaMode
+          ) {
+            this.cursor.left()
+          }
         }
       }
       return this
