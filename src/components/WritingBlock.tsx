@@ -4,19 +4,20 @@ import React from 'react'
 import Editor from '@/lib/Editor'
 import { SoftSettingsValue } from '@/lib/EditorTypes'
 
-type Props = React.PropsWithChildren & {
-  text: string
+type Props = {
+  children: string
   settings?: SoftSettingsValue
 }
 
-function TokuiWritingBlock({ text, settings }: Props) {
+function WritingBlock({ children, settings }: Props) {
+  console.log(children)
   return (
     <div
       dangerouslySetInnerHTML={{
-        __html: Editor.draw(text, settings),
+        __html: Editor.draw(children, settings),
       }}
     />
   )
 }
 
-export default TokuiWritingBlock
+export default WritingBlock

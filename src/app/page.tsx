@@ -1,6 +1,6 @@
 'use client'
 
-import TokuiWritingBlock from '@/components/TokuiWritingBlock'
+import WritingBlock from '@/components/WritingBlock'
 import useWindowDimensions from '@/lib/useWindowDimensions'
 import Link from 'next/link'
 
@@ -29,12 +29,14 @@ export default function Home() {
     <main>
       <div className="prose max-w-prose p-[16px]">
         <h1 className="mb-2 pb-2">
-          <TokuiWritingBlock
-            text={'o kam pon lon lip tokui'}
-            settings={{ scale: smallScreen ? 1.6 : 2.3 }}
-          />
+          <WritingBlock settings={{ scale: smallScreen ? 1.6 : 2.3 }}>
+            o kam pon lon lip tokui
+          </WritingBlock>
         </h1>
-        <h2 className="mt-0 pt-0" style={!smallScreen ? {fontSize: '2.25em'} : undefined}>
+        <h2
+          className="mt-0 pt-0"
+          style={!smallScreen ? { fontSize: '2.25em' } : undefined}
+        >
           o kam pon lon lip tokui
         </h2>
         <p>
