@@ -40,8 +40,9 @@ export default function Home() {
           o kam pon lon lip tokui
         </h2>
         <p>
-          Welcome to the website of tokui language: a conlang based on{' '}
-          <a href="https://tokipona.org/">Toki Pona</a> and{' '}
+          Welcome to the website of the tokui language: a conlang based on{' '}
+          <a href="https://tokipona.org/">Toki Pona</a>{' '}
+          with some ideas imported from{' '}
           <a href="https://www.ithkuil.net/">Ithkuil</a>.
         </p>
         <ul>
