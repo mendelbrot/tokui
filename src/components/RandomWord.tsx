@@ -1,6 +1,6 @@
 'use client'
 
-import words from '@/data/words/words.json'
+import words from '@/data/wordData.json'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
@@ -11,7 +11,7 @@ const RandomWord = () => {
     const wordsList = Object.keys(words.definitions)
     const randomWord = wordsList[Math.floor(Math.random() * wordsList.length)]
     const slug = encodeURI(randomWord)
-    router.push('/words/' + slug)
+    router.push('/wordData/' + slug)
   }
 
   return (

@@ -1,4 +1,4 @@
-import words from '@/data/words/words.json'
+import words from '@/data/wordData.json'
 import RandomWord from '../components/RandomWord'
 import React from 'react'
 import WritingBlock from './WritingBlock'
