@@ -1,7 +1,6 @@
-import words from '@/data/words'
-import RandomWord from '../components/random-word'
+import words from '@/data/words/words.json'
+import RandomWord from '../components/RandomWord'
 import React from 'react'
-import GlyphMulti from './glyph-multi'
 
 type Props = { letters: string }
 type Comp = React.FunctionComponent<Props>

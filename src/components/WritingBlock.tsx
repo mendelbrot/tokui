@@ -10,7 +10,6 @@ type Props = {
 }
 
 function WritingBlock({ children, settings }: Props) {
-  console.log(children)
   return (
     <div
       dangerouslySetInnerHTML={{
