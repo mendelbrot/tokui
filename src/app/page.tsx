@@ -41,8 +41,7 @@ export default function Home() {
         </h2>
         <p>
           Welcome to the website of the tokui language: a conlang based on{' '}
-          <a href="https://tokipona.org/">Toki Pona</a>{' '}
-          with some ideas imported from{' '}
+          <a href="https://tokipona.org/">Toki Pona</a> with some ideas from{' '}
           <a href="https://www.ithkuil.net/">Ithkuil</a>.
         </p>
         <ul>

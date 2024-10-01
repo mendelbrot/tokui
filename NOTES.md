@@ -84,7 +84,7 @@ npm i prettier eslint-config-prettier
 }
 ```
 
-As expected the deployement broke after switching framework.  I changed the framework preset in the project settings and now im going to merge to main to see if it works again.
+As expected the deployement broke after switching framework. I changed the framework preset in the project settings and now im going to merge to main to see if it works again.
 
 ## inline-block
 
@@ -93,6 +93,7 @@ https://tailwindcss.com/docs/display#block-and-inline
 https://stackoverflow.com/questions/18134700/css-prevent-div-width-from-expanding-to-available-width
 
 ## transform-origin svg warning
+
 i'm having this problem:
 https://github.com/vercel/next.js/issues/53342
 
@@ -130,8 +131,9 @@ module.exports = nextConfig
 ```
 
 then to use it in a file:
+
 ```
-// @ts-ignore 
+// @ts-ignore
 import words from '@/data/words.csv'
 
 console.log('words')

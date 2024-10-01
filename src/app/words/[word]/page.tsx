@@ -1,16 +1,16 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import WordDetails from '@/components/word-details'
+import WordDetails from '@/components/WordDetails'
 
 const WordDetailsPage = () => {
   const params = useParams()
-  const letters: string =
-    typeof params.letters == 'string' ? decodeURI(params.letters) : ''
+  const word: string =
+    typeof params.word == 'string' ? decodeURI(params.word) : ''
 
   return (
     <main>
-      <WordDetails letters={letters} />
+      <WordDetails word={word} />
     </main>
   )
 }
