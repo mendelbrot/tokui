@@ -1,29 +1,30 @@
-import words from '@/data/words'
-import RandomWord from '@/components/random-word'
-import WordCard from '@/components/word-card'
-import wordCategories from '@/data/word-categories'
+import words from '@/data/words/words.json'
+import RandomWord from '@/components/RandomWord'
+import WritingBlock from '@/components/WritingBlock'
+import Link from 'next/link'
 
 const Words = () => {
   return (
-    <main>
+    <div>
       <div className="fixed bottom-6 right-6">
         <RandomWord />
       </div>
-      {wordCategories.map((c) => (
-        <div key={c.tag}>
-          <div className="prose">
-            <h2>{c.title}</h2>
-          </div>  
-          <div>
+      <div className="prose">
+        {Object.entries(words.groups).map(([groupName, groupWords]) => (
+          <div key={groupName}>
+            <h2>{groupName}</h2>
+
             <div className="flex flex-wrap">
-              {words.filter(w => w.category === c.tag).map((w) => (
-                <WordCard key={w.id} word={w} />
+              {groupWords.map((word) => (
+                <Link key={word} href={'/words/' + word}>
+                  <WritingBlock>{word}</WritingBlock>
+                </Link>
               ))}
             </div>
           </div>
-        </div>
-      ))}
-    </main>
+        ))}
+      </div>
+    </div>
   )
 }
 

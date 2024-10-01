@@ -1,20 +1,7 @@
 'use client'
 
+import WritingBlock from '@/components/WritingBlock'
 import React from 'react'
-import GlyphSymbol from '@/components/glyph-symbol'
-import GlyphMulti, {
-  GlyphSymbolMulti,
-  GlyphTextMulti,
-} from '@/components/glyph-multi'
-
-type WordTokenProps = { words: string }
-type WordTokenCopm = React.FunctionComponent<WordTokenProps>
-
-const WordToken: WordTokenCopm = ({ words }) => (
-  <div className="border-2 rounded-lg p-1 m-1 inline-block">
-    <GlyphMulti sizeClass="w-12" words={words} />
-  </div>
-)
 
 export default function Learn() {
   return (
@@ -87,19 +74,19 @@ export default function Learn() {
             <th className="border">Nasal</th>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="m" />
+                <WritingBlock>m</WritingBlock>
               </div>
               m
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="n" />
+                <WritingBlock>n</WritingBlock>
               </div>
               n
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="g" />
+                <WritingBlock>g</WritingBlock>
               </div>
               g
             </td>
@@ -108,19 +95,19 @@ export default function Learn() {
             <th className="border">Stop</th>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="p" />
+                <WritingBlock>p</WritingBlock>
               </div>
               p
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="t" />
+                <WritingBlock>t</WritingBlock>
               </div>
               t
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="k" />
+                <WritingBlock>k</WritingBlock>
               </div>
               k
             </td>
@@ -129,19 +116,19 @@ export default function Learn() {
             <th className="border">Frictive</th>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="f" />
+                <WritingBlock>f</WritingBlock>
               </div>
               f
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="s" />
+                <WritingBlock>s</WritingBlock>
               </div>
               s
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="h" />
+                <WritingBlock>h</WritingBlock>
               </div>
               h
             </td>
@@ -150,26 +137,26 @@ export default function Learn() {
             <th className="border">Approxomant</th>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="w" />
+                <WritingBlock>w</WritingBlock>
               </div>
               w
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="l" />
+                <WritingBlock>l</WritingBlock>
               </div>
               l
             </td>
             <td className="border">
               <div className="w-12">
-                <GlyphSymbol letters="y" />
+                <WritingBlock>y</WritingBlock>
               </div>
               y
             </td>
           </tr>
         </tbody>
       </table>
-      <table className="table-fixed">
+      {/* <table className="table-fixed">
         <caption>vowel symbols</caption>
         <thead>
           <tr>
@@ -239,8 +226,8 @@ export default function Learn() {
             </th>
           </tr>
         </tbody>
-      </table>
-      <p>
+      </table> */}
+      {/* <p>
         Here are some examples of how these symbols are combined to make a
         character for an atomic word:
       </p>
@@ -294,7 +281,7 @@ export default function Learn() {
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
       <h1>Words</h1>
       <h2>pi</h2>
       <h2>Pronouns</h2>
@@ -374,10 +361,7 @@ export default function Learn() {
           <tr>
             <th className="border">tokui</th>
             <td className="border">
-              <GlyphSymbolMulti
-                sizeClass="w-10"
-                words={'la mok yu mi su kil kas'}
-              />
+              <WritingBlock>la mok yu mi su kil kas</WritingBlock>
             </td>
           </tr>
         </tbody>

@@ -1,14 +1,14 @@
 import words from '@/data/words/words.json'
 import RandomWord from '../components/RandomWord'
 import React from 'react'
+import WritingBlock from './WritingBlock'
 
-type Props = { letters: string }
+type Props = { word: string }
 type Comp = React.FunctionComponent<Props>
 
-const WordDetails: Comp = ({ letters }) => {
-  const thisWord = words.filter((w) => w.tokui === letters)[0]
-
-  const meanings = thisWord.meaning.split('/')
+const WordDetails: Comp = ({ word }) => {
+  //@ts-ignore
+  const definitions: string[] = words.definitions[word] || ['WORD NOT FOUND']
 
   return (
     <div className="max-w-[444px]">
@@ -16,40 +16,23 @@ const WordDetails: Comp = ({ letters }) => {
         <RandomWord />
       </div>
       <div className="p-2 border-2 rounded-lg inline-block">
-        <GlyphMulti words={letters} sizeClass="w-16" />
+        <WritingBlock>{word}</WritingBlock>
       </div>
 
-      {thisWord && (
-        <div className="prose">
-          {meanings && meanings.length > 0 && (
-            <div>
-              <h3>meanings</h3>
-              <div className="flex flex-wrap">
-                {meanings.map((m) => (
-                  <div
-                    key={'m ' + m}
-                    className="border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36"
-                  >
-                    {m}
-                  </div>
-                ))}
+      <div className="prose">
+        <div>
+          <div className="flex flex-wrap">
+            {definitions.map((m) => (
+              <div
+                key={'m ' + m}
+                className="border-2 mr-1 mb-1 px-2 py-1 rounded-lg w-36"
+              >
+                {m}
               </div>
-            </div>
-          )}
-          {thisWord.category && (
-            <div>
-              <h3>category</h3>
-              <p>{thisWord.category}</p>
-            </div>
-          )}
-          {thisWord.tokipona && (
-            <div>
-              <h3>toki pona equivalent</h3>
-              <p>{thisWord.tokipona}</p>
-            </div>
-          )}
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
