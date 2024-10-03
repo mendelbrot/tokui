@@ -1,0 +1,12 @@
+groups:
+  tokipona:
+    - kin
+    - kes
+
+definitions:
+  kin:
+    - PARTICLE (emphasis, emotion, or confirmation)
+    - TOKIPONA kin
+  kes":
+    - NOUN non-cute animal; reptile, amphibian
+    - TOKIPONA akesi

@@ -1,4 +1,4 @@
-import words from '@/data/wordData.json'
+import words from '@/data/wordData.yaml'
 import RandomWord from '@/components/RandomWord'
 import WritingBlock from '@/components/WritingBlock'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ const Words = () => {
 
             <div className="flex flex-wrap">
               {groupWords.map((word) => (
-                <Link key={word} href={'/wordData/' + word}>
+                <Link key={word} href={'/words/' + word}>
                   <WritingBlock>{word}</WritingBlock>
                 </Link>
               ))}
