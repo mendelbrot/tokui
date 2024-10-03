@@ -234,9 +234,9 @@ function p(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
-      box.y + box.height,
+      box.y + mid(box.height),
       box.x + box.width,
-      box.y + box.height
+      box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
@@ -261,6 +261,18 @@ function t(box) {
       box.x + box.width,
       box.y + mid(box.height)
     ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
     '</g>\n'
   )
 }
@@ -274,9 +286,9 @@ function k(box) {
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x,
-      box.y + box.height,
+      box.y + mid(box.height),
       box.x + box.width,
-      box.y + box.height
+      box.y + mid(box.height)
     ) +
     '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
       box.x + box.width,
@@ -287,6 +299,7 @@ function k(box) {
     '</g>\n'
   )
 }
+
 
 function f(box) {
   return (
