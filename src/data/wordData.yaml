@@ -2,6 +2,70 @@ groups:
   tokipona:
     - kin
     - kes
+    - ala
+    - las
+    - ale
+    - an
+    - ten
+    - anu
+    - wen
+    - le
+    - en
+    - esu
+    - iyo
+    - ike
+    - ilo
+    - nis
+    - yak
+    - yan
+    - yeo
+    - yo
+    - kal
+    - kalam
+    - kam
+    - kas
+    - ken
+    - peken
+    - kil
+    - wen
+    - ko
+    - kon
+    - kul
+    - kulpa
+    - kut
+    - la
+    - lap
+    - lao
+    - awa
+    - len
+    - let
+    - li
+    - lil
+    - linya
+    - lip
+    - loe
+    - lon
+    - uka
+    - luk
+    - lup
+    - ga
+    - ma
+    - man
+    - mel
+    - mi
+    - mep
+    - mok
+    - mol
+    - mon
+    - mu
+    - mun
+    - mus
+    - mut
+    - nan
+
+
+
+
 
 definitions:
   kin:
