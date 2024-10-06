@@ -1,14 +1,17 @@
-import words from '@/data/wordData.json'
+// @ts-ignore
+import wordData_ from '@/data/wordData.yaml'
+const wordData = wordData_ as WordData
 import RandomWord from '../components/RandomWord'
 import React from 'react'
 import WritingBlock from './WritingBlock'
+import { WordData } from '@/data/wordDataTypes'
 
 type Props = { word: string }
 type Comp = React.FunctionComponent<Props>
 
 const WordDetails: Comp = ({ word }) => {
   //@ts-ignore
-  const definitions: string[] = words.definitions[word] || ['WORD NOT FOUND']
+  const definitions: string[] = wordData.definitions[word] || ['WORD NOT FOUND']
 
   return (
     <div className="max-w-[444px]">
