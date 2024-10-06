@@ -671,16 +671,16 @@ const boxes = {
   },
   FT: {
     x: 12,
-    y: 8,
+    y: 7,
     width: 16,
-    height: 8,
+    height: 10,
     transform: '',
   },
   FB: {
     x: 12,
-    y: 24,
+    y: 23,
     width: 16,
-    height: 8,
+    height: 10,
     transform: '',
   },
   LF: {
@@ -692,16 +692,16 @@ const boxes = {
   },
   LFT: {
     x: 7,
-    y: 8,
+    y: 7,
     width: 10,
-    height: 8,
+    height: 10,
     transform: '',
   },
   LFB: {
     x: 7,
-    y: 24,
+    y: 23,
     width: 10,
-    height: 8,
+    height: 10,
     transform: '',
   },
   RFT: {
