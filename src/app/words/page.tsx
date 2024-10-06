@@ -1,7 +1,10 @@
-import words from '@/data/wordData.yaml'
+// @ts-ignore
+import wordData_ from '@/data/wordData.yaml'
+const wordData = wordData_ as WordData
 import RandomWord from '@/components/RandomWord'
 import WritingBlock from '@/components/WritingBlock'
 import Link from 'next/link'
+import { WordData } from '@/data/wordDataTypes'
 
 const Words = () => {
   return (
@@ -10,7 +13,7 @@ const Words = () => {
         <RandomWord />
       </div>
       <div className="prose">
-        {Object.entries(words.groups).map(([groupName, groupWords]) => (
+        {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
           <div key={groupName}>
             <h2>{groupName}</h2>
 
