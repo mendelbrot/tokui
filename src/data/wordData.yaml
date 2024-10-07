@@ -21,17 +21,17 @@ groups:
     - yeo
     - yo
     - kal
-    - kalam
+    - hia
     - kam
     - kas
     - ken
-    - peken
+    - pek
     - kil
-    - wen
+    - hen
     - ko
     - kon
     - kul
-    - kulpa
+    - kua
     - kut
     - la
     - lap
@@ -41,7 +41,7 @@ groups:
     - let
     - li
     - lil
-    - linya
+    - lia
     - lip
     - loe
     - lon
@@ -62,15 +62,287 @@ groups:
     - mus
     - mut
     - nan
-
-
-
-
+    - san
+    - nas
+    - nen
+    - ni
+    - nim
+    - nok
+    - o
+    - oli
+    - ona
+    - ope
+    - pak
+    - pai
+    - pal
+    - han
+    - pan
+    - pi
+    - pil
+    - mea
+    - gon
+    - pip
+    - oka
+    - pon
+    - sam
+    - eli
+    - sio
+    - sem
+    - ewi
+    - yel
+    - sik
+    - sin
+    - san
+    - pin
+    - ten
+    - son
+    - wel
+    - ulo
+    - sun
+    - sup
+    - sui
+    - tan
+    - tas
+    - ta
+    - elo
+    - ano
+    - tok
+    - tom
+    - upa
+    - tau
+    - gal
+    - wal
+    - wao
+    - wag
+    - wek
+    - wil
 
 definitions:
   kin:
+    - TOKIPONA a, kin
     - PARTICLE (emphasis, emotion, or confirmation)
-    - TOKIPONA kin
-  kes":
-    - NOUN non-cute animal; reptile, amphibian
+  kes:
     - TOKIPONA akesi
+    - NOUN non-cute animal; reptile, amphibian
+  ala:
+    - TOKIPONA ala
+  las:
+    - TOKIPONA alasa
+  ale:
+    - TOKIPONA ale
+  an:
+    - TOKIPONA anpa
+  ten:
+    - TOKIPONA ante
+  anu:
+    - TOKIPONA anu
+  wen:
+    - TOKIPONA awen
+  le:
+    - TOKIPONA e
+  en:
+    - TOKIPONA en
+  esu:
+    - TOKIPONA esun
+  iyo:
+    - TOKIPONA ijo
+  ike:
+    - TOKIPONA ike
+  ilo:
+    - TOKIPONA ilo
+  nis:
+    - TOKIPONA insa
+  yak:
+    - TOKIPONA jaki
+  yan:
+    - TOKIPONA yan
+  yeo:
+    - TOKIPONA jelo
+  yo:
+    - TOKIPONA jo
+  kal:
+    - TOKIPONA kala
+  hia:
+    - TOKIPONA kalama
+  kam:
+    - TOKIPONA kama
+  kas:
+    - TOKIPONA kasi
+  ken:
+    - TOKIPONA ken
+  pek:
+    - TOKIPONA kepeken
+  kil:
+    - TOKIPONA kili
+  hen:
+    - TOKIPONA kiwen
+  ko:
+    - TOKIPONA ko
+  kon:
+    - TOKIPONA kon
+  kul:
+    - TOKIPONA kule
+  kua:
+    - TOKIPONA kulupu
+  kut:
+    - TOKIPONA kute
+  la:
+    - TOKIPONA la
+  lap:
+    - TOKIPONA lape
+  lao:
+    - TOKIPONA laso
+  awa:
+    - TOKIPONA lawa
+  len:
+    - TOKIPONA len
+  let:
+    - TOKIPONA lete
+  li:
+    - TOKIPONA li
+  lil:
+    - TOKIPONA lili
+  lia:
+    - TOKIPONA linja
+  lip:
+    - TOKIPONA lipu
+  loe:
+    - TOKIPONA kin
+  lon:
+    - TOKIPONA kin
+  uka:
+    - TOKIPONA kin
+  luk:
+    - TOKIPONA kin
+  lup:
+    - TOKIPONA kin
+  ga:
+    - TOKIPONA kin
+  ma:
+    - TOKIPONA kin
+  gan:
+    - TOKIPONA kin
+  mel:
+    - TOKIPONA kin
+  mi:
+    - TOKIPONA kin
+  mep:
+    - TOKIPONA kin
+  mok:
+    - TOKIPONA kin
+  mol:
+    - TOKIPONA kin
+  mon:
+    - TOKIPONA kin
+  mu:
+    - TOKIPONA kin
+  mun:
+    - TOKIPONA kin
+  mus:
+    - TOKIPONA kin
+  mut:
+    - TOKIPONA kin
+  nan:
+    - TOKIPONA kin
+  san:
+    - TOKIPONA kin
+  nas:
+    - TOKIPONA kin
+  nen:
+    - TOKIPONA kin
+  ni:
+    - TOKIPONA kin
+  nim:
+    - TOKIPONA kin
+  nok:
+    - TOKIPONA kin
+  o:
+    - TOKIPONA kin
+  oli:
+    - TOKIPONA kin
+  ona:
+    - TOKIPONA kin
+  ope:
+    - TOKIPONA kin
+  pak:
+    - TOKIPONA kin
+  pai:
+    - TOKIPONA kin
+  pal:
+    - TOKIPONA kin
+  han:
+    - TOKIPONA kin
+  pan:
+    - TOKIPONA kin
+  pi:
+    - TOKIPONA kin
+  pil:
+    - TOKIPONA kin
+  mea:
+    - TOKIPONA kin
+  gon:
+    - TOKIPONA kin
+  pip:
+    - TOKIPONA kin
+  oka:
+    - TOKIPONA kin
+  pon:
+    - TOKIPONA kin
+  sam:
+    - TOKIPONA kin
+  ewi:
+    - TOKIPONA kin
+  yel:
+    - TOKIPONA kin
+  sik:
+    - TOKIPONA kin
+  sin:
+    - TOKIPONA kin
+  san:
+    - TOKIPONA kin
+  pin:
+    - TOKIPONA kin
+  ten:
+    - TOKIPONA kin
+  son:
+    - TOKIPONA kin
+  wel:
+    - TOKIPONA kin
+  ulo:
+    - TOKIPONA kin
+  sun:
+    - TOKIPONA kin
+  sup:
+    - TOKIPONA kin
+  sui:
+    - TOKIPONA kin
+  tan:
+    - TOKIPONA kin
+  tas:
+    - TOKIPONA kin
+  ta:
+    - TOKIPONA kin
+  elo:
+    - TOKIPONA kin
+  ano:
+    - TOKIPONA kin
+  tok:
+    - TOKIPONA kin
+  tom:
+    - TOKIPONA kin
+  upa:
+    - TOKIPONA kin
+  tau:
+    - TOKIPONA kin
+  gal:
+    - TOKIPONA kin
+  wal:
+    - TOKIPONA kin
+  wao:
+    - TOKIPONA kin
+  wag:
+    - TOKIPONA kin
+  wek:
+    - TOKIPONA kin
+  wil:
+    - TOKIPONA kin
