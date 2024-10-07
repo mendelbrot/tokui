@@ -6,7 +6,7 @@ groups:
     - las
     - ale
     - an
-    - ten
+    - ane
     - anu
     - wen
     - le
@@ -15,7 +15,7 @@ groups:
     - iyo
     - ike
     - ilo
-    - nis
+    - ina
     - yak
     - yan
     - yeo
@@ -36,7 +36,7 @@ groups:
     - la
     - lap
     - lao
-    - awa
+    - lam
     - len
     - let
     - li
@@ -53,7 +53,7 @@ groups:
     - man
     - mel
     - mi
-    - mep
+    - men
     - mok
     - mol
     - mon
@@ -61,9 +61,9 @@ groups:
     - mun
     - mus
     - mut
-    - nan
-    - san
+    - nam
     - nas
+    - nis
     - nen
     - ni
     - nim
@@ -83,10 +83,11 @@ groups:
     - gon
     - pip
     - oka
+    - pok
     - pon
     - sam
     - eli
-    - sio
+    - seo
     - sem
     - ewi
     - yel
@@ -109,11 +110,11 @@ groups:
     - tok
     - tom
     - upa
-    - tau
+    - atu
     - gal
     - wal
     - wao
-    - wag
+    - awa
     - wek
     - wil
 
@@ -132,7 +133,7 @@ definitions:
     - TOKIPONA ale
   an:
     - TOKIPONA anpa
-  ten:
+  ane:
     - TOKIPONA ante
   anu:
     - TOKIPONA anu
@@ -150,7 +151,7 @@ definitions:
     - TOKIPONA ike
   ilo:
     - TOKIPONA ilo
-  nis:
+  ina:
     - TOKIPONA insa
   yak:
     - TOKIPONA jaki
@@ -192,7 +193,7 @@ definitions:
     - TOKIPONA lape
   lao:
     - TOKIPONA laso
-  awa:
+  lam:
     - TOKIPONA lawa
   len:
     - TOKIPONA len
@@ -207,142 +208,150 @@ definitions:
   lip:
     - TOKIPONA lipu
   loe:
-    - TOKIPONA kin
+    - TOKIPONA loje
   lon:
-    - TOKIPONA kin
+    - TOKIPONA lon
   uka:
-    - TOKIPONA kin
+    - TOKIPONA luka
   luk:
-    - TOKIPONA kin
+    - TOKIPONA lukin
   lup:
-    - TOKIPONA kin
+    - TOKIPONA lupa
   ga:
-    - TOKIPONA kin
+    - TOKIPONA ma
   ma:
-    - TOKIPONA kin
+    - TOKIPONA mama
   gan:
-    - TOKIPONA kin
+    - TOKIPONA mani
   mel:
-    - TOKIPONA kin
+    - TOKIPONA meli
   mi:
-    - TOKIPONA kin
-  mep:
-    - TOKIPONA kin
+    - TOKIPONA mi
+  men:
+    - TOKIPONA mije
   mok:
-    - TOKIPONA kin
+    - TOKIPONA moku
   mol:
-    - TOKIPONA kin
+    - TOKIPONA moli
   mon:
-    - TOKIPONA kin
+    - TOKIPONA monsi
   mu:
-    - TOKIPONA kin
+    - TOKIPONA mu
   mun:
-    - TOKIPONA kin
+    - TOKIPONA mun
   mus:
-    - TOKIPONA kin
+    - TOKIPONA musi
   mut:
-    - TOKIPONA kin
-  nan:
-    - TOKIPONA kin
-  san:
-    - TOKIPONA kin
+    - TOKIPONA mute
+  nam:
+    - TOKIPONA nanpa
   nas:
-    - TOKIPONA kin
+    - TOKIPONA nasa
+  nis:
+    - TOKIPONA nasin
   nen:
-    - TOKIPONA kin
+    - TOKIPONA nena
   ni:
-    - TOKIPONA kin
+    - TOKIPONA ni
   nim:
-    - TOKIPONA kin
+    - TOKIPONA nimi
   nok:
-    - TOKIPONA kin
+    - TOKIPONA noka
   o:
-    - TOKIPONA kin
+    - TOKIPONA o
   oli:
-    - TOKIPONA kin
+    - TOKIPONA olin
   ona:
-    - TOKIPONA kin
+    - TOKIPONA ona
   ope:
-    - TOKIPONA kin
+    - TOKIPONA open
   pak:
-    - TOKIPONA kin
+    - TOKIPONA pakala
   pai:
-    - TOKIPONA kin
+    - TOKIPONA pali
   pal:
-    - TOKIPONA kin
+    - TOKIPONA palisa
   han:
-    - TOKIPONA kin
+    - TOKIPONA pan
   pan:
-    - TOKIPONA kin
+    - TOKIPONA pana
   pi:
-    - TOKIPONA kin
+    - TOKIPONA pi
   pil:
-    - TOKIPONA kin
+    - TOKIPONA pilin
   mea:
-    - TOKIPONA kin
+    - TOKIPONA pimeja
   gon:
-    - TOKIPONA kin
+    - TOKIPONA pini
   pip:
-    - TOKIPONA kin
+    - TOKIPONA pipi
   oka:
-    - TOKIPONA kin
+    - TOKIPONA poka
+  pok:
+    - TOKIPONA poki
   pon:
     - TOKIPONA kin
   sam:
-    - TOKIPONA kin
+    - TOKIPONA sama
+  eli:
+    - TOKIPONA seli
+  seo:
+    - TOKIPONA selo
+  sem:
+    - TOKIPONA seme
   ewi:
-    - TOKIPONA kin
+    - TOKIPONA sewi
   yel:
-    - TOKIPONA kin
+    - TOKIPONA sijelo
   sik:
-    - TOKIPONA kin
+    - TOKIPONA sike
   sin:
-    - TOKIPONA kin
+    - TOKIPONA sin
   san:
-    - TOKIPONA kin
+    - TOKIPONA sina
   pin:
-    - TOKIPONA kin
+    - TOKIPONA sinpin
   ten:
-    - TOKIPONA kin
+    - TOKIPONA sitelen
   son:
-    - TOKIPONA kin
+    - TOKIPONA sona
   wel:
-    - TOKIPONA kin
+    - TOKIPONA soweli
   ulo:
-    - TOKIPONA kin
+    - TOKIPONA suli
   sun:
-    - TOKIPONA kin
+    - TOKIPONA suno
   sup:
-    - TOKIPONA kin
+    - TOKIPONA supa
   sui:
-    - TOKIPONA kin
+    - TOKIPONA suwi
   tan:
-    - TOKIPONA kin
+    - TOKIPONA tan
   tas:
-    - TOKIPONA kin
+    - TOKIPONA taso
   ta:
-    - TOKIPONA kin
+    - TOKIPONA tawa
   elo:
-    - TOKIPONA kin
+    - TOKIPONA telo
   ano:
-    - TOKIPONA kin
+    - TOKIPONA tenpo
   tok:
-    - TOKIPONA kin
+    - TOKIPONA toki
   tom:
-    - TOKIPONA kin
+    - TOKIPONA tomo
   upa:
-    - TOKIPONA kin
-  tau:
-    - TOKIPONA kin
+    - TOKIPONA unpa
+  atu:
+    - TOKIPONA uta
   gal:
-    - TOKIPONA kin
+    - TOKIPONA utala
   wal:
-    - TOKIPONA kin
+    - TOKIPONA walo
   wao:
-    - TOKIPONA kin
-  wag:
-    - TOKIPONA kin
+    - TOKIPONA waso
+  awa:
+    - TOKIPONA wawa
   wek:
-    - TOKIPONA kin
+    - TOKIPONA weka
   wil:
-    - TOKIPONA kin
+    - TOKIPONA wile
