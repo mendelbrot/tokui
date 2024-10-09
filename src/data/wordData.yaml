@@ -129,27 +129,19 @@ groups:
     - ana
     - mis
 
-  role-grammar:
-    - a
-    - i
-    - e
-    - he
-    - o
-    - u
-
   alphabet:
-    - yo
     - me
-    - fi
-    - ka
-    - hu
-    - se
-    - lo
-    - ge
-    - wi
-    - pa
     - nu
+    - ge
+    - pa
     - te
+    - ka
+    - fi
+    - se
+    - hu
+    - wi
+    - lo
+    - ya
   
   numbers:
     - la
@@ -170,6 +162,96 @@ groups:
     - mutut
     - sam
 
+
+  role-grammar:
+    - a
+    - i
+    - e
+    - he
+    - o
+    - u
+
+  ithkuil-case-transrelative:
+    - m01
+    - m02
+    - m03
+    - m04
+    - m05
+    - m01
+    - m11
+    - m12
+    - m13
+
+  ithkuil-case-appositive:
+    - n01
+    - n02
+    - n03
+    - n04
+    - n05
+    - n01
+    - n11
+    - n12
+    - n13
+
+  ithkuil-case-associative:
+    - g01
+    - g02
+    - g03
+    - g04
+    - g05
+    - g01
+    - g11
+    - g12
+    - g13
+
+  ithkuil-case-adverbial:
+    - p01
+    - p02
+    - p03
+    - p04
+    - p05
+    - p01
+    - p11
+    - p12
+    - p13
+
+  ithkuil-case-relational:
+    - t01
+    - t02
+    - t03
+    - t04
+    - t05
+    - t01
+    - t11
+    - t12
+
+  ithkuil-case-affinitive:
+    - k01
+    - k02
+    - k03
+    - k04
+    - k05
+    - k01
+    - k11
+    - k12
+
+  ithkuil-case-spacetime:
+    - f01
+    - f02
+    - f03
+    - f04
+    - f05
+    - f01
+    - f11
+    - f12
+    - f13
+    - f14
+    - f15
+    - f20
+    - f21
+    - f22
+    - f23
+    - f24
 
 definitions:
   a:
@@ -446,7 +528,7 @@ definitions:
     - TOKIPONA lanpan (ku)
   mis:
     - TOKIPONA misikeke (ku)
-  yo:
+  ya:
     - LETTER y
   me: 
     - LETTER m
@@ -490,4 +572,5 @@ definitions:
     - MATH radix (point)
   mutut:
     - MATH exponent, to the power of
+  
   

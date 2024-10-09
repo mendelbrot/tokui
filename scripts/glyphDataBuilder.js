@@ -985,7 +985,8 @@ const forms = {
   A5: ['LFT', 'LFB', 'RF', 'RFT', 'RFB'],
   B2: ['T', 'B'],
   B3: ['L', 'I3', 'I4'],
-  B4: ['I1', 'I2', 'I3', 'I4'],
+  B4: ['I1', 'I3', 'I2', 'I4'],
+  C3: ['T', 'I2', 'I4']
 }
 
 function build() {

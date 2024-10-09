@@ -193,7 +193,12 @@ class Editor {
           )
         ) {
           if (sequence.length < 5) {
-            form = 'B' + sequence.length
+            if (sequence.length === 3 && !glyphData.groups.V.some((i) => i === sequence[0])) {
+              form = 'C3'
+            } else {
+              form = 'B' + sequence.length
+            }
+            
           }
         } else {
           form = 'A' + sequence.length
