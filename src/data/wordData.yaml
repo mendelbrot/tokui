@@ -1,6 +1,5 @@
 groups:
   tokipona:
-    - kin
     - kes
     - ala
     - las
@@ -19,7 +18,7 @@ groups:
     - yak
     - yan
     - yeo
-    - yo
+    - yon
     - kal
     - hia
     - kam
@@ -117,11 +116,72 @@ groups:
     - awa
     - wek
     - wil
+    - kin
+    - ako
+    - oko
+    - isi
+    - eko
+    - mos
+    - osi
+    - sok
+    - meo
+    - epi
+    - ana
+    - mis
+
+  role-grammar:
+    - a
+    - i
+    - e
+    - he
+    - o
+    - u
+
+  alphabet:
+    - yo
+    - me
+    - fi
+    - ka
+    - hu
+    - se
+    - lo
+    - ge
+    - wi
+    - pa
+    - nu
+    - te
+  
+  numbers:
+    - la
+    - we
+    - tu
+    - gi
+    - so
+    - lu
+
+  math:
+    - ha
+    - wa
+    - pet
+    - pan
+    - wek
+    - mut
+    - isi
+    - mutut
+    - sam
+
 
 definitions:
-  kin:
-    - TOKIPONA a, kin
-    - PARTICLE (emphasis, emotion, or confirmation)
+  a:
+    - ROLE-GRAMMAR marks the relation of the clause (verb)
+  i: 
+    - ROLE-GRAMMAR marks an entity's semantic role (case)
+  e: 
+    - ROLE-GRAMMAR marks an entity (noun, subject or object)
+  he: 
+    - ROLE-GRAMMAR marks the head of the clause or sub-clause
+  u:
+    - ROLE-GRAMMAR marks the clause as a question. clause-initial placement.
   kes:
     - TOKIPONA akesi
     - NOUN non-cute animal; reptile, amphibian
@@ -159,7 +219,7 @@ definitions:
     - TOKIPONA yan
   yeo:
     - TOKIPONA jelo
-  yo:
+  yon:
     - TOKIPONA jo
   kal:
     - TOKIPONA kala
@@ -189,6 +249,7 @@ definitions:
     - TOKIPONA kute
   la:
     - TOKIPONA la
+    - NUMBER 0
   lap:
     - TOKIPONA lape
   lao:
@@ -243,6 +304,7 @@ definitions:
     - TOKIPONA musi
   mut:
     - TOKIPONA mute
+    - MATH times
   nam:
     - TOKIPONA nanpa
   nas:
@@ -259,6 +321,7 @@ definitions:
     - TOKIPONA noka
   o:
     - TOKIPONA o
+    - ROLE-GRAMMAR marks the clause as an order, command. clause-initial placement.
   oli:
     - TOKIPONA olin
   ona:
@@ -275,6 +338,7 @@ definitions:
     - TOKIPONA pan
   pan:
     - TOKIPONA pana
+    - MATH plus
   pi:
     - TOKIPONA pi
   pil:
@@ -293,6 +357,7 @@ definitions:
     - TOKIPONA kin
   sam:
     - TOKIPONA sama
+    - MATH equals
   eli:
     - TOKIPONA seli
   seo:
@@ -353,5 +418,76 @@ definitions:
     - TOKIPONA wawa
   wek:
     - TOKIPONA weka
+    - MATH minus
   wil:
     - TOKIPONA wile
+  kin:
+    - TOKIPONA kin (ku)
+  ako:
+    - TOKIPONA namako (ku)
+  oko:
+    - TOKIPONA oko (ku)
+  isi:
+    - TOKIPONA kipisi (ku)
+    - MATH divide
+  eko:
+    - TOKIPONA leko (ku)
+  mos:
+    - TOKIPONA monsuta (ku)
+  osi:
+    - TOKIPONA tonsi (ku)
+  sok:
+    - TOKIPONA soko (ku)
+  meo:
+    - TOKIPONA meso (ku)
+  epi:
+    - TOKIPONA epiku (ku)
+  ana:
+    - TOKIPONA lanpan (ku)
+  mis:
+    - TOKIPONA misikeke (ku)
+  yo:
+    - LETTER y
+  me: 
+    - LETTER m
+  fi:
+    - LETTER f
+  ka: 
+    - LETTER k
+  hu:
+    - LETTER h
+  se:
+    - LETTER s
+  lo:
+    - LETTER l
+  ge:
+    - LETTER g
+  wi:
+    - LETTER w
+  pa:
+    - LETTER p
+  nu:
+    - LETTER n
+  te:
+    - LETTER t
+  we:
+    - NUMBER 1
+  tu:
+    - NUMBER 2
+  gi:
+    - NUMBER 3
+  so:
+    - NUMBER 4
+  lu:
+    - NUMBER 5
+  ha:
+    - NUMBER 6
+    - MATH _*6**_
+  wa:
+    - NUMBER 216 (6**3)
+    - MATH _*216**_
+  pet:
+    - MATH radix (point)
+  mutut:
+    - MATH exponent, to the power of
+  
