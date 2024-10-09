@@ -683,36 +683,36 @@ const boxes = {
     height: 10,
     transform: '',
   },
-  LF: {
-    x: 4,
+  RF: {
+    x: 20,
     y: 4,
     width: 16,
     height: 32,
     transform: '',
   },
-  LFT: {
-    x: 7,
+  RFT: {
+    x: 23,
     y: 7,
     width: 10,
     height: 10,
     transform: '',
   },
-  LFB: {
-    x: 7,
+  RFB: {
+    x: 23,
     y: 23,
     width: 10,
     height: 10,
     transform: '',
   },
-  RFT: {
-    x: 24,
+  LFT: {
+    x: 4,
     y: 4,
     width: 12,
     height: 14,
     transform: '',
   },
-  RFB: {
-    x: 24,
+  LFB: {
+    x: 4,
     y: 22,
     width: 12,
     height: 14,
@@ -981,8 +981,8 @@ const forms = {
   X: ['F'],
   A2: ['F', 'FT'],
   A3: ['F', 'FT', 'FB'],
-  A4: ['LF', 'LFT', 'LFB', 'RFT'],
-  A5: ['LF', 'LFT', 'LFB', 'RFT', 'RFB'],
+  A4: ['I1', 'I2', 'I3', 'I4'],
+  A5: ['LFT', 'LFB', 'RF', 'RFT', 'RFB'],
   B2: ['T', 'B'],
   B3: ['L', 'I3', 'I4'],
   B4: ['I1', 'I2', 'I3', 'I4'],
