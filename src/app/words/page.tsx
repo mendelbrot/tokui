@@ -8,7 +8,7 @@ import { WordData } from '@/data/wordDataTypes'
 
 const Words = () => {
   return (
-    <div>
+    <div className="max-w-prose p-[16px]">
       <div className="fixed bottom-6 right-6">
         <RandomWord />
       </div>
