@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Learn() {
   return (
-    <main className="prose max-w-prose">
+    <main className="prose max-w-prose p-[16px]">
       <h1>Sounds and writing</h1>
       <h2>Sounds and letters</h2>
       <p>
@@ -31,7 +31,7 @@ export default function Learn() {
           </tr>
         </tbody>
       </table>
-      <p>
+       <p>
         All of the basic, atomic words in tokui are short, two or three letter
         words. Atomic words have one of these three forms; here <b>C</b> is a
         consonant and <b>V</b> is a vowel:
@@ -282,7 +282,7 @@ export default function Learn() {
           </tr>
         </tbody>
       </table> */}
-      <h1>Words</h1>
+       <h1>Words</h1>
       <h2>pi</h2>
       <h2>Pronouns</h2>
       <h2>Configuration and affiliation</h2>
@@ -299,7 +299,7 @@ export default function Learn() {
         specifies how it&apos;s interpreted in the clause.
       </p>
 
-      <table className="table-auto">
+      <table className="table-fixed">
         <caption>Clause terminology</caption>
         <thead>
           <tr>
@@ -338,7 +338,7 @@ export default function Learn() {
 
       <p>Here&apos;s an example of a clause:</p>
 
-      <table className="table-auto">
+      <table className="table-fixed">
         <caption>Example: I eat lettuce.</caption>
         <tbody>
           <tr>
