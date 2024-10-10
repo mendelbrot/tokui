@@ -49,7 +49,7 @@ groups:
     - lup
     - ga
     - ma
-    - man
+    - gan
     - mel
     - mi
     - men
@@ -60,9 +60,9 @@ groups:
     - mun
     - mus
     - mut
-    - nam
+    - nap
     - nas
-    - nis
+    - has
     - nen
     - ni
     - nim
@@ -92,7 +92,7 @@ groups:
     - yel
     - sik
     - sin
-    - san
+    - yin
     - pin
     - ten
     - son
@@ -105,11 +105,11 @@ groups:
     - tas
     - ta
     - elo
-    - ano
+    - eno
     - tok
     - tom
     - upa
-    - atu
+    - uta
     - gal
     - wal
     - wao
@@ -269,36 +269,53 @@ definitions:
     - NOUN non-cute animal; reptile, amphibian
   ala:
     - TOKIPONA ala
+    - ADJECTIVE no, not, zero
+    - NOTE in the context of math/numbers, la is an abbreviation of ala and means zero
   las:
     - TOKIPONA alasa
+    - VERB to hunt, forage
   ale:
     - TOKIPONA ale
+    - ADJECTIVE all; abundant, countless, bountiful, every, plentiful
+    - NOUN abundance, everything, life, universe
   an:
     - TOKIPONA anpa
+    - ADJECTIVE bowing down, downward, humble, lowly, dependant
   ane:
     - TOKIPONA ante
+    - ADJECTIVE different, antered, changed, other
   anu:
     - TOKIPONA anu
+    - PARTICLE or
   wen:
     - TOKIPONA awen
+    - ADJECTIVE enduring, kept, protected, safe, waiting, staying
+    - PRE-VERB to continue to
   le:
     - TOKIPONA e
+    - PARTICLE (before direct object)
   en:
     - TOKIPONA en
+    - PARTICLE (between multiple subjects)
   esu:
     - TOKIPONA esun
+    - NOUN market, shop, fair, bazar, business transaction
   iyo:
     - TOKIPONA ijo
+    - NOUN thing, phenomenon, object, matter
   ike:
     - TOKIPONA ike
+    - ADJECTIVE bad, negative, non-essential, irrelevant
   ilo:
     - TOKIPONA ilo
+    - NOUN tool, implement, machine, device
   ina:
     - TOKIPONA insa
+    - NOUN center, content, inside, between; internal organ, stomach
   yak:
     - TOKIPONA jaki
   yan:
-    - TOKIPONA yan
+    - TOKIPONA jan
   yeo:
     - TOKIPONA jelo
   yon:
@@ -387,11 +404,11 @@ definitions:
   mut:
     - TOKIPONA mute
     - MATH times
-  nam:
+  nap:
     - TOKIPONA nanpa
   nas:
     - TOKIPONA nasa
-  nis:
+  has:
     - TOKIPONA nasin
   nen:
     - TOKIPONA nena
@@ -436,7 +453,7 @@ definitions:
   pok:
     - TOKIPONA poki
   pon:
-    - TOKIPONA kin
+    - TOKIPONA pona
   sam:
     - TOKIPONA sama
     - MATH equals
@@ -454,7 +471,7 @@ definitions:
     - TOKIPONA sike
   sin:
     - TOKIPONA sin
-  san:
+  yin:
     - TOKIPONA sina
   pin:
     - TOKIPONA sinpin
@@ -480,7 +497,7 @@ definitions:
     - TOKIPONA tawa
   elo:
     - TOKIPONA telo
-  ano:
+  eno:
     - TOKIPONA tenpo
   tok:
     - TOKIPONA toki
@@ -488,7 +505,7 @@ definitions:
     - TOKIPONA tomo
   upa:
     - TOKIPONA unpa
-  atu:
+  uta:
     - TOKIPONA uta
   gal:
     - TOKIPONA utala
