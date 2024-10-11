@@ -2,8 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'to kui',
-  description: 'the website of the to kui language',
+  title: 'tokui',
+  description: 'the website of the tokui conlan',
 }
 
 export default function RootLayout({
