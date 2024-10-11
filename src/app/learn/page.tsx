@@ -61,7 +61,7 @@ export default function Learn() {
         The tokui script is similar to{' '}
         <a href="https://en.wikipedia.org/wiki/Hangul">Hangul</a> in appearance
         and construction. Basic vowel and consonant symbols are combined into
-        characters. In tokui, a character can hold up to 5 letters.
+        characters. In tokui, a character can hold up to five letters.
       </p>
       <p>
         There are well defined rules for building characters. Basic letters are
@@ -234,9 +234,48 @@ export default function Learn() {
       </p>
       <h2>case grammar</h2>
       <p>
-        The idea for this case grammar is an import from Ithkuil. I find kind of
-        revolutionary, and although a bit abstract, its actually very simple,
-        with three core grammatical particles.
+        The idea for this case grammar is an import from Ithkuil. I find it to
+        be kind of revolutionary, and although a bit abstract, its actually
+        simple because there is a small set of grammatical components and
+        minimal grammatical rules. A clause has three main items: relation,
+        entity, and case.
+      </p>
+      <p>
+        Relation is marked by <b>a</b>. The relation is equivalent to the verb
+        of the clause. A tokui clause has at most one relation.
+      </p>
+      <p>
+        Entity is marked by <b>e</b>. An entity is equivalent a noun. Tokui can
+        have any number of entities, including zero.
+      </p>
+      <p>
+        Case is marked by <b>i</b>. It is the way that an entity of the clause
+        takes part in the relation of the clause. Tokui can have any number of
+        cases, including zero. Generally there is one case for each entity of
+        the clause.
+      </p>
+      <p>
+        Case is less familiar because English, like most languages, uses word
+        order and irregular grammatical constructs to convey case. Case
+        isn&apos;t explicit but it&apos;s always present in a clause. Familiar
+        examples of case from basic grammar are subject and object. English is a
+        Subject Verb Object (SVO) language. The subject is the thing that&apos;s
+        doing the verb, and it goes before the verb (in English); the object is
+        the thing the verb is being done to and it goes after the verb. Instead
+        of using word order to convey case, tokui case grammar uses markers to
+        explicitly identify the ways the entities participate in the verb. Case
+        is also called semantic role. I will try to be consistent with using the
+        word case, because that&apos;s what it&apos;s called on the ithkuil
+        website, and it think case may be the more common term in linguistics
+        too.
+      </p>
+      <p>
+        For a concrete example of case, consider the sentence &quot;I borrowed a
+        book from the library&quot;. Here I&apos;d say that I have the case{' '}
+        <b>agent</b>, the book has the case <b>content</b>, and the library has
+        the case <b>source</b>. With tokui case grammar, I&apos;d say something
+        like: &quot;<b>a</b> borrow <b>i</b> agent <b>e</b> me <b>i</b> source{' '}
+        <b>e</b> library <b>i</b> content <b>e</b> book&quot;.
       </p>
     </main>
   )

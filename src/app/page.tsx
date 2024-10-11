@@ -100,9 +100,9 @@ export default function Home() {
           Ithkuil as I was learning them.
         </p>
         <p>
-          I noticed that an Ithkuil sentence is somewhat analogous to a tensor
-          equation. Ithkuil words are multi-dimensional matrix-like structures
-          that narrow down the meaning by specifying a number of parameters.
+          To me, an Ithkuil sentence is somewhat loosely analogous to a tensor
+          equation. Ithkuil words are multi-dimensional matrix-like structures.
+          They narrow down the meaning by specifying a number of parameters.
           Each parameter&apos;s value is specified by a letter or letter group
           in a specific place order called a slot. There are practically
           limitless possible combinations of morphemes to build words. This
@@ -110,10 +110,10 @@ export default function Home() {
           to be memorized. Only the seed root words and the possible values for
           the morphemes need to be memorized. (That being said, there are
           thousands of root words, and the number of morpheme and affix values
-          are in the high hundreds.)
+          is in the high hundreds.)
         </p>
         <p>
-          Another thing I noticed about Ithkuil is, it doesn&apos;t take full
+          Another notable thing about Ithkuil is, it doesn&apos;t take full
           advantage of composition. In a sense the matrix like morphology can be
           thought of as a kind of composition, but I think it&apos;s more
           accurate to call it something else, like transformation. In contrast,
@@ -130,7 +130,7 @@ export default function Home() {
           As I said, I started out trying to make a Toki Pona / Ithkuil hybrid
           language. Then it occurred to me that I could do what I wanted and
           maybe get a better result from modifying Toki Pona and adding Ithkuil
-          extensions to it.
+          to it, as extensions.
         </p>
       </div>
     </main>
