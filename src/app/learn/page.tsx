@@ -1,20 +1,31 @@
 'use client'
 
 import WritingBlock from '@/components/WritingBlock'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Learn() {
   return (
     <main className="prose max-w-prose p-[16px]">
-      <h1>Sounds and writing</h1>
-      <h2>Sounds and letters</h2>
+      <h2>sounds and letters</h2>
       <p>
-        There are 12 consonants and five vowels. The sounds and letters are the
-        same as Toki Pona, except with the added consonants <b>g</b>, <b>f</b>,
-        and <b>h</b>. The letter <b>h</b> is intended to be voiced as in Bach,
-        but it can be unvoiced if the speaker prefers. The Toki Pona letter{' '}
-        <b>j</b> is replaced with <b>y</b>. As in Toki Pona, the five vowels are
-        pronounced: l<b>ee</b> w<b>ay</b> l<b>aw</b> l<b>ow</b> m<b>oo</b>.
+        There are 12 consonants and five vowels. The sounds and letters are
+        slightly extended from{' '}
+        <a href="https://en.wikipedia.org/wiki/Toki_Pona#Phonology_and_phonotactics">
+          Toki Pona
+        </a>
+        . There are added consonants <b>g</b>, <b>f</b>, and <b>h</b>. In Latin
+        script, Toki Pona <b>j</b> is written as <b>y</b>.
+      </p>
+      <p>
+        There is no distinction between voiced and un-voiced consonants, they
+        are equivalent. For instance, <b>f</b> can be an <b>f</b> sound or a{' '}
+        <b>v</b> sound; <b>t</b> can be a <b>t</b> sound or a <b>d</b> sound.
+        Also, <b>l</b> can be an <b>r</b> sound if preferred.
+      </p>
+      <p>
+        As in Toki Pona, the five vowels are pronounced: l<b>ee</b> w<b>ay</b> l
+        <b>aw</b> l<b>ow</b> m<b>oo</b>.
       </p>
       <table className="table-fixed">
         <caption>tokui letters</caption>
@@ -31,36 +42,37 @@ export default function Learn() {
           </tr>
         </tbody>
       </table>
-       <p>
-        All of the basic, atomic words in tokui are short, two or three letter
-        words. Atomic words have one of these three forms; here <b>C</b> is a
-        consonant and <b>V</b> is a vowel:
+      <p>
+        Tokui words are short, with at most 5 letters in a word. The words
+        borrowed from Toki Pona have been reduced to three letters or less. As
+        in Toki Pona, there are no consonant clusters or blended vowels.
       </p>
-      <ul>
-        <li>CV</li>
-        <li>CVV</li>
-        <li>CVC</li>
-      </ul>
+      <p>
+        There can be two vowels in a row, but they are pronounced separately,
+        not blended.
+      </p>
       <p>
         Words don&apos;t end with the consonants <b>h</b>, <b>w</b>, or <b>y</b>{' '}
         because a vowel followed by one of these consonants can be hard to
         pronounce.
       </p>
+      <h2>tokui native script</h2>
       <p>
-        When there are two vowels in a row, they are pronounced distinctly.
-        There are no blended vowels or diphthongs. Also, vowels aren&apos;t
-        doubled: two vowels in a row must be different from each other.
+        The tokui script is similar to{' '}
+        <a href="https://en.wikipedia.org/wiki/Hangul">Hangul</a> in appearance
+        and construction. Basic vowel and consonant symbols are combined into
+        characters. In tokui, a character can hold up to 5 letters.
       </p>
-      <h2>Writing system</h2>
       <p>
-        There is a writing system for tokui: Each atomic word gets one
-        character. The frame of the character is the starting consonant. Inside
-        the frame, the first vowel is placed at the top, and the second vowel or
-        the second consonant is placed at the bottom.
+        There are well defined rules for building characters. Basic letters are
+        place beside, below, or within other letters. A consonant can be a frame
+        enclosing up to two other letters. The next two tables show the tokui
+        letters. For examples of how they&apos;re built into characters, see the
+        list of <Link href="/words">tokui words</Link>, or play around with the{' '}
+        <Link href="/editor">tokui text editor</Link>.
       </p>
-      <p>The consonant symbols map to the place and manner of articulation.</p>
       <table className="table-fixed">
-        <caption>consonant symbols</caption>
+        <caption>consonants</caption>
         <thead>
           <tr>
             <th className="border">Manner \ Place</th>
@@ -156,219 +168,43 @@ export default function Learn() {
           </tr>
         </tbody>
       </table>
-      {/* <table className="table-fixed">
-        <caption>vowel symbols</caption>
-        <thead>
-          <tr>
-            <th className="border"></th>
-            <th className="border">i</th>
-            <th className="border">e</th>
-            <th className="border">a</th>
-            <th className="border">o</th>
-            <th className="border">u</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th className="border"> First vowel</th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="-i" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="-e" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="-a" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="-o" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="-u" />
-              </div>
-            </th>
-          </tr>
-          <tr>
-            <th className="border"> Second vowel</th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="--i" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="--e" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="--a" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="--o" />
-              </div>
-            </th>
-            <th className="border">
-              <div className="w-12">
-                <GlyphSymbol letters="--u" />
-              </div>
-            </th>
-          </tr>
-        </tbody>
-      </table> */}
-      {/* <p>
-        Here are some examples of how these symbols are combined to make a
-        character for an atomic word:
-      </p>
       <table className="table-fixed">
-        <caption>CV word examples</caption>
+        <caption>vowels</caption>
         <tbody>
           <tr>
             <td className="border">
-              <WordToken words="mi" />
-              <WordToken words="ne" />
-              <WordToken words="ga" />
-              <WordToken words="po" />
-              <WordToken words="tu" />
-              <WordToken words="ki" />
-              <WordToken words="fe" />
-              <WordToken words="sa" />
+              <div className="w-12">
+                <WritingBlock>i</WritingBlock>
+              </div>
+              i
+            </td>
+            <td className="border">
+              <div className="w-12">
+                <WritingBlock>e</WritingBlock>
+              </div>
+              e
+            </td>
+            <td className="border">
+              <div className="w-12">
+                <WritingBlock>a</WritingBlock>
+              </div>
+              a
+            </td>
+            <td className="border">
+              <div className="w-12">
+                <WritingBlock>o</WritingBlock>
+              </div>
+              o
+            </td>
+            <td className="border">
+              <div className="w-12">
+                <WritingBlock>u</WritingBlock>
+              </div>
+              u
             </td>
           </tr>
         </tbody>
       </table>
-      <table className="table-fixed">
-        <caption>CVV word examples</caption>
-        <tbody>
-          <tr>
-            <td className="border">
-              <WordToken words="fie" />
-              <WordToken words="sia" />
-              <WordToken words="heo" />
-              <WordToken words="weu" />
-              <WordToken words="lai" />
-              <WordToken words="yae" />
-              <WordToken words="moa" />
-              <WordToken words="nou" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <table className="table-fixed">
-        <caption>CVC word examples</caption>
-        <tbody>
-          <tr>
-            <td className="border">
-              <WordToken words="tik" />
-              <WordToken words="fes" />
-              <WordToken words="hal" />
-              <WordToken words="wom" />
-              <WordToken words="yun" />
-              <WordToken words="gip" />
-              <WordToken words="tek" />
-              <WordToken words="faf" />
-            </td>
-          </tr>
-        </tbody>
-      </table> */}
-       <h1>Words</h1>
-      <h2>pi</h2>
-      <h2>Pronouns</h2>
-      <h2>Configuration and affiliation</h2>
-      <h1>Sentences</h1>
-      <p>
-        The core ideas around sentence structure are: semantic roles; marking
-        the head of sub-clauses. These ideas are adapted from Ithkuil.
-      </p>
-      <h2>Clauses</h2>
-      <p>
-        A clause is a statement that is either an entire sentence or a part of a
-        sentence. In tokui, a clause is made up of a relation and one or more
-        entities. Each of the entities in a clause has a semantic role that
-        specifies how it&apos;s interpreted in the clause.
-      </p>
-
-      <table className="table-fixed">
-        <caption>Clause terminology</caption>
-        <thead>
-          <tr>
-            <th className="border">Term</th>
-            <th className="border">Definition</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="border">Clause</td>
-            <td className="border">
-              a relation + one or more entities with semantic roles
-            </td>
-          </tr>
-          <tr>
-            <td className="border">Relation</td>
-            <td className="border">
-              an item that specifies how entities are semantically related in a
-              clause
-            </td>
-          </tr>
-          <tr>
-            <td className="border">Entity</td>
-            <td className="border">
-              an item that is related to other entities (or itself) in a clause
-            </td>
-          </tr>
-          <tr>
-            <td className="border">Semantic role</td>
-            <td className="border">
-              an item that specifies how an entity is interpreted in a clause
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>Here&apos;s an example of a clause:</p>
-
-      <table className="table-fixed">
-        <caption>Example: I eat lettuce.</caption>
-        <tbody>
-          <tr>
-            <th className="border">English</th>
-            <td className="border">
-              I eat lettuce. <br /> I feed myself the content lettuce.
-            </td>
-          </tr>
-          <tr>
-            <th className="border">Clause notation</th>
-            <td className="border">
-              (Relation:assertion) feed (Role:inductive-agent) me (Role:content)
-              lettuce
-            </td>
-          </tr>
-          <tr>
-            <th className="border">tokui romanized</th>
-            <td className="border">la mok yu mi su kil kas</td>
-          </tr>
-          <tr>
-            <th className="border">tokui</th>
-            <td className="border">
-              <WritingBlock>la mok yu mi su kil kas</WritingBlock>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Sub-clauses</h2>
-      <h1>Math</h1>
     </main>
   )
 }

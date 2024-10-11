@@ -58,7 +58,7 @@ groups:
     - mon
     - mu
     - mun
-    - mus
+    - usi
     - mut
     - nap
     - nas
@@ -261,9 +261,9 @@ definitions:
   e: 
     - ROLE-GRAMMAR marks an entity (noun, subject or object)
   he: 
-    - ROLE-GRAMMAR marks the head of the clause or sub-clause
+    - ROLE-GRAMMAR marks the head of a sub-clause
   u:
-    - ROLE-GRAMMAR marks the clause as a question. clause-initial placement.
+    - ROLE-GRAMMAR marks the clause as a question. clause-initial placement
   kes:
     - TOKIPONA akesi
     - NOUN non-cute animal; reptile, amphibian
@@ -399,7 +399,7 @@ definitions:
     - TOKIPONA mu
   mun:
     - TOKIPONA mun
-  mus:
+  usi:
     - TOKIPONA musi
   mut:
     - TOKIPONA mute
