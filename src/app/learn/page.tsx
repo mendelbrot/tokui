@@ -65,11 +65,11 @@ export default function Learn() {
       </p>
       <p>
         There are well defined rules for building characters. Basic letters are
-        place beside, below, or within other letters. A consonant can be a frame
-        enclosing up to two other letters. The next two tables show the tokui
-        letters. For examples of how they&apos;re built into characters, see the
-        list of <Link href="/words">tokui words</Link>, or play around with the{' '}
-        <Link href="/editor">tokui text editor</Link>.
+        placed beside, below, or within other letters. A consonant can be a
+        frame surrounding up to two other letters. The next two tables show the
+        tokui letters. For examples of how they&apos;re built into characters,
+        see the list of <Link href="/words">tokui words</Link>, or play around
+        with the <Link href="/editor">tokui text editor</Link>.
       </p>
       <table className="table-fixed">
         <caption>consonants</caption>
@@ -205,6 +205,39 @@ export default function Learn() {
           </tr>
         </tbody>
       </table>
+      <h2>Toki Pona words and grammar</h2>
+      <p>
+        The tokui lexicon is an extension of Toki Pona. With few exceptions
+        (such as kijetesantakalu) every Toki Pona word has a tokui counterpart.
+        I shortened all the words that are more than three letters. Most of the
+        shortened words are recognizable. A few of them were completely changed,
+        mainly because conflicts with other shortened words.
+      </p>
+      <p>
+        Tokui grammar is also an extension of Toki Pona. The particles <b>li</b>
+        , <b>e</b>, <b>pi</b>, <b>la</b>, <b>en</b>, and so on are included.{' '}
+        <b>e</b> is replaced with <b>le</b> though, because <b>e</b> is reserved
+        for another purpose in tokui. There is also no <b>a</b>, again because
+        it&apos;s reserved for something else in tokui, but <b>kin</b> can be
+        used instead.
+      </p>
+      <p>
+        Basically any Toki Pona sentence can be trivially translated to tokui by
+        a 1-1 replacement of words. In this document, I will skip summarizing
+        the mechanics of Toki Pona since it&apos;s not a distinguishing feature
+        of this language. I learned Toki Pona from the{' '}
+        <a href="https://sona.pona.la/wiki/Toki_Pona:_The_Language_of_Good">
+          official book
+        </a>{' '}
+        by Sonja Lang. (Not to say that my Toki Pona learning is in complete in
+        any sense: toki mi li ike lili.)
+      </p>
+      <h2>case grammar</h2>
+      <p>
+        The idea for this case grammar is an import from Ithkuil. I find kind of
+        revolutionary, and although a bit abstract, its actually very simple,
+        with three core grammatical particles.
+      </p>
     </main>
   )
 }

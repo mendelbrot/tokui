@@ -53,6 +53,85 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <h2>the purpose of tokui</h2>
+        <p>
+          As a starting point, tokui is a clone of Toki Pona. For me, the reason
+          for creating tokui is to have a basic framework of a language to add
+          extensions to. I choose to build from Toki Pona because I admire the
+          language, it&apos;s simple and minimal, and has an active community.
+          Because it&apos;s minimal, it works well as the core of my language.
+          Also, learning tokui has a side benefit of learning some Toki Pona,
+          and learning tokui is easier if one already knows some Toki Pona.
+        </p>
+        <p>
+          Toki Pona is the core of the language, but the main purpose is the
+          extensions. Extensions are extra, optional features that can be added
+          either individually or in combination. Some tokui extensions are:
+        </p>
+        <ul>
+          <li>
+            <a href="https://youtu.be/qID2B4MK7Y0">A base six number system</a>
+          </li>
+          <li>
+            <a href="https://ithkuil.net/newithkuil_04_case.htm">
+              Ithkuil case grammar
+            </a>
+          </li>
+          <li>
+            Select Ithkuil morphology components, including case,
+            configuration, affiliation, and extension
+          </li>
+        </ul>
+        <p>
+          Components from Ithkuil feature prominently in the extensions. The
+          name tokui is meant to be a mix of Toki Pona and Ithkuil. When I
+          started working on the language, I wasn&apos;t planning to clone Toki
+          Pona, I was thinking about creating a new language that bridged Toki
+          Pona and Ithkuil.
+        </p>
+        <p>
+          Ithkuil is complicated, phonetically packed, and notoriously
+          difficult. I found some ideas in Ithkuil very interesting, but the
+          number of nuanced option in the morphology is daunting, the script has
+          too many permutations for me to learn, and there are too many sounds I
+          can&apos;t pronounce. So instead of putting in massive effort to learn
+          Ithkuil, I started focusing on the concepts and trying to make a
+          simplified language that incorporated some of the concepts from
+          Ithkuil as I was learning them.
+        </p>
+        <p>
+          I noticed that an Ithkuil sentence is somewhat analogous to a tensor
+          equation. Ithkuil words are multi-dimensional matrix-like structures
+          that narrow down the meaning by specifying a number of parameters.
+          Each parameter&apos;s value is specified by a letter or letter group
+          in a specific place order called a slot. There are practically
+          limitless possible combinations of morphemes to build words. This
+          construction allows the words to be compact and they don&apos;t need
+          to be memorized. Only the seed root words and the possible values for
+          the morphemes need to be memorized. (That being said, there are
+          thousands of root words, and the number of morpheme and affix values
+          are in the high hundreds.)
+        </p>
+        <p>
+          Another thing I noticed about Ithkuil is, it doesn&apos;t take full
+          advantage of composition. In a sense the matrix like morphology can be
+          thought of as a kind of composition, but I think it&apos;s more
+          accurate to call it something else, like transformation. In contrast,
+          composition is how Toki Pona compound words are built from basic
+          words. The choice of basic words and their order creates a structure
+          with a meaning that can be interpreted from the words. Ithkuil, as far
+          as I know, does not use this tool. Root words can&apos;t be combined
+          with eachother to make new words. I speculate that a reason this type
+          of composition isn&apos;t included in Ithkuil may be because it is
+          fuzzy and imprecise, and a goal of Ithkuil is to be both nuanced and
+          precise.
+        </p>
+        <p>
+          As I said, I started out trying to make a Toki Pona / Ithkuil hybrid
+          language. Then it occurred to me that I could do what I wanted and
+          maybe get a better result from modifying Toki Pona and adding Ithkuil
+          extensions to it.
+        </p>
       </div>
     </main>
   )
