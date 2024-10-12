@@ -162,6 +162,57 @@ groups:
     - mutut
     - sam
 
+  proper-names:
+    - topon
+    - tikul
+    - tokui
+
+  ithkuil-affiliation-configuration--3-2--3-1:
+    - h1m
+    - h1n
+    - h1g
+    - h1p
+    - h1t
+    - h1k
+    - h1f
+    - h1s
+    - h1h
+    - h2m
+    - h2n
+    - h2g
+    - h2p
+    - h2t
+    - h2k
+    - h2f
+    - h2s
+    - h2h
+    - h3m
+    - h3n
+    - h3g
+    - h3p
+    - h3t
+    - h3k
+    - h3f
+    - h3s
+    - h3h
+    - h4m
+    - h4n
+    - h4g
+    - h4p
+    - h4t
+    - h4k
+    - h4f
+    - h4s
+    - h4h
+  
+  ithkuil-extension--3-4:
+    - gn
+    - gt
+    - gs
+    - gl
+    - gm
+    - gp
+
   case-grammar:
     - a
     - i
@@ -797,4 +848,172 @@ definitions:
     - The Elapsive case.
   s12:
     - NEW-ITHKUIL 4.9.8 PLM
-    - The Prolimitive case.   
+    - The Prolimitive case.  
+  topon:
+    - NOUN Toki Pona
+  tikul:
+    - NOUN Ithkuil
+  tokui:
+    - NOUN Tokui
+  gn:
+    - NEW-ITHKUIL 3.4.1 DEL
+    - The Delimitive extension.
+  gt:
+    - NEW-ITHKUIL 3.4.2 PRX
+    - The Proximal extension.  
+  gs:
+    - NEW-ITHKUIL 3.4.3 ICP
+    - The Inceptive extension. 
+  gl:
+    - NEW-ITHKUIL 3.4.4 ATV
+    - The Attenuative extension. 
+  gm:
+    - NEW-ITHKUIL 3.4.5 GRA
+    - The Graduative extension. 
+  gp:
+    - NEW-ITHKUIL 3.4.6 DPL
+    - The Depletive extension.  
+  h1m:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MSS Similar Seperate Configuration
+  h1n:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MSC Similar Connected Configuration
+  h1g:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MSF Similar Fused Configuration
+  h1p:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MDS Dissimilar Seperate Configuration
+  h1t:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MDC Dissimilar Connected Configuration
+  h1k:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MDF Dissimilar Fused Configuration
+  h1f:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MFS Fuzzy Seperate Configuration
+  h1s:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MFC Fuzzy Connected Configuration
+  h1h:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - MFF Fuzzy Fused Configuration
+  h2m:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MSS Similar Seperate Configuration
+  h2n:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MSC Similar Connected Configuration
+  h2g:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MSF Similar Fused Configuration
+  h2p:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MDS Dissimilar Seperate Configuration
+  h2t:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MDC Dissimilar Connected Configuration
+  h2k:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MDF Dissimilar Fused Configuration
+  h2f:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MFS Fuzzy Seperate Configuration
+  h2s:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MFC Fuzzy Connected Configuration
+  h2h:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - ASO Associative Affiliation
+    - MFF Fuzzy Fused Configuration
+  h3m:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MSS Similar Seperate Configuration
+  h3n:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MSC Similar Connected Configuration
+  h3g:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MSF Similar Fused Configuration
+  h3p:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MDS Dissimilar Seperate Configuration
+  h3t:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MDC Dissimilar Connected Configuration
+  h3k:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MDF Dissimilar Fused Configuration
+  h3f:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MFS Fuzzy Seperate Configuration
+  h3s:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MFC Fuzzy Connected Configuration
+  h3h:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - COA Coalescent Affiliation
+    - MFF Fuzzy Fused Configuration
+  h4m:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MSS Similar Seperate Configuration
+  h4n:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MSC Similar Connected Configuration
+  h4g:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MSF Similar Fused Configuration
+  h4p:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MDS Dissimilar Seperate Configuration
+  h4t:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MDC Dissimilar Connected Configuration
+  h4k:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MDF Dissimilar Fused Configuration
+  h4f:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MFS Fuzzy Seperate Configuration
+  h4s:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - VAR Variative Affiliation
+    - MFC Fuzzy Connected Configuration
+  h4h:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configurati
+    - VAR Variative Affiliation
+    - MFF Fuzzy Fused Configuration
