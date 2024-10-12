@@ -142,7 +142,7 @@ groups:
     - wi
     - lo
     - ya
-  
+
   numbers:
     - la
     - we
@@ -162,7 +162,6 @@ groups:
     - mutut
     - sam
 
-
   case-grammar:
     - a
     - i
@@ -171,7 +170,7 @@ groups:
     - o
     - u
 
-  ithkuil-case-transrelative:
+  ithkuil-case-transrelative--4-2:
     - m01
     - m02
     - m03
@@ -182,7 +181,7 @@ groups:
     - m12
     - m13
 
-  ithkuil-case-appositive:
+  ithkuil-case-appositive--4-3:
     - n01
     - n02
     - n03
@@ -193,7 +192,7 @@ groups:
     - n12
     - n13
 
-  ithkuil-case-associative:
+  ithkuil-case-associative--4-4:
     - g01
     - g02
     - g03
@@ -204,7 +203,7 @@ groups:
     - g12
     - g13
 
-  ithkuil-case-adverbial:
+  ithkuil-case-adverbial--4-5:
     - p01
     - p02
     - p03
@@ -215,7 +214,7 @@ groups:
     - p12
     - p13
 
-  ithkuil-case-relational:
+  ithkuil-case-relational--4-6:
     - t01
     - t02
     - t03
@@ -225,7 +224,7 @@ groups:
     - t11
     - t12
 
-  ithkuil-case-affinitive:
+  ithkuil-case-affinitive--4-7:
     - k01
     - k02
     - k03
@@ -235,7 +234,7 @@ groups:
     - k11
     - k12
 
-  ithkuil-case-spacetime:
+  ithkuil-case-spacetime-1--4-8:
     - f01
     - f02
     - f03
@@ -244,26 +243,28 @@ groups:
     - f01
     - f11
     - f12
-    - f13
-    - f14
-    - f15
-    - f20
-    - f21
-    - f22
-    - f23
-    - f24
+
+  ithkuil-case-spacetime-2--4-9:
+    - s01
+    - s02
+    - s03
+    - s04
+    - s05
+    - s01
+    - s11
+    - s12
 
 definitions:
   a:
-    - ROLE-GRAMMAR marks the relation of the clause (verb)
-  i: 
-    - ROLE-GRAMMAR marks an entity's semantic role (case)
-  e: 
-    - ROLE-GRAMMAR marks an entity (noun, subject or object)
-  he: 
-    - ROLE-GRAMMAR marks the head of a sub-clause
+    - CASE-GRAMMAR marks the relation of the clause (verb)
+  i:
+    - CASE-GRAMMAR marks an entity's semantic role (case)
+  e:
+    - CASE-GRAMMAR marks an entity (noun, subject or object)
+  he:
+    - CASE-GRAMMAR marks the head of a sub-clause
   u:
-    - ROLE-GRAMMAR marks the clause as a question. clause-initial placement
+    - CASE-GRAMMAR marks the clause as a question. clause-initial placement
   kes:
     - TOKIPONA akesi
     - NOUN non-cute animal; reptile, amphibian
@@ -420,7 +421,7 @@ definitions:
     - TOKIPONA noka
   o:
     - TOKIPONA o
-    - ROLE-GRAMMAR marks the clause as an order, command. clause-initial placement.
+    - CASE-GRAMMAR marks the clause as an order, command. clause-initial placement.
   oli:
     - TOKIPONA olin
   ona:
@@ -547,11 +548,11 @@ definitions:
     - TOKIPONA misikeke (ku)
   ya:
     - LETTER y
-  me: 
+  me:
     - LETTER m
   fi:
     - LETTER f
-  ka: 
+  ka:
     - LETTER k
   hu:
     - LETTER h
@@ -589,5 +590,211 @@ definitions:
     - MATH radix (point)
   mutut:
     - MATH exponent, to the power of
-  
-  
+  m01:
+    - NEW-ITHKUIL 4.2.1 THM
+    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.  Its semantic role is that of CONTENT.
+  m02:
+    - NEW-ITHKUIL 4.2.2 INS
+    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event. Its semantic role is that of INSTRUMENT.
+  m03:
+    - NEW-ITHKUIL 4.2.3 ABS
+    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event. Its semantic role is that of PATIENT.
+  m04:
+    - NEW-ITHKUIL 4.2.4 AFF
+    - The Affective case. The party who undergoes an unwilled, affective experience. Its semantic role is that of EXPERIENCER.
+    - EXAMPLES coughing, sneezing, feeling hot/cold, trembling, experiencing sensory input (tactile, olfactory, visual, aural, gustatory), proprioceptive states, psychological/emotional states, reflex reactions such as cringing, yawning, ducking, screaming in fright, etc.
+  m05:
+    - NEW-ITHKUIL 4.2.5 STM
+    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient. Its semantic role is that of STIMULUS.
+    - EXAMPLES The hammer exemplifies toolship, The man possesses a cat, That book contains poems..
+  m10:
+    - NEW-ITHKUIL 4.2.6 EFF
+    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent. Note that the exact nature of the enablement is specifiable via the ENB affix described in the Affixes document. Its semantic role is that of ENABLER.
+  m11:
+    - NEW-ITHKUIL 4.2.7 ERG
+    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.  Its semantic role is that of AGENT or FORCE.
+  m12:
+    - NEW-ITHKUIL 4.2.8 DAT
+    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication. Its semantic role is that of RECIPIENT.
+    - EXAMPLES Give the dog a bone, I'll tell her your secret, The host introduced me to the guests.
+  m13:
+    - NEW-ITHKUIL 4.2.9 IND
+    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party. ts semantic role is that of simultaneous AGENT and PATIENT.
+    - EXAMPLES The boys run in the playground, We talked for hours, The couple eats dinner.
+  n01:
+    - NEW-ITHKUIL 4.3.1 POS
+    - The Possessive case.
+  n02:
+    - NEW-ITHKUIL 4.3.2 PRP
+    - The Proprietive case. 
+  n03:
+    - NEW-ITHKUIL 4.3.3 GEN
+    - The Genitive case.
+  n04:
+    - NEW-ITHKUIL 4.3.4 ATT
+    - The Attributive case.
+  n05:
+    - NEW-ITHKUIL 4.3.5 PDC
+    - The Productive case. 
+  n10:
+    - NEW-ITHKUIL 4.3.6 ITP
+    - The Interpretative case.
+  n11:
+    - NEW-ITHKUIL 4.3.7 OGN
+    - The Originative case.
+  n12:
+    - NEW-ITHKUIL 4.3.8 IDP
+    - The Interdependent case. 
+  n13:
+    - NEW-ITHKUIL 4.3.9 PAR
+    - The Partitive case.
+  g01:
+    - NEW-ITHKUIL 4.4.1 APL
+    - The Applicative case.
+  g02:
+    - NEW-ITHKUIL 4.4.2 PUR
+    - The Purposive case. 
+  g03:
+    - NEW-ITHKUIL 4.4.3 TRA
+    - The Transmissive case.
+  g04:
+    - NEW-ITHKUIL 4.4.4 DFR
+    - The Deferential case.
+  g05:
+    - NEW-ITHKUIL 4.4.5 CRS
+    - The Contrastive case. 
+  g10:
+    - NEW-ITHKUIL 4.4.6 TSP
+    - The Transpositive case.
+  g11:
+    - NEW-ITHKUIL 4.4.7 CMM
+    - The Commutative case.
+  g12:
+    - NEW-ITHKUIL 4.4.8 CMP
+    - The Comparative case. 
+  g13:
+    - NEW-ITHKUIL 4.4.9 CSD
+    - The Considerative case.
+  p01:
+    - NEW-ITHKUIL 4.5.1 FUN
+    - The Functive case.
+  p02:
+    - NEW-ITHKUIL 4.5.2 TFM
+    - The Transformative case. 
+  p03:
+    - NEW-ITHKUIL 4.5.3 CLA
+    - The Classificative case.
+  p04:
+    - NEW-ITHKUIL 4.5.4 RSL
+    - The Resultative case.
+  p05:
+    - NEW-ITHKUIL 4.5.5 CSM
+    - The Consumptive case. 
+  p10:
+    - NEW-ITHKUIL 4.5.6 CON
+    - The Concessive case.
+  p11:
+    - NEW-ITHKUIL 4.5.7 AVR
+    - The Aversive case.
+  p12:
+    - NEW-ITHKUIL 4.5.8 CVS
+    - The Conversive case. 
+  p13:
+    - NEW-ITHKUIL 4.5.9 SIT
+    - The Situative case.
+  t01:
+    - NEW-ITHKUIL 4.6.1 PRN
+    - The Pertinential case.
+  t02:
+    - NEW-ITHKUIL 4.6.2 DSP
+    - The Descriptive case. 
+  t03:
+    - NEW-ITHKUIL 4.6.3 COR
+    - The Correlative case.
+  t04:
+    - NEW-ITHKUIL 4.6.4 CPS
+    - The Compositive case.
+  t05:
+    - NEW-ITHKUIL 4.6.5 COM
+    - The Comitative case. 
+  t10:
+    - NEW-ITHKUIL 4.6.6 UTL
+    - The Utilitative case.
+  t11:
+    - NEW-ITHKUIL 4.6.7 PRD
+    - The Predicative case.
+  t12:
+    - NEW-ITHKUIL 4.6.8 RLT
+    - The Relative case. 
+  k01:
+    - NEW-ITHKUIL 4.7.1 ACT
+    - The Activative case.
+  k02:
+    - NEW-ITHKUIL 4.7.2 ASI
+    - The Assimilative case. 
+  k03:
+    - NEW-ITHKUIL 4.7.3 ESS
+    - The Essive case.
+  k04:
+    - NEW-ITHKUIL 4.7.4 TRM
+    - The Terminative case.
+  k05:
+    - NEW-ITHKUIL 4.7.5 SEL
+    - The Selective case. 
+  k10:
+    - NEW-ITHKUIL 4.7.6 CFM
+    - The Conformative case.
+  k11:
+    - NEW-ITHKUIL 4.7.7 DEP
+    - The Dependent case.
+  k12:
+    - NEW-ITHKUIL 4.7.8 VOC
+    - The Vocative case. 
+  f01:
+    - NEW-ITHKUIL 4.8.1 LOC
+    - The Locative case.
+  f02:
+    - NEW-ITHKUIL 4.8.2 ATD
+    - The Attendant case. 
+  f03:
+    - NEW-ITHKUIL 4.8.3 ALL
+    - The Allative case.
+  f04:
+    - NEW-ITHKUIL 4.8.4 ABL
+    - The Ablative case.
+  f05:
+    - NEW-ITHKUIL 4.8.5 ORI
+    - The Orientative case. 
+  f10:
+    - NEW-ITHKUIL 4.8.6 IRL
+    - The Interrelative case.
+  f11:
+    - NEW-ITHKUIL 4.8.7 INV
+    - The Intrative case.
+  f12:
+    - NEW-ITHKUIL 4.8.8 NAV
+    - The Navigative case. 
+  s01:
+    - NEW-ITHKUIL 4.9.1 CNR
+    - The concursive case.
+  s02:
+    - NEW-ITHKUIL 4.9.2 ASS
+    - The Assessive case. 
+  s03:
+    - NEW-ITHKUIL 4.9.3 PER
+    - The Periodic case.
+  s04:
+    - NEW-ITHKUIL 4.9.4 PRO
+    - The Precursive case.
+  s05:
+    - NEW-ITHKUIL 4.9.5 PCV
+    - The Precursive case. 
+  s10:
+    - NEW-ITHKUIL 4.9.6 PCR
+    - The Postcursive case.
+  s11:
+    - NEW-ITHKUIL 4.9.7 ELP
+    - The Elapsive case.
+  s12:
+    - NEW-ITHKUIL 4.9.8 PLM
+    - The Prolimitive case.   
