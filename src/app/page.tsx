@@ -12,12 +12,12 @@ const navItems = [
     label: 'Learn',
   },
   {
-    url: '/editor',
-    label: 'Editor',
-  },
-  {
     url: '/words',
     label: 'Words',
+  },
+  {
+    url: '/editor',
+    label: 'Editor',
   },
 ]
 
