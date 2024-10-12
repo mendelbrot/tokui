@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { HardSettings } from '@/lib/draw'
+import { SettingsValue } from '@/lib/EditorTypes'
 import { IoCodeDownload } from 'react-icons/io5'
 import { HiMagnifyingGlassMinus, HiMagnifyingGlassPlus } from 'react-icons/hi2'
 import { CiSquareMinus, CiSquarePlus } from 'react-icons/ci'
@@ -16,8 +16,8 @@ const miniSettingsMeterClassName =
   'w-8 h-8 content-center p-1 rounded-lg border border-slate-700'
   
 type Props = React.PropsWithChildren & {
-  settings: Editor["settings"]
-  settingsValue: HardSettings
+  settings: Editor['settings']
+  settingsValue: SettingsValue
   textMode: boolean
   setTextMode: React.Dispatch<React.SetStateAction<boolean>>
   copyWritingToClipbpoadAsync: () => Promise<void>
