@@ -4,10 +4,10 @@
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { WordData } from '@/data/wordDataTypes'
+import NavButton from './NavButton'
 
-const RandomWord = () => {
+const RandomWordButton = () => {
   const router = useRouter()
 
   const handleRandom = () => {
@@ -18,19 +18,12 @@ const RandomWord = () => {
   }
 
   return (
-    <button
+    <NavButton
       onClick={handleRandom}
-      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-emerald-200 hover:bg-opacity-70"
-    >
-      <Image
-        className="opacity-30 rounded-lg"
-        src="/icons/random.png"
-        alt="go to random word"
-        width="64"
-        height="64"
-      />
-    </button>
+      imgSrc="/icons/random.png"
+      imgAlt="go to random word"
+    />
   )
 }
 
-export default RandomWord
+export default RandomWordButton

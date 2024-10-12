@@ -163,7 +163,7 @@ groups:
     - sam
 
 
-  role-grammar:
+  case-grammar:
     - a
     - i
     - e

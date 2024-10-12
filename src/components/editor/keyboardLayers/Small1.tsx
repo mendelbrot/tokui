@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import draw from '@/lib/draw'
 import Key from '../Key'
 import KeyGlyph from '../KeyGlyph'
 
