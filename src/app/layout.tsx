@@ -14,9 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex flex-col items-center w-screen">
-            {children}
-        </div>
+        <div className="flex flex-col items-center w-full">{children}</div>
       </body>
     </html>
   )
