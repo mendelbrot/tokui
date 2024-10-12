@@ -78,8 +78,8 @@ export default function Home() {
             </a>
           </li>
           <li>
-            Select Ithkuil morphology components, including case,
-            configuration, affiliation, and extension
+            Select Ithkuil morphology components, including case, configuration,
+            affiliation, and extension
           </li>
         </ul>
         <p>
@@ -127,10 +127,10 @@ export default function Home() {
           precise.
         </p>
         <p>
-          As I said, I started out trying to make a Toki Pona / Ithkuil hybrid
-          language. Then it occurred to me that I could do what I wanted and
-          maybe get a better result from modifying Toki Pona and adding Ithkuil
-          to it, as extensions.
+          I started out trying to make a Toki Pona / Ithkuil hybrid language.
+          Then it occurred to me that I could do what I wanted and maybe get a
+          better result from modifying Toki Pona and adding Ithkuil inspired
+          features to it, as extensions.
         </p>
       </div>
     </main>

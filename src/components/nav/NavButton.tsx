@@ -24,10 +24,10 @@ function NavButton(props: Props) {
   return (
     <button
       onClick={onClick}
-      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-emerald-200 hover:bg-opacity-70 ml-4"
+      className="border-2 rounded-lg bg-opacity-90 bg-white hover:bg-emerald-200 hover:bg-opacity-70 ml-4"
     >
       <Image
-        className="opacity-30 rounded-lg"
+        className="opacity-50 rounded-lg"
         src={props.imgSrc}
         alt={props.imgAlt}
         width="64"
