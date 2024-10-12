@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import { WordData } from '@/data/wordDataTypes'
 import NavButton from './NavButton'
 
-const RandomWord = () => {
+const RandomWordButton = () => {
   const router = useRouter()
 
   const handleRandom = () => {
@@ -26,4 +26,4 @@ const RandomWord = () => {
   )
 }
 
-export default RandomWord
+export default RandomWordButton

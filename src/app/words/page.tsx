@@ -1,7 +1,9 @@
 // @ts-ignore
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
-import RandomWord from '@/components/RandomWord'
+import RandomWordButton from '@/components/nav/RandomWordButton'
+import NavButton from '@/components/nav/NavButton'
+import NavContainer from '@/components/nav/NavContainer'
 import WritingBlock from '@/components/WritingBlock'
 import Link from 'next/link'
 import { WordData } from '@/data/wordDataTypes'
@@ -9,9 +11,10 @@ import { WordData } from '@/data/wordDataTypes'
 const Words = () => {
   return (
     <div className="max-w-prose p-[16px]">
-      <div className="fixed bottom-6 right-6">
-        <RandomWord />
-      </div>
+      <NavContainer>
+        <NavButton href="/" imgAlt="home" imgSrc="/icons/tomo.svg" />
+        <RandomWordButton />
+      </NavContainer>
       <div className="prose">
         {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
           <div key={groupName}>

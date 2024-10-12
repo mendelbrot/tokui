@@ -245,14 +245,14 @@ export default function Learn() {
         of the clause. A tokui clause has at most one relation.
       </p>
       <p>
-        Entity is marked by <b>e</b>. An entity is equivalent a noun. Tokui can
-        have any number of entities, including zero.
+        Entity is marked by <b>e</b>. An entity is equivalent a noun. A tokui
+        clause can have any number of entities, including zero.
       </p>
       <p>
         Case is marked by <b>i</b>. It is the way that an entity of the clause
-        takes part in the relation of the clause. Tokui can have any number of
-        cases, including zero. Generally there is one case for each entity of
-        the clause.
+        takes part in the relation of the clause. A tokui clause can have any
+        number of cases, including zero. Generally there is one case for each
+        entity of the clause.
       </p>
       <p>
         Case is less familiar because English, like most languages, uses word

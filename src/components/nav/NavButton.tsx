@@ -1,11 +1,7 @@
 'use client'
 
-// @ts-ignore
-import wordData_ from '@/data/wordData.yaml'
-const wordData = wordData_ as WordData
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { WordData } from '@/data/wordDataTypes'
 
 type Props = {
   href?: string
@@ -28,7 +24,7 @@ function NavButton(props: Props) {
   return (
     <button
       onClick={onClick}
-      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-emerald-200 hover:bg-opacity-70"
+      className="border-2 rounded-lg bg-opacity-70 bg-white hover:bg-emerald-200 hover:bg-opacity-70 ml-4"
     >
       <Image
         className="opacity-30 rounded-lg"
