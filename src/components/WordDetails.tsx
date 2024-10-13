@@ -7,6 +7,7 @@ import NavContainer from '@/components/nav/NavContainer'
 import React from 'react'
 import WritingBlock from './WritingBlock'
 import { WordData } from '@/data/wordDataTypes'
+import lnWord from '@/lib/ln-word'
 
 type Props = { word: string }
 type Comp = React.FunctionComponent<Props>
@@ -14,6 +15,7 @@ type Comp = React.FunctionComponent<Props>
 const WordDetails: Comp = ({ word }) => {
   //@ts-ignore
   const definitions: string[] = wordData.definitions[word] || ['WORD NOT FOUND']
+  const soundedOutLnWord = lnWord(word)
 
   return (
     <div>
@@ -32,7 +34,7 @@ const WordDetails: Comp = ({ word }) => {
         >
           {word}
         </WritingBlock>
-        <h2>{word}</h2>
+        <h2>{soundedOutLnWord ? `${word} (${soundedOutLnWord})` : word}</h2>
       </div>
 
       <div className="prose">
