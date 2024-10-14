@@ -1,7 +1,10 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import WordDetails from '@/components/WordDetails'
+import WordDetails from '@/components/words/WordDetails'
+import NavContainer from '@/components/nav/NavContainer'
+import NavButton from '@/components/nav/NavButton'
+import RandomWordButton from '@/components/nav/RandomWordButton'
 
 const WordDetailsPage = () => {
   const params = useParams()
@@ -9,22 +12,19 @@ const WordDetailsPage = () => {
     typeof params.word == 'string' ? decodeURI(params.word) : ''
 
   return (
-    <main className="max-w-prose p-[16px]">
-      <WordDetails word={word} />
-      <span>
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      </span>
-    </main>
+    <div>
+      <NavContainer>
+        <NavButton
+          href="/words"
+          imgSrc="/icons/chevron-back.svg"
+          imgAlt="back to words page"
+        />
+        <RandomWordButton />
+      </NavContainer>
+      <div className="max-w-prose p-[16px]">
+        <WordDetails word={word} />
+      </div>
+    </div>
   )
 }
 
