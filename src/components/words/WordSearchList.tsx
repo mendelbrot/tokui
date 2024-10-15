@@ -3,10 +3,11 @@
 // @ts-ignore
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
-import WritingBlock from '@/components/WritingBlock'
+import WritingBlock from '@/components/glyphs/WritingBlock'
 import { WordData } from '@/data/wordDataTypes'
 import React from 'react'
 import Spanner from '@/components/Spanner'
+import Link from 'next/link'
 
 function WordSearchList() {
   const [searchQueryA, setSearchQueryA] = React.useState<string>('')
@@ -47,12 +48,14 @@ function WordSearchList() {
           .map(([wordName, wordDefinitions]) => (
             <li key={wordName} className="flex items-start mt-4 pt-4 border-t">
               <div>
-                <WritingBlock
-                  className="p-2 border-2 rounded-lg mr-2"
-                  settings={{ scale: 2 }}
-                >
-                  {wordName}
-                </WritingBlock>
+                <Link href={'/words/' + wordName}>
+                  <WritingBlock
+                    className="p-2 border-2 rounded-lg mr-2"
+                    settings={{ scale: 2 }}
+                  >
+                    {wordName}
+                  </WritingBlock>
+                </Link>
                 <h2 className="">{wordName}</h2>
               </div>
               <div>

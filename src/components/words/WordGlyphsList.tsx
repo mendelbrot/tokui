@@ -3,7 +3,7 @@
 // @ts-ignore
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
-import WritingBlock from '@/components/WritingBlock'
+import WritingBlock from '@/components/glyphs/WritingBlock'
 import Link from 'next/link'
 import { WordData } from '@/data/wordDataTypes'
 import React from 'react'
