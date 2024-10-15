@@ -1,3 +1,24 @@
+ln-word-mapping:
+  m: me
+  n: nu
+  g: ge
+  p: pa
+  t: te
+  k: ka
+  f: fi
+  s: se
+  h: hu
+  w: wi
+  l: lo
+  y: ya
+  0: la
+  1: we
+  2: tu
+  3: gi
+  4: so
+  5: lu
+  6: ha
+
 groups:
   tokipona:
     - kes
@@ -168,6 +189,7 @@ groups:
     - tokui
 
   ithkuil-affiliation-configuration--3-2--3-1:
+    - h1w
     - h1m
     - h1n
     - h1g
@@ -177,6 +199,7 @@ groups:
     - h1f
     - h1s
     - h1h
+    - h2w
     - h2m
     - h2n
     - h2g
@@ -186,6 +209,7 @@ groups:
     - h2f
     - h2s
     - h2h
+    - h3w
     - h3m
     - h3n
     - h3g
@@ -195,6 +219,7 @@ groups:
     - h3f
     - h3s
     - h3h
+    - h4w
     - h4m
     - h4n
     - h4g
@@ -227,7 +252,7 @@ groups:
     - m03
     - m04
     - m05
-    - m01
+    - m10
     - m11
     - m12
     - m13
@@ -238,7 +263,7 @@ groups:
     - n03
     - n04
     - n05
-    - n01
+    - n10
     - n11
     - n12
     - n13
@@ -249,7 +274,7 @@ groups:
     - g03
     - g04
     - g05
-    - g01
+    - g10
     - g11
     - g12
     - g13
@@ -260,7 +285,7 @@ groups:
     - p03
     - p04
     - p05
-    - p01
+    - p10
     - p11
     - p12
     - p13
@@ -271,7 +296,7 @@ groups:
     - t03
     - t04
     - t05
-    - t01
+    - t10
     - t11
     - t12
 
@@ -281,7 +306,7 @@ groups:
     - k03
     - k04
     - k05
-    - k01
+    - k10
     - k11
     - k12
 
@@ -291,7 +316,7 @@ groups:
     - f03
     - f04
     - f05
-    - f01
+    - f10
     - f11
     - f12
 
@@ -301,7 +326,7 @@ groups:
     - s03
     - s04
     - s05
-    - s01
+    - s10
     - s11
     - s12
 
@@ -873,6 +898,10 @@ definitions:
   gp:
     - NEW-ITHKUIL 3.4.6 DPL
     - The Depletive extension.  
+  h1w:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - UPX Uniplex Configuration
   h1m:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - CSL Consolidative Affiliation
@@ -909,6 +938,10 @@ definitions:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - CSL Consolidative Affiliation
     - MFF Fuzzy Fused Configuration
+  h2w:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - UPX Uniplex Configuration
   h2m:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - ASO Associative Affiliation
@@ -945,6 +978,10 @@ definitions:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - ASO Associative Affiliation
     - MFF Fuzzy Fused Configuration
+  h3w:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - UPX Uniplex Configuration
   h3m:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - COA Coalescent Affiliation
@@ -981,6 +1018,10 @@ definitions:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - COA Coalescent Affiliation
     - MFF Fuzzy Fused Configuration
+  h4w:
+    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
+    - CSL Consolidative Affiliation
+    - UPX Uniplex Configuration
   h4m:
     - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
     - VAR Variative Affiliation
