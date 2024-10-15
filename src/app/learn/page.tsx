@@ -257,10 +257,10 @@ export default function Learn() {
           </li>
           <li>
             <b>Case</b> is the way that an entity of the clause takes part in
-            the relation of the clause. (I prefer the term Semantic Role, but
+            the relation of the clause. (I prefer the term Semantic Role, but I
             use Case to be aligned with the Ithkuil website nomenclature. I
-            think there may be a distinction that semanting role is the
-            underlying meaning and case is in some way the the expression of the
+            think there may be a distinction that semantic role is the
+            underlying meaning and case is in some way the expression of the
             semantic role in the grammar. I&apos;m not sure though.)
           </li>
         </ul>
@@ -271,14 +271,15 @@ export default function Learn() {
           Subject Verb Object (SVO) language. The subject is the thing
           that&apos;s doing the verb, and it goes before the verb (in English);
           the object is the thing the verb is being done to and it goes after
-          the verb. In the sentence &quot;person 1 tossed person 2 the
-          ball&quot;, we can infer that person 1 is the agent, person 2 is the
+          the verb. In the sentence &quot;person 1 tossed the ball to person
+          2&quot;, we can infer that person 1 is the agent, person 2 is the
           recipient, and the ball is the content.
         </p>
         <p>
-          As an alternative to the normal (implicit) way of conveying case, tokui provides the option
-          of using markers from Ithkuil case morphology to explicitly identify
-          the ways the entities participate in the verb.
+          As an alternative to the normal (implicit) way of conveying case,
+          tokui provides the option of using markers from Ithkuil case
+          morphology to explicitly identify the ways the entities participate in
+          the verb.
         </p>
         <p>
           In Ithkuil the the case for agent is the Ergative Case (4.2.7), the
@@ -288,59 +289,85 @@ export default function Learn() {
         </p>
         <ul>
           <li>
-            <div className="flex items-end">
-              <div>Agent: me-we-we: &nbsp;</div>
-              <WritingBlock settings={{ scale: 0.5 }}>m11</WritingBlock>
+            <div className="flex items-start">
+              <div>
+                Agent: <b>mewewe</b>: &nbsp;
+              </div>
+              <WritingBlock settings={{ scale: 1 }}>m11</WritingBlock>
             </div>
           </li>
           <li>
-            <div className="flex items-end">
-              <div>Recipient: me-we-tu: &nbsp;</div>
-              <WritingBlock settings={{ scale: 0.5 }}>m12</WritingBlock>
+            <div className="flex items-start">
+              <div>
+                Recipient: <b>mewetu</b>: &nbsp;
+              </div>
+              <WritingBlock settings={{ scale: 1 }}>m12</WritingBlock>
             </div>
           </li>
           <li>
-            <div className="flex items-end">
-              <div>Content: me-pa-we: &nbsp;</div>
-              <WritingBlock settings={{ scale: 0.5 }}>m01</WritingBlock>
+            <div className="flex items-start">
+              <div>
+                Content: <b>mepawe</b>: &nbsp;
+              </div>
+              <WritingBlock settings={{ scale: 1 }}>m01</WritingBlock>
             </div>
           </li>
         </ul>
         <p>
-          Now to translate this sentence (person 1 tossed person 2 the ball): I
-          will translate &quot;toss&quot; as &quot;big give&quot; (this is what
-          I found for &quot;throw&quot; in the Toki Pona dictionary I got from
-          the library). The final result is:{' '}
-          <u>
-            [agent] person number 1 [verb] give big [recipient] person number 2
-            [content] ball.
-          </u>
+          The glyphs for semantic role markers (as well as some of the other
+          words from Ithkuil) are written differently than the other words. They
+          are somewhat analogous to acronyms or initialisms. The glyph for the
+          word&nbsp;
+          <b>mewewe</b> is actually <b>m11</b>. The consonant <b>m</b> is
+          sounded as <b>me</b> and the number <b>1</b> is sounded as <b>we</b>,
+          so <b>m11</b> is <b>mewewe</b>. The way to tell is: if the glyph has a
+          vowel it&apos;s sounded normally, if there is no vowel, then it&apos;s
+          sounded by speaking the alphanumeric code.
         </p>
         <p>
-          <b>me-we-we yan nap we li pan awa me-we-tu yan nap tu me-pa-we seo</b>
-        </p>
-        <WritingBlock settings={{ lineWrap: 6 }}>
-          m11 yan nap we li pan awa m12 yan nap tu m01 seo
-        </WritingBlock>
-        <p>
-          Note that the case is determined by case markers and not the position
-          of the entities relative to the relation, so the sentence would still
-          mean the same if the entities and relation were moved around, like so
-          for example:{' '}
-          <u>
-            [content] ball [verb] give big [recipient] person number 2 [agent]
-            person number 1.
-          </u>
-        </p>
-        <p>
-          <b>me-pa-we seo li pan awa me-we-tu yan nap tu me-we-we yan nap we</b>
+          Now to translate this sentence (person 1 tossed the ball to person 2):
+          I will translate &quot;toss&quot; as &quot;big give&quot; (this is
+          what I found for &quot;throw&quot; in the Toki Pona dictionary I got
+          from the library). With the normal Toki Pona grammar, the sentence is:
         </p>
         <WritingBlock settings={{ lineWrap: 6 }}>
-          m01 seo li pan awa m12 yan nap tu m11 yan nap we
+          yan we li pan awa e seo ta yan tu
         </WritingBlock>
         <p>
-          The above two tokui sentences mean the same thing even though they
-          have very different word orderings.
+          <b>yan we li pan awa e seo ta yan tu</b>
+        </p>
+        <p>
+          With grammar from Ithkuil case morphology it is:&nbsp;
+          <u>
+            [agent] person 1 [verb] give big [content] ball [recipient] person
+            2.
+          </u>
+        </p>
+        <WritingBlock settings={{ lineWrap: 6 }}>
+          m11 yan we li pan awa m01 seo m12 yan tu
+        </WritingBlock>
+        <p>
+          <b>mewewe yan we li pan awa mepawe seo mewetu yan tu</b>
+        </p>
+        <p>
+          The case is determined by case markers and not the position of the
+          entities relative to the relation, so the sentence would still mean
+          the same if the entities and relation were moved around, like so for
+          example:&nbsp;
+          <u>
+            [verb] give big [content] ball [recipient] person 2 [agent] person
+            1.
+          </u>
+        </p>
+        <WritingBlock settings={{ lineWrap: 6 }}>
+          li pan awa m01 seo m12 yan tu m11 yan we
+        </WritingBlock>
+        <p>
+          <b>li pan awa mepawe seo mewetu yan tu mewewe yan we</b>
+        </p>
+        <p>
+          The two sentences mean the same thing even though they have very
+          different word orderings.
         </p>
         <h2>words from Ithkuil basic morphology</h2>
         <p>TODO</p>
