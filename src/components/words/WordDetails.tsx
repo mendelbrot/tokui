@@ -1,9 +1,6 @@
 // @ts-ignore
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
-import RandomWordButton from '@/components/nav/RandomWordButton'
-import NavButton from '@/components/nav/NavButton'
-import NavContainer from '@/components/nav/NavContainer'
 import React from 'react'
 import WritingBlock from '@/components/glyphs/WritingBlock'
 import { WordData } from '@/data/wordDataTypes'
@@ -11,9 +8,8 @@ import lnWord from '@/lib/ln-word'
 import Spanner from '../Spanner'
 
 type Props = { word: string }
-type Comp = React.FunctionComponent<Props>
 
-const WordDetails: Comp = ({ word }) => {
+function WordDetails({ word }: Props) {
   //@ts-ignore
   const definitions: string[] = wordData.definitions[word] || ['WORD NOT FOUND']
   const soundedOutLnWord = lnWord(word)

@@ -1,0 +1,39 @@
+import React from 'react'
+import Editor from '@/lib/Editor'
+import { SoftSettingsValue } from '@/lib/EditorTypes'
+import InfoPopup from './InfoPopup'
+
+type Props = {
+  children: string
+  settings?: SoftSettingsValue
+  className?: string
+}
+
+function InfoGlyph({ children, settings, className = undefined }: Props) {
+  const [showInfo, setShowInfo] = React.useState(false)
+
+  const closeInfo = () => {
+    setShowInfo(false)
+  }
+
+  const openInfo = () => {
+    setShowInfo(true)
+  }
+
+  return (
+    <div className="relative">
+      {showInfo && <InfoPopup word={children} close={closeInfo} />}
+      <button
+        className={
+          showInfo ? 'bg-purple-100 rounded-lg ' + className : className
+        }
+        onClick={openInfo}
+        dangerouslySetInnerHTML={{
+          __html: Editor.draw(children, settings),
+        }}
+      ></button>
+    </div>
+  )
+}
+
+export default InfoGlyph
