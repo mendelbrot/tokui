@@ -22,19 +22,17 @@ function NavButton(props: Props) {
   }
 
   return (
-    <button
-      onClick={onClick}
-      className="relative border-2 rounded-lg bg-white ml-4 z-20"
-      // className="border-2 rounded-lg bg-opacity-90 bg-white hover:bg-emerald-200 hover:bg-opacity-70 ml-4"
-    >
-      <Image
-        // className="opacity-50 rounded-lg"
-        src={props.imgSrc}
-        alt={props.imgAlt}
-        width="64"
-        height="64"
-      />
-    </button>
+    <div className="border-2 rounded-lg bg-opacity-90  bg-white hover:bg-emerald-200 ml-4 z-20">
+      <button onClick={onClick}>
+        <Image
+          className="opacity-50 rounded-lg"
+          src={props.imgSrc}
+          alt={props.imgAlt}
+          width="64"
+          height="64"
+        />
+      </button>
+    </div>
   )
 }
 

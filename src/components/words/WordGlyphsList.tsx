@@ -16,11 +16,11 @@ function WordGlyphsList() {
 
   return (
     <BoundaryContext.Provider value={boundingRect}>
-      <div className="prose bg-pink-400" ref={boundaryRef}>
+      <div className="prose" ref={boundaryRef}>
         {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
           <div key={groupName}>
             <h2>{groupName}</h2>
-            <div className="flex flex-wrap bg-yellow-300">
+            <div className="flex flex-wrap">
               {groupWords.map((word) => (
                 <InfoGlyph key={word}>{word}</InfoGlyph>
               ))}
