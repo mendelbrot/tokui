@@ -3,30 +3,32 @@
 // @ts-ignore
 import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
-import WritingBlock from '@/components/glyphs/WritingBlock'
-import Link from 'next/link'
 import { WordData } from '@/data/wordDataTypes'
 import React from 'react'
+import InfoGlyph from '../glyphs/InfoGlyph'
+import useBoundingClientRect from '@/lib/useBoundingClientRect'
+
+export const BoundaryContext = React.createContext<DOMRect | null>(null)
 
 function WordGlyphsList() {
+  const boundaryRef = React.useRef<HTMLDivElement | null>(null)
+  const boundingRect = useBoundingClientRect(boundaryRef)
+
   return (
-    <div>
-      <div className="prose">
+    <BoundaryContext.Provider value={boundingRect}>
+      <div className="prose bg-pink-400" ref={boundaryRef}>
         {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
           <div key={groupName}>
             <h2>{groupName}</h2>
-
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap bg-yellow-300">
               {groupWords.map((word) => (
-                <Link key={word} href={'/words/' + word}>
-                  <WritingBlock>{word}</WritingBlock>
-                </Link>
+                <InfoGlyph key={word}>{word}</InfoGlyph>
               ))}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </BoundaryContext.Provider>
   )
 }
 
