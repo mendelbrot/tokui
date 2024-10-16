@@ -28,6 +28,28 @@ function InfoPopup({ word, close }: Props) {
     }
   }, [popupRef, boundingRect])
 
+  React.useEffect(() => {
+    const closeOnClickOutside = (event: MouseEvent) => {
+      if (popupRef.current) {
+        const popupBoundingRect = popupRef.current.getBoundingClientRect()
+        if (
+          event.x > popupBoundingRect.right ||
+          event.x < popupBoundingRect.left ||
+          event.y < popupBoundingRect.top ||
+          event.y > popupBoundingRect.bottom
+        )
+          close()
+      }
+    }
+    window.setTimeout(() => {
+      window.addEventListener('click', closeOnClickOutside)
+    }, 100)
+
+    return () => {
+      window.removeEventListener('click', closeOnClickOutside)
+    }
+  }, [close])
+
   return (
     <div
       ref={popupRef}
