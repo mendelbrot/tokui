@@ -19,7 +19,7 @@ function Words() {
   }
 
   return (
-    <div className="max-w-prose p-4">
+    <div>
       <NavContainer>
         <NavButton href="/" imgAlt="home" imgSrc="/icons/tomo.svg" />
         {searchMode ? (

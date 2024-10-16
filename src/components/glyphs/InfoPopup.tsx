@@ -6,7 +6,7 @@ import { WordData } from '@/data/wordDataTypes'
 import lnWord from '@/lib/ln-word'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BoundaryContext } from '../words/WordGlyphsList'
+import { BoundaryContext } from '@/app/(content)/layout'
 
 type Props = { word: string; close: () => void }
 
@@ -23,7 +23,7 @@ function InfoPopup({ word, close }: Props) {
       const popupBoundingRect = popupRef.current.getBoundingClientRect()
       const rightOverflow = popupBoundingRect.right - boundingRect.right
       if (rightOverflow > 0) {
-        popupRef.current.style.left = `-${Math.trunc(rightOverflow + 8)}px`
+        popupRef.current.style.left = `-${Math.trunc(rightOverflow + 24)}px`
       }
     }
   }, [popupRef, boundingRect])

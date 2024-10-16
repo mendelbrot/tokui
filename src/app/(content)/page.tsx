@@ -27,7 +27,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="prose max-w-prose p-[16px]">
+      <div className="prose">
         <h1 className="mb-2 pb-2">
           <WritingBlock settings={{ scale: smallScreen ? 1.6 : 2.3 }}>
             o kam pon lon lip tokui

@@ -5,10 +5,11 @@ import NavContainer from '@/components/nav/NavContainer'
 import WritingBlock from '@/components/glyphs/WritingBlock'
 import Link from 'next/link'
 import React from 'react'
+import I from '@/components/glyphs/InfoGlyph'
 
 export default function Learn() {
   return (
-    <main className="max-w-prose p-[16px]">
+    <div>
       <NavContainer>
         <NavButton href="/" imgAlt="home" imgSrc="/icons/tomo.svg" />
       </NavContainer>
@@ -330,9 +331,21 @@ export default function Learn() {
           what I found for &quot;throw&quot; in the Toki Pona dictionary I got
           from the library). With the normal Toki Pona grammar, the sentence is:
         </p>
-        <WritingBlock settings={{ lineWrap: 6 }}>
+        {/* <WritingBlock settings={{ lineWrap: 6 }}>
           yan we li pan awa e seo ta yan tu
-        </WritingBlock>
+        </WritingBlock> */}
+        <div className="flex flex-wrap">
+          <I>yan</I>
+          <I>we</I>
+          <I>li</I>
+          <I>awa</I>
+          <I>e</I>
+          <I>seo</I>
+          <I>tan</I>
+          <I>yan</I>
+          <I>tu</I>
+        </div>
+
         <p>
           <b>yan we li pan awa e seo ta yan tu</b>
         </p>
@@ -374,6 +387,6 @@ export default function Learn() {
         <h2>numbers</h2>
         <p>TODO</p>
       </div>
-    </main>
+    </div>
   )
 }

@@ -24,8 +24,10 @@ function InfoGlyph({ children, settings, className = undefined }: Props) {
     <div className="relative">
       {showInfo && <InfoPopup word={children} close={closeInfo} />}
       <button
+        className={
+          showInfo ? 'bg-purple-100 rounded-lg ' + className : className
+        }
         onClick={openInfo}
-        className={className}
         dangerouslySetInnerHTML={{
           __html: Editor.draw(children, settings),
         }}
