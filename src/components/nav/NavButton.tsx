@@ -22,7 +22,7 @@ function NavButton(props: Props) {
   }
 
   return (
-    <div className="border-2 rounded-lg bg-opacity-90  bg-white hover:bg-emerald-200 ml-4 z-20">
+    <div className="border-2 rounded-lg bg-opacity-95 shadow-2xl bg-emerald-50 hover:bg-emerald-200 ml-4 z-20">
       <button onClick={onClick}>
         <Image
           className="opacity-50 rounded-lg"
