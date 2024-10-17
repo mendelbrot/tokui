@@ -37,10 +37,10 @@ function WordSearchList() {
       </div>
       <ul className="mt-[64px]">
         {Object.entries(wordData.definitions)
-          .filter(([wordName, wordDefinitions]) =>
+          .filter(([wordName, _wordDefinitions]) =>
             wordName.includes(searchQueryA)
           )
-          .filter(([wordName, wordDefinitions]) =>
+          .filter(([_wordName, wordDefinitions]) =>
             wordDefinitions.some((definition) =>
               definition.includes(searchQueryB)
             )
