@@ -9,7 +9,7 @@ import InfoGlyph from '../glyphs/InfoGlyph'
 
 function WordGlyphsList() {
   return (
-    <div className="prose">
+    <div className="prose pb-[186px]">
       {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
         <div key={groupName}>
           <h2>{groupName}</h2>
