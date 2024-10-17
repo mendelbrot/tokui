@@ -3,5 +3,8 @@
   "editor.formatOnSave": true,
   "[json]": {
     "editor.wordWrap": "on"
+  },
+  "[yaml]": {
+    "editor.wordWrap": "on"
   }
 }

@@ -327,7 +327,7 @@ export default function Learn() {
         </p>
         <p>
           Now to translate this sentence (person 1 tossed the ball to person 2):
-          I will translate &quot;toss&quot; as &quot;big give&quot; (this is
+          I will translate &quot;toss&quot; as &quot;strong give&quot; (this is
           what I found for &quot;throw&quot; in the Toki Pona dictionary I got
           from the library). With the normal Toki Pona grammar, the sentence is:
         </p>
@@ -352,7 +352,7 @@ export default function Learn() {
         <p>
           With grammar from Ithkuil case morphology it is:&nbsp;
           <u>
-            [agent] person 1 [verb] give big [content] ball [recipient] person
+            [agent] person 1 [verb] give strong [content] ball [recipient] person
             2.
           </u>
         </p>
@@ -368,7 +368,7 @@ export default function Learn() {
           the same if the entities and relation were moved around, like so for
           example:&nbsp;
           <u>
-            [verb] give big [content] ball [recipient] person 2 [agent] person
+            [verb] give strong [content] ball [recipient] person 2 [agent] person
             1.
           </u>
         </p>
