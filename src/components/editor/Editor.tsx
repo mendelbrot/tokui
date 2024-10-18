@@ -128,6 +128,10 @@ function Editor() {
 
       <div className={!textMode ? 'hidden' : 'h-[216px]'}>
         <textarea
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
           ref={textareaRef}
           value={writingValue}
           onChange={handleTextChange}

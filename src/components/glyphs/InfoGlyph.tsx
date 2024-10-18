@@ -25,7 +25,9 @@ function InfoGlyph({ children, settings, className = undefined }: Props) {
       {showInfo && <InfoPopup word={children} close={closeInfo} />}
       <button
         className={
-          showInfo ? 'bg-purple-100 rounded-lg ' + className : className
+          'rounded-lg hover:bg-purple-100 ' +
+          (showInfo ? 'bg-purple-100 ' : '') +
+          className
         }
         onClick={openInfo}
         dangerouslySetInnerHTML={{
