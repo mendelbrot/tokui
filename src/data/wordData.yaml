@@ -30,7 +30,7 @@ groups:
     - ane
     - anu
     - wen
-    - le
+    - e
     - en
     - esu
     - iyo
@@ -194,6 +194,16 @@ groups:
     - tokui
 
   ithkuil-affiliation-configuration--3-2--3-1:
+    - h0w
+    - h0m
+    - h0n
+    - h0g
+    - h0p
+    - h0t
+    - h0k
+    - h0f
+    - h0s
+    - h0h
     - h1w
     - h1m
     - h1n
@@ -209,7 +219,7 @@ groups:
     - h2n
     - h2g
     - h2p
-    - h2t
+    - h3t
     - h2k
     - h2f
     - h2s
@@ -224,16 +234,6 @@ groups:
     - h3f
     - h3s
     - h3h
-    - h4w
-    - h4m
-    - h4n
-    - h4g
-    - h4p
-    - h4t
-    - h4k
-    - h4f
-    - h4s
-    - h4h
   
   ithkuil-extension--3-4:
     - gn
@@ -718,212 +718,219 @@ definitions:
     - MATH exponent, to the power of
   ym:
     - NEW-ITHKUIL 4.2.1 THM
-    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.  Its semantic role is that of CONTENT.
+    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.  
+    - Semantic role of content.
   yn:
     - NEW-ITHKUIL 4.2.2 INS
-    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event. Its semantic role is that of INSTRUMENT.
+    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event. 
+    - Semantic role of instrument.
   yg:
     - NEW-ITHKUIL 4.2.3 ABS
-    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event. Its semantic role is that of PATIENT.
+    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event. 
+    - Semantic role of patient.
   yp:
     - NEW-ITHKUIL 4.2.4 AFF
-    - The Affective case. The party who undergoes an unwilled, affective experience. Its semantic role is that of EXPERIENCER.
-    - EXAMPLES coughing, sneezing, feeling hot/cold, trembling, experiencing sensory input (tactile, olfactory, visual, aural, gustatory), proprioceptive states, psychological/emotional states, reflex reactions such as cringing, yawning, ducking, screaming in fright, etc.
+    - The Affective case. The party who undergoes an unwilled, affective experience. 
+    - Semantic role of experiencer.
   yt:
     - NEW-ITHKUIL 4.2.5 STM
-    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient. Its semantic role is that of STIMULUS.
-    - EXAMPLES The hammer exemplifies toolship, The man possesses a cat, That book contains poems..
+    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient. 
+    - Semantic role of stimulus.
   yk:
     - NEW-ITHKUIL 4.2.6 EFF
-    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent. Note that the exact nature of the enablement is specifiable via the ENB affix described in the Affixes document. Its semantic role is that of ENABLER.
+    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent. 
+    - Semantic role of enabler.
   yf:
     - NEW-ITHKUIL 4.2.7 ERG
-    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.  Its semantic role is that of AGENT or FORCE.
+    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.  
+    - Semantic role of agent or force.
   ys:
     - NEW-ITHKUIL 4.2.8 DAT
-    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication. Its semantic role is that of RECIPIENT.
-    - EXAMPLES Give the dog a bone, I'll tell her your secret, The host introduced me to the guests.
+    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication. 
+    - Semantic role of recipient.
   yh:
     - NEW-ITHKUIL 4.2.9 IND
-    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party. ts semantic role is that of simultaneous AGENT and PATIENT.
-    - EXAMPLES The boys run in the playground, We talked for hours, The couple eats dinner.
+    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party. 
+    - - Semantic role of simultanious agent and patient.
   pm:
     - NEW-ITHKUIL 4.3.1 POS
-    - The Possessive case.
+    - The Possessive case. A noun which has alienable (i.e., removable or severable) possession of another noun in the sense of having physical control or oversight of that noun, whether by chance circumstance or deliberate manipulation. The two nouns are not in any sense inherent parts of one another and the relationship between the two can be theoretically or actually terminated by an outside force or influence, or by decision of the possessor, usually by means of mere physical permanent separation of the possessor and possessed nouns.
   pn:
     - NEW-ITHKUIL 4.3.2 PRP
-    - The Proprietive case. 
+    - The Proprietive case. A noun having alienable possession of another noun in the sense of quasi-permanent contextual control, ownership or oversight, whether by societal recognition, social convention, law, purchase or decree, which mere physical separation does not sever. The two nouns are not in any sense inherent parts of one another, however the relationship cannot be terminated except via an equally or more binding act, declaration, convention, law, process, etc.  
   pg:
     - NEW-ITHKUIL 4.3.3 GEN
-    - The Genitive case.
+    - The Genitive case. A noun which has inalienable (i.e., unremovable, unseverable) possession of or association with another noun in the sense of having that noun as an inherent or intrinsic attribute, characteristic, physical part, or genetic (i.e., familial) bond.
   pt:
     - NEW-ITHKUIL 4.3.4 ATT
-    - The Attributive case.
+    - The Attributive case. A noun which inalienably experiences the effects of, or otherwise has an affective (see the affective case) relationship with another noun, either as a temporary or permanent attribute, characteristic, or experience, whether physical or psychological, objective or subjective in nature.
   pk:
     - NEW-ITHKUIL 4.3.5 PDC
-    - The Productive case. 
+    - The Productive case. The creator, author or originator of another noun.
   pf:
     - NEW-ITHKUIL 4.3.6 ITP
-    - The Interpretative case.
+    - The Interpretative case. A noun acting as the subjective interpretational context of another noun, that is the noun by or through which another noun is subjectively interpreted or described.
   ps:
     - NEW-ITHKUIL 4.3.7 OGN
-    - The Originative case.
+    - The Originative case. A noun as being the literal or figurative source of another, or which is the native location, origin, or usual locational context for another.
   ph:
     - NEW-ITHKUIL 4.3.8 IDP
-    - The Interdependent case. 
+    - The Interdependent case. A noun which has a coordinated, tandem, complementary or mutually dependent relationship with another. The relationship between the two nouns can be thought of as reciprocal in nature, i.e., each noun implies the other or needs the other to exist within its natural context. Note that this case does not imply a part-whole dependency as with the genitive case.
   pw:
     - NEW-ITHKUIL 4.3.9 PAR
-    - The Partitive case.
+    - The Partitive case. A quantitative or content-to-container relationship between the two nouns. (This case identifies the content)
+    - Also used to mark a noun qualified by a specific number.
   tm:
     - NEW-ITHKUIL 4.4.1 APL
-    - The Applicative case.
+    - The Applicative case. A noun which represents the purpose for which another noun is to be utilized in a given instance. As such, it usually translates English 'for' when meaning 'for the temporary or incidental use/purpose of.'
   tn:
     - NEW-ITHKUIL 4.4.2 PUR
-    - The Purposive case. 
+    - The Purposive case. A noun which characterizes or defines the purpose of, or reason for, another noun. The purposive is subtly distinct from the applicative above, in that the latter names the actual use to which a noun is put on a given occasion or in given context, whereas the purposive defines another noun's dedicated function or primary reason for being, outside of any contextual instance, i.e., what the noun is used for all the time (or at least its intended use). It generally translates English 'as,' 'of' or 'for' when meaning 'for the purpose of' or alternately an English noun-noun expression or a compound noun.
   tg:
     - NEW-ITHKUIL 4.4.3 TRA
-    - The Transmissive case.
+    - The Transmissive case. A noun for whose sake or benefit an action or event occurs or is done or the party to whose detriment an action or event occurs.  As such, the transmissive is similar to the dative, except that the transmissive implies a strong emphasis on the fact that the noun is more than simply the recipient or target of a dative action, but rather either benefits or is affected detrimentally in a tangible or consequential way from the action or event.  It is usually translated by English 'for' in the sense of 'for the sake (i.e., benefit) of.'
   tp:
     - NEW-ITHKUIL 4.4.4 DFR
-    - The Deferential case.
+    - The Deferential case. Translates the English phrases 'out of respect for,' 'for the sake of,' or 'in deference toward,' identifying the noun to which deference is paid within the context for an act, condition, or event. 
   tk:
     - NEW-ITHKUIL 4.4.5 CRS
-    - The Contrastive case. 
+    - The Contrastive case. A noun which has been replaced by another or for which another noun has been substituted.  This is translatable by the English phrases 'instead of' or 'rather than' or 'as opposed to,' or specialized uses of 'not'.
   tf:
     - NEW-ITHKUIL 4.4.6 TSP
-    - The Transpositive case.
+    - The Transpositive case. implies substitution of one noun for another.  It translates English 'for' in the sense of 'on behalf of,' 'in place of,' or 'instead of' (i.e., 'as a substitution for').
   ts:
     - NEW-ITHKUIL 4.4.7 CMM
-    - The Commutative case.
+    - The Commutative case. Translates English 'for' in the sense of 'in exchange for'.
   th:
     - NEW-ITHKUIL 4.4.8 CMP
-    - The Comparative case. 
+    - The Comparative case. Identifies a noun being compared to another.  It translates such expressions as 'as compared to,' or certain usages of 'versus' or 'as opposed to.'  It is similar to the contrastive case (see Section 4.4.5 above), except that it does not carry the sense of opposition, joint exclusivity, or either-or binary substitution of the contrastive, but rather merely comparison/choice/preference from various options or along a spectrum or scale. 
   tw:
     - NEW-ITHKUIL 4.4.9 CSD
-    - The Considerative case.
+    - The Considerative case. Translates English terms such as 'according to,' 'in the opinion of.'
   km:
     - NEW-ITHKUIL 4.5.1 FUN
-    - The Functive case.
+    - The Functive case. Functions similarly to English adverbs ending in -ly or the adverbial use of with, identifying the manner in which an action, event, or state occurs or exists. More exactly, it identifies a noun used to characterize the manner of the act, state, or event, translatable most accurately by the phrase 'in a manner characterized by... .' 
   kn:
     - NEW-ITHKUIL 4.5.2 TFM
-    - The Transformative case. 
+    - The Transformative case. The outcome or final state of a process, often translatable by 'to,' 'until,' or 'into' in the sense of reaching a final state after having undergone some transformation. 
   kg:
     - NEW-ITHKUIL 4.5.3 CLA
-    - The Classificative case.
+    - The Classificative case. a noun as a basis for arranging, sorting, classifying, or counting, translating various English prepositions and phrases used for this purpose.
+    - Also used to identify a noun considered in consecutively recurring increments as a means of describing the manner of an event. 
   kp:
     - NEW-ITHKUIL 4.5.4 RSL
-    - The Resultative case.
+    - The Resultative case. A result or consequence, usually translatable utilizing a clause-like structure in English.
   kt:
     - NEW-ITHKUIL 4.5.5 CSM
-    - The Consumptive case. 
+    - The Consumptive case. The resource consumed or used (up) as a result of, or as a concurrent part of a process.
   kf:
     - NEW-ITHKUIL 4.5.6 CON
-    - The Concessive case.
+    - The Concessive case. A noun, situation, or circumstance which gives rise to an expectation of a certain result which, in fact, does not occur. This can be translated by various English prepositions, conjunctions, or phrases such as 'despite,' 'in spite of,' 'notwithstanding,' 'although,' 'regardless of,' 'no matter what,' etc. 
   ks:
     - NEW-ITHKUIL 4.5.7 AVR
-    - The Aversive case.
+    - The Aversive case. A noun as a source or object of fear and/or avoidance. With nouns, it translates expressions such as 'for fear of,' 'in order to avoid,' or 'in avoidance of.'
   kh:
     - NEW-ITHKUIL 4.5.8 CVS
-    - The Conversive case. 
+    - The Conversive case. Used in conjunction with hypothetical or potential contexts to identify a hypothetical exception to a potential outcome or an actual circumstance which alters or has altered a potential outcome. This translates two different ways into English. Where it indicates an exception to a hypothetical situation, it is translated by the conjunction 'unless' in verbal contexts, and by the preposition 'without' for nouns. If applied to a real or actual situation, it is translatable by such expressions as 'except for', 'but for,' 'if not for,' 'if it wasn't for,' or 'if it wasn't on account of.'
   kw:
     - NEW-ITHKUIL 4.5.9 SIT
-    - The Situative case.
+    - The Situative case. identifies a noun as the background context for a clause without implying a direct causative relationship between the background context and the act, condition, or event which occurs. It is translatable into English by various circumlocutions.
   fm:
     - NEW-ITHKUIL 4.6.1 PRN
-    - The Pertinential case.
+    - The Pertinential case. A formative functioning as the general referent of the verb, translating such English terms as 'about,' 'regarding,' 'concerning,' 'in regard to,' 'in reference to,' 'pertaining to,' or 'as for.'
   fn:
     - NEW-ITHKUIL 4.6.2 DSP
-    - The Descriptive case. 
+    - The Descriptive case. Identifies a formative as describing another formative in an adjectival manner, translatable as 'characterised/describable as being like', 'characterized/describable as having the quality/qualities of'.
   fg:
     - NEW-ITHKUIL 4.6.3 COR
-    - The Correlative case.
+    - The Correlative case. An abstract general relationship, association, or conjunction between one formative and another, including subjective, contextual, metaphorical, or symbolic associations. It translates general phrases such as 'relative to,' 'in relation to,' 'in correlation with,' 'in association with.'
   fp:
     - NEW-ITHKUIL 4.6.4 CPS
-    - The Compositive case.
+    - The Compositive case.  The literal or figurative substance or component(s) of which another is made, composed, formed, built or comprised.
   ft:
     - NEW-ITHKUIL 4.6.5 COM
-    - The Comitative case. 
+    - The Comitative case. A formative that accompanies another, translatable as '(along) with'.
   fk:
     - NEW-ITHKUIL 4.6.6 UTL
-    - The Utilitative case.
+    - The Utilitative case. A formative in the process of being used while some other activity or state is in progress.  It does not imply the instrument of an act as does the instrumental case.
   fs:
     - NEW-ITHKUIL 4.6.7 PRD
-    - The Predicative case.
+    - The Predicative case. The non-causal basis, foundation, sustenance (literally or figuratively), or required existential condition for another noun or clause, translatable by the phrases 'based (up)on,' 'dependent (up)on' or 'relying on.'
   fh:
     - NEW-ITHKUIL 4.6.8 RLT
-    - The Relative case. 
+    - The Relative case. Identifies a formative as constituting a relative clause associated with the preceding formative as being the head of the relative clause.
   sm:
     - NEW-ITHKUIL 4.7.1 ACT
-    - The Activative case.
+    - The Activative case.  The experiencer of a modal state, such as obligation, necessity, desire, hope, expectation, wishing, being able to, etc. functioning as the "subject" of a modal(ized) verb governing a hypothetical state (i.e., what is wanted, needed, expected, able to be done, etc.). 
   sn:
     - NEW-ITHKUIL 4.7.2 ASI
-    - The Assimilative case. 
+    - The Assimilative case. A formative used as a context for analogy or metaphorical comparison to another formative; translatable as 'as/like' meaning 'as if (it were) X' in the sense of comparison or analogy between one thing and another that it is not.
   sg:
     - NEW-ITHKUIL 4.7.3 ESS
-    - The Essive case.
+    - The Essive case. the role or name by which an entity is known or contextually identified. It translates English 'as/like' in the sense of naming or reference to the an entity's functional identity.
   sp:
     - NEW-ITHKUIL 4.7.4 TRM
-    - The Terminative case.
+    - The Terminative case. A formative as being the goal of an act/event.
   st:
     - NEW-ITHKUIL 4.7.5 SEL
-    - The Selective case. 
+    - The Selective case. A contextually recurring time-period, or a string of recurring entities.
   sk:
     - NEW-ITHKUIL 4.7.6 CFM
-    - The Conformative case.
+    - The Conformative case. The entity pursuant to which, as per which, or in conformance with which, another entity is, or an act/event occurs.
   sf:
     - NEW-ITHKUIL 4.7.7 DEP
-    - The Dependent case.
+    - The Dependent case. Identifies a formative as being the basis of a dependency phrase on which another formative or phrase acts as the contingency, translatable as '...if the circumstances regarding X are such to allow/warrant it' where the final "it" refers to the original contingency noun/phrase whose existence/occurrence is (at least in part) determined by or contingent upon the dependency phrase. 
   sh:
     - NEW-ITHKUIL 4.7.8 VOC
-    - The Vocative case. 
+    - The Vocative case. A noun being used in direct address.
   hm:
     - NEW-ITHKUIL 4.8.1 LOC
-    - The Locative case.
+    - The Locative case. The location where something is situated or occurs; 'at / in / on / by '.
   hn:
     - NEW-ITHKUIL 4.8.2 ATD
-    - The Attendant case. 
+    - The Attendant case. Functions as a variant of the locative case, to indicate in whose presence something occurs/takes place/is situated.  However, such a function has implications allowing the attendant case to identify a vague or externally determined non-causal (and potentially causal) relationship to the event/state/act/occurrence/situation in question.  The party marked by attendant case becomes relevant to or involved in a situation, however, the manner of this involvement/relevancy is vague, undefined, or left to the imagination/speculation of the addressee.
   hg:
     - NEW-ITHKUIL 4.8.3 ALL
-    - The Allative case.
+    - The Allative case. The entity toward which another entity is moving/approaching, translating English 'to/toward'.
   hp:
     - NEW-ITHKUIL 4.8.4 ABL
-    - The Ablative case.
+    - The Ablative case. The entity away from which another entity is moving/receding. It translates English '(away) from'. 
   ht:
     - NEW-ITHKUIL 4.8.5 ORI
-    - The Orientative case. 
+    - The Orientative case. The entity (often a body part or sub-component) which serves as the "face" or surface or "front" or "head" of an entity in terms of external communication or interaction, or which serves as the forward "end" of a spatially orientated axis aligned to a vector of motion in terms of directional movement.
   hk:
     - NEW-ITHKUIL 4.8.6 IRL
-    - The Interrelative case.
+    - The Interrelative case. The directional/temporal orientation or position of an entity relative to another, i.e., a noun relative to whose position in space or time another noun is being described for purposes of spatial/temporal orientation.
   hf:
     - NEW-ITHKUIL 4.8.7 INV
-    - The Intrative case.
+    - The Intrative case. Identifies a formative as being the spatio-temporal boundary point of a span or volume of space or a period of time, i.e, either the starting point or the ending point of a span of time or space.  English translations include 'as of ' / 'since '  /'until '; for spatial contexts, translates as 'as far as', 'up to', or 'between here and there'). 
   hs:
     - NEW-ITHKUIL 4.8.8 NAV
-    - The Navigative case. 
+    - The Navigative case. The entity whose literal or metaphorically inferred long axis serves as the direction of another entity's path, course, arc, or trajectory of translative motion. 
   nm:
     - NEW-ITHKUIL 4.9.1 CNR
-    - The concursive case.
+    - The concursive case. Identifies a "temporal locative" meaning 'at or during the time of X', i.e., the point or stretch in time at or during which an entity or an act/event exists or occurs.
   ng:
     - NEW-ITHKUIL 4.9.2 ASS
-    - The Assessive case. 
+    - The Assessive case. The increment of space or time or unit by which a contextual ratio of measurement is created.
   np:
     - NEW-ITHKUIL 4.9.3 PER
-    - The Periodic case.
+    - The Periodic case. The span of time / time frame at some point(s) during which, separate events, repetitions, or durationally segmented acts or states take place.
   nt:
     - NEW-ITHKUIL 4.9.4 PRO
-    - The Precursive case.
+    - The Prolapsive case. The duration of an act, condition, or event, i.e., how long it takes or lasts.
   nk:
     - NEW-ITHKUIL 4.9.5 PCV
-    - The Precursive case. 
+    - The Precursive case. An entity acting as a point in time prior to which an act, condition, or event occurs.
   nf:
     - NEW-ITHKUIL 4.9.6 PCR
-    - The Postcursive case.
+    - The Postcursive case. A point in time after which, following which, subsequent to which, an act, state, or event occurs.
   ns:
     - NEW-ITHKUIL 4.9.7 ELP
-    - The Elapsive case.
+    - The Elapsive case. Identifies the amount of time that has passed or is expected to pass between the contextual present and the time of the act, condition, or event being spoken of. It corresponds to English '...ago' or '...from now'.
   nh:
     - NEW-ITHKUIL 4.9.8 PLM
-    - The Prolimitive case.  
+    - The Prolimitive case. The spatio-temporal boundary point of a span of time or space during which or within which something is expected to or must occur or be situated.
   topon:
     - NOUN Toki Pona
   tikul:
@@ -933,195 +940,226 @@ definitions:
   gn:
     - NEW-ITHKUIL 3.4.1 DEL
     - The Delimitive extension. A noun is being spoken of in its contextual entirety as a discrete entity with clear spatio-temporal boundaries, with no emphasis on any particular portion, edge, boundary, limit, or manifestation beyond the context at hand. 
-    - EXAMPLES a tree, a grove, a set of books, an army. He climbed the ladder would be translated with the word ladder in the delimitive to show it is being considered as a whole
     - With verbs, this extension indicates that the act, state, or event is being considered in its entirety, from beginning to end.
-    - EXAMPLES (verb) She diets every winter (i.e., she starts and finishes each diet).
   gt:
     - NEW-ITHKUIL 3.4.2 PRX
     - The Proximal extension. A noun is being spoken of not in its entirety, but rather only in terms of the portion, duration, subset, or aspect which is relevant to the context at hand. 
-    - EXAMPLES The words tree, journey, and ladder in the sentences That tree is hard there (e.g., in the spot where I hit against it), She lost weight during her journey, or He climbed on the ladder (i.e., it is not relevant to the context to know if he made it all the way to the top).
-    - Note that in these sentences, the proximal does not refer to a specific or delineated piece, part, or component of the tree or ladder, but rather to the fact that delineated boundaries such as the ends of the ladder or the entirety of the tree are not relevant or applicable to the context at hand. 
+    - Note that the proximal does not refer to a specific or delineated piece, part, or component of the tree or ladder, but rather to the fact that delineated boundaries such as the ends of the ladder or the entirety of the tree are not relevant or applicable to the context at hand. 
     - With verbs, this extension signifies that it is not the entirety of an act, state, or event which is being considered, but rather the spatial extent or durational period of the act, state, or event relevant to the context.
-    - EXAMPLES (verb) She's on a diet every winter (i.e., focus on “having to live on” a diet, not the total time spent dieting from start to finish).
   gs:
     - NEW-ITHKUIL 3.4.3 ICP
     - The Inceptive extension. Focuses on the closest boundary, the beginning, initiation, or the immediately accessible portion of a noun or verb, without focusing on the boundaries of the remainder. 
-    - EXAMPLES The nouns tunnel, song, desert, daybreak and plan in the following sentences. We looked into (the mouth of) the tunnel, He recognizes that song (i.e., from the first few notes), They came upon (an expanse of) desert, Let's wait for daybreak, I'm working out a plan (i.e., that I just thought of). 
     - In verbal contexts it would correspond to the English 'to begin (to)...' or 'to start (to)...'.
-    - EXAMPLES (verb) He began reading, It's starting to molt, She goes on a diet every winter, or He initiated a process of seduction. 
   gl:
     - NEW-ITHKUIL 3.4.4 ATV
-    - The Attenuative extension. Focuses on the end, termination, last portion, or trailing boundary of a noun, without focusing on the preceding or previously existing state of the noun. 
-    - EXAMPLES The words water, story, and arrival in the sentences There's no water (i.e., we ran out), I like the end of that story, and We await your arrival. 
+    - The Attenuative extension. Focuses on the end, termination, last portion, or trailing boundary of a noun, without focusing on the preceding or previously existing state of the noun.  
     - With verbs, it is illustrated by the sentences It finished molting or She's come off her diet. 
-
   gm:
     - NEW-ITHKUIL 3.4.5 GRA
     - The Graduative extension. Focuses on a diffuse, extended "fade-in" or gradual onset of a noun. 
-    - EXAMPLES The words darkness, wonder, and music in the following sentences. Darkness came upon us, I felt a growing sense of wonder, The music was very soft at first. 
     - With verbs it is illustrated by verbs and phrases such as to fade in, to start gradually, to build up, and similar notions, e.g., She's been eating more and more lately. 
   gp:
     - NEW-ITHKUIL 3.4.6 DPL
     - The Depletive extension. The inverse of the graduative, focusing on the terminal boundary or "trailing" edge of a noun, where this terminus is ill-defined, "diffuse" or extended to some degree, (i.e. the at-hand context of the noun "peters out" or terminates gradually). Essentially, it applies to any context involving actual or figurative fading. 
-    - EXAMPLES The words water, strength, and twilight in the sentences He drank the last of the water, I have little strength left, She disappeared into the twilight. 
-    - With verbs, it is exemplified by the phrases to wind down, to fade out, to disappear gradually and similar notions, e.g., She's eating less and less these days. 
+    - With verbs, it is exemplified by the phrases to wind down, to fade out, to disappear gradually and similar notions.
+  h0w:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation. 
+    - UPX Uniplex Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+    
+  h0m:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSS Similar Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0n:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSC Similar Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0g:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSF Similar Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0p:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDS Dissimilar Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0t:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDC Dissimilar Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0k:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDF Dissimilar Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0f:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFS Fuzzy Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0s:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFC Fuzzy Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  h0h:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFF Fuzzy Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
   h1w:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - UPX Uniplex Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1m:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MSS Similar Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1n:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MSC Similar Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1g:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MSF Similar Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1p:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MDS Dissimilar Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1t:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MDC Dissimilar Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1k:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MDF Dissimilar Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1f:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MFS Fuzzy Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1s:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MFC Fuzzy Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h1h:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - CSL Consolidative Affiliation. A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
     - MFF Fuzzy Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
   h2w:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - UPX Uniplex Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2m:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MSS Similar Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2n:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MSC Similar Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2g:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MSF Similar Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2p:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MDS Dissimilar Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2t:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MDC Dissimilar Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2k:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MDF Dissimilar Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2f:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MFS Fuzzy Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2s:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MFC Fuzzy Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h2h:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - ASO Associative Affiliation. The individual members of a configurational set share the same subjective function, state, purpose or benefit.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
     - MFF Fuzzy Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
   h3w:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - UPX Uniplex Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3m:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MSS Similar Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3n:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MSC Similar Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3g:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MSF Similar Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3p:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MDS Dissimilar Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3t:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MDC Dissimilar Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3k:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MDF Dissimilar Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3f:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MFS Fuzzy Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3s:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MFC Fuzzy Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
   h3h:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - COA Coalescent Affiliation. The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
     - MFF Fuzzy Fused Configuration
-  h4w:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - UPX Uniplex Configuration
-  h4m:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MSS Similar Seperate Configuration
-  h4n:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MSC Similar Connected Configuration
-  h4g:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MSF Similar Fused Configuration
-  h4p:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MDS Dissimilar Seperate Configuration
-  h4t:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MDC Dissimilar Connected Configuration
-  h4k:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MDF Dissimilar Fused Configuration
-  h4f:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MFS Fuzzy Seperate Configuration
-  h4s:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configuration
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MFC Fuzzy Connected Configuration
-  h4h:
-    - NEW-ITHKUIL 3.2 Affiliation & 3.1 Configurati
-    - VAR Variative Affiliation. The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.
-    - MFF Fuzzy Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
