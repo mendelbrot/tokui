@@ -4,7 +4,7 @@ const wordData = wordData_ as WordData
 import React from 'react'
 import WritingBlock from '@/components/glyphs/WritingBlock'
 import { WordData } from '@/data/wordDataTypes'
-import lnWord from '@/lib/ln-word'
+import lnWord from '@/lib/lnWord'
 import Spanner from '../Spanner'
 
 type Props = { word: string }

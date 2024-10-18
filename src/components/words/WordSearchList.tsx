@@ -8,6 +8,7 @@ import { WordData } from '@/data/wordDataTypes'
 import React from 'react'
 import Spanner from '@/components/Spanner'
 import Link from 'next/link'
+import lnWord from '@/lib/lnWord'
 
 function WordSearchList() {
   const [searchQueryA, setSearchQueryA] = React.useState<string>('')
@@ -45,28 +46,38 @@ function WordSearchList() {
               definition.includes(searchQueryB)
             )
           )
-          .map(([wordName, wordDefinitions]) => (
-            <li key={wordName} className="flex items-start mt-4 pt-4 border-t">
-              <div>
-                <Link href={'/words/' + wordName}>
-                  <WritingBlock
-                    className="p-2 border-2 rounded-lg mr-2"
-                    settings={{ scale: 2 }}
-                  >
-                    {wordName}
-                  </WritingBlock>
-                </Link>
-                <h2 className="">{wordName}</h2>
-              </div>
-              <div>
-                <ul className="prose">
-                  {wordDefinitions.map((i) => (
-                    <li key={wordName + i}>{i}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
+          .map(([wordName, wordDefinitions]) => {
+            const soundedOutLnWord = lnWord(wordName)
+            return (
+              <li
+                key={wordName}
+                className="flex items-start mt-4 pt-4 border-t"
+              >
+                <div>
+                  <Link href={'/words/' + wordName}>
+                    <WritingBlock
+                      className="p-2 border-2 rounded-lg mr-2"
+                      settings={{ scale: 2 }}
+                    >
+                      {wordName}
+                    </WritingBlock>
+                  </Link>
+                  <h2>
+                    {soundedOutLnWord
+                      ? `${wordName} (${soundedOutLnWord})`
+                      : wordName}
+                  </h2>
+                </div>
+                <div>
+                  <ul className="prose">
+                    {wordDefinitions.map((i) => (
+                      <li key={wordName + i}>{i}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            )
+          })}
       </ul>
       <Spanner />
     </div>

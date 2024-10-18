@@ -153,10 +153,6 @@ groups:
     - lan
     - mis
 
-  additional-particles:
-    - he
-    - u
-
   alphabet:
     - me
     - nu
@@ -194,6 +190,13 @@ groups:
     - topon
     - tikul
     - tokui
+
+  additional-particles:
+    - he
+    - u
+    - ki
+    - go
+    - fa
 
   ithkuil-affiliation-configuration--3-2--3-1:
     - l0w
@@ -750,50 +753,6 @@ definitions:
   mis:
     - TOKIPONA misikeke (ku)
     - medication, medicine, cure, pill, medical
-  he:
-    - PARTICLE marks the head of a sub-clause
-  u:
-    - PARTICLE marks the clause as a question. clause-initial placement.
-  ya:
-    - LETTER y
-  me:
-    - LETTER m
-  fi:
-    - LETTER f
-  ka:
-    - LETTER k
-  hu:
-    - LETTER h
-  se:
-    - LETTER s
-  lo:
-    - LETTER l
-  ge:
-    - LETTER g
-  wi:
-    - LETTER w
-  po:
-    - LETTER p
-  nu:
-    - LETTER n
-  te:
-    - LETTER t
-  gi:
-    - NUMBER 3
-  so:
-    - NUMBER 4
-  lu:
-    - NUMBER 5
-  ha:
-    - NUMBER 6
-    - MATH _*6**_
-  wa:
-    - NUMBER 216 (6**3)
-    - MATH _*216**_
-  pet:
-    - MATH radix (point)
-  mutut:
-    - MATH exponent, to the power of
   ym:
     - NEW-ITHKUIL 4.2.1 THM
     - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.  
@@ -1241,3 +1200,53 @@ definitions:
     - VAR Variative Affiliation
     - MFF Fuzzy Fused Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  ya:
+    - LETTER y
+  me:
+    - LETTER m
+  fi:
+    - LETTER f
+  ka:
+    - LETTER k
+  hu:
+    - LETTER h
+  se:
+    - LETTER s
+  lo:
+    - LETTER l
+  ge:
+    - LETTER g
+  wi:
+    - LETTER w
+  po:
+    - LETTER p
+  nu:
+    - LETTER n
+  te:
+    - LETTER t
+  gi:
+    - NUMBER 3
+  so:
+    - NUMBER 4
+  lu:
+    - NUMBER 5
+  ha:
+    - NUMBER 6
+    - MATH _*6**_
+  wa:
+    - NUMBER 216 (6**3)
+    - MATH _*216**_
+  pet:
+    - MATH radix (point)
+  mutut:
+    - MATH exponent, to the power of
+  he:
+    - PARTICLE marks the head of a sub-clause
+  u:
+    - PARTICLE marks the clause as a question. clause-initial placement.
+  ki:
+    - PARTICLE preceeds a compond word that uses case inflection for the component words
+  go:
+    - PARTICLE converts to a noun
+  fa:
+    - particle converts to a verb
