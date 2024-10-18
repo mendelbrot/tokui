@@ -463,7 +463,7 @@ definitions:
     - ADJECTIVE little, small, short; few; a bit; young
   lia:
     - TOKIPONA linja
-    - NOUN long and flexible thing,; cord, hair, rope, thread, yarn
+    - NOUN long and flexible thing; cord, hair, rope, thread, yarn
   lip:
     - TOKIPONA lipu
     - NOUN flat object; book, document, card, paper, record, website
@@ -485,7 +485,7 @@ definitions:
     - NOUN door, hole, orifice, window
   ga:
     - TOKIPONA ma
-    - earth, land; outdoors, worls,; country, territory; soil
+    - earth, land; outdoors, world; country, territory; soil
   ma:
     - TOKIPONA mama
     - NOUN parent, ancestor,; creator, originator; caretaker, sustainer
@@ -715,16 +715,23 @@ definitions:
     - ADJECTIVE, ADVERB also, too
   ako:
     - TOKIPONA namako (ku)
+    - NOUN spice, adornment
   oko:
     - TOKIPONA oko (ku)
     - NOUN eye, vision
   isi:
     - TOKIPONA kipisi (ku)
+    - VERB split, slice, cut, divide, chop
+    - NOUN division, slice, segment, section, portion, piece, part
     - MATH divide
   eko:
     - TOKIPONA leko (ku)
+    - square, cube, block, stair, brick, polyhedron
   mos:
     - TOKIPONA monsuta (ku)
+    - NOUN fear, monster, horror, terror, beast, demon
+    - ADJECTIVE scary, disturbing, afraid
+    - VERB scare
   ton:
     - TOKIPONA tonsi (ku)
     - non-binary person, transgender person, gender non-conforming person, intersex person, LGBTQ+
@@ -742,7 +749,7 @@ definitions:
     - steal, seize, grab, capture
   mis:
     - TOKIPONA misikeke (ku)
-    - 
+    - medication, medicine, cure, pill, medical
   he:
     - PARTICLE marks the head of a sub-clause
   u:
