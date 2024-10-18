@@ -3,7 +3,7 @@ import wordData_ from '@/data/wordData.yaml'
 const wordData = wordData_ as WordData
 import React from 'react'
 import { WordData } from '@/data/wordDataTypes'
-import lnWord from '@/lib/ln-word'
+import lnWord from '@/lib/lnWord'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BoundaryContext } from '@/app/(content)/layout'
