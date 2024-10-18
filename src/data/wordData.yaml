@@ -116,10 +116,10 @@ groups:
     - sin
     - yin
     - pin
-    - ten
+    - tel
     - son
     - wel
-    - ulo
+    - uli
     - sun
     - sup
     - sui
@@ -127,13 +127,15 @@ groups:
     - tas
     - ta
     - elo
-    - eno
+    - epo
     - tok
     - tom
+    - tu
     - upa
     - uta
     - gal
     - wal
+    - we
     - wao
     - awa
     - wek
@@ -148,7 +150,7 @@ groups:
     - sok
     - meo
     - epi
-    - ana
+    - lan
     - mis
 
   additional-particles:
@@ -194,46 +196,46 @@ groups:
     - tokui
 
   ithkuil-affiliation-configuration--3-2--3-1:
-    - h0w
-    - h0m
-    - h0n
-    - h0g
-    - h0p
-    - h0t
-    - h0k
-    - h0f
-    - h0s
-    - h0h
-    - h1w
-    - h1m
-    - h1n
-    - h1g
-    - h1p
-    - h1t
-    - h1k
-    - h1f
-    - h1s
-    - h1h
-    - h2w
-    - h2m
-    - h2n
-    - h2g
-    - h2p
-    - h3t
-    - h2k
-    - h2f
-    - h2s
-    - h2h
-    - h3w
-    - h3m
-    - h3n
-    - h3g
-    - h3p
-    - h3t
-    - h3k
-    - h3f
-    - h3s
-    - h3h
+    - l0w
+    - l0m
+    - l0n
+    - l0g
+    - l0p
+    - l0t
+    - l0k
+    - l0f
+    - l0s
+    - l0h
+    - l1w
+    - l1m
+    - l1n
+    - l1g
+    - l1p
+    - l1t
+    - l1k
+    - l1f
+    - l1s
+    - l1h
+    - l2w
+    - l2m
+    - l2n
+    - l2g
+    - l2p
+    - l3t
+    - l2k
+    - l2f
+    - l2s
+    - l2h
+    - l3w
+    - l3m
+    - l3n
+    - l3g
+    - l3p
+    - l3t
+    - l3k
+    - l3f
+    - l3s
+    - l3h
   
   ithkuil-extension--3-4:
     - gn
@@ -610,63 +612,104 @@ definitions:
     - outer form, outer layer; bark, peel, shell, skin; boundary
   sem:
     - TOKIPONA seme
+    - PARTICLE what? which?
   ewi:
     - TOKIPONA sewi
+    - NOUN area above, highest part, something elevated
+    - ADJECTIVE aew-inspiring, divine, sacred, supernatural
   yel:
     - TOKIPONA sijelo
+    - NOUN body (of person or animal), physical state, torso
   sik:
     - TOKIPONA sike
+    - NOUN round or circular thing; ball, circle, cycle, sphere, wheel
+    - ADJECTIVE of one year
   sin:
     - TOKIPONA sin
+    - ADJECTIVE new, fresh, additional, another, extra
   yin:
     - TOKIPONA sina
+    - NOUN you
   pin:
     - TOKIPONA sinpin
-  ten:
+    - NOUN face, foremost, front, wall
+  tel:
     - TOKIPONA sitelen
+    - NOUN image, picture, representation, symbol, mark, writing
   son:
     - TOKIPONA sona
+    - VERB to know, be skilled in, be wise about, have information on
+    - PRE-VERB to know how to
   wel:
     - TOKIPONA soweli
-  ulo:
+    - NOUN animal, beast, land mamal
+  uli:
     - TOKIPONA suli
+    - ADJECTIVE big, heavy, large, long, tall; important; adult
   sun:
     - TOKIPONA suno
+    - NOUN sun; light, brightness, glow, radiance, shine, light source
   sup:
     - TOKIPONA supa
+    - NOUN horizontal surface, thing to put or rest something on
   sui:
     - TOKIPONA suwi
+    - ADJECTIVE sweet, fragrant; cute, innocent, adorable
   tan:
     - TOKIPONA tan
+    - PREPOSITION by, from, because of
   tas:
     - TOKIPONA taso
+    - PARTICLE but, however
+    - ADJECTIVE only
   ta:
     - TOKIPONA tawa
+    - PREPOSITION going to, toward; for; from the perspective of
+    - ADJECTIVE moving 
   elo:
     - TOKIPONA telo
-  eno:
+    - NOUN water, liquid, fluid, wet substance; beverage
+  epo:
     - TOKIPONA tenpo
+    - NOUN time, duration, moment, occasion, period, situation
   tok:
     - TOKIPONA toki
+    - VERB to communicate, say, speak, talk, use language, think
   tom:
     - TOKIPONA tomo
+    - VERB indoor space; building, home, house, room
+  tu:
+    - TOKIPONA tu
+    - NUMBER 2
   upa:
     - TOKIPONA unpa
+    - VERB to have sexual or marital relations with
   uta:
     - TOKIPONA uta
+    - NOUN mouth, lips, oral cavity, jaw
   gal:
     - TOKIPONA utala
+    - VERB to battle, challenge, compete against, struggle against
   wal:
     - TOKIPONA walo
+    - ADJECTIVE white, whitish; light-colored, pale
+  we:
+    - TOKIPONA wan
+    - ADJECTIVE unique, united
+    - NUMBER 1
   wao:
     - TOKIPONA waso
+    - NOUN bird, flying creature, winged animal
   awa:
     - TOKIPONA wawa
+    - ADJECTIVE strong, powerful; confident, sure; energetic, intense
   wek:
     - TOKIPONA weka
+    - absent, away, ignored
     - MATH minus
   wil:
     - TOKIPONA wile
+    - PRE-VERB must, need, require, should, want, wish
   kin:
     - TOKIPONA kin (ku)
     - ADJECTIVE, ADVERB also, too
@@ -687,14 +730,19 @@ definitions:
     - non-binary person, transgender person, gender non-conforming person, intersex person, LGBTQ+
   sok:
     - TOKIPONA soko (ku)
+    - nushroom, fungus
   meo:
     - TOKIPONA meso (ku)
+    - ADJECTIVE average, moderate, medium, intermediate, ordinary
   epi:
     - TOKIPONA epiku (ku)
-  ana:
+    - epic, awesome, amazing
+  lan:
     - TOKIPONA lanpan (ku)
+    - steal, seize, grab, capture
   mis:
     - TOKIPONA misikeke (ku)
+    - 
   he:
     - PARTICLE marks the head of a sub-clause
   u:
@@ -723,10 +771,6 @@ definitions:
     - LETTER n
   te:
     - LETTER t
-  we:
-    - NUMBER 1
-  tu:
-    - NUMBER 2
   gi:
     - NUMBER 3
   so:
@@ -989,203 +1033,203 @@ definitions:
     - NEW-ITHKUIL 3.4.6 DPL
     - The Depletive extension. The inverse of the graduative, focusing on the terminal boundary or "trailing" edge of a noun, where this terminus is ill-defined, "diffuse" or extended to some degree, (i.e. the at-hand context of the noun "peters out" or terminates gradually). Essentially, it applies to any context involving actual or figurative fading. 
     - With verbs, it is exemplified by the phrases to wind down, to fade out, to disappear gradually and similar notions.
-  h0w:
+  l0w:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation. 
     - UPX Uniplex Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
     
-  h0m:
+  l0m:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MSS Similar Seperate Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0n:
+  l0n:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MSC Similar Connected Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0g:
+  l0g:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MSF Similar Fused Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0p:
+  l0p:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MDS Dissimilar Seperate Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0t:
+  l0t:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MDC Dissimilar Connected Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0k:
+  l0k:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MDF Dissimilar Fused Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0f:
+  l0f:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MFS Fuzzy Seperate Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0s:
+  l0s:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MFC Fuzzy Connected Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h0h:
+  l0h:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
     - MFF Fuzzy Fused Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-  h1w:
+  l1w:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - UPX Uniplex Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1m:
+  l1m:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MSS Similar Seperate Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1n:
+  l1n:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MSC Similar Connected Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1g:
+  l1g:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MSF Similar Fused Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1p:
+  l1p:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MDS Dissimilar Seperate Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1t:
+  l1t:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MDC Dissimilar Connected Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1k:
+  l1k:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MDF Dissimilar Fused Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1f:
+  l1f:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MFS Fuzzy Seperate Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1s:
+  l1s:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MFC Fuzzy Connected Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h1h:
+  l1h:
     - NEW-ITHKUIL 3.2 & 3.1
     - ASO Associative Affiliation
     - MFF Fuzzy Fused Configuration
     - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
-  h2w:
+  l2w:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - UPX Uniplex Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2m:
+  l2m:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MSS Similar Seperate Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2n:
+  l2n:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MSC Similar Connected Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2g:
+  l2g:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MSF Similar Fused Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2p:
+  l2p:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MDS Dissimilar Seperate Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2t:
+  l2t:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MDC Dissimilar Connected Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2k:
+  l2k:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MDF Dissimilar Fused Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2f:
+  l2f:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MFS Fuzzy Seperate Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2s:
+  l2s:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MFC Fuzzy Connected Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h2h:
+  l2h:
     - NEW-ITHKUIL 3.2 & 3.1
     - COA Coalescent Affiliation
     - MFF Fuzzy Fused Configuration
     - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
-  h3w:
+  l3w:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - UPX Uniplex Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3m:
+  l3m:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MSS Similar Seperate Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3n:
+  l3n:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MSC Similar Connected Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3g:
+  l3g:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MSF Similar Fused Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3p:
+  l3p:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MDS Dissimilar Seperate Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3t:
+  l3t:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MDC Dissimilar Connected Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3k:
+  l3k:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MDF Dissimilar Fused Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3f:
+  l3f:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MFS Fuzzy Seperate Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3s:
+  l3s:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MFC Fuzzy Connected Configuration
     - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
-  h3h:
+  l3h:
     - NEW-ITHKUIL 3.2 & 3.1
     - VAR Variative Affiliation
     - MFF Fuzzy Fused Configuration

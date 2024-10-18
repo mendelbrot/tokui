@@ -6,5 +6,6 @@
   },
   "[yaml]": {
     "editor.wordWrap": "on"
-  }
+  },
+  "cSpell.words": ["mamal"]
 }
