@@ -84,7 +84,7 @@ groups:
     - mut
     - nap
     - nas
-    - has
+    - asi
     - nen
     - ni
     - nim
@@ -94,13 +94,13 @@ groups:
     - ona
     - ope
     - pak
-    - pai
     - pal
+    - pia
     - han
     - pan
     - pi
-    - pil
-    - mea
+    - lin
+    - eya
     - gon
     - pip
     - oka
@@ -108,7 +108,7 @@ groups:
     - pon
     - sam
     - eli
-    - seo
+    - feo
     - sem
     - ewi
     - yel
@@ -528,59 +528,86 @@ definitions:
     - NOUN numbers
   nas:
     - TOKIPONA nasa
-  has:
+    - ADJECTIVE unusual, strange, foolish, crazy; drunk, intoxicated
+  asi:
     - TOKIPONA nasin
+    - NOUN way, custom, doctrine, method, path, road
   nen:
     - TOKIPONA nena
+    - NOUN bump, button, hill, mountain, nose, protuberance
   ni:
     - TOKIPONA ni
+    - ADJECTIVE that, this
   nim:
     - TOKIPONA nimi
+    - NOUN name, word
   nok:
     - TOKIPONA noka
+    - NOUN foot, leg, organ of locomotion; bottom, lower part
   o:
     - TOKIPONA o
-    - CASE-GRAMMAR marks the clause as an order, command. clause-initial placement.
+    - PARTICLE hey! O! (vocative or imperative)
   oli:
     - TOKIPONA olin
+    - VERB to love, have compassion for, respect, show affection to
   ona:
     - TOKIPONA ona
+    - NOUN he, she, it, they
   ope:
     - TOKIPONA open
+    - VERB to begin, start; open; turn on
   pak:
     - TOKIPONA pakala
-  pai:
-    - TOKIPONA pali
+    - ADJECTIVE botched, broken, damaged, harmed, messed up
   pal:
+    - TOKIPONA pali
+    - VERB to do, take action on, work on,; build make, prepare
+  pia:
     - TOKIPONA palisa
+    - NOUN long hard think; branch, rod, stick
   han:
     - TOKIPONA pan
+    - NOUN cereal, grain; barley, corn, oat, rice, wheat; bread, pasta
   pan:
     - TOKIPONA pana
+    - VERB to give, send, emit, provide, put, release
     - MATH plus
   pi:
     - TOKIPONA pi
-  pil:
+    - PARTICLE of
+  lin:
     - TOKIPONA pilin
-  mea:
+    - NOUN heart (physical or emotional)
+    - ADJECTIVE ago, completed, ended, finished, past
+  eya:
     - TOKIPONA pimeja
+    - ADJECTIVE black, dark, unlit
   gon:
     - TOKIPONA pini
+    - ADJECTIVE ago, completed, ended, finished, past
   pip:
     - TOKIPONA pipi
+    - NOUN bug, insect, ant, spider
   oka:
     - TOKIPONA poka
+    - NOUN hip, side; next to, nearby, vicinity
   pok:
     - TOKIPONA poki
+    - NOUN container, bag, bowl, box, cup, cupboard, drawer, vessel
   pon:
     - TOKIPONA pona
+    - ADJECTIVE good, positive, useful, friendly, peaceful; simple
   sam:
     - TOKIPONA sama
+    - ADJECTIVE same, similar,; each other; sibling, peer, fellow
+    - PREPOSITION as, like
     - MATH equals
   eli:
     - TOKIPONA seli
-  seo:
+    - ADJECTIVE fire; cooking element, chemical reaction, heat source
+  feo:
     - TOKIPONA selo
+    - outer form, outer layer; bark, peel, shell, skin; boundary
   sem:
     - TOKIPONA seme
   ewi:
