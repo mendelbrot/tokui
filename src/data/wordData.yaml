@@ -195,6 +195,7 @@ groups:
     - he
     - u
     - ki
+    - i
     - go
     - fa
 
@@ -239,7 +240,7 @@ groups:
     - l3f
     - l3s
     - l3h
-  
+
   ithkuil-extension--3-4:
     - gn
     - gt
@@ -333,7 +334,6 @@ groups:
     - nh
 
 definitions:
-  
   a:
     - TOKIPONA a
     - PARTICLE (emphasis, emotion, or confirmation)
@@ -668,7 +668,7 @@ definitions:
   ta:
     - TOKIPONA tawa
     - PREPOSITION going to, toward; for; from the perspective of
-    - ADJECTIVE moving 
+    - ADJECTIVE moving
   elo:
     - TOKIPONA telo
     - NOUN water, liquid, fluid, wet substance; beverage
@@ -737,7 +737,7 @@ definitions:
     - VERB scare
   ton:
     - TOKIPONA tonsi (ku)
-    - non-binary person, transgender person, gender non-conforming person, intersex person, LGBTQ+
+    - non-binary person, transgender, gender non-conforming, intersex, LGBTQ+
   sok:
     - TOKIPONA soko (ku)
     - nushroom, fungus
@@ -755,46 +755,46 @@ definitions:
     - medication, medicine, cure, pill, medical
   ym:
     - NEW-ITHKUIL 4.2.1 THM
-    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.  
+    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.
     - Semantic role of content.
   yn:
     - NEW-ITHKUIL 4.2.2 INS
-    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event. 
+    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event.
     - Semantic role of instrument.
   yg:
     - NEW-ITHKUIL 4.2.3 ABS
-    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event. 
+    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event.
     - Semantic role of patient.
   yp:
     - NEW-ITHKUIL 4.2.4 AFF
-    - The Affective case. The party who undergoes an unwilled, affective experience. 
+    - The Affective case. The party who undergoes an unwilled, affective experience.
     - Semantic role of experiencer.
   yt:
     - NEW-ITHKUIL 4.2.5 STM
-    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient. 
+    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient.
     - Semantic role of stimulus.
   yk:
     - NEW-ITHKUIL 4.2.6 EFF
-    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent. 
+    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent.
     - Semantic role of enabler.
   yf:
     - NEW-ITHKUIL 4.2.7 ERG
-    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.  
+    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.
     - Semantic role of agent or force.
   ys:
     - NEW-ITHKUIL 4.2.8 DAT
-    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication. 
+    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication.
     - Semantic role of recipient.
   yh:
     - NEW-ITHKUIL 4.2.9 IND
-    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party. 
+    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party.
     - - Semantic role of simultanious agent and patient.
   pm:
     - NEW-ITHKUIL 4.3.1 POS
     - The Possessive case. A noun which has alienable (i.e., removable or severable) possession of another noun in the sense of having physical control or oversight of that noun, whether by chance circumstance or deliberate manipulation. The two nouns are not in any sense inherent parts of one another and the relationship between the two can be theoretically or actually terminated by an outside force or influence, or by decision of the possessor, usually by means of mere physical permanent separation of the possessor and possessed nouns.
   pn:
     - NEW-ITHKUIL 4.3.2 PRP
-    - The Proprietive case. A noun having alienable possession of another noun in the sense of quasi-permanent contextual control, ownership or oversight, whether by societal recognition, social convention, law, purchase or decree, which mere physical separation does not sever. The two nouns are not in any sense inherent parts of one another, however the relationship cannot be terminated except via an equally or more binding act, declaration, convention, law, process, etc.  
+    - The Proprietive case. A noun having alienable possession of another noun in the sense of quasi-permanent contextual control, ownership or oversight, whether by societal recognition, social convention, law, purchase or decree, which mere physical separation does not sever. The two nouns are not in any sense inherent parts of one another, however the relationship cannot be terminated except via an equally or more binding act, declaration, convention, law, process, etc.
   pg:
     - NEW-ITHKUIL 4.3.3 GEN
     - The Genitive case. A noun which has inalienable (i.e., unremovable, unseverable) possession of or association with another noun in the sense of having that noun as an inherent or intrinsic attribute, characteristic, physical part, or genetic (i.e., familial) bond.
@@ -828,7 +828,7 @@ definitions:
     - The Transmissive case. A noun for whose sake or benefit an action or event occurs or is done or the party to whose detriment an action or event occurs.  As such, the transmissive is similar to the dative, except that the transmissive implies a strong emphasis on the fact that the noun is more than simply the recipient or target of a dative action, but rather either benefits or is affected detrimentally in a tangible or consequential way from the action or event.  It is usually translated by English 'for' in the sense of 'for the sake (i.e., benefit) of.'
   tp:
     - NEW-ITHKUIL 4.4.4 DFR
-    - The Deferential case. Translates the English phrases 'out of respect for,' 'for the sake of,' or 'in deference toward,' identifying the noun to which deference is paid within the context for an act, condition, or event. 
+    - The Deferential case. Translates the English phrases 'out of respect for,' 'for the sake of,' or 'in deference toward,' identifying the noun to which deference is paid within the context for an act, condition, or event.
   tk:
     - NEW-ITHKUIL 4.4.5 CRS
     - The Contrastive case. A noun which has been replaced by another or for which another noun has been substituted.  This is translatable by the English phrases 'instead of' or 'rather than' or 'as opposed to,' or specialized uses of 'not'.
@@ -840,20 +840,20 @@ definitions:
     - The Commutative case. Translates English 'for' in the sense of 'in exchange for'.
   th:
     - NEW-ITHKUIL 4.4.8 CMP
-    - The Comparative case. Identifies a noun being compared to another.  It translates such expressions as 'as compared to,' or certain usages of 'versus' or 'as opposed to.'  It is similar to the contrastive case (see Section 4.4.5 above), except that it does not carry the sense of opposition, joint exclusivity, or either-or binary substitution of the contrastive, but rather merely comparison/choice/preference from various options or along a spectrum or scale. 
+    - The Comparative case. Identifies a noun being compared to another.  It translates such expressions as 'as compared to,' or certain usages of 'versus' or 'as opposed to.'  It is similar to the contrastive case (see Section 4.4.5 above), except that it does not carry the sense of opposition, joint exclusivity, or either-or binary substitution of the contrastive, but rather merely comparison/choice/preference from various options or along a spectrum or scale.
   tw:
     - NEW-ITHKUIL 4.4.9 CSD
     - The Considerative case. Translates English terms such as 'according to,' 'in the opinion of.'
   km:
     - NEW-ITHKUIL 4.5.1 FUN
-    - The Functive case. Functions similarly to English adverbs ending in -ly or the adverbial use of with, identifying the manner in which an action, event, or state occurs or exists. More exactly, it identifies a noun used to characterize the manner of the act, state, or event, translatable most accurately by the phrase 'in a manner characterized by... .' 
+    - The Functive case. Functions similarly to English adverbs ending in -ly or the adverbial use of with, identifying the manner in which an action, event, or state occurs or exists. More exactly, it identifies a noun used to characterize the manner of the act, state, or event, translatable most accurately by the phrase 'in a manner characterized by... .'
   kn:
     - NEW-ITHKUIL 4.5.2 TFM
-    - The Transformative case. The outcome or final state of a process, often translatable by 'to,' 'until,' or 'into' in the sense of reaching a final state after having undergone some transformation. 
+    - The Transformative case. The outcome or final state of a process, often translatable by 'to,' 'until,' or 'into' in the sense of reaching a final state after having undergone some transformation.
   kg:
     - NEW-ITHKUIL 4.5.3 CLA
     - The Classificative case. a noun as a basis for arranging, sorting, classifying, or counting, translating various English prepositions and phrases used for this purpose.
-    - Also used to identify a noun considered in consecutively recurring increments as a means of describing the manner of an event. 
+    - Also used to identify a noun considered in consecutively recurring increments as a means of describing the manner of an event.
   kp:
     - NEW-ITHKUIL 4.5.4 RSL
     - The Resultative case. A result or consequence, usually translatable utilizing a clause-like structure in English.
@@ -862,7 +862,7 @@ definitions:
     - The Consumptive case. The resource consumed or used (up) as a result of, or as a concurrent part of a process.
   kf:
     - NEW-ITHKUIL 4.5.6 CON
-    - The Concessive case. A noun, situation, or circumstance which gives rise to an expectation of a certain result which, in fact, does not occur. This can be translated by various English prepositions, conjunctions, or phrases such as 'despite,' 'in spite of,' 'notwithstanding,' 'although,' 'regardless of,' 'no matter what,' etc. 
+    - The Concessive case. A noun, situation, or circumstance which gives rise to an expectation of a certain result which, in fact, does not occur. This can be translated by various English prepositions, conjunctions, or phrases such as 'despite,' 'in spite of,' 'notwithstanding,' 'although,' 'regardless of,' 'no matter what,' etc.
   ks:
     - NEW-ITHKUIL 4.5.7 AVR
     - The Aversive case. A noun as a source or object of fear and/or avoidance. With nouns, it translates expressions such as 'for fear of,' 'in order to avoid,' or 'in avoidance of.'
@@ -898,7 +898,7 @@ definitions:
     - The Relative case. Identifies a formative as constituting a relative clause associated with the preceding formative as being the head of the relative clause.
   sm:
     - NEW-ITHKUIL 4.7.1 ACT
-    - The Activative case.  The experiencer of a modal state, such as obligation, necessity, desire, hope, expectation, wishing, being able to, etc. functioning as the "subject" of a modal(ized) verb governing a hypothetical state (i.e., what is wanted, needed, expected, able to be done, etc.). 
+    - The Activative case.  The experiencer of a modal state, such as obligation, necessity, desire, hope, expectation, wishing, being able to, etc. functioning as the "subject" of a modal(ized) verb governing a hypothetical state (i.e., what is wanted, needed, expected, able to be done, etc.).
   sn:
     - NEW-ITHKUIL 4.7.2 ASI
     - The Assimilative case. A formative used as a context for analogy or metaphorical comparison to another formative; translatable as 'as/like' meaning 'as if (it were) X' in the sense of comparison or analogy between one thing and another that it is not.
@@ -916,7 +916,7 @@ definitions:
     - The Conformative case. The entity pursuant to which, as per which, or in conformance with which, another entity is, or an act/event occurs.
   sf:
     - NEW-ITHKUIL 4.7.7 DEP
-    - The Dependent case. Identifies a formative as being the basis of a dependency phrase on which another formative or phrase acts as the contingency, translatable as '...if the circumstances regarding X are such to allow/warrant it' where the final "it" refers to the original contingency noun/phrase whose existence/occurrence is (at least in part) determined by or contingent upon the dependency phrase. 
+    - The Dependent case. Identifies a formative as being the basis of a dependency phrase on which another formative or phrase acts as the contingency, translatable as '...if the circumstances regarding X are such to allow/warrant it' where the final "it" refers to the original contingency noun/phrase whose existence/occurrence is (at least in part) determined by or contingent upon the dependency phrase.
   sh:
     - NEW-ITHKUIL 4.7.8 VOC
     - The Vocative case. A noun being used in direct address.
@@ -931,7 +931,7 @@ definitions:
     - The Allative case. The entity toward which another entity is moving/approaching, translating English 'to/toward'.
   hp:
     - NEW-ITHKUIL 4.8.4 ABL
-    - The Ablative case. The entity away from which another entity is moving/receding. It translates English '(away) from'. 
+    - The Ablative case. The entity away from which another entity is moving/receding. It translates English '(away) from'.
   ht:
     - NEW-ITHKUIL 4.8.5 ORI
     - The Orientative case. The entity (often a body part or sub-component) which serves as the "face" or surface or "front" or "head" of an entity in terms of external communication or interaction, or which serves as the forward "end" of a spatially orientated axis aligned to a vector of motion in terms of directional movement.
@@ -940,10 +940,10 @@ definitions:
     - The Interrelative case. The directional/temporal orientation or position of an entity relative to another, i.e., a noun relative to whose position in space or time another noun is being described for purposes of spatial/temporal orientation.
   hf:
     - NEW-ITHKUIL 4.8.7 INV
-    - The Intrative case. Identifies a formative as being the spatio-temporal boundary point of a span or volume of space or a period of time, i.e, either the starting point or the ending point of a span of time or space.  English translations include 'as of ' / 'since '  /'until '; for spatial contexts, translates as 'as far as', 'up to', or 'between here and there'). 
+    - The Intrative case. Identifies a formative as being the spatio-temporal boundary point of a span or volume of space or a period of time, i.e, either the starting point or the ending point of a span of time or space.  English translations include 'as of ' / 'since '  /'until '; for spatial contexts, translates as 'as far as', 'up to', or 'between here and there').
   hs:
     - NEW-ITHKUIL 4.8.8 NAV
-    - The Navigative case. The entity whose literal or metaphorically inferred long axis serves as the direction of another entity's path, course, arc, or trajectory of translative motion. 
+    - The Navigative case. The entity whose literal or metaphorically inferred long axis serves as the direction of another entity's path, course, arc, or trajectory of translative motion.
   nm:
     - NEW-ITHKUIL 4.9.1 CNR
     - The concursive case. Identifies a "temporal locative" meaning 'at or during the time of X', i.e., the point or stretch in time at or during which an entity or an act/event exists or occurs.
@@ -976,35 +976,35 @@ definitions:
     - NOUN Tokui
   gn:
     - NEW-ITHKUIL 3.4.1 DEL
-    - The Delimitive extension. A noun is being spoken of in its contextual entirety as a discrete entity with clear spatio-temporal boundaries, with no emphasis on any particular portion, edge, boundary, limit, or manifestation beyond the context at hand. 
+    - The Delimitive extension. A noun is being spoken of in its contextual entirety as a discrete entity with clear spatio-temporal boundaries, with no emphasis on any particular portion, edge, boundary, limit, or manifestation beyond the context at hand.
     - With verbs, this extension indicates that the act, state, or event is being considered in its entirety, from beginning to end.
   gt:
     - NEW-ITHKUIL 3.4.2 PRX
-    - The Proximal extension. A noun is being spoken of not in its entirety, but rather only in terms of the portion, duration, subset, or aspect which is relevant to the context at hand. 
-    - Note that the proximal does not refer to a specific or delineated piece, part, or component of the tree or ladder, but rather to the fact that delineated boundaries such as the ends of the ladder or the entirety of the tree are not relevant or applicable to the context at hand. 
+    - The Proximal extension. A noun is being spoken of not in its entirety, but rather only in terms of the portion, duration, subset, or aspect which is relevant to the context at hand.
+    - Note that the proximal does not refer to a specific or delineated piece, part, or component of the tree or ladder, but rather to the fact that delineated boundaries such as the ends of the ladder or the entirety of the tree are not relevant or applicable to the context at hand.
     - With verbs, this extension signifies that it is not the entirety of an act, state, or event which is being considered, but rather the spatial extent or durational period of the act, state, or event relevant to the context.
   gs:
     - NEW-ITHKUIL 3.4.3 ICP
-    - The Inceptive extension. Focuses on the closest boundary, the beginning, initiation, or the immediately accessible portion of a noun or verb, without focusing on the boundaries of the remainder. 
+    - The Inceptive extension. Focuses on the closest boundary, the beginning, initiation, or the immediately accessible portion of a noun or verb, without focusing on the boundaries of the remainder.
     - In verbal contexts it would correspond to the English 'to begin (to)...' or 'to start (to)...'.
   gl:
     - NEW-ITHKUIL 3.4.4 ATV
-    - The Attenuative extension. Focuses on the end, termination, last portion, or trailing boundary of a noun, without focusing on the preceding or previously existing state of the noun.  
-    - With verbs, it is illustrated by the sentences It finished molting or She's come off her diet. 
+    - The Attenuative extension. Focuses on the end, termination, last portion, or trailing boundary of a noun, without focusing on the preceding or previously existing state of the noun.
+    - With verbs, it is illustrated by the sentences It finished molting or She's come off her diet.
   gm:
     - NEW-ITHKUIL 3.4.5 GRA
-    - The Graduative extension. Focuses on a diffuse, extended "fade-in" or gradual onset of a noun. 
-    - With verbs it is illustrated by verbs and phrases such as to fade in, to start gradually, to build up, and similar notions, e.g., She's been eating more and more lately. 
+    - The Graduative extension. Focuses on a diffuse, extended "fade-in" or gradual onset of a noun.
+    - With verbs it is illustrated by verbs and phrases such as to fade in, to start gradually, to build up, and similar notions, e.g., She's been eating more and more lately.
   gp:
     - NEW-ITHKUIL 3.4.6 DPL
-    - The Depletive extension. The inverse of the graduative, focusing on the terminal boundary or "trailing" edge of a noun, where this terminus is ill-defined, "diffuse" or extended to some degree, (i.e. the at-hand context of the noun "peters out" or terminates gradually). Essentially, it applies to any context involving actual or figurative fading. 
+    - The Depletive extension. The inverse of the graduative, focusing on the terminal boundary or "trailing" edge of a noun, where this terminus is ill-defined, "diffuse" or extended to some degree, (i.e. the at-hand context of the noun "peters out" or terminates gradually). Essentially, it applies to any context involving actual or figurative fading.
     - With verbs, it is exemplified by the phrases to wind down, to fade out, to disappear gradually and similar notions.
   l0w:
     - NEW-ITHKUIL 3.2 & 3.1
-    - CSL Consolidative Affiliation. 
+    - CSL Consolidative Affiliation.
     - UPX Uniplex Configuration
     - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
-    
+
   l0m:
     - NEW-ITHKUIL 3.2 & 3.1
     - CSL Consolidative Affiliation
@@ -1245,8 +1245,10 @@ definitions:
   u:
     - PARTICLE marks the clause as a question. clause-initial placement.
   ki:
-    - PARTICLE preceeds a compond word that uses case inflection for the component words
+    - PARTICLE enter case frame (sub-clause)
+  i: 
+    - PAERICLE exit case frame (sub-clause)
   go:
-    - PARTICLE converts to a noun
+    - PARTICLE convert to a noun
   fa:
-    - particle converts to a verb
+    - particle convert to a verb
