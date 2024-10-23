@@ -153,7 +153,7 @@ groups:
     - lan
     - mis
 
-  alphabet:
+  alphabet--consonants--numerals:
     - me
     - nu
     - ge
@@ -166,8 +166,6 @@ groups:
     - wi
     - lo
     - ya
-
-  numbers:
     - pa
     - we
     - tu
@@ -192,12 +190,10 @@ groups:
     - tokui
 
   additional-particles:
-    - he
     - u
+    - he
     - ki
     - i
-    - go
-    - fa
 
   ithkuil-affiliation-configuration--3-2--3-1:
     - l0w
@@ -583,7 +579,7 @@ definitions:
   lin:
     - TOKIPONA pilin
     - NOUN heart (physical or emotional)
-    - ADJECTIVE ago, completed, ended, finished, past
+    - ADJECTIVE feeling (an emotion, a direct experience)
   eya:
     - TOKIPONA pimeja
     - ADJECTIVE black, dark, unlit
@@ -1240,15 +1236,11 @@ definitions:
     - MATH radix (point)
   mutut:
     - MATH exponent, to the power of
-  he:
-    - PARTICLE marks the head of a sub-clause
   u:
     - PARTICLE marks the clause as a question. clause-initial placement.
+  he:
+    - PARTICLE marks the head of a sub-clause
   ki:
     - PARTICLE enter case frame (sub-clause)
   i: 
     - PAERICLE exit case frame (sub-clause)
-  go:
-    - PARTICLE convert to a noun
-  fa:
-    - particle convert to a verb
