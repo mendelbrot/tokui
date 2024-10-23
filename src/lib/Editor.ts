@@ -162,10 +162,6 @@ class Editor {
 
     const pakala = glyphData.special.Z
 
-    if (word.length > 5) {
-      return pakala
-    }
-
     if (glyphData.groups.S.some((i) => i === word)) {
       // @ts-ignore
       return glyphData.special[word].format(
@@ -176,33 +172,36 @@ class Editor {
     }
 
     const sequence = word.split('')
+
+    if (!glyphData.groups.Y.some((i) => i === sequence[0])) {
+      return pakala
+    }
+
     let form = 'pakala'
 
     if (sequence.length === 1) {
-      if (glyphData.groups.Y.some((i) => i === sequence[0])) {
-        form = 'X'
+      form = 'X'
+    } else if (sequence.length === 2) {
+      if (glyphData.groups.V.some((i) => i === sequence[0])) {
+        form = 'B2'
+      } else if (glyphData.groups.V.some((i) => i === sequence[1])) {
+        form = 'A2'
+      } else {
+        form = 'R2'
       }
-    } else {
-      if (
-        sequence.every((letter) => glyphData.groups.Y.some((i) => i === letter))
-      ) {
-        if (
-          glyphData.groups.VN.some((i) => i === sequence[0]) ||
-          sequence.every((letter) =>
-            glyphData.groups.CN.some((i) => i === letter)
-          )
-        ) {
-          if (sequence.length < 5) {
-            if (sequence.length === 3 && !glyphData.groups.V.some((i) => i === sequence[0])) {
-              form = 'C3'
-            } else {
-              form = 'B' + sequence.length
-            }
-            
-          }
-        } else {
-          form = 'A' + sequence.length
-        }
+    } else if (sequence.length === 3) {
+      if (glyphData.groups.V.some((i) => i === sequence[1])) {
+        form = 'A3'
+      } else if (glyphData.groups.V.some((i) => i === sequence[0])) {
+        form = 'B3'
+      } else {
+        form = 'C3'
+      }
+    } else if (sequence.length === 4) {
+      form = 'B4'
+    } else if (sequence.length === 5) {
+      if (glyphData.groups.C.some((i) => i === sequence[2])) {
+        form = 'A5'
       }
     }
 

@@ -958,13 +958,6 @@ const special = {
   7: sixCubed,
 }
 
-const V = ['i', 'e', 'a', 'o', 'u']
-const C = ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y']
-
-const S = ['Z', '_', '0', '1', '2', '3', '4', '5']
-const Y = V.concat(C)
-const X = V.concat(C, S)
-
 const groups = {
   V: ['i', 'e', 'a', 'o', 'u'],
   C: ['m', 'n', 'g', 'f', 's', 'h', 'p', 't', 'k', 'w', 'l', 'y'],
@@ -986,7 +979,8 @@ const forms = {
   B2: ['T', 'B'],
   B3: ['L', 'I3', 'I4'],
   B4: ['I1', 'I3', 'I2', 'I4'],
-  C3: ['T', 'I2', 'I4']
+  C3: ['T', 'I2', 'I4'],
+  R2: ['T', 'I2']
 }
 
 function build() {
