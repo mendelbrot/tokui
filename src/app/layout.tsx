@@ -1,23 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Nav from '@/components/nav'
 
 export const metadata: Metadata = {
-  title: 'to kui',
-  description: 'the website of the to kui language',
+  title: 'tokui',
+  description: 'the website of the tokui conlan',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="mx-4 mb-4">
-        <Nav />
-        {children}
+      <body>
+        <div className="flex flex-col items-center w-full">{children}</div>
       </body>
     </html>
   )
 }
+
+export default RootLayout

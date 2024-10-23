@@ -1,0 +1,1246 @@
+ln-word-mapping:
+  m: me
+  n: nu
+  g: ge
+  p: po
+  t: te
+  k: ka
+  f: fi
+  s: se
+  h: hu
+  w: wi
+  l: lo
+  y: ya
+  0: pa
+  1: we
+  2: tu
+  3: gi
+  4: so
+  5: lu
+  6: ha
+
+groups:
+  tokipona:
+    - a
+    - kes
+    - pa
+    - las
+    - ale
+    - an
+    - ane
+    - anu
+    - wen
+    - e
+    - en
+    - esu
+    - iyo
+    - ike
+    - ilo
+    - ina
+    - yak
+    - yan
+    - yeo
+    - yon
+    - kal
+    - hia
+    - kam
+    - kas
+    - ken
+    - pek
+    - kil
+    - gem
+    - ko
+    - kon
+    - ule
+    - kua
+    - kut
+    - la
+    - lap
+    - lao
+    - lam
+    - len
+    - ete
+    - li
+    - ili
+    - lia
+    - lip
+    - oye
+    - lon
+    - uka
+    - luk
+    - lup
+    - ga
+    - ma
+    - gan
+    - mel
+    - mi
+    - men
+    - mok
+    - mol
+    - osi
+    - mu
+    - mun
+    - umi
+    - mut
+    - nap
+    - nas
+    - asi
+    - nen
+    - ni
+    - nim
+    - nok
+    - o
+    - oli
+    - ona
+    - ope
+    - pak
+    - pal
+    - pia
+    - han
+    - pan
+    - pi
+    - lin
+    - eya
+    - gon
+    - pip
+    - oka
+    - pok
+    - pon
+    - sam
+    - eli
+    - feo
+    - sem
+    - ewi
+    - yel
+    - sik
+    - sin
+    - yin
+    - pin
+    - tel
+    - son
+    - wel
+    - uli
+    - sun
+    - sup
+    - sui
+    - tan
+    - tas
+    - ta
+    - elo
+    - epo
+    - tok
+    - tom
+    - tu
+    - upa
+    - uta
+    - gal
+    - wal
+    - we
+    - wao
+    - awa
+    - wek
+    - wil
+    - kin
+    - ako
+    - oko
+    - isi
+    - eko
+    - mos
+    - ton
+    - sok
+    - meo
+    - epi
+    - lan
+    - mis
+
+  alphabet--consonants--numerals:
+    - me
+    - nu
+    - ge
+    - po
+    - te
+    - ka
+    - fi
+    - se
+    - hu
+    - wi
+    - lo
+    - ya
+    - pa
+    - we
+    - tu
+    - gi
+    - so
+    - lu
+
+  math:
+    - ha
+    - wa
+    - pet
+    - pan
+    - wek
+    - mut
+    - isi
+    - mutut
+    - sam
+
+  proper-names:
+    - topon
+    - tikul
+    - tokui
+
+  additional-particles:
+    - u
+    - he
+    - ki
+    - i
+
+  ithkuil-affiliation-configuration--3-2--3-1:
+    - l0w
+    - l0m
+    - l0n
+    - l0g
+    - l0p
+    - l0t
+    - l0k
+    - l0f
+    - l0s
+    - l0h
+    - l1w
+    - l1m
+    - l1n
+    - l1g
+    - l1p
+    - l1t
+    - l1k
+    - l1f
+    - l1s
+    - l1h
+    - l2w
+    - l2m
+    - l2n
+    - l2g
+    - l2p
+    - l3t
+    - l2k
+    - l2f
+    - l2s
+    - l2h
+    - l3w
+    - l3m
+    - l3n
+    - l3g
+    - l3p
+    - l3t
+    - l3k
+    - l3f
+    - l3s
+    - l3h
+
+  ithkuil-extension--3-4:
+    - gn
+    - gt
+    - gs
+    - gl
+    - gm
+    - gp
+
+  ithkuil-case-transrelative--4-2:
+    - ym
+    - yn
+    - yg
+    - yp
+    - yt
+    - yk
+    - yf
+    - ys
+    - yh
+
+  ithkuil-case-appositive--4-3:
+    - pm
+    - pn
+    - pg
+    - pt
+    - pk
+    - pf
+    - ps
+    - ph
+    - pw
+
+  ithkuil-case-associative--4-4:
+    - tm
+    - tn
+    - tg
+    - tp
+    - tk
+    - tf
+    - ts
+    - th
+    - tw
+
+  ithkuil-case-adverbial--4-5:
+    - km
+    - kn
+    - kg
+    - kp
+    - kt
+    - kf
+    - ks
+    - kh
+    - kw
+
+  ithkuil-case-relational--4-6:
+    - fm
+    - fn
+    - fg
+    - fp
+    - ft
+    - fk
+    - fs
+    - fh
+
+  ithkuil-case-affinitive--4-7:
+    - sm
+    - sn
+    - sg
+    - sp
+    - st
+    - sk
+    - sf
+    - sh
+
+  ithkuil-case-spacetime-1--4-8:
+    - hm
+    - hn
+    - hg
+    - hp
+    - ht
+    - hk
+    - hf
+    - hs
+
+  ithkuil-case-spacetime-2--4-9:
+    - nm
+    - ng
+    - np
+    - nt
+    - nk
+    - nf
+    - ns
+    - nh
+
+definitions:
+  a:
+    - TOKIPONA a
+    - PARTICLE (emphasis, emotion, or confirmation)
+  kes:
+    - TOKIPONA akesi
+    - NOUN non-cute animal; reptile, amphibian
+  pa:
+    - TOKIPONA ala
+    - ADJECTIVE no, not, zero
+    - NUMBER 0
+  las:
+    - TOKIPONA alasa
+    - VERB to hunt, forage
+  ale:
+    - TOKIPONA ale
+    - ADJECTIVE all; abundant, countless, bountiful, every, plentiful
+    - NOUN abundance, everything, life, universe
+  an:
+    - TOKIPONA anpa
+    - ADJECTIVE bowing down, downward, humble, lowly, dependant
+  ane:
+    - TOKIPONA ante
+    - ADJECTIVE different, antered, changed, other
+  anu:
+    - TOKIPONA anu
+    - PARTICLE or
+  wen:
+    - TOKIPONA awen
+    - ADJECTIVE enduring, kept, protected, safe, waiting, staying
+    - PRE-VERB to continue to
+  e:
+    - TOKIPONA e
+    - PARTICLE (before direct object)
+  en:
+    - TOKIPONA en
+    - PARTICLE (between multiple subjects)
+  esu:
+    - TOKIPONA esun
+    - NOUN market, shop, fair, bazar, business transaction
+  iyo:
+    - TOKIPONA ijo
+    - NOUN thing, phenomenon, object, matter
+  ike:
+    - TOKIPONA ike
+    - ADJECTIVE bad, negative, non-essential, irrelevant
+  ilo:
+    - TOKIPONA ilo
+    - NOUN tool, implement, machine, device
+  ina:
+    - TOKIPONA insa
+    - NOUN center, content, inside, between; internal organ, stomach
+  yak:
+    - TOKIPONA jaki
+    - ADJECTIVE disgusting, obscene, sickly, toxic, unclean, unsanitary
+  yan:
+    - TOKIPONA jan
+    - NOUN human being, person, somebody
+  yeo:
+    - TOKIPONA jelo
+    - ADJECTIVE yellow, yellowish
+  yon:
+    - TOKIPONA jo
+    - VERB to have, carry, contain, hold
+  kal:
+    - TOKIPONA kala
+    - NOUN fish, marine animal, sea creature
+  hia:
+    - TOKIPONA kalama
+    - VERB to produce a sound; recite, utter aloud
+  kam:
+    - TOKIPONA kama
+    - ADJECTIVE arriving, coming, future, summoned
+    - PRE-VERB to become, manage to, succed in
+  kas:
+    - TOKIPONA kasi
+    - NOUN plant, vegetation, herb, leaf
+  ken:
+    - TOKIPONA ken
+    - PRE-VERB to be able to, be allowed to, can, may
+    - ADJECTIVE possible
+  pek:
+    - TOKIPONA kepeken
+    - PREPOSITION to use, with, by means of
+  kil:
+    - TOKIPONA kili
+    - NOUN fruit, vegetable, mushroom
+  gem:
+    - TOKIPONA kiwen
+    - hard object, metal, rock, stone
+  ko:
+    - TOKIPONA ko
+    - NOUN clay, clinging form, dough, semi-solid, paste, powder
+  kon:
+    - TOKIPONA kon
+    - NOUN air, breath; essence, spirit; hidden reality, unseen agent
+  ule:
+    - TOKIPONA kule
+    - ADJECTIVE colorful, pigmented, painted
+  kua:
+    - TOKIPONA kulupu
+    - NOUN community company, group, nation, society, tribe
+  kut:
+    - TOKIPONA kute
+    - NOUN ear
+    - VERB to hear, listen; pay attention to, obey
+  la:
+    - TOKIPONA la
+    - PARTICLE (between context phrase and the main sentence)
+  lap:
+    - TOKIPONA lape
+    - ADJECTIVE sleeping, resting
+  lao:
+    - TOKIPONA laso
+    - ADJECTIVE blue, green
+  lam:
+    - TOKIPONA lawa
+    - NOUN head, mind
+    - VERB to control, direct, guide, lead, own, plan, regulate, rule
+  len:
+    - TOKIPONA len
+    - NOUN cloth, clothing, fabric, textile; cover, layer of privacy
+  ete:
+    - TOKIPONA lete
+    - ADJECTIVE cold, cool; uncooked, raw
+  li:
+    - TOKIPONA li
+    - PARTICLE (between subject and verb, also to introduce new verb for the same subject)
+  ili:
+    - TOKIPONA lili
+    - ADJECTIVE little, small, short; few; a bit; young
+  lia:
+    - TOKIPONA linja
+    - NOUN long and flexible thing; cord, hair, rope, thread, yarn
+  lip:
+    - TOKIPONA lipu
+    - NOUN flat object; book, document, card, paper, record, website
+  oye:
+    - TOKIPONA loje
+    - ADJECTIVE red, reddish
+  lon:
+    - TOKIPONA lon
+    - PREPOSITION located at, present at, real, true, existing
+  uka:
+    - TOKIPONA luka
+    - NOUN arm, hand, tactile organ
+  luk:
+    - TOKIPONA lukin
+    - VERB to look at, see, examine, observe, read, watch
+    - PRE-VERB to seek, look for, try to
+  lup:
+    - TOKIPONA lupa
+    - NOUN door, hole, orifice, window
+  ga:
+    - TOKIPONA ma
+    - earth, land; outdoors, world; country, territory; soil
+  ma:
+    - TOKIPONA mama
+    - NOUN parent, ancestor,; creator, originator; caretaker, sustainer
+  gan:
+    - TOKIPONA mani
+    - NOUN money, cash, savings, wealth
+  mel:
+    - TOKIPONA meli
+    - NOUN woman, female, feminine person, wife
+  mi:
+    - TOKIPONA mi
+    - NOUN I me, we, us
+  men:
+    - TOKIPONA mije
+    - NOUN man, male, masculine person, husband
+  mok:
+    - TOKIPONA moku
+    - VERB to eat, drink, consume, swallow, ingest
+  mol:
+    - TOKIPONA moli
+    - ADJECTIVE dead, dying
+  osi:
+    - TOKIPONA monsi
+    - NOUN back, behind, rear
+  mu:
+    - TOKIPONA mu
+    - particle (animal noise or communication)
+  mun:
+    - TOKIPONA mun
+    - NOUN moon, night sky object, star
+  umi:
+    - TOKIPONA musi
+    - ADJECTIVE artistic, entertaining, frivolous, playful, recreational
+  mut:
+    - TOKIPONA mute
+    - ADJECTIVE many, a lot, more, much, several, very
+    - NOUN quantity
+    - MATH times
+  nap:
+    - TOKIPONA nanpa
+    - PARTICLE -th (ordinal number)
+    - NOUN numbers
+  nas:
+    - TOKIPONA nasa
+    - ADJECTIVE unusual, strange, foolish, crazy; drunk, intoxicated
+  asi:
+    - TOKIPONA nasin
+    - NOUN way, custom, doctrine, method, path, road
+  nen:
+    - TOKIPONA nena
+    - NOUN bump, button, hill, mountain, nose, protuberance
+  ni:
+    - TOKIPONA ni
+    - ADJECTIVE that, this
+  nim:
+    - TOKIPONA nimi
+    - NOUN name, word
+  nok:
+    - TOKIPONA noka
+    - NOUN foot, leg, organ of locomotion; bottom, lower part
+  o:
+    - TOKIPONA o
+    - PARTICLE hey! O! (vocative or imperative)
+  oli:
+    - TOKIPONA olin
+    - VERB to love, have compassion for, respect, show affection to
+  ona:
+    - TOKIPONA ona
+    - NOUN he, she, it, they
+  ope:
+    - TOKIPONA open
+    - VERB to begin, start; open; turn on
+  pak:
+    - TOKIPONA pakala
+    - ADJECTIVE botched, broken, damaged, harmed, messed up
+  pal:
+    - TOKIPONA pali
+    - VERB to do, take action on, work on,; build make, prepare
+  pia:
+    - TOKIPONA palisa
+    - NOUN long hard think; branch, rod, stick
+  han:
+    - TOKIPONA pan
+    - NOUN cereal, grain; barley, corn, oat, rice, wheat; bread, pasta
+  pan:
+    - TOKIPONA pana
+    - VERB to give, send, emit, provide, put, release
+    - MATH plus
+  pi:
+    - TOKIPONA pi
+    - PARTICLE of
+  lin:
+    - TOKIPONA pilin
+    - NOUN heart (physical or emotional)
+    - ADJECTIVE feeling (an emotion, a direct experience)
+  eya:
+    - TOKIPONA pimeja
+    - ADJECTIVE black, dark, unlit
+  gon:
+    - TOKIPONA pini
+    - ADJECTIVE ago, completed, ended, finished, past
+  pip:
+    - TOKIPONA pipi
+    - NOUN bug, insect, ant, spider
+  oka:
+    - TOKIPONA poka
+    - NOUN hip, side; next to, nearby, vicinity
+  pok:
+    - TOKIPONA poki
+    - NOUN container, bag, bowl, box, cup, cupboard, drawer, vessel
+  pon:
+    - TOKIPONA pona
+    - ADJECTIVE good, positive, useful, friendly, peaceful; simple
+  sam:
+    - TOKIPONA sama
+    - ADJECTIVE same, similar,; each other; sibling, peer, fellow
+    - PREPOSITION as, like
+    - MATH equals
+  eli:
+    - TOKIPONA seli
+    - ADJECTIVE fire; cooking element, chemical reaction, heat source
+  feo:
+    - TOKIPONA selo
+    - outer form, outer layer; bark, peel, shell, skin; boundary
+  sem:
+    - TOKIPONA seme
+    - PARTICLE what? which?
+  ewi:
+    - TOKIPONA sewi
+    - NOUN area above, highest part, something elevated
+    - ADJECTIVE aew-inspiring, divine, sacred, supernatural
+  yel:
+    - TOKIPONA sijelo
+    - NOUN body (of person or animal), physical state, torso
+  sik:
+    - TOKIPONA sike
+    - NOUN round or circular thing; ball, circle, cycle, sphere, wheel
+    - ADJECTIVE of one year
+  sin:
+    - TOKIPONA sin
+    - ADJECTIVE new, fresh, additional, another, extra
+  yin:
+    - TOKIPONA sina
+    - NOUN you
+  pin:
+    - TOKIPONA sinpin
+    - NOUN face, foremost, front, wall
+  tel:
+    - TOKIPONA sitelen
+    - NOUN image, picture, representation, symbol, mark, writing
+  son:
+    - TOKIPONA sona
+    - VERB to know, be skilled in, be wise about, have information on
+    - PRE-VERB to know how to
+  wel:
+    - TOKIPONA soweli
+    - NOUN animal, beast, land mamal
+  uli:
+    - TOKIPONA suli
+    - ADJECTIVE big, heavy, large, long, tall; important; adult
+  sun:
+    - TOKIPONA suno
+    - NOUN sun; light, brightness, glow, radiance, shine, light source
+  sup:
+    - TOKIPONA supa
+    - NOUN horizontal surface, thing to put or rest something on
+  sui:
+    - TOKIPONA suwi
+    - ADJECTIVE sweet, fragrant; cute, innocent, adorable
+  tan:
+    - TOKIPONA tan
+    - PREPOSITION by, from, because of
+  tas:
+    - TOKIPONA taso
+    - PARTICLE but, however
+    - ADJECTIVE only
+  ta:
+    - TOKIPONA tawa
+    - PREPOSITION going to, toward; for; from the perspective of
+    - ADJECTIVE moving
+  elo:
+    - TOKIPONA telo
+    - NOUN water, liquid, fluid, wet substance; beverage
+  epo:
+    - TOKIPONA tenpo
+    - NOUN time, duration, moment, occasion, period, situation
+  tok:
+    - TOKIPONA toki
+    - VERB to communicate, say, speak, talk, use language, think
+  tom:
+    - TOKIPONA tomo
+    - VERB indoor space; building, home, house, room
+  tu:
+    - TOKIPONA tu
+    - NUMBER 2
+  upa:
+    - TOKIPONA unpa
+    - VERB to have sexual or marital relations with
+  uta:
+    - TOKIPONA uta
+    - NOUN mouth, lips, oral cavity, jaw
+  gal:
+    - TOKIPONA utala
+    - VERB to battle, challenge, compete against, struggle against
+  wal:
+    - TOKIPONA walo
+    - ADJECTIVE white, whitish; light-colored, pale
+  we:
+    - TOKIPONA wan
+    - ADJECTIVE unique, united
+    - NUMBER 1
+  wao:
+    - TOKIPONA waso
+    - NOUN bird, flying creature, winged animal
+  awa:
+    - TOKIPONA wawa
+    - ADJECTIVE strong, powerful; confident, sure; energetic, intense
+  wek:
+    - TOKIPONA weka
+    - absent, away, ignored
+    - MATH minus
+  wil:
+    - TOKIPONA wile
+    - PRE-VERB must, need, require, should, want, wish
+  kin:
+    - TOKIPONA kin (ku)
+    - ADJECTIVE, ADVERB also, too
+  ako:
+    - TOKIPONA namako (ku)
+    - NOUN spice, adornment
+  oko:
+    - TOKIPONA oko (ku)
+    - NOUN eye, vision
+  isi:
+    - TOKIPONA kipisi (ku)
+    - VERB split, slice, cut, divide, chop
+    - NOUN division, slice, segment, section, portion, piece, part
+    - MATH divide
+  eko:
+    - TOKIPONA leko (ku)
+    - square, cube, block, stair, brick, polyhedron
+  mos:
+    - TOKIPONA monsuta (ku)
+    - NOUN fear, monster, horror, terror, beast, demon
+    - ADJECTIVE scary, disturbing, afraid
+    - VERB scare
+  ton:
+    - TOKIPONA tonsi (ku)
+    - non-binary person, transgender, gender non-conforming, intersex, LGBTQ+
+  sok:
+    - TOKIPONA soko (ku)
+    - nushroom, fungus
+  meo:
+    - TOKIPONA meso (ku)
+    - ADJECTIVE average, moderate, medium, intermediate, ordinary
+  epi:
+    - TOKIPONA epiku (ku)
+    - epic, awesome, amazing
+  lan:
+    - TOKIPONA lanpan (ku)
+    - steal, seize, grab, capture
+  mis:
+    - TOKIPONA misikeke (ku)
+    - medication, medicine, cure, pill, medical
+  ym:
+    - NEW-ITHKUIL 4.2.1 THM
+    - The Thematic case. The (usually inanimate) party which is a participant to the verbal predicate where that participant does not undergo any tangible change of state.
+    - Semantic role of content.
+  yn:
+    - NEW-ITHKUIL 4.2.2 INS
+    - The Instrumental case. The entity acting as means utilized by an explicit or implicit agent to implement/carry out the effect/impact of an act/event.
+    - Semantic role of instrument.
+  yg:
+    - NEW-ITHKUIL 4.2.3 ABS
+    - The Absolutive case. The party that is the target of, or undergoes, the effect/impact or change of state as a result of a tangible act/event.
+    - Semantic role of patient.
+  yp:
+    - NEW-ITHKUIL 4.2.4 AFF
+    - The Affective case. The party who undergoes an unwilled, affective experience.
+    - Semantic role of experiencer.
+  yt:
+    - NEW-ITHKUIL 4.2.5 STM
+    - The Stimulative case. The party/entity/idea/thought/situation or mental state which triggers an unwilled, affective response or is the trigger for an existential states with no tangibly affected patient.
+    - Semantic role of stimulus.
+  yk:
+    - NEW-ITHKUIL 4.2.6 EFF
+    - The Effectuative case. The party/force that initiates a chain of causal events or who induces another party to act as an agent.
+    - Semantic role of enabler.
+  yf:
+    - NEW-ITHKUIL 4.2.7 ERG
+    - The Ergative case. The animate party or inanimate force which initiates/causes an act/event which creates a tangible effect or change of state in a patient.
+    - Semantic role of agent or force.
+  ys:
+    - NEW-ITHKUIL 4.2.8 DAT
+    - The Dative case. The party which is the (intended) recipient of a verb of transference, transmission, or communication.
+    - Semantic role of recipient.
+  yh:
+    - NEW-ITHKUIL 4.2.9 IND
+    - The Inducive case. The patient who undergoes the tangible effect, impact, or change of state of an act/event initiated/caused by that self-same party.
+    - - Semantic role of simultanious agent and patient.
+  pm:
+    - NEW-ITHKUIL 4.3.1 POS
+    - The Possessive case. A noun which has alienable (i.e., removable or severable) possession of another noun in the sense of having physical control or oversight of that noun, whether by chance circumstance or deliberate manipulation. The two nouns are not in any sense inherent parts of one another and the relationship between the two can be theoretically or actually terminated by an outside force or influence, or by decision of the possessor, usually by means of mere physical permanent separation of the possessor and possessed nouns.
+  pn:
+    - NEW-ITHKUIL 4.3.2 PRP
+    - The Proprietive case. A noun having alienable possession of another noun in the sense of quasi-permanent contextual control, ownership or oversight, whether by societal recognition, social convention, law, purchase or decree, which mere physical separation does not sever. The two nouns are not in any sense inherent parts of one another, however the relationship cannot be terminated except via an equally or more binding act, declaration, convention, law, process, etc.
+  pg:
+    - NEW-ITHKUIL 4.3.3 GEN
+    - The Genitive case. A noun which has inalienable (i.e., unremovable, unseverable) possession of or association with another noun in the sense of having that noun as an inherent or intrinsic attribute, characteristic, physical part, or genetic (i.e., familial) bond.
+  pt:
+    - NEW-ITHKUIL 4.3.4 ATT
+    - The Attributive case. A noun which inalienably experiences the effects of, or otherwise has an affective (see the affective case) relationship with another noun, either as a temporary or permanent attribute, characteristic, or experience, whether physical or psychological, objective or subjective in nature.
+  pk:
+    - NEW-ITHKUIL 4.3.5 PDC
+    - The Productive case. The creator, author or originator of another noun.
+  pf:
+    - NEW-ITHKUIL 4.3.6 ITP
+    - The Interpretative case. A noun acting as the subjective interpretational context of another noun, that is the noun by or through which another noun is subjectively interpreted or described.
+  ps:
+    - NEW-ITHKUIL 4.3.7 OGN
+    - The Originative case. A noun as being the literal or figurative source of another, or which is the native location, origin, or usual locational context for another.
+  ph:
+    - NEW-ITHKUIL 4.3.8 IDP
+    - The Interdependent case. A noun which has a coordinated, tandem, complementary or mutually dependent relationship with another. The relationship between the two nouns can be thought of as reciprocal in nature, i.e., each noun implies the other or needs the other to exist within its natural context. Note that this case does not imply a part-whole dependency as with the genitive case.
+  pw:
+    - NEW-ITHKUIL 4.3.9 PAR
+    - The Partitive case. A quantitative or content-to-container relationship between the two nouns. (This case identifies the content)
+    - Also used to mark a noun qualified by a specific number.
+  tm:
+    - NEW-ITHKUIL 4.4.1 APL
+    - The Applicative case. A noun which represents the purpose for which another noun is to be utilized in a given instance. As such, it usually translates English 'for' when meaning 'for the temporary or incidental use/purpose of.'
+  tn:
+    - NEW-ITHKUIL 4.4.2 PUR
+    - The Purposive case. A noun which characterizes or defines the purpose of, or reason for, another noun. The purposive is subtly distinct from the applicative above, in that the latter names the actual use to which a noun is put on a given occasion or in given context, whereas the purposive defines another noun's dedicated function or primary reason for being, outside of any contextual instance, i.e., what the noun is used for all the time (or at least its intended use). It generally translates English 'as,' 'of' or 'for' when meaning 'for the purpose of' or alternately an English noun-noun expression or a compound noun.
+  tg:
+    - NEW-ITHKUIL 4.4.3 TRA
+    - The Transmissive case. A noun for whose sake or benefit an action or event occurs or is done or the party to whose detriment an action or event occurs.  As such, the transmissive is similar to the dative, except that the transmissive implies a strong emphasis on the fact that the noun is more than simply the recipient or target of a dative action, but rather either benefits or is affected detrimentally in a tangible or consequential way from the action or event.  It is usually translated by English 'for' in the sense of 'for the sake (i.e., benefit) of.'
+  tp:
+    - NEW-ITHKUIL 4.4.4 DFR
+    - The Deferential case. Translates the English phrases 'out of respect for,' 'for the sake of,' or 'in deference toward,' identifying the noun to which deference is paid within the context for an act, condition, or event.
+  tk:
+    - NEW-ITHKUIL 4.4.5 CRS
+    - The Contrastive case. A noun which has been replaced by another or for which another noun has been substituted.  This is translatable by the English phrases 'instead of' or 'rather than' or 'as opposed to,' or specialized uses of 'not'.
+  tf:
+    - NEW-ITHKUIL 4.4.6 TSP
+    - The Transpositive case. implies substitution of one noun for another.  It translates English 'for' in the sense of 'on behalf of,' 'in place of,' or 'instead of' (i.e., 'as a substitution for').
+  ts:
+    - NEW-ITHKUIL 4.4.7 CMM
+    - The Commutative case. Translates English 'for' in the sense of 'in exchange for'.
+  th:
+    - NEW-ITHKUIL 4.4.8 CMP
+    - The Comparative case. Identifies a noun being compared to another.  It translates such expressions as 'as compared to,' or certain usages of 'versus' or 'as opposed to.'  It is similar to the contrastive case (see Section 4.4.5 above), except that it does not carry the sense of opposition, joint exclusivity, or either-or binary substitution of the contrastive, but rather merely comparison/choice/preference from various options or along a spectrum or scale.
+  tw:
+    - NEW-ITHKUIL 4.4.9 CSD
+    - The Considerative case. Translates English terms such as 'according to,' 'in the opinion of.'
+  km:
+    - NEW-ITHKUIL 4.5.1 FUN
+    - The Functive case. Functions similarly to English adverbs ending in -ly or the adverbial use of with, identifying the manner in which an action, event, or state occurs or exists. More exactly, it identifies a noun used to characterize the manner of the act, state, or event, translatable most accurately by the phrase 'in a manner characterized by... .'
+  kn:
+    - NEW-ITHKUIL 4.5.2 TFM
+    - The Transformative case. The outcome or final state of a process, often translatable by 'to,' 'until,' or 'into' in the sense of reaching a final state after having undergone some transformation.
+  kg:
+    - NEW-ITHKUIL 4.5.3 CLA
+    - The Classificative case. a noun as a basis for arranging, sorting, classifying, or counting, translating various English prepositions and phrases used for this purpose.
+    - Also used to identify a noun considered in consecutively recurring increments as a means of describing the manner of an event.
+  kp:
+    - NEW-ITHKUIL 4.5.4 RSL
+    - The Resultative case. A result or consequence, usually translatable utilizing a clause-like structure in English.
+  kt:
+    - NEW-ITHKUIL 4.5.5 CSM
+    - The Consumptive case. The resource consumed or used (up) as a result of, or as a concurrent part of a process.
+  kf:
+    - NEW-ITHKUIL 4.5.6 CON
+    - The Concessive case. A noun, situation, or circumstance which gives rise to an expectation of a certain result which, in fact, does not occur. This can be translated by various English prepositions, conjunctions, or phrases such as 'despite,' 'in spite of,' 'notwithstanding,' 'although,' 'regardless of,' 'no matter what,' etc.
+  ks:
+    - NEW-ITHKUIL 4.5.7 AVR
+    - The Aversive case. A noun as a source or object of fear and/or avoidance. With nouns, it translates expressions such as 'for fear of,' 'in order to avoid,' or 'in avoidance of.'
+  kh:
+    - NEW-ITHKUIL 4.5.8 CVS
+    - The Conversive case. Used in conjunction with hypothetical or potential contexts to identify a hypothetical exception to a potential outcome or an actual circumstance which alters or has altered a potential outcome. This translates two different ways into English. Where it indicates an exception to a hypothetical situation, it is translated by the conjunction 'unless' in verbal contexts, and by the preposition 'without' for nouns. If applied to a real or actual situation, it is translatable by such expressions as 'except for', 'but for,' 'if not for,' 'if it wasn't for,' or 'if it wasn't on account of.'
+  kw:
+    - NEW-ITHKUIL 4.5.9 SIT
+    - The Situative case. identifies a noun as the background context for a clause without implying a direct causative relationship between the background context and the act, condition, or event which occurs. It is translatable into English by various circumlocutions.
+  fm:
+    - NEW-ITHKUIL 4.6.1 PRN
+    - The Pertinential case. A formative functioning as the general referent of the verb, translating such English terms as 'about,' 'regarding,' 'concerning,' 'in regard to,' 'in reference to,' 'pertaining to,' or 'as for.'
+  fn:
+    - NEW-ITHKUIL 4.6.2 DSP
+    - The Descriptive case. Identifies a formative as describing another formative in an adjectival manner, translatable as 'characterised/describable as being like', 'characterized/describable as having the quality/qualities of'.
+  fg:
+    - NEW-ITHKUIL 4.6.3 COR
+    - The Correlative case. An abstract general relationship, association, or conjunction between one formative and another, including subjective, contextual, metaphorical, or symbolic associations. It translates general phrases such as 'relative to,' 'in relation to,' 'in correlation with,' 'in association with.'
+  fp:
+    - NEW-ITHKUIL 4.6.4 CPS
+    - The Compositive case.  The literal or figurative substance or component(s) of which another is made, composed, formed, built or comprised.
+  ft:
+    - NEW-ITHKUIL 4.6.5 COM
+    - The Comitative case. A formative that accompanies another, translatable as '(along) with'.
+  fk:
+    - NEW-ITHKUIL 4.6.6 UTL
+    - The Utilitative case. A formative in the process of being used while some other activity or state is in progress.  It does not imply the instrument of an act as does the instrumental case.
+  fs:
+    - NEW-ITHKUIL 4.6.7 PRD
+    - The Predicative case. The non-causal basis, foundation, sustenance (literally or figuratively), or required existential condition for another noun or clause, translatable by the phrases 'based (up)on,' 'dependent (up)on' or 'relying on.'
+  fh:
+    - NEW-ITHKUIL 4.6.8 RLT
+    - The Relative case. Identifies a formative as constituting a relative clause associated with the preceding formative as being the head of the relative clause.
+  sm:
+    - NEW-ITHKUIL 4.7.1 ACT
+    - The Activative case.  The experiencer of a modal state, such as obligation, necessity, desire, hope, expectation, wishing, being able to, etc. functioning as the "subject" of a modal(ized) verb governing a hypothetical state (i.e., what is wanted, needed, expected, able to be done, etc.).
+  sn:
+    - NEW-ITHKUIL 4.7.2 ASI
+    - The Assimilative case. A formative used as a context for analogy or metaphorical comparison to another formative; translatable as 'as/like' meaning 'as if (it were) X' in the sense of comparison or analogy between one thing and another that it is not.
+  sg:
+    - NEW-ITHKUIL 4.7.3 ESS
+    - The Essive case. the role or name by which an entity is known or contextually identified. It translates English 'as/like' in the sense of naming or reference to the an entity's functional identity.
+  sp:
+    - NEW-ITHKUIL 4.7.4 TRM
+    - The Terminative case. A formative as being the goal of an act/event.
+  st:
+    - NEW-ITHKUIL 4.7.5 SEL
+    - The Selective case. A contextually recurring time-period, or a string of recurring entities.
+  sk:
+    - NEW-ITHKUIL 4.7.6 CFM
+    - The Conformative case. The entity pursuant to which, as per which, or in conformance with which, another entity is, or an act/event occurs.
+  sf:
+    - NEW-ITHKUIL 4.7.7 DEP
+    - The Dependent case. Identifies a formative as being the basis of a dependency phrase on which another formative or phrase acts as the contingency, translatable as '...if the circumstances regarding X are such to allow/warrant it' where the final "it" refers to the original contingency noun/phrase whose existence/occurrence is (at least in part) determined by or contingent upon the dependency phrase.
+  sh:
+    - NEW-ITHKUIL 4.7.8 VOC
+    - The Vocative case. A noun being used in direct address.
+  hm:
+    - NEW-ITHKUIL 4.8.1 LOC
+    - The Locative case. The location where something is situated or occurs; 'at / in / on / by '.
+  hn:
+    - NEW-ITHKUIL 4.8.2 ATD
+    - The Attendant case. Functions as a variant of the locative case, to indicate in whose presence something occurs/takes place/is situated.  However, such a function has implications allowing the attendant case to identify a vague or externally determined non-causal (and potentially causal) relationship to the event/state/act/occurrence/situation in question.  The party marked by attendant case becomes relevant to or involved in a situation, however, the manner of this involvement/relevancy is vague, undefined, or left to the imagination/speculation of the addressee.
+  hg:
+    - NEW-ITHKUIL 4.8.3 ALL
+    - The Allative case. The entity toward which another entity is moving/approaching, translating English 'to/toward'.
+  hp:
+    - NEW-ITHKUIL 4.8.4 ABL
+    - The Ablative case. The entity away from which another entity is moving/receding. It translates English '(away) from'.
+  ht:
+    - NEW-ITHKUIL 4.8.5 ORI
+    - The Orientative case. The entity (often a body part or sub-component) which serves as the "face" or surface or "front" or "head" of an entity in terms of external communication or interaction, or which serves as the forward "end" of a spatially orientated axis aligned to a vector of motion in terms of directional movement.
+  hk:
+    - NEW-ITHKUIL 4.8.6 IRL
+    - The Interrelative case. The directional/temporal orientation or position of an entity relative to another, i.e., a noun relative to whose position in space or time another noun is being described for purposes of spatial/temporal orientation.
+  hf:
+    - NEW-ITHKUIL 4.8.7 INV
+    - The Intrative case. Identifies a formative as being the spatio-temporal boundary point of a span or volume of space or a period of time, i.e, either the starting point or the ending point of a span of time or space.  English translations include 'as of ' / 'since '  /'until '; for spatial contexts, translates as 'as far as', 'up to', or 'between here and there').
+  hs:
+    - NEW-ITHKUIL 4.8.8 NAV
+    - The Navigative case. The entity whose literal or metaphorically inferred long axis serves as the direction of another entity's path, course, arc, or trajectory of translative motion.
+  nm:
+    - NEW-ITHKUIL 4.9.1 CNR
+    - The concursive case. Identifies a "temporal locative" meaning 'at or during the time of X', i.e., the point or stretch in time at or during which an entity or an act/event exists or occurs.
+  ng:
+    - NEW-ITHKUIL 4.9.2 ASS
+    - The Assessive case. The increment of space or time or unit by which a contextual ratio of measurement is created.
+  np:
+    - NEW-ITHKUIL 4.9.3 PER
+    - The Periodic case. The span of time / time frame at some point(s) during which, separate events, repetitions, or durationally segmented acts or states take place.
+  nt:
+    - NEW-ITHKUIL 4.9.4 PRO
+    - The Prolapsive case. The duration of an act, condition, or event, i.e., how long it takes or lasts.
+  nk:
+    - NEW-ITHKUIL 4.9.5 PCV
+    - The Precursive case. An entity acting as a point in time prior to which an act, condition, or event occurs.
+  nf:
+    - NEW-ITHKUIL 4.9.6 PCR
+    - The Postcursive case. A point in time after which, following which, subsequent to which, an act, state, or event occurs.
+  ns:
+    - NEW-ITHKUIL 4.9.7 ELP
+    - The Elapsive case. Identifies the amount of time that has passed or is expected to pass between the contextual present and the time of the act, condition, or event being spoken of. It corresponds to English '...ago' or '...from now'.
+  nh:
+    - NEW-ITHKUIL 4.9.8 PLM
+    - The Prolimitive case. The spatio-temporal boundary point of a span of time or space during which or within which something is expected to or must occur or be situated.
+  topon:
+    - NOUN Toki Pona
+  tikul:
+    - NOUN Ithkuil
+  tokui:
+    - NOUN Tokui
+  gn:
+    - NEW-ITHKUIL 3.4.1 DEL
+    - The Delimitive extension. A noun is being spoken of in its contextual entirety as a discrete entity with clear spatio-temporal boundaries, with no emphasis on any particular portion, edge, boundary, limit, or manifestation beyond the context at hand.
+    - With verbs, this extension indicates that the act, state, or event is being considered in its entirety, from beginning to end.
+  gt:
+    - NEW-ITHKUIL 3.4.2 PRX
+    - The Proximal extension. A noun is being spoken of not in its entirety, but rather only in terms of the portion, duration, subset, or aspect which is relevant to the context at hand.
+    - Note that the proximal does not refer to a specific or delineated piece, part, or component of the tree or ladder, but rather to the fact that delineated boundaries such as the ends of the ladder or the entirety of the tree are not relevant or applicable to the context at hand.
+    - With verbs, this extension signifies that it is not the entirety of an act, state, or event which is being considered, but rather the spatial extent or durational period of the act, state, or event relevant to the context.
+  gs:
+    - NEW-ITHKUIL 3.4.3 ICP
+    - The Inceptive extension. Focuses on the closest boundary, the beginning, initiation, or the immediately accessible portion of a noun or verb, without focusing on the boundaries of the remainder.
+    - In verbal contexts it would correspond to the English 'to begin (to)...' or 'to start (to)...'.
+  gl:
+    - NEW-ITHKUIL 3.4.4 ATV
+    - The Attenuative extension. Focuses on the end, termination, last portion, or trailing boundary of a noun, without focusing on the preceding or previously existing state of the noun.
+    - With verbs, it is illustrated by the sentences It finished molting or She's come off her diet.
+  gm:
+    - NEW-ITHKUIL 3.4.5 GRA
+    - The Graduative extension. Focuses on a diffuse, extended "fade-in" or gradual onset of a noun.
+    - With verbs it is illustrated by verbs and phrases such as to fade in, to start gradually, to build up, and similar notions, e.g., She's been eating more and more lately.
+  gp:
+    - NEW-ITHKUIL 3.4.6 DPL
+    - The Depletive extension. The inverse of the graduative, focusing on the terminal boundary or "trailing" edge of a noun, where this terminus is ill-defined, "diffuse" or extended to some degree, (i.e. the at-hand context of the noun "peters out" or terminates gradually). Essentially, it applies to any context involving actual or figurative fading.
+    - With verbs, it is exemplified by the phrases to wind down, to fade out, to disappear gradually and similar notions.
+  l0w:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation.
+    - UPX Uniplex Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+
+  l0m:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSS Similar Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0n:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSC Similar Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0g:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MSF Similar Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0p:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDS Dissimilar Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0t:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDC Dissimilar Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0k:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MDF Dissimilar Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0f:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFS Fuzzy Seperate Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0s:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFC Fuzzy Connected Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l0h:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - CSL Consolidative Affiliation
+    - MFF Fuzzy Fused Configuration
+    - (CSL = A naturally occurring set where the function, state, purpose or benefit of individual members is inapplicable, irrelevant, or if applicable, is shared.)
+  l1w:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - UPX Uniplex Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1m:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MSS Similar Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1n:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MSC Similar Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1g:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MSF Similar Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1p:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MDS Dissimilar Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1t:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MDC Dissimilar Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1k:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MDF Dissimilar Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1f:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MFS Fuzzy Seperate Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1s:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MFC Fuzzy Connected Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l1h:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - ASO Associative Affiliation
+    - MFF Fuzzy Fused Configuration
+    - (ASO = The individual members of a configurational set share the same subjective function, state, purpose or benefit.)
+  l2w:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - UPX Uniplex Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2m:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MSS Similar Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2n:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MSC Similar Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2g:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MSF Similar Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2p:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MDS Dissimilar Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2t:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MDC Dissimilar Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2k:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MDF Dissimilar Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2f:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MFS Fuzzy Seperate Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2s:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MFC Fuzzy Connected Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l2h:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - COA Coalescent Affiliation
+    - MFF Fuzzy Fused Configuration
+    - (COA = The members of a configurational set share in a complementary relationship with respect to their individual functions, states, purposes, benefits, etc. While each member's function is distinct from those of other members, each serves in furtherance of some greater unified role.)
+  l3w:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - UPX Uniplex Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3m:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MSS Similar Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3n:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MSC Similar Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3g:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MSF Similar Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3p:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MDS Dissimilar Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3t:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MDC Dissimilar Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3k:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MDF Dissimilar Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3f:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MFS Fuzzy Seperate Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3s:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MFC Fuzzy Connected Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  l3h:
+    - NEW-ITHKUIL 3.2 & 3.1
+    - VAR Variative Affiliation
+    - MFF Fuzzy Fused Configuration
+    - (VAR = The individual members of a configurational set differ as to subjective function, state, purpose or benefit. The differences among members can be to varying degrees (i.e., constituting a fuzzy set in regard to function, purpose, etc.) or at complete odds with one another.)
+  ya:
+    - LETTER y
+  me:
+    - LETTER m
+  fi:
+    - LETTER f
+  ka:
+    - LETTER k
+  hu:
+    - LETTER h
+  se:
+    - LETTER s
+  lo:
+    - LETTER l
+  ge:
+    - LETTER g
+  wi:
+    - LETTER w
+  po:
+    - LETTER p
+  nu:
+    - LETTER n
+  te:
+    - LETTER t
+  gi:
+    - NUMBER 3
+  so:
+    - NUMBER 4
+  lu:
+    - NUMBER 5
+  ha:
+    - NUMBER 6
+    - MATH _*6**_
+  wa:
+    - NUMBER 216 (6**3)
+    - MATH _*216**_
+  pet:
+    - MATH radix (point)
+  mutut:
+    - MATH exponent, to the power of
+  u:
+    - PARTICLE marks the clause as a question. clause-initial placement.
+  he:
+    - PARTICLE marks the head of a sub-clause
+  ki:
+    - PARTICLE enter case frame (sub-clause)
+  i: 
+    - PAERICLE exit case frame (sub-clause)
