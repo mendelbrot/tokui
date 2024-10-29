@@ -5,7 +5,8 @@
     "editor.wordWrap": "on"
   },
   "[yaml]": {
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.wordBasedSuggestions": "off"
   },
   "cSpell.words": ["mamal"]
 }

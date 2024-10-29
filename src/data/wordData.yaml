@@ -18,7 +18,6 @@ ln-word-mapping:
   4: so
   5: lu
 
-
 groups:
   tokipona:
     heading: words derived from Toki Pona
@@ -28,12 +27,12 @@ groups:
       - pa
       - las
       - ale
-      - an
+      - nal
       - ane
       - anu
       - wen
       - e
-      - en
+      - go
       - esu
       - iyo
       - ike
@@ -163,6 +162,45 @@ groups:
       - ki
       - i
 
+  semantic-roles:
+    heading: semantic roles
+    members:
+      - al
+      - ak
+      - ag
+      - ul
+      - el
+      - em
+      - ok
+      - ip
+      - il
+      - us
+      - it
+      - ef
+      - ap
+      - eg
+      - at
+      - os
+      - of
+      - in
+      - og
+      - af
+      - ol
+      - es
+      - ot
+      - on
+      - ep
+      - an
+      - up
+      - ut
+      - as
+      - om
+      - am
+      - ig
+      - op
+      - en
+
+
   alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
     members:
@@ -242,7 +280,7 @@ definitions:
     - TOKIPONA ale
     - ADJECTIVE all; abundant, countless, bountiful, every, plentiful
     - NOUN abundance, everything, life, universe
-  an:
+  nal:
     - TOKIPONA anpa
     - ADJECTIVE bowing down, downward, humble, lowly, dependant
   ane:
@@ -258,7 +296,7 @@ definitions:
   e:
     - TOKIPONA e
     - PARTICLE (before direct object)
-  en:
+  go:
     - TOKIPONA en
     - PARTICLE (between multiple subjects)
   esu:
@@ -754,3 +792,72 @@ definitions:
     - "SYMBOL :"
     - (currently no tokui name/word for this symbol)
     - colon
+  al: 
+    - SEMANTIC-ROLE actor
+  ak:
+    - SEMANTIC-ROLE agent
+  ag:
+    - SEMANTIC-ROLE force
+  ul: 
+    - SEMANTIC-ROLE stimulus
+  el: 
+    - SEMANTIC-ROLE theme
+  em: 
+    - SEMANTIC-ROLE patient
+  ok: 
+    - SEMANTIC-ROLE experiencer
+  ip: 
+    - SEMANTIC-ROLE reciever
+  il: 
+    - SEMANTIC-ROLE instrument
+  us: 
+    - SEMANTIC-ROLE attribute
+  it: 
+    - SEMANTIC-ROLE description
+  ef: 
+    - SEMANTIC-ROLE manner
+  ap: 
+    - SEMANTIC-ROLE value
+  eg: 
+    - SEMANTIC-ROLE extent
+  at: 
+    - SEMANTIC-ROLE duration
+  os: 
+    - SEMANTIC-ROLE state
+  of: 
+    - SEMANTIC-ROLE lens
+  in: 
+    - SEMANTIC-ROLE content
+  og: 
+    - SEMANTIC-ROLE possession
+  af: 
+    - SEMANTIC-ROLE role
+  ol: 
+    - SEMANTIC-ROLE care
+  es: 
+    - SEMANTIC-ROLE created
+  ot: 
+    - SEMANTIC-ROLE context
+  on: 
+    - SEMANTIC-ROLE location
+  ep: 
+    - SEMANTIC-ROLE time
+  an: 
+    - SEMANTIC-ROLE cause
+  up: 
+    - SEMANTIC-ROLE goal
+  ut: 
+    - SEMANTIC-ROLE beneficiary
+  as: 
+    - SEMANTIC-ROLE path
+  om: 
+    - SEMANTIC-ROLE origin
+  am: 
+    - SEMANTIC-ROLE destination
+  ig: 
+    - SEMANTIC-ROLE result
+  op: 
+    - SEMANTIC-ROLE initial
+  en: 
+    - SEMANTIC-ROLE final
+  
