@@ -9,7 +9,7 @@ import RandomWordButton from '@/components/nav/RandomWordButton'
 const WordDetailsPage = () => {
   const params = useParams()
   const word: string =
-    typeof params.word == 'string' ? decodeURI(params.word) : ''
+    typeof params.word == 'string' ? decodeURIComponent(params.word) : ''
 
   return (
     <div>

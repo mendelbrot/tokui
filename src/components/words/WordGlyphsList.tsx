@@ -15,7 +15,6 @@ function WordGlyphsList() {
           <h2>{heading}</h2>
           <div className="flex flex-wrap">
             {
-              // @ts-ignore
               members.map((word) => (
                 <InfoGlyph key={word}>{word}</InfoGlyph>
               ))

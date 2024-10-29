@@ -17,7 +17,7 @@ ln-word-mapping:
   3: gi
   4: so
   5: lu
-  6: ha
+
 
 groups:
   tokipona:
@@ -155,7 +155,15 @@ groups:
       - lan
       - mis
 
-  alphabet--consonants--numerals:
+  additional-particles:
+    heading: additional particles
+    members:
+      - u
+      - he
+      - ki
+      - i
+
+  alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
     members:
       - me
@@ -181,7 +189,7 @@ groups:
     heading: math words
     members:
       - ha
-      - wa
+      - su
       - pet
       - pan
       - wek
@@ -190,20 +198,31 @@ groups:
       - mutut
       - sam
 
+  symbols:
+    heading: symbols
+    members:
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '.'
+      - '+'
+      - '-'
+      - '*'
+      - '/'
+      - '='
+      - ':'
+
   proper-names:
     heading: proper names
     members:
       - topon
       - tikul
       - tokui
-
-  additional-particles:
-    heading: additional particles
-    members:
-      - u
-      - he
-      - ki
-      - i
 
 definitions:
   a:
@@ -664,7 +683,7 @@ definitions:
   ha:
     - NUMBER 6
     - MATH _*6**_
-  wa:
+  su:
     - NUMBER 216 (6**3)
     - MATH _*216**_
   pet:
@@ -679,3 +698,59 @@ definitions:
     - PARTICLE enter case frame (sub-clause)
   i:
     - PAERICLE exit case frame (sub-clause)
+  '0':
+    - SYMBOL 0, zero
+    - pa
+  '1':
+    - SYMBOL 1, one
+    - we
+  '2':
+    - SYMBOL 2, two
+    - tu
+  '3':
+    - SYMBOL 3, three
+    - gi
+  '4':
+    - SYMBOL 4, four
+    - so
+  '5':
+    - SYMBOL 5, five
+    - lu
+  '6':
+    - SYMBOL 6, six
+    - ha
+    - _*6**_
+  '7':
+    - SYMBOL 216
+    - su
+    - 6**3
+    - _*216**_
+    - EDITOR entered by typing "7"
+  '.':
+    - SYMBOL .
+    - pet
+    - decimal point
+  '+':
+    - SYMBOL +
+    - pan
+    - plus
+  '-':
+    - SYMBOL -
+    - wek
+    - minus
+  '*':
+    - SYMBOL *
+    - mut
+    - times
+  '/':
+    - SYMBOL /
+    - isi
+    - divide
+  '=':
+    - SYMBOL =
+    - sam
+    - equals
+  ':':
+    - "SYMBOL :"
+    - (currently no tokui name/word for this symbol)
+    - colon
