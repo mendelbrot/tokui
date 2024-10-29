@@ -13,7 +13,7 @@ const RandomWordButton = () => {
   const handleRandom = () => {
     const wordsList = Object.keys(wordData.definitions)
     const randomWord = wordsList[Math.floor(Math.random() * wordsList.length)]
-    const slug = encodeURI(randomWord)
+    const slug = encodeURIComponent(randomWord)
     router.push('/words/' + slug)
   }
 

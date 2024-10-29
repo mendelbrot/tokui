@@ -10,13 +10,15 @@ import InfoGlyph from '../glyphs/InfoGlyph'
 function WordGlyphsList() {
   return (
     <div className="prose pb-[186px]">
-      {Object.entries(wordData.groups).map(([groupName, groupWords]) => (
-        <div key={groupName}>
-          <h2>{groupName}</h2>
+      {Object.values(wordData.groups).map(({ heading, members }) => (
+        <div key={heading}>
+          <h2>{heading}</h2>
           <div className="flex flex-wrap">
-            {groupWords.map((word) => (
-              <InfoGlyph key={word}>{word}</InfoGlyph>
-            ))}
+            {
+              members.map((word) => (
+                <InfoGlyph key={word}>{word}</InfoGlyph>
+              ))
+            }
           </div>
         </div>
       ))}

@@ -56,7 +56,7 @@ function InfoPopup({ word, close }: Props) {
       className="absolute bottom-[-186px] prose w-64 border rounded-lg bg-purple-50 shadow-2xl z-30"
     >
       <div className="flex px-4 pt-2 text-lg justify-between">
-        <Link href={'/words/' + word}>
+        <Link href={'/words/' + encodeURIComponent(word)}>
           {soundedOutLnWord ? `${word} (${soundedOutLnWord})` : word}
         </Link>
         <button onClick={close}>
