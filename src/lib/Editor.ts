@@ -173,7 +173,7 @@ class Editor {
 
     const sequence = word.split('')
 
-    if (!glyphData.groups.Y.some((i) => i === sequence[0])) {
+    if (!sequence.every(letter => glyphData.groups.Y.some((i) => i === letter))) {
       return pakala
     }
 
@@ -190,12 +190,15 @@ class Editor {
         form = 'R2'
       }
     } else if (sequence.length === 3) {
-      if (glyphData.groups.V.some((i) => i === sequence[1])) {
-        form = 'A3'
-      } else if (glyphData.groups.V.some((i) => i === sequence[0])) {
-        form = 'B3'
-      } else {
+      if (
+        glyphData.groups.CN.some((i) => i === sequence[0]) &&
+        glyphData.groups.CN.some((i) => i === sequence[1])
+      ) {
         form = 'C3'
+      } else if (glyphData.groups.C.some((i) => i === sequence[0])) {
+        form = 'A3'
+      } else {
+        form = 'B3'
       }
     } else if (sequence.length === 4) {
       form = 'B4'
