@@ -767,7 +767,8 @@ definitions:
   '.':
     - SYMBOL .
     - pet
-    - decimal point
+    - math decimal point
+    - period marking the end of a sentence
   '+':
     - SYMBOL +
     - pan
