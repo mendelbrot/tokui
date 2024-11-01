@@ -14,7 +14,7 @@ export default function Learn() {
         <NavButton href="/" imgAlt="home" imgSrc="/icons/tomo.svg" />
       </NavContainer>
       <div className="prose">
-        <h2>sounds and letters</h2>
+        <h1>sounds and letters</h1>
         <p>
           There are 12 consonants and five vowels. The sounds and letters are
           slightly extended from{' '}

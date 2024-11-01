@@ -23,9 +23,9 @@ function NavButton(props: Props) {
 
   return (
     <div className="border-2 rounded-lg bg-opacity-95 shadow-2xl bg-emerald-50 hover:bg-emerald-200 ml-4 z-20">
-      <button onClick={onClick}>
+      <button onClick={onClick} className="">
         <Image
-          className="opacity-50 rounded-lg"
+          className="opacity-50 rounded-lg m-0"
           src={props.imgSrc}
           alt={props.imgAlt}
           width="64"
