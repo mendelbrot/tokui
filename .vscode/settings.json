@@ -4,6 +4,9 @@
   "[json]": {
     "editor.wordWrap": "on"
   },
+  "[mdx]": {
+    "editor.wordWrap": "on"
+  },
   "[yaml]": {
     "editor.wordWrap": "on",
     "editor.wordBasedSuggestions": "off"

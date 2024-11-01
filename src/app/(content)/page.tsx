@@ -1,44 +1,29 @@
-'use client'
-
-import WritingBlock from '@/components/glyphs/WritingBlock'
-import useWindowDimensions from '@/lib/useWindowDimensions'
+import WritingHeading from '@/components/glyphs/WritingHeading'
 import Link from 'next/link'
-
-const screens = { sm: 640 }
 
 const navItems = [
   {
-    url: '/learn',
-    label: 'Learn',
+    url: '/docs',
+    label: 'docs',
   },
   {
     url: '/words',
-    label: 'Words',
+    label: 'words',
   },
   {
     url: '/editor',
-    label: 'Editor',
+    label: 'editor',
   },
 ]
 
-export default function Home() {
-  const windowDimensions = useWindowDimensions()
-  const smallScreen = windowDimensions[0] < screens.sm
-
+function Home() {
   return (
     <main>
       <div className="prose">
-        <h1 className="mb-2 pb-2">
-          <WritingBlock settings={{ scale: smallScreen ? 1.6 : 2.3 }}>
-            o kam pon lon lip tokui
-          </WritingBlock>
+        <WritingHeading>o kam pon on lip tokui</WritingHeading>
+        <h1 className="mt-0 pt-0 text-2xl sm:text-4xl">
+          o kam pon on lip tokui
         </h1>
-        <h2
-          className="mt-0 pt-0"
-          style={!smallScreen ? { fontSize: '2.25em' } : undefined}
-        >
-          o kam pon lon lip tokui
-        </h2>
         <p>
           Welcome to the website of the tokui language: a conlang based on{' '}
           <a href="https://tokipona.org/">Toki Pona</a> and{' '}
@@ -61,42 +46,27 @@ export default function Home() {
         </p>
         <ul>
           <li>
-            <a href="https://ithkuil.net/newithkuil_04_case.htm">
-              The Ithkuil cases
-            </a>
+            <Link href="/docs/semantic-roles">
+              semantic role grammar inspired by Ithkuil case morphology
+            </Link>
           </li>
           <li>
-            <a href="https://ithkuil.net/newithkuil_03_morphology.htm">
-              Ithkuil configuration, affiliation, and extension
-            </a>
-          </li>
-          <li>
-            <a href="https://youtu.be/qID2B4MK7Y0">A base six number system</a>
+            <Link href="/docs/math">
+              basic math operations on a base 6 number system
+            </Link>
           </li>
         </ul>
         <p>
-          The name tokui is meant to be a mix of Toki Pona and Ithkuil. When I
-          started working on tokui, I wanted a language with Ithkiul&apos;s
-          innovative case grammar and matrix like morphology, but that was much
-          easier to learn than Ithkuil (so that I could learn it). I wanted to
-          keep the same principles of Ithkuil construction, but trade some of
-          the precision for a smaller phonology and morphology. I was also
-          interested in Toki Pona and thinking about using ideas from there in
-          this language, perhaps using Toki Pona style word composition to keep
-          the vocabulary small.
-        </p>
-        <p>
-          I started out trying to make a Toki Pona / Ithkuil hybrid language.
-          Then it occurred to me that I could do what I wanted and maybe get a
-          better result from modifying Toki Pona and adding Ithkuil inspired
-          features to it, as extensions.
-        </p>
-        <p>
-          Now that I have put together this language with words from Toki Pona
-          and Ithkuil, it&apos;s time to try using it and discover what&apos;s
-          next.
+          The name tokui is meant to be a mix of Toki Pona and Ithkuil. My goal
+          is to experiment with language creation using interesting features
+          from Ithkuil in a context that is much easier to learn and use than
+          Ithkuil. I also wanted to experiment with developing a writing system.
+          It turned out to be a character-based system inspired by Chinese and
+          Korean characters. Tokui is a work in progress.
         </p>
       </div>
     </main>
   )
 }
+
+export default Home

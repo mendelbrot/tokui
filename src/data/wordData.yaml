@@ -170,7 +170,7 @@ groups:
       - ag
       - ul
       - el
-      - em
+      - an
       - ok
       - ip
       - il
@@ -184,13 +184,14 @@ groups:
       - of
       - in
       - og
-      - af
+      - im
       - ol
       - es
+      - af
       - ot
       - on
       - ep
-      - an
+      - em
       - up
       - ut
       - as
@@ -199,7 +200,6 @@ groups:
       - ig
       - op
       - en
-
 
   alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
@@ -767,7 +767,8 @@ definitions:
   '.':
     - SYMBOL .
     - pet
-    - decimal point
+    - math decimal point
+    - period marking the end of a sentence
   '+':
     - SYMBOL +
     - pan
@@ -802,7 +803,7 @@ definitions:
     - SEMANTIC-ROLE stimulus
   el: 
     - SEMANTIC-ROLE theme
-  em: 
+  an: 
     - SEMANTIC-ROLE patient
   ok: 
     - SEMANTIC-ROLE experiencer
@@ -830,19 +831,21 @@ definitions:
     - SEMANTIC-ROLE content
   og: 
     - SEMANTIC-ROLE possession
-  af: 
-    - SEMANTIC-ROLE role
+  im: 
+    - SEMANTIC-ROLE associate
   ol: 
     - SEMANTIC-ROLE care
   es: 
     - SEMANTIC-ROLE created
+  af: 
+    - SEMANTIC-ROLE role
   ot: 
     - SEMANTIC-ROLE context
   on: 
     - SEMANTIC-ROLE location
   ep: 
     - SEMANTIC-ROLE time
-  an: 
+  em: 
     - SEMANTIC-ROLE cause
   up: 
     - SEMANTIC-ROLE goal

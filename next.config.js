@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const createMDX = require('@next/mdx')
 
 const nextConfig = {
   webpack: (config, options) => {
@@ -18,6 +19,11 @@ const nextConfig = {
     })
     return config
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 }
 
-module.exports = nextConfig
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+})
+
+module.exports = withMDX(nextConfig)

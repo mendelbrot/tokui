@@ -6,6 +6,8 @@ import NavContainer from '@/components/nav/NavContainer'
 import NavButton from '@/components/nav/NavButton'
 import RandomWordButton from '@/components/nav/RandomWordButton'
 
+// TODO: find out why /words/%2E redirects back to /words
+
 const WordDetailsPage = () => {
   const params = useParams()
   const word: string =
