@@ -1,9 +1,176 @@
 import I from '@/components/glyphs/InfoGlyph'
+import WritingBlock from '@/components/glyphs/WritingBlock'
+import Link from 'next/link'
 
 # sounds and writing system
 
-TODO
+## sounds and letters
 
-<div className="flex flex-wrap">
-  <I>iyo</I>
-</div>
+There are 12 consonants and five vowels. The sounds and letters are slightly extended from [Toki Pona sounds](https://en.wikipedia.org/wiki/Toki_Pona#Phonology_and_phonotactics). There are added consonants **g**, **f**, and **h**. In Latin script, Toki Pona **j** is written as **y**.
+
+There is no distinction between voiced and un-voiced consonants and the choice of pronounciation is very flexible. For instance: **f** can be **v**; **t** can be **d**; **l** can be **r**; **s** can **z** or **sh**; **y** can be **j**.
+
+The vowels are the same as in Toki Pona.
+
+<table className="table-fixed">
+  <caption>tokui letters</caption>
+  <thead>
+    <tr>
+      <th className="border">Vowels</th>
+      <th className="border">Consonants</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border">i e a o u</td>
+      <td className="border">m n g f s h p t k w l y</td>
+    </tr>
+  </tbody>
+</table>
+
+Tokui words are short, with at most five letters in a word. The words borrowed from Toki Pona have been reduced to three letters or less. As in Toki Pona, there are no consonant clusters or blended vowels.
+
+There can, however, be two vowels in a row in tokui. They are pronounced distinctly, not blended.
+
+Words don't end with the consonants **h**, **w**, or **y** because a vowel followed by one of these consonants can be hard to pronounce.
+
+## tokui writing
+
+The tokui writing system is similar [Hangul writing](https://en.wikipedia.org/wiki/Hangul) in appearance and construction. Basic vowel and consonant symbols are combined into characters. A tokui character can hold a maximum of five letters.
+
+There are well defined rules for building characters, but think it would be tedious to go over the rules in detail here. They are programmed into the text editor and there are many examples throughout this site. The overview is this: Letters are placed beside, below, or within other letters; a consonant can be a frame surrounding up to two other letters. These two tables show the tokui letters:
+
+<table className="table-fixed">
+  <caption>consonants</caption>
+  <thead>
+    <tr>
+      <th className="border">Manner \ Place</th>
+      <th className="border">Front</th>
+      <th className="border">Middle</th>
+      <th className="border">Back</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th className="border">Nasal</th>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>m</WritingBlock>
+        </div>
+        m
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>n</WritingBlock>
+        </div>
+        n
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>g</WritingBlock>
+        </div>
+        g
+      </td>
+    </tr>
+    <tr>
+      <th className="border">Stop</th>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>p</WritingBlock>
+        </div>
+        p
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>t</WritingBlock>
+        </div>
+        t
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>k</WritingBlock>
+        </div>
+        k
+      </td>
+    </tr>
+    <tr>
+      <th className="border">Frictive</th>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>f</WritingBlock>
+        </div>
+        f
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>s</WritingBlock>
+        </div>
+        s
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>h</WritingBlock>
+        </div>
+        h
+      </td>
+    </tr>
+    <tr>
+      <th className="border">Approxomant</th>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>w</WritingBlock>
+        </div>
+        w
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>l</WritingBlock>
+        </div>
+        l
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>y</WritingBlock>
+        </div>
+        y
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table className="table-fixed">
+  <caption>vowels</caption>
+  <tbody>
+    <tr>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>i</WritingBlock>
+        </div>
+        i
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>e</WritingBlock>
+        </div>
+        e
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>a</WritingBlock>
+        </div>
+        a
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>o</WritingBlock>
+        </div>
+        o
+      </td>
+      <td className="border">
+        <div className="w-12">
+          <WritingBlock>u</WritingBlock>
+        </div>
+        u
+      </td>
+    </tr>
+  </tbody>
+</table>
