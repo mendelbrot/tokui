@@ -9,7 +9,7 @@ export const BoundaryContext = React.createContext<DOMRect | null>(null)
 function ContentLayout({ children }: { children: React.ReactNode }) {
   const boundaryRef = React.useRef<HTMLDivElement | null>(null)
   const boundingRect = useBoundingClientRect(boundaryRef)
-  
+
   return (
     <BoundaryContext.Provider value={boundingRect}>
       <main ref={boundaryRef} className="prose max-w-prose p-[16px]">

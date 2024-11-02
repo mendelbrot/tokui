@@ -54,19 +54,19 @@ function WordSearchList() {
                 className="flex items-start mb-0 mx-0 pb-0 px-0 mt-4 pt-4 border-t"
               >
                 <div>
-                  <Link href={'/words/' + wordName}>
+                  <Link href={'/words/' + wordName} className="no-underline">
                     <WritingBlock
                       className="p-2 border-2 rounded-lg mr-2"
                       settings={{ scale: 2 }}
                     >
                       {wordName}
                     </WritingBlock>
+                    <div className="font-bold">
+                      {soundedOutLnWord
+                        ? `${wordName} (${soundedOutLnWord})`
+                        : wordName}
+                    </div>
                   </Link>
-                  <div className="font-bold">
-                    {soundedOutLnWord
-                      ? `${wordName} (${soundedOutLnWord})`
-                      : wordName}
-                  </div>
                 </div>
                 <div>
                   <ul className="m-0">
