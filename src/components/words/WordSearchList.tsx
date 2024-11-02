@@ -36,7 +36,7 @@ function WordSearchList() {
           onChange={(e) => setSearchQueryB(e.target.value)}
         />
       </div>
-      <ul className="mt-[64px]">
+      <ul className="mt-[64px] m-0 p-0">
         {Object.entries(wordData.definitions)
           .filter(([wordName, _wordDefinitions]) =>
             wordName.includes(searchQueryA)
@@ -51,7 +51,7 @@ function WordSearchList() {
             return (
               <li
                 key={wordName}
-                className="flex items-start mt-4 pt-4 border-t"
+                className="flex items-start mb-0 mx-0 pb-0 px-0 mt-4 pt-4 border-t"
               >
                 <div>
                   <Link href={'/words/' + wordName}>
@@ -62,16 +62,18 @@ function WordSearchList() {
                       {wordName}
                     </WritingBlock>
                   </Link>
-                  <h2>
+                  <div className="font-bold">
                     {soundedOutLnWord
                       ? `${wordName} (${soundedOutLnWord})`
                       : wordName}
-                  </h2>
+                  </div>
                 </div>
                 <div>
-                  <ul className="prose">
+                  <ul className="m-0">
                     {wordDefinitions.map((i) => (
-                      <li key={wordName + i}>{i}</li>
+                      <li className="m-0" key={wordName + i}>
+                        {i}
+                      </li>
                     ))}
                   </ul>
                 </div>
