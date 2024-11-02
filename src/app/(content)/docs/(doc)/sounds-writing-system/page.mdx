@@ -1,4 +1,3 @@
-import I from '@/components/glyphs/InfoGlyph'
 import WritingBlock from '@/components/glyphs/WritingBlock'
 import Link from 'next/link'
 
@@ -32,13 +31,13 @@ Tokui words are short, with at most five letters in a word. The words borrowed f
 
 There can, however, be two vowels in a row in tokui. They are pronounced distinctly, not blended.
 
-Words don't end with the consonants **h**, **w**, or **y** because a vowel followed by one of these consonants can be hard to pronounce.
+Words don't end with the consonants **h**, **w**, or **y** because of diffuculty in pronouncing such words.
 
 ## tokui writing
 
-The tokui writing system is similar [Hangul writing](https://en.wikipedia.org/wiki/Hangul) in appearance and construction. Basic vowel and consonant symbols are combined into characters. A tokui character can hold a maximum of five letters.
+The tokui writing system is similar [Hangul writing](https://en.wikipedia.org/wiki/Hangul) in appearance and construction. Vowel and consonant letter symbols are combined into characters. 
 
-There are well defined rules for building characters, but think it would be tedious to go over the rules in detail here. They are programmed into the text editor and there are many examples throughout this site. The overview is this: Letters are placed beside, below, or within other letters; a consonant can be a frame surrounding up to two other letters. These two tables show the tokui letters:
+A tokui character can hold a maximum of five letters. In a character, letters are placed beside, below, or within other letters. A consonant can be a frame surrounding up to two other letters. These two tables show the tokui letters:
 
 <table className="table-fixed">
   <caption>consonants</caption>
@@ -174,5 +173,20 @@ There are well defined rules for building characters, but think it would be tedi
     </tr>
   </tbody>
 </table>
+
+The rules for building these letters into characters are programmed into the text editor and there are examples throughout this site. Here is an illustration, using only the letters **i** and **l**, of some forms the characters can have:
+
+<div className="flex flex-wrap">
+<WritingBlock className="mb-8 mr-8">i</WritingBlock>
+<WritingBlock className="mb-8 mr-8">l</WritingBlock>
+<WritingBlock className="mb-8 mr-8">il</WritingBlock>
+<WritingBlock className="mb-8 mr-8">li</WritingBlock>
+<WritingBlock className="mb-8 mr-8">ll</WritingBlock>
+<WritingBlock className="mb-8 mr-8">ili</WritingBlock>
+<WritingBlock className="mb-8 mr-8">lil</WritingBlock>
+<WritingBlock className="mb-8 mr-8">lll</WritingBlock>
+<WritingBlock className="mb-8 mr-8">llll</WritingBlock>
+<WritingBlock className="mb-8 mr-8">lilil</WritingBlock>
+</div>
 
 <Link href="/docs/toki-pona-words-grammar">next: Toki Pona words and grammar</Link>
