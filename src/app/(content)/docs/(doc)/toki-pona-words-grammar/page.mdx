@@ -1,21 +1,33 @@
-import I from '@/components/glyphs/InfoGlyph'
-import InfoBlockSubtitle from '@/components/glyphs/InfoBlockSubtitle'
+import InfoBlock from '@/components/glyphs/InfoBlock'
 import Link from 'next/link'
 
 # Toki Pona words and grammar
 
 The the core vocublary of tokui is derived from Toki Pona. I shortened any word with more than three letters. Many of the altered words are recognizable. Some of them were completely changed.
 
-Tokui grammar, too, is based on Toki Pona. Most any Toki Pona sentence can be trivially translated to tokui by a 1-1 replacement of words. Here are some example Toki Pona sentence translated to tokui (pressing on a word character reveals its meaning):
+Tokui grammar, too, is based on Toki Pona. Most any Toki Pona sentence can be trivially translated to tokui by a 1-1 replacement of words. Here are some example Toki Pona proverbs translated to tokui (pressing on a word character reveals its meaning):
 
-<InfoBlockSubtitle>ale li yon e epo</InfoBlockSubtitle>
+<InfoBlock subtitle translation="Everything has a time.">
+  ale li yon e epo
+</InfoBlock>
 
-<InfoBlockSubtitle>yan li uli mut . gan li uli ili</InfoBlockSubtitle>
+<InfoBlock subtitle translation="People are more important than money.">
+  yan li uli mut . gan li uli ili
+</InfoBlock>
 
-<InfoBlockSubtitle>mi pon e ale mi la mi pon e mi</InfoBlockSubtitle>
+<InfoBlock
+  subtitle
+  translation="When I improve all areas of my life, I improve myself."
+>
+  mi pon e ale mi la mi pon e mi
+</InfoBlock>
 
-<InfoBlockSubtitle>asi ane li pon ta yan ane</InfoBlockSubtitle>
+<InfoBlock subtitle translation="Different ways are good for different people.">
+  asi ane li pon ta yan ane
+</InfoBlock>
 
-<InfoBlockSubtitle>o pan e pon ta ga</InfoBlockSubtitle>
+<InfoBlock subtitle translation="Love the earth.">
+  o pan e pon ta ga
+</InfoBlock>
 
 <Link href="/docs/semantic-roles">next: semantic role grammar</Link>
