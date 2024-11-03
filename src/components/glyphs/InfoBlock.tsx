@@ -7,12 +7,9 @@ type Props = {
   children: string | Object
   subtitle?: boolean
   translation?: string
-  comment?: string | Array<string | Object>
 }
 
 function InfoBlock(props: Props) {
-  console.log(props.children)
-  console.log(typeof props.children)
   let text: string = ''
   if (typeof props.children === 'object') {
     if (
@@ -40,7 +37,6 @@ function InfoBlock(props: Props) {
         <div className="font-bold">{text.replace(' . ', '. ') + '.'}</div>
       )}
       {props.translation && <div className="italic">{props.translation}</div>}
-      {props.comment && <div>{props.comment}</div>}
     </div>
   )
 }
