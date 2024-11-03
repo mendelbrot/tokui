@@ -269,9 +269,9 @@ class Editor {
   }
 
   public project() {
-    console.clear()
-    console.log(this._writingValue)
-    console.table(this.writingRep)
+    // console.clear()
+    // console.log(this._writingValue)
+    // console.table(this.writingRep)
 
     this.projectionCallback({
       settingsValue: this._settingsValue,
