@@ -18,7 +18,7 @@ const WordDetailsPage = () => {
       <NavContainer>
         <NavButton
           href="/words"
-          imgSrc="/icons/chevron-back.svg"
+          imgSrc="/icons/up.svg"
           imgAlt="back to words page"
         />
         <RandomWordButton />

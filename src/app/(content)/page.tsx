@@ -20,9 +20,9 @@ function Home() {
   return (
     <main>
       <div className="prose">
-        <WritingHeading>o kam pon on lip tokui</WritingHeading>
+        <WritingHeading>o kapon on lip tokui</WritingHeading>
         <h1 className="mt-0 pt-0 text-2xl sm:text-4xl">
-          o kam pon on lip tokui
+          o kapon on lip tokui
         </h1>
         <p>
           Welcome to the website of the tokui language: a conlang based on{' '}
