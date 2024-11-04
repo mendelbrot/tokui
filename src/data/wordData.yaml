@@ -50,7 +50,7 @@ groups:
       - pek
       - kil
       - gem
-      - ko
+      - koe
       - kon
       - ule
       - kua
@@ -154,13 +154,18 @@ groups:
       - lan
       - mis
 
-  additional-particles:
-    heading: additional particles
+  particles:
+    heading: particles
     members:
+      - a
+      - o
       - u
-      - he
+      - li
+      - pi
+      - la
       - ki
       - i
+      - he
 
   semantic-roles:
     heading: semantic roles
@@ -200,6 +205,23 @@ groups:
       - ig
       - op
       - en
+
+  additional-words:
+    heading: additional words
+    members:
+      - yapan
+      - yapal
+      - yaloi
+      - lipon
+      - lipoi
+      - ligal
+      - ligai
+      - posuk
+      - popag
+      - hipon
+      - kapon
+      - tonas
+
 
   alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
@@ -285,7 +307,7 @@ definitions:
     - ADJECTIVE bowing down, downward, humble, lowly, dependant
   ane:
     - TOKIPONA ante
-    - ADJECTIVE different, antered, changed, other
+    - ADJECTIVE different, altered, changed, other
   anu:
     - TOKIPONA anu
     - PARTICLE or
@@ -335,7 +357,7 @@ definitions:
   kam:
     - TOKIPONA kama
     - ADJECTIVE arriving, coming, future, summoned
-    - PRE-VERB to become, manage to, succed in
+    - PRE-VERB to become, manage to, succeed in
   kas:
     - TOKIPONA kasi
     - NOUN plant, vegetation, herb, leaf
@@ -352,7 +374,7 @@ definitions:
   gem:
     - TOKIPONA kiwen
     - hard object, metal, rock, stone
-  ko:
+  koe:
     - TOKIPONA ko
     - NOUN clay, clinging form, dough, semi-solid, paste, powder
   kon:
@@ -863,4 +885,40 @@ definitions:
     - SEMANTIC-ROLE initial
   en: 
     - SEMANTIC-ROLE final
-  
+  yapan:
+    - NOUN supplier
+    - DERIVATION yan pan
+  yapal:
+    - NOUN worker
+    - DERIVATION yan pal
+  yaloi:
+    - NOUN loved one
+    - DERIVATION yan oli
+  lipon:
+    - NOUN joy
+    - DERIVATION lin pon
+  lipoi:
+    - ADJECTIVE delighted
+    - DERIVATION lin pon uli, or lin pon ewi
+  ligal:
+    - ADJECTIVE angry
+    - DERIVATION lin gal
+  ligai:
+    - ADJECTIVE furious
+    - DERIVATION lin gal uli
+  posuk:
+    - NOUN tomorrow
+    - DERIVATION epo sun kam
+  popag:
+    - NOUN the weekend
+    - DERIVATION epo pi pal gon
+  hipon:
+    - ADJECTIVE cheerfull
+    - DERIVATION hia pon
+  kapon:
+    - VERB welcome
+    - DERIVATION kam pon
+  tonas:
+    - VERB plan
+    - NOUN plan
+    - DERIVATION tok nas
