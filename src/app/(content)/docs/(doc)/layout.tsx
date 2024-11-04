@@ -11,7 +11,7 @@ function DocLayout({ children }: Props) {
         <NavButton href="/" imgAlt="home" imgSrc="/icons/tomo.svg" />
         <NavButton
           href="/docs"
-          imgSrc="/icons/chevron-back.svg"
+          imgSrc="/icons/up.svg"
           imgAlt="back to docs index page"
         />
       </NavContainer>
