@@ -222,7 +222,6 @@ groups:
       - kapon
       - tonas
 
-
   alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
     members:
@@ -812,78 +811,95 @@ definitions:
     - sam
     - equals
   ':':
-    - "SYMBOL :"
+    - 'SYMBOL :'
     - (currently no tokui name/word for this symbol)
     - colon
-  al: 
+  al:
     - SEMANTIC-ROLE actor
+    - an active participant, but not as actively polarized as agent. on a spectrum between agent and pation, actor is about two thirds agent and one third patient.
+    - EXAMPLE if two people are having a balanced conversation, then it would be most appropriate to label them with the actor role.
   ak:
     - SEMANTIC-ROLE agent
+    - the person that is actively doing the action of the verb
+    - EXAMPLE throwing a ball, running, cooking, building a piece of furnatire
   ag:
     - SEMANTIC-ROLE force
-  ul: 
+    - the non-intentional natural force that is doing the action of the verb
+    - EXAMPLE the wind
+  ul:
     - SEMANTIC-ROLE stimulus
-  el: 
+    - the thing that causes a sensory experience
+    - EXAMPLE bright sunlight
+  el:
     - SEMANTIC-ROLE theme
-  an: 
+    - a very general purpose semantic role that can be used in several contexts. 
+    - often it is the pairing to a semantic role if that role's complimentary pair isn't represented in tokui. for instance, there is a semantic role for a posession, but there isn't a role (in the list of tokui semantic roles) for 'the one that has a posession' the theme would be the role to choose for this. likewise for the complimentary pair of attribute, description, associate, care, created, and role.
+    - EXAMPLE in 'my child', 'me' is theme and 'child' is care or created.
+    - EXAMPLE in 'my hat', 'me' is theme and 'hat' is posession.
+    - EXAMPLE in 'my job', 'me' is theme and 'job' is role.
+    - theme can also optionally be a substitute for a semantic role even when there is an appropriate role on the list to use. it can sometimes be used instead of patient, experiencer, and other roles.
+  an:
     - SEMANTIC-ROLE patient
-  ok: 
+    - the object or person that that the action of the verb is done to. if preferred, theme can be used instead of patient (but generally patient can not be used instead of theme).
+    - EXAMPLE in 'the falling rocks hit the car', 'the falling rocks' is force and 'the car' is patient (or theme).
+  ok:
     - SEMANTIC-ROLE experiencer
-  ip: 
+    - the one that experiences a sensory or physical/emotional state.
+  ip:
     - SEMANTIC-ROLE reciever
-  il: 
+  il:
     - SEMANTIC-ROLE instrument
-  us: 
+  us:
     - SEMANTIC-ROLE attribute
-  it: 
+  it:
     - SEMANTIC-ROLE description
-  ef: 
+  ef:
     - SEMANTIC-ROLE manner
-  ap: 
+  ap:
     - SEMANTIC-ROLE value
-  eg: 
+  eg:
     - SEMANTIC-ROLE extent
-  at: 
+  at:
     - SEMANTIC-ROLE duration
-  os: 
+  os:
     - SEMANTIC-ROLE state
-  of: 
+  of:
     - SEMANTIC-ROLE lens
-  in: 
+  in:
     - SEMANTIC-ROLE content
-  og: 
+  og:
     - SEMANTIC-ROLE possession
-  im: 
+  im:
     - SEMANTIC-ROLE associate
-  ol: 
+  ol:
     - SEMANTIC-ROLE care
-  es: 
+  es:
     - SEMANTIC-ROLE created
-  af: 
+  af:
     - SEMANTIC-ROLE role
-  ot: 
+  ot:
     - SEMANTIC-ROLE context
-  on: 
+  on:
     - SEMANTIC-ROLE location
-  ep: 
+  ep:
     - SEMANTIC-ROLE time
-  em: 
+  em:
     - SEMANTIC-ROLE cause
-  up: 
+  up:
     - SEMANTIC-ROLE goal
-  ut: 
+  ut:
     - SEMANTIC-ROLE beneficiary
-  as: 
+  as:
     - SEMANTIC-ROLE path
-  om: 
+  om:
     - SEMANTIC-ROLE origin
-  am: 
+  am:
     - SEMANTIC-ROLE destination
-  ig: 
+  ig:
     - SEMANTIC-ROLE result
-  op: 
+  op:
     - SEMANTIC-ROLE initial
-  en: 
+  en:
     - SEMANTIC-ROLE final
   yapan:
     - NOUN supplier
