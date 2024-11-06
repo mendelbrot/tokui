@@ -177,6 +177,7 @@ groups:
       - el
       - an
       - ok
+      - uf
       - ip
       - il
       - us
@@ -256,6 +257,10 @@ groups:
       - isi
       - mutut
       - sam
+      - tau
+      - sif
+      - cof
+      - taf
 
   symbols:
     heading: symbols
@@ -275,9 +280,17 @@ groups:
       - '/'
       - '='
       - ':'
+      - '^'
+      - '['
+      - ']'
+      - 'T'
+      - 'I'
+      - 'S'
+      - 'C'
+      - 'V'
 
   proper-names:
-    heading: proper names
+    heading: names
     members:
       - topon
       - tikul
@@ -788,32 +801,65 @@ definitions:
   '.':
     - SYMBOL .
     - pet
-    - math decimal point
+    - MATH decimal point
     - period marking the end of a sentence
   '+':
     - SYMBOL +
     - pan
-    - plus
+    - MATH plus
   '-':
     - SYMBOL -
     - wek
-    - minus
+    - MATH minus
   '*':
     - SYMBOL *
     - mut
-    - times
+    - MATH times
   '/':
     - SYMBOL /
     - isi
-    - divide
+    - MATH divide
   '=':
     - SYMBOL =
     - sam
-    - equals
+    - MATH equals
   ':':
     - 'SYMBOL :'
     - (currently no tokui name/word for this symbol)
     - colon
+  '^':
+    - SYMBOL ^
+    - mutut
+    - MATH exponent
+  '[':
+    - SYMBOL [
+    - (currently no tokui name/word for this symbol)
+    - MATH open bracket
+  ']':
+    - SYMBOL ]
+    - (currently no tokui name/word for this symbol)
+    - MATH close bracket
+  'T':
+    - SYMBOL T
+    - tau
+    - MATH 2*pi,
+  'I':
+    - SYMBOL I
+    - wea
+    - MATH the imaginary number, i
+  'S':
+    - SYMBOL S
+    - sif
+    - MATH the sin function
+  'C':
+    - SYMBOL C
+    - cof
+    - MATH the cosine function
+  'V':
+    - SYMBOL V
+    - taf
+    - MATH the tangent function
+  
   al:
     - SEMANTIC-ROLE actor
     - an active participant, but not as actively polarized as agent. on a spectrum between agent and pation, actor is about two thirds agent and one third patient.
@@ -845,6 +891,8 @@ definitions:
   ok:
     - SEMANTIC-ROLE experiencer
     - the one that experiences a sensory or physical/emotional state.
+  uf:
+    - witness
   ip:
     - SEMANTIC-ROLE reciever
   il:
@@ -938,3 +986,13 @@ definitions:
     - VERB plan
     - NOUN plan
     - DERIVATION tok nas
+  tau:
+    - MATH 2*pi, 2 pi, the math constant tau
+  wea:
+    - MATH the imaginary number, i
+  sif:
+    - MATH the sin function
+  cof:
+    - MATH the cosine function
+  taf:
+    - MATH the tangent function

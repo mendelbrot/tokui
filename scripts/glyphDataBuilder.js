@@ -944,6 +944,189 @@ function equal(box) {
   )
 }
 
+function exponent(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function bracketOpen(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + mid(box.width),
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function bracketClose(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + box.width,
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y,
+      box.x + mid(box.width),
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function twoPi(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y,
+      box.x + box.width,
+      box.y
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + third(box.width),
+      box.y,
+      box.x + third(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width - third(box.width),
+      box.y,
+      box.x + box.width - third(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function imaginaryNumber(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y,
+      box.x + mid(box.width),
+      box.y + box.height
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + box.width,
+      box.y + box.height,
+      box.x + mid(box.width),
+      box.y + mid(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
+function sinFunction(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
+      quart(box.width),
+      box.x + mid(box.width),
+      box.y + quart(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + quart(box.width),
+      box.y + quart(box.height),
+      box.x + quart(box.width),
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
+function cosineFunction(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
+      quart(box.width),
+      box.x + quart(box.width),
+      box.y + mid(box.height)
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + quart(box.width),
+      box.y + quart(box.height),
+      box.x + box.width,
+      box.y + quart(box.height)
+    ) +
+    '</g>\n'
+  )
+}
+
 const special = {
   Z: pakala,
   _: '', // space
@@ -954,8 +1137,15 @@ const special = {
   '*': times(boxes.F),
   '/': divide(boxes.F),
   '=': equal(boxes.F),
+  '^': exponent(boxes.F),
+  '[': bracketOpen(boxes.F),
+  ']': bracketClose(boxes.F),
+  T: twoPi(boxes.F),
+  I: imaginaryNumber(boxes.F),
   6: six,
   7: sixCubed,
+  S: sinFunction(boxes.F),
+  C: cosineFunction(boxes.F),
 }
 
 const groups = {
@@ -980,7 +1170,7 @@ const forms = {
   B3: ['L', 'I3', 'I4'],
   B4: ['I1', 'I3', 'I2', 'I4'],
   C3: ['T', 'I2', 'I4'],
-  R2: ['T', 'I2']
+  R2: ['T', 'I2'],
 }
 
 function build() {
