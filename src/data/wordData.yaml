@@ -259,8 +259,10 @@ groups:
       - sam
       - tau
       - sif
-      - cof
+      - kof
       - taf
+      - wei
+      - fig
 
   symbols:
     heading: symbols
@@ -288,6 +290,7 @@ groups:
       - 'S'
       - 'C'
       - 'V'
+      - 'E'
 
   proper-names:
     heading: names
@@ -845,7 +848,7 @@ definitions:
     - MATH 2*pi,
   'I':
     - SYMBOL I
-    - wea
+    - wei
     - MATH the imaginary number, i
   'S':
     - SYMBOL S
@@ -853,13 +856,16 @@ definitions:
     - MATH the sin function
   'C':
     - SYMBOL C
-    - cof
+    - kof
     - MATH the cosine function
   'V':
     - SYMBOL V
     - taf
     - MATH the tangent function
-  
+  'E':
+    - SYMBOL E
+    - fig
+    - MATH Euler's constant e
   al:
     - SEMANTIC-ROLE actor
     - an active participant, but not as actively polarized as agent. on a spectrum between agent and pation, actor is about two thirds agent and one third patient.
@@ -988,11 +994,13 @@ definitions:
     - DERIVATION tok nas
   tau:
     - MATH 2*pi, 2 pi, the math constant tau
-  wea:
+  wei:
     - MATH the imaginary number, i
   sif:
     - MATH the sin function
-  cof:
+  kof:
     - MATH the cosine function
   taf:
     - MATH the tangent function
+  fig:
+    - MATH Euler's constant e

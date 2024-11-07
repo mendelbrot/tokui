@@ -1083,49 +1083,33 @@ function imaginaryNumber(box) {
   )
 }
 
-function sinFunction(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
-      quart(box.width),
-      box.x + mid(box.width),
-      box.y + quart(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + quart(box.width),
-      box.y + quart(box.height),
-      box.x + quart(box.width),
-      box.y + box.height
-    ) +
-    '</g>\n'
-  )
-}
+const sin = `
+<path
+fill="none"
+d="m 13.616986,24.054199 v 11.313706 m 16,-19.313706 a 8,8 0 0 0 -8,-8.000001 8,8 0 0 0 -8.000001,8.000001 l 1e-6,8 h 8 a 8,8 0 0 0 8,-8 v 0"
+/>
+`
 
-function cosineFunction(box) {
-  return (
-    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
-      box.transform,
-      Math.round((box.x + box.width / 2) * 100) / 100,
-      Math.round((box.y + box.height / 2) * 100) / 100
-    ) +
-    '<circle r="{0}" cx="{1}" cy="{2}" fill="none" />\n'.format(
-      quart(box.width),
-      box.x + quart(box.width),
-      box.y + mid(box.height)
-    ) +
-    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
-      box.x + quart(box.width),
-      box.y + quart(box.height),
-      box.x + box.width,
-      box.y + quart(box.height)
-    ) +
-    '</g>\n'
-  )
-}
+const cos = `
+<path
+fill="none"
+d="m 24.010133,17.661052 h 11.313706 m -19.313706,16 a 8,8 0 0 1 -8.0000007,-8 8,8 0 0 1 8.0000007,-8.000001 l 8,1e-6 v 8 a 8,8 0 0 1 -8,8 v 0"
+/>
+`
+
+const tan = `
+<path
+fill="none"
+d="M 20,16 27.999998,8.0000017 M 12.098153,7.9996714 20,16 m 5.656854,16.970563 a 8,8 0 0 1 -11.313709,0 8,8 0 0 1 0,-11.313709 L 20,16 l 5.656854,5.656854 a 8,8 0 0 1 0,11.313709 v 0"
+/>
+`
+
+const exp = `
+<path
+fill="none"
+d="M 10,24 C 21.967935,20.05 26,16 30,4 m 0,32 H 20.106263 10 V 4"
+/>
+`
 
 const special = {
   Z: pakala,
@@ -1144,8 +1128,10 @@ const special = {
   I: imaginaryNumber(boxes.F),
   6: six,
   7: sixCubed,
-  S: sinFunction(boxes.F),
-  C: cosineFunction(boxes.F),
+  S: sin,
+  C: cos,
+  V: tan,
+  E: exp
 }
 
 const groups = {
