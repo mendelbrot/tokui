@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
-const createMDX = require('@next/mdx')
+import remarkGfm from 'remark-gfm'
+import createMDX from '@next/mdx'
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config, options) => {
     config.module.rules.push({
@@ -23,7 +24,11 @@ const nextConfig = {
 }
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+  },
 })
 
-module.exports = withMDX(nextConfig)
+export default withMDX(nextConfig)
