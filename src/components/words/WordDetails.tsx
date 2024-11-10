@@ -6,30 +6,37 @@ import WritingBlock from '@/components/glyphs/WritingBlock'
 import { WordData } from '@/data/wordDataTypes'
 import lnWord from '@/lib/lnWord'
 import Spanner from '../Spanner'
+import { SoftSettingsValue } from '@/lib/EditorTypes'
 
-type Props = { word: string }
+type Props = { word: string; settings?: SoftSettingsValue; className?: string }
 
-function WordDetails({ word }: Props) {
+function WordDetails(props: Props) {
   //@ts-ignore
-  const definitions: string[] = wordData.definitions[word] || ['WORD NOT FOUND']
-  const soundedOutLnWord = lnWord(word)
+  const definitions: string[] = wordData.definitions[props.word] || [
+    'WORD NOT FOUND',
+  ]
+  const soundedOutLnWord = lnWord(props.word)
 
   return (
-    <div>
+    <div className={props.className}>
       <div className="flex items-end prose">
         <WritingBlock
           className="p-2 border-2 rounded-lg mr-2"
-          settings={{ scale: 3 }}
+          settings={props.settings || { scale: 3 }}
         >
-          {word}
+          {props.word}
         </WritingBlock>
-        <h2>{soundedOutLnWord ? `${word} (${soundedOutLnWord})` : word}</h2>
+        <h2>
+          {soundedOutLnWord
+            ? `${props.word} (${soundedOutLnWord})`
+            : props.word}
+        </h2>
       </div>
       <div className="prose">
         <div>
           <ul>
             {definitions.map((i) => (
-              <li key={word + i}>{i}</li>
+              <li key={props.word + i}>{i}</li>
             ))}
           </ul>
         </div>
