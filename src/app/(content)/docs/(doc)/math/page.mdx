@@ -2,21 +2,61 @@ import InfoBlock from '@/components/glyphs/InfoBlock'
 
 # math
 
-<InfoBlock settings={{ scale: 1.0, lineWrap: null }}>
-#m^f_=_n
+## basics
 
-#m^s\_=_g
+The number system is base six. I choose base six because [this YouTube video](https://youtu.be/qID2B4MK7Y0) convinced me of its merits. Here are the digits zero through five:
 
-\_
+<InfoBlock>0 1 2 3 4 5</InfoBlock>
 
-#m^[f+h]\_=\_n\*g
+Here's an example:
 
-\_
+<InfoBlock translation={'243 (base 6), which is 99 (base 10)'}>2 4 3</InfoBlock>
 
-\_
+Note that the symbol that looks like a plus is the number four.
 
-#[m^]n+[m^]g
+## grouping numbers
 
-#=\_[m^][n*g]
+It works well to write a number by listing the digits, but in speaking it isn't understandable to recite the digits of a number that is longer than a few digits. By this I mean, the digits can be understood, but not the actual value of the number. This is because, to understand the value, the listener would need to keep a running count of the number of digits while also remembering all the digits. The listener would only know the scale of the number after the last digit is spoken.
 
+Spoken languages group numbers starting with the biggest part which is the most important because it sets the scale of the number (the millions or thousands etc.). The remaining parts of the numbers are grouped into successively smaller leftover amounts, going down to the hundreds and maybe the twenties (French) or tens (English). A number like 284,300,515 is recited as _two-hundred-eighty-four **million**, three-hundred **thousand** five-hundred-fifteen_. The major groupings are the millions and thousands, (also indicated by the commas in the written number). Groupings of hundreds and tens are also present as sub-groupings within the major groupings.
+
+The tokui thousand is **su**. Its value is six cubed. That's 1000 (base 6), or 216 (base 10):
+
+<InfoBlock>7</InfoBlock>
+
+_Su_ is written in tokui like a 6. (The info popup for _su_ has the label 7 simply because 7 is the key to enter to type _su_ in the text editor. 6 was taken - more on that later.)
+
+_(Side note: To be clear: + is 4, and 6 is 6 cubed. There's a theme starting here, in that math symbols which clash with the conventional symbols in ridiculous ways are preferred. Wait 'till you see the symbols for decimal, exponent, and pi.)_
+
+_Su_ has a special property: it is an operator as well as a number. it is raised to the power of the number to its right and then it multiplies with the number to its left. This works as in scientific notation. The examples will be much more clear than the explanation (I hope):
+
+<InfoBlock translation={'243 (base 6)'}>2 4 3</InfoBlock>
+
+<InfoBlock translation={'243,000 (base 6)'}>2 4 3 7</InfoBlock>
+
+<InfoBlock translation={'243,000,000 (base 6)'}>2 4 3 7 2</InfoBlock>
+
+<InfoBlock translation={'243,000,000,000 (base 6)'}>2 4 3 7 3</InfoBlock>
+
+I'm almost ready to give an example of a long number recited in speech. I need to introduce on more symbol, plus. In tokui plus is **pan**:
+
+<InfoBlock>+</InfoBlock>
+
+Now here's the example: 23,105,003,214 (base 6). Here it is as it would normally be written:
+
+<InfoBlock
+  settings={{ scale: 1.0, lineWrap: null }}
+  translation={'23,135,003,214 (base 6), or 153,918,874 (base 10)'}
+>
+  2 3 1 0 5 0 0 3 2 1 4
+</InfoBlock>
+
+And here it is written as it would be spoken:
+
+<InfoBlock
+  settings={{ scale: 1.0, lineWrap: null }}
+  translationClassName="font-bold"
+  translation={'tu gi su gi, pan we pa lu su tu, pan gi su, pan we so'}
+>
+  2 3 7 3 + 1 0 5 7 2 + 3 7 + 1 4
 </InfoBlock>
