@@ -1,5 +1,7 @@
 import InfoBlock from '@/components/glyphs/InfoBlock'
 import Link from 'next/link'
+import wordData from '@/data/wordData.yaml'
+import WordDetails from '@/components/words/WordDetails'
 
 # semantic roles
 
@@ -23,8 +25,7 @@ This is the structure of a clause with tokui semantic role grammar:
   <span className="text-purple-500">(MODE)</span> (
   <span className="text-green-500">ROLE</span>{' '}
   <span className="text-orange-500">NOUN</span>)... (li{' '}
-  <span className="text-blue-500">VERB</span>)
-  <span className="text-purple-500">(MODE)</span> (
+  <span className="text-blue-500">VERB</span>) (
   <span className="text-green-500">ROLE</span>{' '}
   <span className="text-orange-500">NOUN</span>)...
 </span>
@@ -39,7 +40,7 @@ The parts of the clause are defined in this table:
         <span className="text-purple-500">MODE</span>
       </td>
       <td className="border">
-        The part of the clause I call **mode** (aka mood, modality in other texts) is used to say what kind of clause it is is in the folowing senses:
+        The part of the clause I call **mode** (aka mood, modality in other texts) is used to say what kind of clause it is is in the following senses:
 
         The most basic usage is, mode specifies if the clause is a statement, a question, or a command/request.
 
@@ -84,9 +85,47 @@ The parts of the clause are defined in this table:
   </tbody>
 </table>
 
+## tokui roles
+
+There is no definitive list of semantic roles: ithkuil has 68. Lists from other sources generally have around 15 to 45. FrameNet has hundreds, many of which are domain specific for certain group of verbs. I made my own list for tokui instead of copying Ithkuil's because some of the ithkuil cases are tailored specifically for that language in the way they interact with ithkuil affixes and other morphemes. Also, some of the Ithkuil cases are more specific or nuanced than I wanted for tokui.
+
+I have selected 36 roles for tokui. I identified seven categories of roles. From each category I chose one role to be the category's representative (this is mostly to aid in learning by dividing to list into more manageable chucks, and is not in any way rigorous). In the lists below, pressing a role reveals the definition.
+
+<div className="border rounded-xl px-4">
+
+**the actor roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>al ak ag ul</InfoBlock>
+
+**the theme roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>el an ok uf ip il</InfoBlock>
+
+**the attribute roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>us it ef ap eg at os of</InfoBlock>
+
+**the content roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>in og im ol es af</InfoBlock>
+
+**the context roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>ot on ep</InfoBlock>
+
+**the cause roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>em up ut</InfoBlock>
+
+**the path roles**
+
+<InfoBlock settings={{ scale: 1.5 }}>as om am ig op en</InfoBlock>
+
+</div>
+
 ## examples
 
-Each of the examples below is just one of many ways to translate the given sentence. These are some of the choices that can alter the translation: the order of the items in a clause can be different; parts of the clause can be added or left out depending on what the speaker wants to say or leave unsaid (implied); there can be different choices for the semantic roles; The entire phrase can be structured differently.
+Each of the examples below is just one of many ways to translate the given sentence. These are some of the choices that can alter the translation: the order of the items in a clause can be different; parts of the clause can be added or left out depending on what the speaker wants to say or leave unsaid (implied); there can be different choices for the semantic roles; the entire phrase can be structured differently.
 
 <InfoBlock subtitle translation="I'll give you the book tomorrow.">
   ep posuk li pan in lip

@@ -11,5 +11,6 @@
     "editor.wordWrap": "on",
     "editor.wordBasedSuggestions": "off"
   },
-  "cSpell.words": ["mamal"]
+  "cSpell.words": ["mamal"],
+  "cSpell.enableFiletypes": ["mdx"]
 }
