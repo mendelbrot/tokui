@@ -8,6 +8,7 @@ type Props = {
   children: string | Object | Array<string | Object>
   subtitle?: boolean
   translation?: string
+  translationClassName?: string
   settings?: SoftSettingsValue
   className?: string
 }
@@ -60,7 +61,11 @@ function InfoBlock(props: Props) {
             {words.replace(' . ', '. ') + '.'}
           </div>
         ))}
-      {props.translation && <div className="italic">{props.translation}</div>}
+      {props.translation && (
+        <div className={props.translationClassName || 'italic'}>
+          {props.translation}
+        </div>
+      )}
     </div>
   )
 }
