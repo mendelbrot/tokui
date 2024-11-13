@@ -222,6 +222,9 @@ groups:
       - hipon
       - kapon
       - tonas
+      - lowei
+      - petok
+      - polui
 
   alphabet-consonants-numerals:
     heading: the alphabet of consonants and numerals
@@ -473,6 +476,7 @@ definitions:
   mok:
     - TOKIPONA moku
     - VERB to eat, drink, consume, swallow, ingest
+    - NOUN food
   mol:
     - TOKIPONA moli
     - ADJECTIVE dead, dying
@@ -1004,3 +1008,15 @@ definitions:
     - MATH the tangent function
   fig:
     - MATH Euler's constant e
+  lowei:
+    - rain
+    - DERIVATION elo ewi
+  petok:
+    - greeting, hello
+    - DERIVATION ope tok
+  polui:
+    - favorite, best, preferred
+    - DERIVATION pon uli
+  nasum:
+    - silly
+    - DERIVATION nas umi
