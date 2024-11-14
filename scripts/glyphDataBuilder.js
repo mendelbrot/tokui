@@ -1083,6 +1083,23 @@ function imaginaryNumber(box) {
   )
 }
 
+function comma(box) {
+  return (
+    '<g transform="{0}" transform-origin="{1} {2}">\n'.format(
+      box.transform,
+      Math.round((box.x + box.width / 2) * 100) / 100,
+      Math.round((box.y + box.height / 2) * 100) / 100
+    ) +
+    '<line x1="{0}" y1="{1}" x2="{2}" y2="{3}" />\n'.format(
+      box.x + mid(box.width),
+      box.y + mid(box.height),
+      box.x,
+      box.y + box.height
+    ) +
+    '</g>\n'
+  )
+}
+
 const sin = `
 <path
 fill="none"
@@ -1131,7 +1148,8 @@ const special = {
   S: sin,
   C: cos,
   V: tan,
-  E: exp
+  E: exp,
+  ',': comma(boxes.F)
 }
 
 const groups = {

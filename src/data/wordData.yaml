@@ -285,6 +285,7 @@ groups:
       - '/'
       - '='
       - ':'
+      - ','
       - '^'
       - '['
       - ']'
@@ -834,6 +835,10 @@ definitions:
     - 'SYMBOL :'
     - (currently no tokui name/word for this symbol)
     - colon
+  ',':
+    - 'SYMBOL ,'
+    - (currently no tokui name/word for this symbol)
+    - comma, pause
   '^':
     - SYMBOL ^
     - mutut
