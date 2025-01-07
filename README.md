@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# the tokui website
 
-## Getting Started
+This is the source code for:
+https://tokui.vercel.app/
 
-First, run the development server:
+## getting started
+
+Follow these instructions if you would like to run the website locally on your computer:
+
+**1. download and install node**
+
+https://nodejs.org/en/download
+
+**2. download and install git**
+
+https://git-scm.com/downloads
+
+**3. clone this project's git repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/mendelbrot/tokui.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**4. run the development server**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd ./tokui
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## architecture overview
 
-## Learn More
+**the tokui glyphs**
 
-To learn more about Next.js, take a look at the following resources:
+The glyphs are made programatically. The sub-components are created by a script at `/scripts/glyphDataBuilder.js` and pre-saved to the file `/src/data/glyphData.json` This script is run manually whenever the glyphs are modified.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To render tokui glyphs, the Editor class at `/lib/Editor.ts` reads from the glyph data file and assembles the components into complete glyphs. The glyphs are rendered as inline svg.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The Editor class has static and non-static methods. The non-static methods are for the text editor discussed below; the static draw method is for rendering text within the website. It is called as follows:
 
-## Deploy on Vercel
+```javascript
+Editor.draw(writing, settings)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The writing input is a string of a romanized glyph or sequence of glyphs separated by spaces. The settings is an optional input described in the file `/src/lib/editorTypes.ts`. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The current default settings are:
+```javascript
+{
+  fill: 'none',
+  stroke: 'black',
+  strokeWidth: 2,
+  scale: 1.5,
+  lineWrap: 8,
+}
+```
+
+For inline svg, it's main use is to specify the glyph size, with the scale parameter:
+
+```javascript
+let settings = { scale: 2 }
+```
+
+**the text editor**
+
+TODO
+
+**the dictionary**
+
+TODO
